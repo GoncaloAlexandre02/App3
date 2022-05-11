@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.Views.RegisterPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+
+       
+         <StackLayout BackgroundColor="#f5f5f5">
+           
+                <Grid>
+                    
+                        
+                    <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand">
+                        <Frame HeightRequest="150" Padding="0" BackgroundColor="#7499fd" >
+                            <Frame.Background>
+                                <LinearGradientBrush StartPoint="0,0"
+                                        EndPoint="1,0">
+                                    <GradientStop Color="#527beb"
+                                        Offset="0.4"/>
+                                    <GradientStop Color="#cf991d"
+                                        Offset="1.0"/>
+                                </LinearGradientBrush>
+                            </Frame.Background>
+                            <Label Text="CADASTRAR" TextColor="White"  HorizontalOptions="Center" FontAttributes="Bold" FontSize="35" Margin="0,40,0,0"></Label>
+                        </Frame>
+                    </StackLayout>
+                    
+                    <ScrollView>
+                    <StackLayout Padding="0" Margin="10,110,10,0" HorizontalOptions="FillAndExpand" >
+                        <Frame  BackgroundColor="#FFFF" HeightRequest="850"  HasShadow="True" Padding="0" Margin="0,-5,0,20" CornerRadius="15" >
+
+                            <StackLayout>
+
+                                <StackLayout Padding="0" Margin="15,20">
+
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                                <Label Text="Nome" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                            
+                                        </Grid>
+                                        
+                                        <StackLayout>
+                                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,20,20,0">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
+                                                    </StackLayout>
+                                                </Frame>
+                                        </StackLayout>
+                                       
+                                         
+                                    </StackLayout>
+
+                                   
+
+                                    <StackLayout >
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Label Text="Apelido" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                         </Grid>
+                                        <StackLayout >
+                                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,20,20,0">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Entry x:Name="txtApelido" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Text"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Label Text="Email" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                        <StackLayout>
+                                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,20,20,0">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Entry x:Name="txtEmail" Placeholder="exemplo@abc.com"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    </StackLayout>
+
+
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Label Text="Telemovel" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                        <StackLayout>
+                                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,20,20,0">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Entry x:Name="txtTelemovel" Placeholder="9########"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,20,20,0">
+                                                    <StackLayout Orientation="Horizontal">
+                                                        <DatePicker x:Name="txtDtNas"  TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0"></DatePicker>
+                                                    </StackLayout>
+                                                </Frame>
+                                            </StackLayout>
+                                        
+                                    </StackLayout>
+
+
+                                    <StackLayout>
+                                        <Grid>
+                                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                                <Label Text="Password" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                            </StackLayout>
+                                        </Grid>
+                                        <StackLayout Grid.Column="0" Grid.Row="1">
+                                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Margin="20,20,20,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                                                <StackLayout Orientation="Horizontal">
+                                                    <Entry x:Name="txtPassword" Placeholder="**********" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
+                                                </StackLayout>
+                                            </Frame>
+                                        </StackLayout>
+
+                                    </StackLayout>
+
+                                    <StackLayout Margin="0,30,0,0">
+                                        <Button Text="Cadastrar" Clicked="Button_ClickedAsync"  BackgroundColor="#527beb" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100" />
+                                    </StackLayout>
+
+
+
+                                    <StackLayout Margin="0,25,0,0" Padding="0">
+                                        <Grid>
+                                            <BoxView BackgroundColor="#cf9946" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Frame BackgroundColor="White" HeightRequest="85" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="#cf9946" Margin="0" HorizontalOptions="Center" Padding="0">
+                                                <Label Text="OU" TextColor="#4568C7" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                            </Frame>
+                                        </Grid>
+                                    </StackLayout>
+
+                                    <StackLayout Margin="0,30" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <Frame BackgroundColor="White" HeightRequest="85" WidthRequest="45"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="https://tekgenius.pt/wp-content/uploads/2016/12/google-logo-icon-PNG-Transparent-Background.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+                                        <Frame BackgroundColor="White" HeightRequest="125" WidthRequest="45"  HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="https://www.casalnerdnocanada.com.br/wp-content/uploads/2017/02/logo-facebook.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+                                    </StackLayout>
+
+                                </StackLayout>
+
+
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+            </Grid>
+           
+        </StackLayout>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#ededed"
+             x:Class="App3.Views.CompanyPage"
+             Title="Sobre"
+             >
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Sobre"></Label>
+
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+            <StackLayout>
+
+                <Image Source="q4logo.png" HorizontalOptions="Center" HeightRequest="120" Margin="0,40,0,0"></Image>
+                    <Label TextColor="#4568C7" Text="Tecnologia para conectar pessoas" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="20" FontAttributes="Bold"></Label>
+                    <Label TextColor="#4568C7" Text="Mais do que desenvolder aplicações proprocionamos funções que permitem acessibilidade para todos e crecimento para as instituições/empresas." HorizontalTextAlignment="Center"  Margin="5,5,5,0" FontSize="16" ></Label>
+                    <Label TextColor="#4568C7" Text="CONTATO" FontAttributes="Bold" FontSize="18" Margin="10,60,0,0"></Label>
+                    <Label TextColor="#4568C7" Text="Av. Sagrado Coração de Maria N1,1ºF 2900-031 Setubal" Margin="10,0,0,0"></Label>
+                    <Label TextColor="#4568C7" Text="+351 913 885 038" Margin="10,3,0,0"  FontSize="16"></Label>
+                    <Label TextColor="#4568C7" Text="SITE" FontAttributes="Bold" FontSize="18" Margin="10,25,0,0"></Label>
+                    <Label TextColor="#4568C7" Text="http://www.srwsoftware.pt" Margin="10,0,0,0" FontSize="15">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="site_event"></TapGestureRecognizer>
+                    </Label.GestureRecognizers>
+                </Label>
+                    <Label TextColor="#4568C7" Text="E-MAIL" FontAttributes="Bold" FontSize="18" Margin="10,25,0,10"></Label>
+                    <Label TextColor="#4568C7" Text="info@srwsoftware.pt" Margin="10,0,0,10" FontSize="15"></Label>
+            </StackLayout>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

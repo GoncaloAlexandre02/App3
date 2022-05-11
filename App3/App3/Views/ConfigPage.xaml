@@ -1,0 +1,87 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             BackgroundColor="#ededed"
+             Title="Configurações"
+             x:Class="App3.Views.ConfigPage">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium"  VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Configurações"></Label>
+
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Margin="0,30,0,0">
+
+                <StackLayout Margin="0,0,0,5">
+                    <Frame>
+                        <Label TextColor="#7a7a7a" Text="Notificações de transmissões ao vivo" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Switch Margin="0,-50,10,0"></Switch>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,5">
+                    <Frame>
+                        <Label TextColor="#7a7a7a" Text="Notificações de eventos" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Switch Margin="0,-50,10,0"></Switch>
+                </StackLayout>
+
+                <StackLayout Margin="0,0,0,5">
+                    <Frame>
+                        <Label TextColor="#7a7a7a" Text="Notificações de notícias" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Switch Margin="0,-50,10,0"></Switch>
+                </StackLayout>
+
+            </StackLayout>
+
+            <StackLayout Margin="0,50,0,0">
+                <StackLayout>
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="desenvolver_event"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Label TextColor="#7a7a7a" Text="Sobre o desenvolvedor" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                </StackLayout>
+
+                <StackLayout>
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="privacy_event"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Label TextColor="#7a7a7a" Text="Política de privacidade" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                </StackLayout>
+
+                <StackLayout>
+
+                    <Frame>
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="term_event"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <Label TextColor="#7a7a7a" Text="Termos de serviços" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                </StackLayout>
+
+            </StackLayout>
+        </StackLayout>
+
+    </ContentPage.Content>
+</ContentPage>

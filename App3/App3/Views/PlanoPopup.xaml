@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages:PopupPage xmlns:Pages="http://rotorgames.com" 
+                 xmlns="http://xamarin.com/schemas/2014/forms"
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                 x:Class="App3.Views.PlanoPopup"
+                 Padding="20,10,20,10"
+                 Opacity="0.9">
+
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" WidthRequest="360" HeightRequest="510" xct:CornerRadiusEffect.CornerRadius="15" >
+        <ScrollView>
+            <StackLayout>
+                <StackLayout>
+                    <Label Text="Criar novo plano de oração"  TextColor="#4568C7" HorizontalOptions="Center" FontSize="20" FontFamily="RedHat-Bold" Margin="20, 35, 20, 0"></Label>
+                    <Label Text="Selecione os dias e os horários que deseja ser lembrado para orar" HorizontalOptions="Center"  FontFamily="RedHat-SemiBold" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="18" Margin="20, 5, 20, 0"></Label>
+                </StackLayout>
+                <StackLayout>
+                    <Frame Margin="20,40,20,0" CornerRadius="15" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100">
+                        <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Selecione o dia da semana" HorizontalTextAlignment="Center" FontFamily="RedHat-SemiBold" >
+                            <Picker.Items>
+                                <x:String>Domingo</x:String>
+                                <x:String>Segunda-feira</x:String>
+                                <x:String>Terça-feira</x:String>
+                                <x:String>Quarta-feira</x:String>
+                                <x:String>Quinta-feira</x:String>
+                                <x:String>Sexta-feira</x:String>
+                                <x:String>Sábado</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+                </StackLayout>
+                <StackLayout>
+                    <Frame Margin="20,20,20,0" CornerRadius="15" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100">
+                        <TimePicker HorizontalOptions="Center" TextColor="#4568C7" ></TimePicker>
+                    </Frame>
+                </StackLayout>
+                <StackLayout>
+                    <Button Text="Selecionar" BackgroundColor="#527beb"  Margin="20,30,20,10" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+        
+    </StackLayout>
+
+</Pages:PopupPage>

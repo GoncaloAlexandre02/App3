@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="App3.Views.BatismoPage"
+             xmlns:local="clr-namespace:App3.Renderer"
+             Title="Batismo"
+             BackgroundColor="#ededed">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Batismo"></Label>
+        </StackLayout>
+    </Shell.TitleView>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+
+            <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" >
+                <Image Source="batismo.png" HeightRequest="160" Margin="0,15,0,0"></Image>
+
+                <Frame BackgroundColor="#FFFF" HeightRequest="450" HasShadow="True" Padding="0" Margin="0,5" CornerRadius="15">
+                    <StackLayout>
+                        <StackLayout>
+                            <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#527beb" FontSize="17" FontAttributes="Bold" Margin="0,20,0,0"></Label>
+                        </StackLayout>
+                        <StackLayout>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,20,0,0">
+                                <Entry x:Name="txtNome" Placeholder="Nome Completo"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
+                                <Entry x:Name="txtNcartao" Keyboard="Email" Placeholder="Email" MaxLength="16" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250" />
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
+                                <local:ExtendedDatePicker HorizontalOptions="Center"  FontSize="17" WidthRequest="180" Margin="50,0,50,0" TextColor="#4568C7" />
+                            </Frame>
+                        </StackLayout>
+
+                        
+
+
+
+                        <StackLayout>
+
+                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
+                                <Entry x:Name="txtNumTelemovel" Placeholder="Numero de Telemóvel" Keyboard="Telephone" MaxLength="9" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250"/>
+                            </Frame>
+                        </StackLayout>
+
+                        <StackLayout>
+                            <Button x:Name="ButtonEnviar" Clicked="ButtonEnviar_Clicked" Text="Enviar" Margin="30,50,30,0" CornerRadius="30" HeightRequest="50" BackgroundColor="#527beb"></Button>
+                        </StackLayout>
+                    </StackLayout>
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

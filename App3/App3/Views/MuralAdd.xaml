@@ -1,0 +1,104 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.MuralAdd"
+             
+             Title="Mural de Orações">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mural de Orações"></Label>
+
+        </StackLayout>
+
+    </Shell.TitleView>
+
+
+    <ContentPage.Content >
+        <ScrollView>
+            <StackLayout HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand">
+
+                <StackLayout >
+
+
+
+                    <Frame  Margin="20,30,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
+                        <Entry Placeholder="MOTIVO DA ORAÇÃO" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0" ></Entry>
+                    </Frame>
+
+
+                    <Frame  Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
+                        <Entry  Placeholder="ESCREVA AQUI" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0"></Entry>
+                    </Frame>
+
+                    <Frame  Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
+                        <Entry  Placeholder="NOME" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0"></Entry>
+                    </Frame>
+
+                    <StackLayout>
+                        <Label Text="Deseja receber uma visita ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="15" FontFamily="RedHat-Bold"></Label>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                           
+                            
+                            <Label Text="SIM" Grid.Row="0" Grid.ColumnSpan="2" TextColor="#4568C7" Margin="20,0,0,0" FontSize="15"></Label>
+                            <RadioButton x:Name="cbRecebSim"  xct:IconTintColorEffect.TintColor="#4568C7" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0"></RadioButton>
+
+                            <Label Text="NÃO" Grid.Row="0" Grid.ColumnSpan="4" Margin="110,0,0,0" TextColor="#4568C7" FontSize="15"></Label>
+                            <RadioButton x:Name="cbRecebNao"  Grid.Row="0" Grid.Column="2"  ></RadioButton>
+                            
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Label Text="Publicar no mural de oração ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="16" FontFamily="RedHat-Bold"></Label>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <Label Text="SIM" Grid.Row="0" Grid.ColumnSpan="2" FontFamily="Dosis-SemiBold" TextColor="#4568C7" Margin="20,0,0,0" FontSize="15"></Label>
+                            <RadioButton x:Name="cbRecebSim1"  xct:IconTintColorEffect.TintColor="#4568C7" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0"></RadioButton>
+
+                            <Label Text="NÃO" Grid.Row="0" Grid.ColumnSpan="4" FontFamily="Dosis-SemiBold" Margin="110,0,0,0" TextColor="#4568C7" FontSize="15"></Label>
+                            <RadioButton x:Name="cbRecebNao1"  Grid.Row="0" Grid.Column="2" ></RadioButton>
+
+
+                        </Grid>
+
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Button Text="Enviar" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,45,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+
+                    </StackLayout>
+
+
+                </StackLayout>
+
+
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,194 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.HomeLayout2"
+             BackgroundColor="#ededed"
+             Title="AD BETEL Portugal"
+             >
+    <Shell.TitleView>
+
+        <StackLayout Orientation="Horizontal"   BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="AD BETEL Portugal"></Label>
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="50"  />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Source="bellW.png" Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22"/>
+                <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" Margin="0,-22,10,-18"   CornerRadius="20"
+                    Padding="-3"
+                    BackgroundColor="#375dc4"
+                    HasShadow="False">
+                    <Label  FontSize="10" HeightRequest="22" WidthRequest="23" Margin="1,1,1,1"    HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  BackgroundColor="Transparent" Text="1"
+                         TextColor="White"  x:Name="labelText"/>
+                </Frame>
+                <Image Source="gearW.png" Grid.Row="0" Grid.Column="2" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Config"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+        </StackLayout>
+    </Shell.TitleView>
+    
+    
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Orientation="Vertical" >
+                <ScrollView >
+                    <Grid Margin="10" HorizontalOptions="Center" Style="{StaticResource gridLayout}">
+
+                    <StackLayout  Grid.Column="0" Grid.Row="0" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_1"  Source="churchT.png" BackgroundColor="Transparent"></ImageButton>
+                        <Frame  TranslationY="-15"  Padding="10" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"/>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="IGREJA"></Label>
+                        </Frame>
+                    </StackLayout>
+                        <StackLayout  Grid.Column="1" Grid.Row="0" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <ImageButton Style="{StaticResource image2}"  Source="dep.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15" Padding="-23,10,-23,0"  BackgroundColor="Transparent" >
+                                <Label   HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="DEPARTAMENTOS"></Label>
+                            </Frame>
+                        </StackLayout>
+                        <StackLayout  Grid.Column="2" Grid.Row="0" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}"  Source="speechT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"  Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Label HorizontalTextAlignment="Center"  Padding="-30,0,-30,0" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="NOTICIAS"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout  Grid.Column="0" Grid.Row="1" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Donate"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Clicked="TapGestureRecognizer_Tapped_Donate" Style="{StaticResource image2}"  Source="donateT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"  Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="DOAR"></Label>
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Donate"/>
+                                </Frame.GestureRecognizers>
+                            </Frame>
+                    </StackLayout>
+                    <StackLayout  Grid.Column="1" Grid.Row="1" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Biblia"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Biblia"  Source="bibliaT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"  Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                            <Frame.GestureRecognizers>
+                              <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Biblia"/>
+                            </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="BÍBLIA"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout  Grid.Column="2" Grid.Row="1" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}"  Source="eventoT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"  Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="EVENTOS"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="0" Grid.Row="2" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mural"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Mural"  Source="notesT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15" Padding="0,10,0,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mural"/>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="MURAL DE ORAÇÔES"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="1" Grid.Row="2" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Plano"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Plano"  Source="prayT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15" Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Plano"/>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="PLANO DE ORAÇÃO"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="2" Grid.Row="2" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Batismo"/>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Batismo"  Source="hand.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"  Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Batismo"/>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="BATISMO"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="0" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}"  Source="bookT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="DEVOCIONAL"></Label>
+                         </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="1" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Mensagem"  Source="videoT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="MENSAGENS">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                            </Label>
+                         </Frame>
+                    </StackLayout>
+                    <StackLayout   Grid.Column="2" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}"  Source="microT.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="PODCAST"></Label>
+                         </Frame>
+                    </StackLayout>
+
+
+
+                    </Grid>
+                </ScrollView>
+                <StackLayout Margin="20,0,20,20" HorizontalOptions="Center">
+                    <Label FontFamily="RedHat" TextColor="Black" FontSize="13" HorizontalOptions="Center" Text="Nossas Redes"></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <ImageButton Style="{StaticResource image3}" HeightRequest="40" Margin="0" Source="instaTC.png"  BackgroundColor="Transparent"   ></ImageButton>
+                        <ImageButton HeightRequest="38" Source="faceTC.png" Margin="10,0,0,0"  BackgroundColor="Transparent"   ></ImageButton>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

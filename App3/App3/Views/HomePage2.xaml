@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.HomePage2"
+             BackgroundColor="PeachPuff"
+             Title="AD BETEL Portugal"
+             >
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout  Orientation="Vertical">
+                <Grid Margin="0,10,0,0" HorizontalOptions="Center" Style="{StaticResource gridLayout}">
+
+                    <StackLayout  Grid.Column="0" Grid.Row="0" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}"  Source="church.jpg" BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label  FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="IGREJA"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="0" Orientation="Vertical" Padding="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="speech.png"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="NOTICIAS"></Label>
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Grid.Row="0"   Padding="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="donate.png"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="DOAÇÃO"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="1"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="evento.png"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="EVENTOS"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="1"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="biblia.png"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="BÍBLIA"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Grid.Row="1"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="video.jpg"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="VIDEOS"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="2"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="video.jpg"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="EXEMPLO"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1" Grid.Row="2"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="video.jpg"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="EXEMPLO"></Label>
+
+                        </Frame>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Grid.Row="2"  Orientation="Vertical" Margin="10,10,10,10" BackgroundColor="Transparent">
+                        <ImageButton Style="{StaticResource image2}" Source="video.jpg"  BackgroundColor="White" CornerRadius="5" BorderWidth="2" BorderColor="Orange" ></ImageButton>
+                        <Frame xct:ShadowEffect.Color="Black" xct:ShadowEffect.Radius="6" TranslationY="-15"  Padding="10" BackgroundColor="Orange" >
+                            <Label FontFamily="RedHat" TextColor="Black" FontSize="16" HorizontalOptions="Center" Text="EXEMPLO"></Label>
+
+                        </Frame>
+                    </StackLayout>
+
+                </Grid>
+                <StackLayout Margin="20,180,20,20">
+                    <Label FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Nossas Redes"></Label>
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                        <ImageButton Style="{StaticResource image3}" Margin="0" Source="instagram.png"  BackgroundColor="Transparent"   ></ImageButton>
+                        <ImageButton HeightRequest="40" Source="face.png" Margin="6"  BackgroundColor="Transparent"   ></ImageButton>
+
+                    </StackLayout>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+
+    </ContentPage.Content>
+
+</ContentPage>

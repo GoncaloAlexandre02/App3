@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             mc:Ignorable="d"
+             x:Class="App3.Views.LoginPage"
+             Shell.NavBarIsVisible="False">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="#f5f5f5">
+            <Grid>
+                <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand" >
+                    <Frame HeightRequest="150" Padding="0" BackgroundColor="#7499fd">
+
+                        <Frame.Background>
+                            <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                                <GradientStop Color="#527beb"
+                          Offset="0.4"/>
+                                <GradientStop Color="#cf991d"
+                          Offset="1.0"/>
+                            </LinearGradientBrush>
+                        </Frame.Background>
+
+                        <Label Text="BEM VINDO" FontFamily="RedHat-SemiBold" TextColor="White" HorizontalOptions="Center" FontSize="35" Margin="0,40,0,0"></Label>
+                    </Frame>
+
+
+
+                </StackLayout>
+
+                <ScrollView>
+                    <StackLayout Padding="0" Margin="10,120,10,0" HorizontalOptions="FillAndExpand">
+
+                        <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0,0,0,20" CornerRadius="15">
+
+                            <StackLayout>
+
+                                <StackLayout Padding="0" Margin="15,35">
+
+
+
+                                    <StackLayout>
+                                        <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="20,5,20,0">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#4568C7"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Margin="20,15,20,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                                            <StackLayout Orientation="Horizontal">
+                                                <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#4568C7"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
+                                            </StackLayout>
+                                        </Frame>
+                                    </StackLayout>
+
+
+
+                                    <StackLayout  Orientation="Horizontal" Margin="0,5,0,0">
+                                        <CheckBox IsChecked="False" Color="#7499fd" />
+                                        <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+                                        <Label Text="Forgot Password" TextColor="#7499fd" FontAttributes="Bold" HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+
+
+                                    </StackLayout>
+
+                                    <StackLayout>
+                                        <Button Text="Entrar" Clicked="Button_ClickedAsync" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="10,30,10,0"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+
+                                    </StackLayout>
+
+
+
+
+                                    <StackLayout Margin="0,33,0,0" Padding="0">
+                                        <Grid>
+                                            <BoxView BackgroundColor="#cf9946" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="#cf9946" Margin="0" HorizontalOptions="Center" Padding="0">
+                                                <Label Text="OU" TextColor="#4568C7" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
+                                            </Frame>
+                                        </Grid>
+                                    </StackLayout>
+
+                                    <StackLayout Margin="0,30" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                        <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="https://tekgenius.pt/wp-content/uploads/2016/12/google-logo-icon-PNG-Transparent-Background.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+                                        <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="https://www.casalnerdnocanada.com.br/wp-content/uploads/2017/02/logo-facebook.png" Aspect="AspectFill" Margin="0"/>
+                                        </Frame>
+                                    </StackLayout>
+
+                                </StackLayout>
+
+
+                            </StackLayout>
+
+                        </Frame>
+                    </StackLayout>
+                </ScrollView>
+
+       
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

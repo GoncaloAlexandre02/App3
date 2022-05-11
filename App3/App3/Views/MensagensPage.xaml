@@ -1,0 +1,146 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.MensagensPage">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mensagem"></Label>
+        </StackLayout>
+    </Shell.TitleView>
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="20,0,20,20" Orientation="Vertical">
+                    <Grid>
+                        <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Margin="10,20,10,10" >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <Button BackgroundColor="#D42E20" Clicked="Button_Clicked" Text="Youtube" FontSize="16" FontAttributes="Bold"></Button>
+
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="Button_Clicked"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <Image Source="youtube_icon.png" BackgroundColor="Transparent"  HorizontalOptions="Start" Margin="20,0,0,0"  HeightRequest="87">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="Button_Clicked"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Label Text="Vídeos" HorizontalOptions="Start" Margin="20,0,0,0" TextColor="#4568C7" FontSize="20" FontAttributes="Bold"></Label>
+                </StackLayout>
+                <Frame >
+                    <StackLayout >
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="video_icon" HorizontalOptions="Start" HeightRequest="90" Margin="0,5,5,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="EBD Pr. Paulo Affonso - A alegria na carta aos filipenses" TextColor="#4568C7" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0,65,35,0" HeightRequest="30" >
+                                <Button Text="Compartilhar" BackgroundColor="#527beb" FontSize="10" HorizontalOptions="Start" HeightRequest="35"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+                        
+                        
+                    </StackLayout>
+                </Frame>
+
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="video_icon" HorizontalOptions="Start" HeightRequest="90" Margin="0,5,5,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="EBD Pr. Paulo Affonso - A alegria na carta aos filipenses" TextColor="#4568C7" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0,65,35,0" HeightRequest="30" >
+                                <Button Text="Compartilhar" BackgroundColor="#527beb" FontSize="10" HorizontalOptions="Start" HeightRequest="35"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="video_icon" HorizontalOptions="Start" HeightRequest="90" Margin="0,5,5,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="EBD Pr. Paulo Affonso - A alegria na carta aos filipenses" TextColor="#4568C7" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0,65,35,0" HeightRequest="30" >
+                                <Button Text="Compartilhar" BackgroundColor="#527beb" FontSize="10" HorizontalOptions="Start" HeightRequest="35"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="video_icon" HorizontalOptions="Start" HeightRequest="90" Margin="0,5,5,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="EBD Pr. Paulo Affonso - A alegria na carta aos filipenses" TextColor="#4568C7"></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0,65,35,0" HeightRequest="30" >
+                                <Button Text="Compartilhar" BackgroundColor="#527beb" FontSize="10" HorizontalOptions="Start" HeightRequest="35"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="video_icon" HorizontalOptions="Start" HeightRequest="90" Margin="0,5,5,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="EBD Pr. Paulo Affonso - A alegria na carta aos filipenses" TextColor="#4568C7" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0" Margin="0,65,35,0" HeightRequest="30" >
+                                <Button Text="Compartilhar" BackgroundColor="#527beb" FontSize="10" HorizontalOptions="Start" HeightRequest="35"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+             
+                
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+            
+
+            
+           
+</ContentPage>

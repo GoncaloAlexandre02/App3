@@ -1,0 +1,121 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.PerfilPage"
+             Title="Minha Conta">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Minha Conta"></Label>
+
+            <Grid >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="50"  />
+                    <RowDefinition Height="50"  />
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.2*"/>
+                    <ColumnDefinition Width="1*"/>
+                    <ColumnDefinition Width="0.1*"/>
+                </Grid.ColumnDefinitions>
+                <Image Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22"/>
+                <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" Margin="0,-22,10,-18"   CornerRadius="20"
+                    Padding="-3"
+                    BackgroundColor="Transparent"
+                    HasShadow="False">
+                    <Label  FontSize="10" HeightRequest="22" WidthRequest="23" Margin="1,1,1,1"    HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  BackgroundColor="Transparent" 
+                         TextColor="White"  x:Name="labelText"/>
+                </Frame>
+                <Image Source="icon_atualizar.png" Grid.Row="0" Grid.Column="2" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Atualizar"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
+            </Grid>
+
+        </StackLayout>
+    </Shell.TitleView>
+
+
+
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <StackLayout Margin="5,5,5,0" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="1" xct:ShadowEffect.Radius="1" xct:ShadowEffect.Opacity="5">
+                    <Grid>
+                        <StackLayout Grid.Column="0" Grid.Row="0" >
+                            <Image Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100"></Image>
+                        </StackLayout>
+                
+                    </Grid>
+
+                    <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Admin" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,5,0,20" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold" ></Label>
+                            </StackLayout>
+                    </Grid>
+                </StackLayout>
+                <StackLayout>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Email" FontSize="18" Margin="10,10,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="admin@admin.com" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Telemovel" FontSize="18" Margin="10,20,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="912345678" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Data Nascimento" FontSize="18" Margin="10,20,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="06/05/2022" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+
+            </StackLayout>
+            
+            
+            
+            
+        </ScrollView>
+        
+        
+    </ContentPage.Content>
+</ContentPage>

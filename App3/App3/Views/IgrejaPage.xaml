@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.IgrejaPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"             
+             BackgroundColor="#ededed"
+             Title="Igreja">
+    <Shell.TitleView>
+    <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+        <StackLayout.Background>
+            <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+            </LinearGradientBrush>
+        </StackLayout.Background>
+        <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Igreja"></Label>
+        
+    </StackLayout>
+    </Shell.TitleView>
+
+
+    <ContentPage.Content>
+        
+        <ScrollView>
+        <StackLayout>
+                
+                <StackLayout Margin="25,30,0,10">
+                    <Label Text="Informações de Contacto" TextColor="#636363" FontSize="16" FontFamily="RedHat-Bold" />
+
+            </StackLayout>
+                <StackLayout Margin="30,0,30,30" Orientation="Vertical" xct:ShadowEffect.Radius="6" xct:CornerRadiusEffect.CornerRadius="4" xct:ShadowEffect.Color="Black"  Background="#fafafa">
+                    <Grid >
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="1*"></RowDefinition>
+                           
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            <ColumnDefinition Width="1*"></ColumnDefinition>
+                            
+                        </Grid.ColumnDefinitions>
+                        <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Margin="10,20,10,10" >
+                            <Label x:Name="teleL" Text="(351) 961 721 289  (351) 961 721 289" TextColor="#7a7a7a" FontFamily="RedHat-SemiBold" />
+                           <!-- <Label IsVisible="False" Text="(351) 961 721 289" TextColor="#7a7a7a" FontFamily="RedHat-SemiBold" /> -->
+                        </StackLayout>
+                        <Button Grid.Column="1" Grid.Row="0" Text="Como Chegar"  HorizontalOptions="End" TextTransform="None"  TextColor="#cf9946" CornerRadius="4" FontFamily="RedHat-Bold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="0" xct:ShadowEffect.Radius="7" BorderColor="#cf9946" BorderWidth="2" FontSize="Default" BackgroundColor="#fafafa" Margin="0,20,10,10">
+                            
+                            <!--  <Button.Background>
+                                <LinearGradientBrush StartPoint="0,0" EndPoint="1,0">
+                                    <GradientStop Color="#cf991d" Offset="0.1"/>
+
+                                    <GradientStop Color="#527beb" Offset="1"/>
+                                </LinearGradientBrush>
+                            </Button.Background> -->
+                        </Button>
+                    </Grid>
+               <Label Grid.Row="1" Grid.Column="0" x:Name="moradaL" Text="AV. Francisco Sá Carneiro, Edifício Riveira, Loja 98125-147 – Quarteira, PT." FontFamily="RedHat-SemiBold" Margin="10,10,10,30"/>
+                    <!--  <Button Text="Como Chegar" TextTransform="None"  TextColor="White" CornerRadius="25" FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="-3" xct:ShadowEffect.Radius="7" BorderColor="White" BorderWidth="4" BackgroundColor="#cf9946" Margin="80,10,80,0"></Button>-->
+                    
+                </StackLayout>
+
+            <StackLayout Margin="25,30,0,10">
+                    <Label Text="História" TextColor="#636363" FontSize="16" FontFamily="RedHat-Bold" />
+
+            </StackLayout>
+                <StackLayout Margin="30,0,30,30" Orientation="Vertical" xct:ShadowEffect.Radius="6" xct:CornerRadiusEffect.CornerRadius="4" xct:ShadowEffect.Color="Black"  Background="#fafafa">
+                    <Label x:Name="descIg" TextColor="#7a7a7a" Text="A igreja Evangélica Assembléia de Deus Betel é um Ministério focado em descobrir o potencial que está dentro de cada um, para ajudar a cumprir desenvolver o propósito para o qual fomos criados; E formar um verdadeiro adorador, trazendo os preceitos de Deus em cada coração, família e nação." FontFamily="RedHat-SemiBold" Margin="10,20,10,10"/>
+                    <Label IsVisible="False" TextColor="#7a7a7a" Text="Missão: O que fizermos no dia-a-dia com o objetivo de que o alvo seja alcançado." FontFamily="RedHat-SemiBold" Margin="10,20,10,10"/>
+                    
+            </StackLayout>
+                <StackLayout Margin="25,30,0,10">
+                    <Label Text="Redes Sociais" TextColor="#636363" FontSize="16" FontFamily="RedHat-Bold" />
+
+                </StackLayout>
+                <StackLayout  Orientation="Horizontal" Margin="30,0,30,30"  xct:ShadowEffect.Radius="6" xct:CornerRadiusEffect.CornerRadius="4" xct:ShadowEffect.Color="Black"  Background="#fafafa">
+                    
+                        <StackLayout HorizontalOptions="Start" Orientation="Horizontal" Margin="5,10,0,10">
+                            <Image HorizontalOptions="Start"  HeightRequest="45" Source="instaTC.png"></Image>
+                            <Label Text="Instagram" VerticalOptions="Center"  FontFamily="RedHat-Medium" TextColor="#636363"/>
+                        </StackLayout>
+                        <StackLayout HorizontalOptions="End" Orientation="Horizontal" Margin="5,10,5,10">
+                            <Image HorizontalOptions="Start"  HeightRequest="45" Source="faceTC.png"></Image>
+                            <Label Text="Facebook" VerticalOptions="Center"  FontFamily="RedHat-Medium" TextColor="#636363"/>
+                        </StackLayout>
+                    
+                    
+                  </StackLayout>
+            
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+    
+</ContentPage>
+

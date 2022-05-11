@@ -1,0 +1,16 @@
+﻿<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           x:Class="App3.Views.PopUpLoading"
+           
+           Size="150,75"
+           >
+
+    <StackLayout VerticalOptions="Center" HorizontalOptions="Center" >
+        <StackLayout Orientation="Vertical" VerticalOptions="Center" HorizontalOptions="Center">
+            <ActivityIndicator Color="#7a7a7a" HorizontalOptions="Center" VerticalOptions="Center" IsRunning="True"></ActivityIndicator>
+            <Label TextColor="#7a7a7a" Text="A carregar.."></Label>
+        </StackLayout>
+    </StackLayout>
+
+</xct:Popup>
