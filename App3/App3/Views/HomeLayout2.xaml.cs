@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -62,6 +62,28 @@ namespace App3.Views
         private async void TapGestureRecognizer_Tapped_Mensagem(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new MensagensPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Evento(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new EventPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Departamento(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new DepartamentoPage());
+        }
+
+        
+
+        private async void TapGestureRecognizer_Tapped_Noticia(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new NoticiaPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Podcast(object sender, EventArgs e)
+        {
+            await Browser.OpenAsync("https://open.spotify.com/show/7x7o7VRQifLYTzs0nEimpt?si=2727a7bfb0f048d7", BrowserLaunchMode.SystemPreferred);
         }
     }
 }

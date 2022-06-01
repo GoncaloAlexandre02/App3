@@ -1,0 +1,51 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages:PopupPage
+            xmlns:Pages="http://rotorgames.com"
+            xmlns="http://xamarin.com/schemas/2014/forms"
+            xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+            xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+            x:Class="App3.Views.VideoAddPopup"
+            Padding="20, 10, 20, 20" 
+            Opacity="0.9">
+
+     
+            <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" WidthRequest="380" HeightRequest="450" xct:CornerRadiusEffect.CornerRadius="15">
+        <ScrollView>
+            <StackLayout >
+
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,45,0,0">
+                                <ImageButton Source="icon_addvideo.png"  HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="70" BackgroundColor="Transparent" ></ImageButton>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,35,0,0">
+                                <Frame   Margin="20,30,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
+                                    <Entry Placeholder="TEMA DO VÍDEO" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0" ></Entry>
+                                </Frame>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+
+
+
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0" Margin="0,35,0,0">
+                                <Button Text="Enviar" BackgroundColor="#527beb"  Margin="30,20,35,15" HeightRequest="60"  TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            </StackLayout>
+                        </Grid>
+                    </StackLayout>
+                   
+
+                </StackLayout>
+        </ScrollView>
+    </StackLayout>
+      
+
+</Pages:PopupPage>

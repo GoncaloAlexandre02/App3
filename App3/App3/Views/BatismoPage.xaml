@@ -30,47 +30,89 @@
         <ScrollView>
 
             <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" >
-                <Image Source="batismo.png" HeightRequest="160" Margin="0,15,0,0"></Image>
+                <StackLayout>
+                    <Image Source="batismo.png" HeightRequest="140" Margin="0,0,0,0"></Image>
+                </StackLayout>
+                
 
-                <Frame BackgroundColor="#FFFF" HeightRequest="450" HasShadow="True" Padding="0" Margin="0,5" CornerRadius="15">
+                <Frame BackgroundColor="#FFFF" HeightRequest="550" HasShadow="True" Padding="0" Margin="0,5" CornerRadius="15">
                     <StackLayout>
                         <StackLayout>
-                            <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#527beb" FontSize="17" FontAttributes="Bold" Margin="0,20,0,0"></Label>
-                        </StackLayout>
-                        <StackLayout>
-
-                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,20,0,0">
-                                <Entry x:Name="txtNome" Placeholder="Nome Completo"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250"/>
-                            </Frame>
+                            <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#527beb" FontSize="18" FontAttributes="Bold" FontFamily="RedHat-Bold" Margin="0,20,0,0"></Label>
                         </StackLayout>
 
                         <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="Nome Completo" TextTransform="Uppercase" Margin="10,15,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                </StackLayout>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
-                                <Entry x:Name="txtNcartao" Keyboard="Email" Placeholder="Email" MaxLength="16" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250" />
-                            </Frame>
+                            </Grid>
+
+                            <StackLayout>
+                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+
                         </StackLayout>
 
                         <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="1">
+                                    <Label Text="Email" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                </StackLayout>
+                            </Grid>
+                            <StackLayout>
+                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Entry x:Name="txtEmail" Placeholder="exemplo@abc.com"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
-                                <local:ExtendedDatePicker HorizontalOptions="Center"  FontSize="17" WidthRequest="180" Margin="50,0,50,0" TextColor="#4568C7" />
-                            </Frame>
                         </StackLayout>
 
-                        
+                        <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="1">
+                                    <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                </StackLayout>
+                            </Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <DatePicker x:Name="txtDtNas"  TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0"></DatePicker>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
+
+                        </StackLayout>
+
 
 
 
                         <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="1">
+                                    <Label Text="Telemovel" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                </StackLayout>
+                            </Grid>
+                            <StackLayout>
+                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                    <StackLayout Orientation="Horizontal">
+                                        <Entry x:Name="txtTelemovel" Placeholder="9########"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
+                                    </StackLayout>
+                                </Frame>
+                            </StackLayout>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="15" Margin="0,10,0,0">
-                                <Entry x:Name="txtNumTelemovel" Placeholder="Numero de Telemóvel" Keyboard="Telephone" MaxLength="9" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250"/>
-                            </Frame>
                         </StackLayout>
 
-                        <StackLayout>
-                            <Button x:Name="ButtonEnviar" Clicked="ButtonEnviar_Clicked" Text="Enviar" Margin="30,50,30,0" CornerRadius="30" HeightRequest="50" BackgroundColor="#527beb"></Button>
+                        <StackLayout Margin="20,30,20,10">
+                            <Button Text="Enviar" BackgroundColor="#527beb" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100" />
                         </StackLayout>
                     </StackLayout>
                 </Frame>

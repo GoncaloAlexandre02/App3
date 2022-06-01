@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class IgrejaPage : ContentPage
+    public partial class EventPage : ContentPage
     {
-        public IgrejaPage()
+        public EventPage()
         {
             InitializeComponent();
-        }
-
-        private async void TapGestureRecognizer_Tapped_MaisPerto(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new MaisProxPage());
         }
     }
 }

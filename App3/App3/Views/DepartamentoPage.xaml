@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.DepartamentoPage">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                              Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                              Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Departamento"></Label>
+
+            
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+
+        <ScrollView>
+
+            <StackLayout >
+
+                <Frame Margin="0,1,0,0">
+                    <StackLayout >
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                            </StackLayout>
+
+
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="Cibe" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                                <Label Text="Coordenador:"  TextColor="#4568C7" FontSize="13" FontFamily="RedHat-Semi"></Label>
+                                <Label Text="Ana cardoso" TextTransform="Uppercase"  TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>                              
+    
+                            </StackLayout>
+                            
+                           
+                           
+                        </Grid>
+                       
+
+
+                    </StackLayout>
+                </Frame>
+
+                
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="Frente Jovem" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                                <Label Text="Coordenador:"  TextColor="#4568C7" FontSize="13" FontFamily="RedHat-Semi"></Label>
+                                <Label Text="Joana Rodrigues" TextTransform="Uppercase"  TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="Catequista" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                                <Label Text="Coordenador:"  TextColor="#4568C7" FontSize="13" FontFamily="RedHat-Semi"></Label>
+                                <Label Text="João Faria" TextTransform="Uppercase"  TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+                <Frame Margin="0,5,0,0">
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout  Grid.Column="0" Grid.Row="0">
+                                <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                            </StackLayout>
+
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Label Text="Homens de Honra" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold"  ></Label>
+                                <Label Text="Coordenador:"  TextColor="#4568C7" FontSize="13" FontFamily="RedHat-Semi"></Label>
+                                <Label Text="Vieira lopes" TextTransform="Uppercase"  TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                            </StackLayout>
+
+                        </Grid>
+
+
+                    </StackLayout>
+                </Frame>
+
+            </StackLayout>
+
+        </ScrollView>
+
+        
+    </ContentPage.Content>
+</ContentPage>

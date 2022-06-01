@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Rg.Plugins.Popup.Extensions;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,9 +18,25 @@ namespace App3.Views
             InitializeComponent();
         }
 
-        private async void Button_Clicked(object sender, EventArgs e)
+        private void Button_Clicked_Youtube(object sender, EventArgs e)
         {
-            await Browser.OpenAsync("https://www.youtube.com/c/ADBETEL/featured", BrowserLaunchMode.SystemPreferred);
+            
+            scrollYoutube.IsVisible = true;
+            scrollVip.IsVisible = false;
+            AddVideo.IsVisible = false;
+           
+        }
+
+        private void Button_Clicked_VIP(object sender, EventArgs e)
+        {
+            scrollYoutube.IsVisible = false;
+            scrollVip.IsVisible = true;
+            AddVideo.IsVisible = true;
+        }
+
+        private void TapGestureRecognizer_Tapped_Add(object sender, EventArgs e)
+        {
+            Navigation.PushPopupAsync(new VideoAddPopup());
         }
     }
 }
