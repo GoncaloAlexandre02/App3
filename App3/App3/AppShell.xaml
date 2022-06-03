@@ -102,6 +102,9 @@
     <FlyoutItem Title="Configurações" Icon="gearB.png">
         <ShellContent Route="Config" ContentTemplate="{DataTemplate local:ConfigPage}" />
     </FlyoutItem>
+    <FlyoutItem Title="Idioma" Icon="gearB.png">
+        <ShellContent Route="Config" ContentTemplate="{DataTemplate local:IdiomaPage}" />
+    </FlyoutItem>
     <MenuItem Text="Sair" Clicked="OnLogout" Icon="logoutB.png">
     </MenuItem>
     <FlyoutItem IsVisible="False" Title="Home" Icon="home.png">

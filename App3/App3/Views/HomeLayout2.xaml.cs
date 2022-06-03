@@ -85,5 +85,11 @@ namespace App3.Views
         {
             await Browser.OpenAsync("https://open.spotify.com/show/7x7o7VRQifLYTzs0nEimpt?si=2727a7bfb0f048d7", BrowserLaunchMode.SystemPreferred);
         }
+
+        private async void TapGestureRecognizer_Tapped_Redes(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new RedesSociaisPage());
+
+        }
     }
 }

@@ -22,13 +22,13 @@
         <StackLayout>
             
             <StackLayout>
-                <Frame Margin="10,20,10,0" BorderColor="#cf991d" CornerRadius="10">
+                <Frame Margin="10,20,10,20" BorderColor="#cf991d" CornerRadius="10" HeightRequest="30">
                     <SearchBar Placeholder="Buscar por localidade, cidade" PlaceholderColor="#7a7a7a" TextColor="#4568C7"></SearchBar>
                 </Frame>
                 
-                <Grid  Margin="15,30,15,0" >
-                    <StackLayout>
-                        <Frame  Grid.Column="0" Grid.Row="0"   BackgroundColor="#527beb"  CornerRadius="10">
+                <Grid>
+                    <StackLayout >
+                        <Frame  Grid.Column="0" Grid.Row="0" Margin="0,10,0,0">
                             <Frame.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                             </Frame.GestureRecognizers>
@@ -36,13 +36,13 @@
                                 <StackLayout.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                                 </StackLayout.GestureRecognizers>
-                                <ImageButton  Source="icon_localizar.png" BackgroundColor="Transparent" Clicked="TapGestureRecognizer_Tapped_MaisPerto" HorizontalOptions="Start" HeightRequest="50" Margin="10,0,0,-60"></ImageButton>
-                                <Frame  TranslationY="-10"  Margin="20,0,0,-20" BackgroundColor="Transparent" >
+                                <ImageButton  Source="icon_localizar.png" BackgroundColor="Transparent" Clicked="TapGestureRecognizer_Tapped_MaisPerto" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60"></ImageButton>
+                                <Frame  TranslationY="-5"  Margin="20,0,0,-25" BackgroundColor="Transparent" >
                                     <Frame.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                                     </Frame.GestureRecognizers>
 
-                                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="White" FontSize="22" TextTransform="Uppercase" HorizontalOptions="Center" Text="Mais Perto de si">
+                                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Center" Text="Mais Perto de si">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                                         </Label.GestureRecognizers>
@@ -51,13 +51,15 @@
                             </StackLayout>
                         </Frame>
 
-                        <Frame Grid.Column="0" Grid.Row="1" Margin="0,15,0,0"  BackgroundColor="#527beb" CornerRadius="10">
+                        <Frame Grid.Column="0" Grid.Row="1" Margin="0,5,0,0">
                             <StackLayout>
 
-                                <ImageButton  Source="icon_favorito.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="50" Margin="10,0,0,-60"></ImageButton>
-                                <Frame  TranslationY="-10"  Margin="10,0,0,-20" BackgroundColor="Transparent" >
+                                <Image Source="icon_favorito.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
+                                    
+                                </Image>
+                                <Frame  TranslationY="-5"  Margin="10,0,0,-25" BackgroundColor="Transparent" >
 
-                                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="White" FontSize="22" TextTransform="Uppercase" HorizontalOptions="Center" Text="Favoritos"></Label>
+                                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Favoritos"></Label>
                                 </Frame>
                             </StackLayout>
                         </Frame>

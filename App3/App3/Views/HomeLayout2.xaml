@@ -19,24 +19,7 @@
                 </LinearGradientBrush>
             </StackLayout.Background>
             <Label FontFamily="RedHat-Medium" HorizontalOptions="Center" VerticalOptions="Center" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="AD BETEL Portugal"></Label>
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="10"  />
-                   
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    
-                </Grid.ColumnDefinitions>
-
-                <StackLayout Grid.Column="0">
-                    <ImageButton Source="icon_BanPortugal" HorizontalOptions="End" VerticalOptions="End" HeightRequest="30" Margin="30,15,0,0"></ImageButton>
-                </StackLayout>
-
-                
-
-
-            </Grid>
+            
         </StackLayout>
     </Shell.TitleView>
     
@@ -178,7 +161,7 @@
                     <StackLayout   Grid.Column="0" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
                         <ImageButton Style="{StaticResource image2}"  Source="bookT.png" BackgroundColor="Transparent"></ImageButton>
                             <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
-                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="DEVOCIONAL"></Label>
+                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="VERSÍCULO DO DIA"></Label>
                          </Frame>
                     </StackLayout>
                     <StackLayout   Grid.Column="1" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
@@ -219,7 +202,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer ></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <ImageButton Style="{StaticResource image2}"  Source="hinario.png" BackgroundColor="Transparent"></ImageButton>
+                            <ImageButton Style="{StaticResource image2}" HeightRequest="65" Source="hinario.png" BackgroundColor="Transparent"></ImageButton>
                             <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer></TapGestureRecognizer>
@@ -232,18 +215,46 @@
                             </Frame>
                         </StackLayout>
 
+                        <StackLayout   Grid.Column="1" Grid.Row="4" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Redes"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Redes" HeightRequest="63" Source="redesSociais.png" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Redes"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Redes Sociais">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Redes"></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+
+
+                        <StackLayout   Grid.Column="2" Grid.Row="4" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer ></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <ImageButton Style="{StaticResource image2}" HeightRequest="63" Source="" BackgroundColor="Transparent"></ImageButton>
+                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Igreja Social">
+                                    <Label.GestureRecognizers>
+                                        <TapGestureRecognizer></TapGestureRecognizer>
+                                    </Label.GestureRecognizers>
+                                </Label>
+                            </Frame>
+                        </StackLayout>
+
 
 
                     </Grid>
                 </ScrollView>
-                <StackLayout Margin="20,0,20,20" HorizontalOptions="Center">
-                    <Label FontFamily="RedHat" TextColor="Black" FontSize="13" HorizontalOptions="Center" Text="Nossas Redes"></Label>
-                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <ImageButton Style="{StaticResource image3}" HeightRequest="40" Margin="0" Source="instaTC.png"  BackgroundColor="Transparent"   ></ImageButton>
-                        <ImageButton HeightRequest="38" Source="faceTC.png" Margin="10,0,0,0"  BackgroundColor="Transparent"   ></ImageButton>
-
-                    </StackLayout>
-                </StackLayout>
+               
             </StackLayout>
         </ScrollView>
 
