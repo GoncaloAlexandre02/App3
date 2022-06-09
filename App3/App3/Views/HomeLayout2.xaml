@@ -159,9 +159,19 @@
                         </Frame>
                     </StackLayout>
                     <StackLayout   Grid.Column="0" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
-                        <ImageButton Style="{StaticResource image2}"  Source="bookT.png" BackgroundColor="Transparent"></ImageButton>
-                            <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
-                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="VERSÍCULO DO DIA"></Label>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Versiculo"></TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                        <ImageButton Style="{StaticResource image2}"  Source="bookT.png" BackgroundColor="Transparent" Clicked="TapGestureRecognizer_Tapped_Versiculo"></ImageButton>
+                        <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
+                                <Frame.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Versiculo"></TapGestureRecognizer>
+                                </Frame.GestureRecognizers>
+                            <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="VERSÍCULO DO DIA">
+                                <Label.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Versiculo"></TapGestureRecognizer>
+                                </Label.GestureRecognizers>
+                            </Label>
                          </Frame>
                     </StackLayout>
                     <StackLayout   Grid.Column="1" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
@@ -200,16 +210,16 @@
 
                         <StackLayout   Grid.Column="0" Grid.Row="4" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer ></TapGestureRecognizer>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Hinario"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <ImageButton Style="{StaticResource image2}" HeightRequest="65" Source="hinario.png" BackgroundColor="Transparent"></ImageButton>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Hinario" HeightRequest="65" Source="hinario.png" BackgroundColor="Transparent"></ImageButton>
                             <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer></TapGestureRecognizer>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Hinario"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
                                 <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Hinário">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer></TapGestureRecognizer>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Hinario"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
                                 </Label>
                             </Frame>
@@ -235,16 +245,16 @@
 
                         <StackLayout   Grid.Column="2" Grid.Row="4" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer ></TapGestureRecognizer>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Socia"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <ImageButton Style="{StaticResource image2}" HeightRequest="63" Source="" BackgroundColor="Transparent"></ImageButton>
+                            <ImageButton Style="{StaticResource image2}" HeightRequest="63" Source="icon_igrejaSocial.png" Clicked="TapGestureRecognizer_Tapped_Socia" BackgroundColor="Transparent"></ImageButton>
                             <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer></TapGestureRecognizer>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Socia"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
                                 <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Igreja Social">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer></TapGestureRecognizer>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Socia"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
                                 </Label>
                             </Frame>

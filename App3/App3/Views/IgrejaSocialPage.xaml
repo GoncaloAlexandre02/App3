@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.IgrejaSocialPage">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Igreja Social"></Label>
+
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Orientation="Vertical">
+                <StackLayout>
+                    <Frame Margin="10,20,10,0" CornerRadius="10">
+                        <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Tipos de Doação" HorizontalTextAlignment="Center" FontFamily="Dosis-SemiBold">
+                            <Picker.Items>
+                                <x:String>Roupa</x:String>
+                                <x:String>Móveis</x:String>
+                                <x:String>Emprego</x:String>
+                            </Picker.Items>
+                        </Picker>
+                    </Frame>
+                </StackLayout> 
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

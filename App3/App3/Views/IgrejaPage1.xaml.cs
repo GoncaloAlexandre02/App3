@@ -10,9 +10,9 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class MaisProxPage : ContentPage
+    public partial class IgrejaPage1 : ContentPage
     {
-        public MaisProxPage()
+        public IgrejaPage1()
         {
             InitializeComponent();
         }

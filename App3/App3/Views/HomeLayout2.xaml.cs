@@ -91,5 +91,20 @@ namespace App3.Views
             await Navigation.PushAsync(new RedesSociaisPage());
 
         }
+
+        private async void TapGestureRecognizer_Tapped_Hinario(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new HinarioPage1());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Versiculo(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new VersiculoPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Socia(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IgrejaSocialPage());
+        }
     }
 }

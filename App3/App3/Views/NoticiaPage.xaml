@@ -21,29 +21,22 @@
     </Shell.TitleView>
     
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200">
-                    <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="1">
-                            <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+        <StackLayout>
+            <ListView x:Name="lista" ItemSelected="lista_ItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate >
+                        <ViewCell>
+                            <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                <Label FontSize="23" Text="{Binding dataNoticia}" FontFamily="RedHat-Bold" />
+                            </StackLayout>
+                        </ViewCell>
 
-                        </StackLayout>
-                    </Grid>
-                    
-                </Frame>
-                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200" >
-                    <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="1">
-                            <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                            <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
 
-                        </StackLayout>
-                    </Grid>
-
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+        </StackLayout>
+        
+        
     </ContentPage.Content>
 </ContentPage>

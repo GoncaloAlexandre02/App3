@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.NoticiaPage1">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                              Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                              Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Notícias"></Label>
+
+
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200">
+                    <Grid>
+                        <StackLayout Grid.Column="0" Grid.Row="1">
+                            <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                        </StackLayout>
+                    </Grid>
+
+                </Frame>
+                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200" >
+                    <Grid>
+                        <StackLayout Grid.Column="0" Grid.Row="1">
+                            <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                            <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                        </StackLayout>
+                    </Grid>
+
+                </Frame>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
