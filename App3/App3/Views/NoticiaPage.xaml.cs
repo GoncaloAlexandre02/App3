@@ -20,7 +20,7 @@ namespace App3.Views
         public NoticiaPage()
         {
             InitializeComponent();
-            noticiaList.Add(new Noticia() { dataNoticia = "06/06/2022"});
+            noticiaList.Add(new Noticia() { dataNoticia = "06 de jun de 2022"});
             lista.ItemsSource = noticiaList;
         }
 

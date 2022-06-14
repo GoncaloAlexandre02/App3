@@ -41,6 +41,9 @@
             <StackLayout>
                 <Label Margin="0,20,0,0" Text="Salmos 28:7"  FontSize="16" HorizontalOptions="Center" TextColor="#4568C7" ></Label>
             </StackLayout>
+            <StackLayout>
+                <Label  Margin="0,20,0,0" Text="Ver Mais"  FontSize="16" HorizontalOptions="Center" TextColor="#4568C7" ></Label>
+            </StackLayout>
             
         </StackLayout>
        

@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.IgrejaPage2">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Quinta do Conde"></Label>
+
+        </StackLayout>
+    </Shell.TitleView>
+    
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <ScrollView>
+
+                <StackLayout>
+                    <Frame >
+                        <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="RedHat-Bold" TextColor="#4568C7"></Label>
+
+                                </StackLayout>
+                                <StackLayout>
+                                    <Image Source="icon_BanPortugal.png" HorizontalOptions="End" HeightRequest="30" ></Image>
+                                </StackLayout>
+                                <StackLayout Grid.Column="0" Grid.Row="1">
+                                    <Label Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="RedHat" TextColor="#4568C7"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                    <Frame >
+                        <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Image Source="icon_localizar.png" HorizontalOptions="Start" HeightRequest="30"></Image>
+                                </StackLayout>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="Av.Cova dos Vidros,49,Quinta do Conde, Sesimbra" HorizontalOptions="Center" Margin="10,5,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+
+                    </Frame>
+                    <Frame >
+                        <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Image Source="icon_relogio.png" HorizontalOptions="Start" HeightRequest="30"></Image>
+                                </StackLayout>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="Horario" HorizontalOptions="Start" Margin="40,5,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                    <Frame >
+                        <StackLayout>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Image Source="icon_telemovel.png" HorizontalOptions="Start" HeightRequest="30"></Image>
+                                </StackLayout>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="(21) 4069021" HorizontalOptions="Start" Margin="40,5,0,0"></Label>
+                                </StackLayout>
+                            </Grid>
+                        </StackLayout>
+                    </Frame>
+                </StackLayout>
+                   
+                
+            </ScrollView>
+
+
+            
+
+
+
+
+        </StackLayout>
+        
+    </ContentPage.Content>
+</ContentPage>

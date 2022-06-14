@@ -23,9 +23,14 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200">
+                
+                <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5,10" >
+                    <Label FontSize="21" Text="06 de jun de 2022" FontFamily="RedHat-Bold" TextColor="#4568C7" />
+                </StackLayout>
+                
+                <Frame >
                     <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="1">
+                        <StackLayout >
                             <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
                             <Label Text="Missões urbanas no concelho de Santa Maria da Feira"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
 
@@ -33,9 +38,9 @@
                     </Grid>
 
                 </Frame>
-                <Frame BorderColor="#cf991d" Margin="35,25,35,0" HeightRequest="200" >
+                <Frame  >
                     <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="1">
+                        <StackLayout >
                             <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
                             <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
 

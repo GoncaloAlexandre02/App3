@@ -16,5 +16,10 @@ namespace App3.Views
         {
             InitializeComponent();
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IgrejaPage2());
+        }
     }
 }
