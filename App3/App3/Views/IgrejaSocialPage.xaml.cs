@@ -16,5 +16,26 @@ namespace App3.Views
         {
             InitializeComponent();
         }
+
+        private void buttonCamisola_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola.BorderColor = Color.Blue;
+            buttonEmprego.BorderColor = Color.Transparent;
+            buttonMoveis.BorderColor = Color.Transparent;
+        }
+
+        private void buttonEmprego_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola.BorderColor = Color.Transparent;
+            buttonEmprego.BorderColor = Color.Blue;
+            buttonMoveis.BorderColor = Color.Transparent;
+        }
+
+        private void buttonMoveis_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola.BorderColor = Color.Transparent;
+            buttonEmprego.BorderColor = Color.Transparent;
+            buttonMoveis.BorderColor = Color.Blue;
+        }
     }
 }

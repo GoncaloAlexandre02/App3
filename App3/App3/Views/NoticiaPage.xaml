@@ -22,18 +22,38 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lista" ItemSelected="lista_ItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate >
-                        <ViewCell>
-                            <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                <Label FontSize="23" Text="{Binding dataNoticia}" FontFamily="RedHat-Bold" />
-                            </StackLayout>
-                        </ViewCell>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"  />
+                    
+                </Grid.RowDefinitions>
+                
+                <StackLayout Grid.Row="0">
+                    <Frame HeightRequest="25">
+                        <SearchBar Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#4568C7"></SearchBar>
+                    </Frame>
+                </StackLayout>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
+                <ScrollView Grid.Row="1" >
+                    <StackLayout >
+                        <ListView x:Name="lista" ItemSelected="lista_ItemSelected" >
+                            <ListView.ItemTemplate >
+                                <DataTemplate >
+                                    <ViewCell
+                                        <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                            <Label FontSize="18" Text="{Binding dataNoticia}" FontFamily="RedHat-SemiBold" Margin="10,0,0,0" TextColor="#4568C7"/>
+                                        </StackLayout>
+                                    </ViewCell>
+
+                                </DataTemplate>
+                            </ListView.ItemTemplate>
+                        </ListView>
+                    </StackLayout>
+                </ScrollView>
+            </Grid>
+            
+            
+            
 
         </StackLayout>
         

@@ -22,11 +22,13 @@ namespace App3.Views
             InitializeComponent();
             noticiaList.Add(new Noticia() { dataNoticia = "06 de jun de 2022"});
             lista.ItemsSource = noticiaList;
+           
         }
 
         async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             await Navigation.PushAsync(new NoticiaPage1());
+           
         }
     }
 }

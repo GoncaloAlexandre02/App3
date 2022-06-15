@@ -34,15 +34,15 @@
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Margin="20,60,20,0" FontSize="22" TextColor="#4568C7"  HorizontalTextAlignment="Center" FontFamily="RedHat-Bold" HorizontalOptions="Center" Text="O Senhor é a minha força e o meu escudo nele o meu coração confia, e dele recebo ajuda. Meu coração exulta de alegria, e com o meu cântico lhe darei graças.">
+                <Label Margin="20,60,20,0" FontSize="18" TextColor="#4568C7"  HorizontalTextAlignment="Center" FontFamily="RedHat-SemiBold" HorizontalOptions="Center" Text="O Senhor é a minha força e o meu escudo nele o meu coração confia, e dele recebo ajuda. Meu coração exulta de alegria, e com o meu cântico lhe darei graças.">
                 </Label>
             </StackLayout>
       
             <StackLayout>
-                <Label Margin="0,20,0,0" Text="Salmos 28:7"  FontSize="16" HorizontalOptions="Center" TextColor="#4568C7" ></Label>
+                <Label Margin="0,30,0,0" Text="Salmos 28:7"  FontSize="16" HorizontalOptions="Center" FontFamily="RedHat-Bold" TextColor="#4568C7" ></Label>
             </StackLayout>
-            <StackLayout>
-                <Label  Margin="0,20,0,0" Text="Ver Mais"  FontSize="16" HorizontalOptions="Center" TextColor="#4568C7" ></Label>
+            <StackLayout >
+                <Button  Margin="0,40,0,0" Text="Leia Mais" BackgroundColor="#4568C7"  FontSize="15" HorizontalOptions="Center"  FontFamily="RedHat-Bold" TextColor="White" ></Button>
             </StackLayout>
             
         </StackLayout>

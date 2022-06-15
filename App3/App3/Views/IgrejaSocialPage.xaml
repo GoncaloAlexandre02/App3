@@ -1,6 +1,7 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="App3.Views.IgrejaSocialPage">
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
@@ -19,21 +20,52 @@
     </Shell.TitleView>
     
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout Orientation="Vertical">
-                <StackLayout>
-                    <Frame Margin="10,20,10,0" CornerRadius="10">
-                        <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Tipos de Doação" HorizontalTextAlignment="Center" FontFamily="Dosis-SemiBold">
-                            <Picker.Items>
-                                <x:String>Roupa</x:String>
-                                <x:String>Móveis</x:String>
-                                <x:String>Emprego</x:String>
-                            </Picker.Items>
-                        </Picker>
-                    </Frame>
-                </StackLayout> 
-            </StackLayout>
-        </ScrollView>
+        <StackLayout>
+            <StackLayout Margin="12,50,0,50">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="70"></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                    <ColumnDefinition Width="115"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+
+
+                    <ImageButton Source="icon_camisola.png" x:Name="buttonCamisola" Clicked="buttonCamisola_Clicked" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
+
+                    <ImageButton Source="icon_emprego.png" x:Name="buttonEmprego" Clicked="buttonEmprego_Clicked" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent" BorderWidth="3"></ImageButton>
+
+                    <ImageButton Source="icon_moveis.png" x:Name="buttonMoveis" Clicked="buttonMoveis_Clicked" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
+
+
+
+            </Grid>
+        </StackLayout>
+            <ScrollView>
+                <StackLayout Orientation="Vertical">
+              
+                
+                <Frame Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946">
+                    <Editor HeightRequest="190" Placeholder="Mensagem" FontFamily="Dosis-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0" />
+                </Frame>
+
+                    <StackLayout>
+                        <Button Text="Enviar" BackgroundColor="#527beb"  Margin="30,20,35,15" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                    </StackLayout>
+
+                </StackLayout>
+                
+            </ScrollView>
+
+            
+        </StackLayout>
+        
+
+           
+        
         
     </ContentPage.Content>
 </ContentPage>
