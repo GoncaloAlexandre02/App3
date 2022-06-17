@@ -31,33 +31,27 @@ namespace App3.Views
         void OnPickerSelectedIndexChanged(object sender, EventArgs e)
         {
             var chList = new List<Int32>();
-            var selectedIndex = pickerB.SelectedItem as Biblia;
-            titleL.Text = selectedIndex.Nome;
+            
 
             // aa.Text = selectedIndex.Id;
 
-            for (int i = 1; i <= selectedIndex.Ch; i++)
-                chList.Add(i);
-            titleLN.Text = "1";
-            pickerC.ItemsSource = chList;
-
-            AtualizaDados("1", selectedIndex.Id.ToString());
+            
         }
         void OnPickerSelectedIndexChangedCh(object sender, EventArgs e)
         {
-            var selectedIndex = pickerB.SelectedItem as Biblia;
-            var selectedCh = pickerC.SelectedItem;
+            
+           
             try
             {
-                titleLN.Text = selectedCh.ToString();
+                
 
-                AtualizaDados(selectedCh.ToString(), selectedIndex.Id.ToString());
+                
             }
             catch (Exception ex)
             {
                 titleLN.Text = "1";
 
-                AtualizaDados("1", selectedIndex.Id.ToString());
+                
 
             }
 
@@ -74,5 +68,9 @@ namespace App3.Views
 
         }
 
+        async private void Button_Clicked_Livro(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BibliaLivroPage());
+        }
     }
 }

@@ -21,34 +21,91 @@
     </Shell.TitleView>
     
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                
-                <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5,10" >
-                    <Label FontSize="21" Text="06 de jun de 2022" FontFamily="RedHat-Bold" TextColor="#4568C7" />
+        <StackLayout>
+            
+        
+            <ScrollView >
+                <StackLayout>
+                    
+                        <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="50"></RowDefinition>
+                        </Grid.RowDefinitions>
+                        <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5,10" Grid.Row="0" >
+                        <Label FontSize="21" Text="06 de jun de 2022" FontFamily="RedHat-SemiBold" TextColor="#4568C7" />
+                    </StackLayout>
+
+                    <Frame Grid.Row="1" >
+                        <StackLayout>
+                            <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="540"></RowDefinition>
+                                    </Grid.RowDefinitions>
+                                
+                                        <StackLayout>
+                                            <StackLayout >
+                                            <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                                        </StackLayout>
+
+                                        <StackLayout Margin="0,20,0,0">
+                                            <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                                            <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                                        </StackLayout>
+                            </StackLayout>
+                                    
+                            </Grid>
+                        </StackLayout>
+                    
+
+                    </Frame>
+                    </Grid>
+                    
+                    
+
+                    
                 </StackLayout>
                 
-                <Frame >
+            </ScrollView>
+
+
+            <Frame>
+                <StackLayout>
                     <Grid>
-                        <StackLayout >
-                            <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"></RowDefinition>
 
-                        </StackLayout>
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <ImageButton Source="zoomMais.png" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="zoomMenos.png" BackgroundColor="Transparent"  Grid.Column="1" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="icon_sol.png" BackgroundColor="Transparent" Grid.Column="2"   BorderColor="Transparent"></ImageButton>
+
+
+
                     </Grid>
+                </StackLayout>
+            </Frame>
 
-                </Frame>
-                <Frame  >
-                    <Grid>
-                        <StackLayout >
-                            <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                            <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
 
-                        </StackLayout>
-                    </Grid>
 
-                </Frame>
-            </StackLayout>
-        </ScrollView>
+
+
+
+
+
+        </StackLayout>
+
+
     </ContentPage.Content>
 </ContentPage>
