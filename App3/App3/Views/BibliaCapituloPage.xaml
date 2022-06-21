@@ -21,13 +21,13 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lista" ItemsSource="{Binding Biblia}">
+            <ListView x:Name="listaC" ItemsSource="{Binding Biblia}" >
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout
                                 Orientation="Vertical" VerticalOptions="Center" Margin="10,5,0,0">
-                                <Label FontSize="20" Text="{Binding Nome}" FontFamily="RedHat-SemiBold" TextColor="#4568C7" />
+                                <Label FontSize="20" Text="{Binding Ch}" FontFamily="RedHat-SemiBold" TextColor="#4568C7" />
                             </StackLayout>
                         </ViewCell>
 

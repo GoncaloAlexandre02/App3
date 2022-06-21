@@ -28,36 +28,8 @@ namespace App3.Views
             AtualizaDados("1", "gen");
 
         }
-        void OnPickerSelectedIndexChanged(object sender, EventArgs e)
-        {
-            var chList = new List<Int32>();
-            
-
-            // aa.Text = selectedIndex.Id;
-
-            
-        }
-        void OnPickerSelectedIndexChangedCh(object sender, EventArgs e)
-        {
-            
-           
-            try
-            {
-                
-
-                
-            }
-            catch (Exception ex)
-            {
-                titleLN.Text = "1";
-
-                
-
-            }
-
-
-
-        }
+        
+        
         async void AtualizaDados(string chapter, string book)
         {
             aa.Text = "";
@@ -71,6 +43,11 @@ namespace App3.Views
         async private void Button_Clicked_Livro(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new BibliaLivroPage());
+        }
+
+        async void Button_Clicked_Capitulo(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new BibliaCapituloPage());
         }
     }
 }

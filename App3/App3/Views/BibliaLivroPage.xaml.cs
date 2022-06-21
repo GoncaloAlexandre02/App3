@@ -89,5 +89,10 @@ namespace App3.Views
             book.Add(new Biblia { Id = "jud", Nome = "[Jd] Judas", Ch = 1 });
             book.Add(new Biblia { Id = "rev", Nome = "[Ap] Apocalipse", Ch = 22 });
         }
+
+        async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            await Navigation.PushAsync(new BibliaCapituloPage());
+        }
     }
 }

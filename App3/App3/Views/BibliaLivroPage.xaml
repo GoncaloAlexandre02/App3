@@ -22,7 +22,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <ListView x:Name="lista" ItemsSource="{Binding Biblia}">
+            <ListView x:Name="lista" ItemsSource="{Binding Biblia}" ItemSelected="lista_ItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>                        
                         <ViewCell>
