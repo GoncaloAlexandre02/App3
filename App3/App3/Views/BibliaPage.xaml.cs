@@ -28,8 +28,18 @@ namespace App3.Views
             AtualizaDados("1", "gen");
 
         }
-        
-        
+        public BibliaPage (string nomebook,string book, string chapter)
+        {
+            InitializeComponent();
+            Navigation.ShowPopup(new PopUpLoading());
+            restService = new RestService();
+            titleL.Text = nomebook;
+            titleLN.Text = chapter;
+            AtualizaDados(chapter, book);
+
+
+        }
+
         async void AtualizaDados(string chapter, string book)
         {
             aa.Text = "";
@@ -42,6 +52,7 @@ namespace App3.Views
 
         async private void Button_Clicked_Livro(object sender, EventArgs e)
         {
+            
             await Navigation.PushAsync(new BibliaLivroPage());
         }
 

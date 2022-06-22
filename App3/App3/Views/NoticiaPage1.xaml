@@ -44,7 +44,6 @@
                                 
                                         <StackLayout>
                                             <StackLayout >
-                                            <Label Text="Projeto Social Cuidando de Vidas" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
                                             <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
 
                                         </StackLayout>

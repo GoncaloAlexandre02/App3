@@ -40,9 +40,20 @@
                             <ListView.ItemTemplate >
                                 <DataTemplate >
                                     <ViewCell>
-                                        <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                            <Label FontSize="18" Text="{Binding dataNoticia}" FontFamily="RedHat-SemiBold" Margin="10,0,0,0" TextColor="#4568C7"/>
-                                        </StackLayout>
+                                        <Grid>
+                                            <Grid.ColumnDefinitions>
+                                                <ColumnDefinition Width="1*"></ColumnDefinition>
+                                                
+                                            </Grid.ColumnDefinitions>
+                                            
+                                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                                <Label  FontSize="16" Text="{Binding tituloNoticia}" FontFamily="RedHat-SemiBold"  TextColor="#4568C7"/>
+                                            </StackLayout>
+                                            <StackLayout Grid.Column="1">
+                                                <Label FontSize="16" Text="{Binding dataNoticia}"  FontFamily="RedHat-SemiBold" Margin="45,0,0,0" TextColor="#4568C7"/>
+                                            </StackLayout>
+                                        </Grid>
+                                        
                                     </ViewCell>
 
                                 </DataTemplate>

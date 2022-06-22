@@ -90,6 +90,7 @@ namespace App3.Views
             book.Add(new Biblia { Id = "rev", Nome = "[Ap] Apocalipse", Ch = 22 });
         }
 
+        
         async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             await Navigation.PushAsync(new BibliaCapituloPage());
