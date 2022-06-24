@@ -53,7 +53,8 @@ namespace App3.Views
         async private void Button_Clicked_Livro(object sender, EventArgs e)
         {
             
-            await Navigation.PushAsync(new BibliaLivroPage());
+            await Navigation.PushModalAsync(new BibliaLivroPage());
+            
         }
 
         async void Button_Clicked_Capitulo(object sender, EventArgs e)

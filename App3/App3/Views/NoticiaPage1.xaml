@@ -31,9 +31,7 @@
                         <Grid.RowDefinitions>
                             <RowDefinition Height="50"></RowDefinition>
                         </Grid.RowDefinitions>
-                        <StackLayout  Orientation="Vertical" VerticalOptions="Center" Margin="5,10" Grid.Row="0" >
-                        <Label FontSize="21" Text="06 de jun de 2022" FontFamily="RedHat-SemiBold" TextColor="#4568C7" />
-                    </StackLayout>
+                        
 
                     <Frame Grid.Row="1" >
                         <StackLayout>

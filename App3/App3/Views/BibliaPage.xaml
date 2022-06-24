@@ -1,21 +1,21 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.BibliaPage"
-             xmlns:vm="clr-namespace:App3.Models;assembly=App3"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"     
-             BackgroundColor="#ededed"
-             Title="Bíblia">
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="App3.Views.BibliaPage"
+                 xmlns:vm="clr-namespace:App3.Models;assembly=App3"
+                 xmlns:xct="http://xamarin.com/schemas/2020/toolkit"     
+                 BackgroundColor="#ededed"
+                 Title="Bíblia">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+        <StackLayout Orientation="Horizontal"  BackgroundColor="White">
             <StackLayout.Background>
                 <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
+                                 EndPoint="1,0">
                     <GradientStop Color="#527beb"
-                          Offset="0.1"/>
+                              Offset="0.1"/>
                     <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
+                              Offset="2.0"/>
                 </LinearGradientBrush>
             </StackLayout.Background>
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Bíblia"></Label>
@@ -23,31 +23,32 @@
         </StackLayout>
     </Shell.TitleView>
 
-    <ContentPage.Content>
-        <StackLayout>
-            <ScrollView>
+    <Grid >
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="56" />
+        </Grid.RowDefinitions>
+        
+
+        <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White">
+            <Button  Margin="10,5,0,0" Text="Livro" BackgroundColor="#4568C7" Clicked="Button_Clicked_Livro" FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
+        </StackLayout>
+        <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White">
+            <Button  Margin="0,5,10,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#4568C7"  FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
+        </StackLayout>
+
+
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0">
+
+            <ScrollView BackgroundColor="White">
                 <StackLayout >
-                    <StackLayout Margin="15,0,15,40" Orientation="Vertical"  HorizontalOptions="Center">
 
-                        <Grid>
-                            <StackLayout Grid.Column="0" Grid.Row="0">
-                                <Button  Margin="0,20,0,0" Text="Livro" BackgroundColor="#4568C7" Clicked="Button_Clicked_Livro" FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
-                            </StackLayout>
-                            <StackLayout Grid.Column="1" Grid.Row="0" >
-                                <Button  Margin="0,20,0,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#4568C7"  FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
-                            </StackLayout>
-                            
-                        </Grid>
 
-                        
-                        
-                    </StackLayout>
-                    
-                    
-                    
+
+
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,0,0,0" Text="[Gn] Gênesis"></Label>
-                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,0,0,0" Text="1"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="[Gn] Gênesis"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
                     </StackLayout>
                     <StackLayout>
                         <Label Padding="20" HorizontalTextAlignment="Start" FontFamily="RedHat-SemiBold" FontSize="16" TextColor="#4d4d4d" x:Name="aa"></Label>
@@ -86,6 +87,6 @@
 
             </StackLayout>
         </StackLayout>
+    </Grid>
 
-    </ContentPage.Content>
 </ContentPage>

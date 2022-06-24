@@ -91,9 +91,26 @@ namespace App3.Views
         }
 
         
-        async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        private async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            await Navigation.PushAsync(new BibliaCapituloPage());
+            //await Navigation.PushAsync(new BibliaCapituloPage());
+            capitulo.FontFamily = "RedHat-Bold";
+            livro.FontFamily = "RedHat-SemiBold";
+            lista.IsVisible = false;
+        }
+
+        private void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
+        {
+            livro.FontFamily = "RedHat-Bold";
+            capitulo.FontFamily = "RedHat-SemiBold";
+            lista.IsVisible = true;
+        }
+
+        private void TapGestureRecognizer_Tapped_capitulo(object sender, EventArgs e)
+        {
+            capitulo.FontFamily = "RedHat-Bold";
+            livro.FontFamily = "RedHat-SemiBold";
+            lista.IsVisible=false;
         }
     }
 }
