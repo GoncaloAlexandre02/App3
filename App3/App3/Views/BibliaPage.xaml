@@ -31,14 +31,14 @@
         
 
         <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White">
-            <Button  Margin="10,5,0,0" Text="Livro" BackgroundColor="#4568C7" Clicked="Button_Clicked_Livro" FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
+            <Button  Margin="10,5,0,0" Text="Livro" BackgroundColor="#527beb" Clicked="Button_Clicked_Livro" FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
         </StackLayout>
         <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White">
-            <Button  Margin="0,5,10,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#4568C7"  FontSize="15"   FontFamily="RedHat-SemiBold" TextColor="White" ></Button>
+            <Button  Margin="0,5,10,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#527beb"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
         </StackLayout>
 
 
-        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0">
+        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" BackgroundColor="White">
 
             <ScrollView BackgroundColor="White">
                 <StackLayout >
@@ -47,16 +47,19 @@
 
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="[Gn] Gênesis"></Label>
-                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="RedHat-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="[Gn] Gênesis"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
                     </StackLayout>
                     <StackLayout>
-                        <Label Padding="20" HorizontalTextAlignment="Start" FontFamily="RedHat-SemiBold" FontSize="16" TextColor="#4d4d4d" x:Name="aa"></Label>
+                        <Label Padding="20" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="16" TextColor="#4d4d4d" x:Name="aa"></Label>
                     </StackLayout>
+
+                    
 
                 </StackLayout>
 
             </ScrollView>
+            
             <StackLayout>
 
                 <Frame>
@@ -70,6 +73,7 @@
                                 <ColumnDefinition Width="115"></ColumnDefinition>
                                 <ColumnDefinition Width="115"></ColumnDefinition>
                                 <ColumnDefinition Width="115"></ColumnDefinition>
+                                
                             </Grid.ColumnDefinitions>
 
 
@@ -79,7 +83,8 @@
 
                             <ImageButton Source="icon_sol.png" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
 
-
+                            <Image Grid.Column="0"  Source="icon_setaesquerda" TranslationY="-250" TranslationX="-30" HeightRequest="10"></Image>
+                            <Image Grid.Column="2" Source="icon_setadireita" TranslationY="-250" TranslationX="30" HeightRequest="10"></Image>
 
                         </Grid>
                     </StackLayout>

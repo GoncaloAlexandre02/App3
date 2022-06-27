@@ -1,4 +1,5 @@
-﻿using System;
+﻿using App3.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +13,12 @@ namespace App3.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class NoticiaPage1 : ContentPage
     {
+        
         public NoticiaPage1()
         {
             InitializeComponent();
+            
+
         }
     }
 }

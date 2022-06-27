@@ -26,43 +26,50 @@
         
             <ScrollView >
                 <StackLayout>
-                    
-                        <Grid>
+
+                    <Grid>
                         <Grid.RowDefinitions>
-                            <RowDefinition Height="50"></RowDefinition>
+                            <RowDefinition Height="70"></RowDefinition>
                         </Grid.RowDefinitions>
+
+                        
+                            <StackLayout HeightRequest="0">
+                                <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                    <Label  FontSize="18" Margin="10,5,0,0" Text="Projeto Social Cuidando de Vidas" FontFamily="OpenSans-SemiBold"  TextColor="#4568C7"/>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                <Label FontSize="16" Text="06 de jun de 2022"  FontFamily="OpenSans-SemiBold" Margin="10,0,0,0" HorizontalOptions="Start" TextColor="#4568C7"/>
+                                </StackLayout>
+                            </StackLayout>
+
                         
 
-                    <Frame Grid.Row="1" >
-                        <StackLayout>
-                            <Grid>
+                        <Frame Grid.Row="1" >
+                            <StackLayout>
+                                <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="540"></RowDefinition>
                                     </Grid.RowDefinitions>
-                                
-                                        <StackLayout>
-                                            <StackLayout >
-                                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                                    <StackLayout>
+                                        <StackLayout >
+                                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
 
                                         </StackLayout>
 
-                                        <StackLayout Margin="0,20,0,0">
-                                            <Label Text="Destribuição de Alimentos" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                                            <Label Text="Missões no bairro sociais da Bela Vista "   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+                                        
+                                    </StackLayout>
 
-                                        </StackLayout>
+                                </Grid>
                             </StackLayout>
-                                    
-                            </Grid>
-                        </StackLayout>
-                    
 
-                    </Frame>
+
+                        </Frame>
                     </Grid>
-                    
-                    
 
-                    
+
+
+
                 </StackLayout>
                 
             </ScrollView>

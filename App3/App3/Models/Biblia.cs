@@ -8,6 +8,7 @@ namespace App3.Models
     {
         public string Id { get; set; }
         public string Nome  { get; set; }
+        public string Sigla { get; set; }
         public int Ch { get; set; }
 
     }

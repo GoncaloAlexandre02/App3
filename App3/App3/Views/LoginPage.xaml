@@ -23,7 +23,7 @@
                             </LinearGradientBrush>
                         </Frame.Background>
 
-                        <Label Text="BEM VINDO" FontFamily="RedHat-SemiBold" TextColor="White" HorizontalOptions="Center" FontSize="35" Margin="0,40,0,0"></Label>
+                        <Label Text="BEM VINDO" FontFamily="OpenSans-SemiBold" TextColor="White" HorizontalOptions="Center" FontSize="35" Margin="0,40,0,0"></Label>
                     </Frame>
 
 
@@ -69,7 +69,7 @@
                                     </StackLayout>
 
                                     <StackLayout>
-                                        <Button Text="Entrar" Clicked="Button_ClickedAsync" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="10,30,10,0"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                                        <Button Text="Entrar" Clicked="Button_ClickedAsync" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="10,30,10,0"  FontFamily="OpenSans-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
 
                                     </StackLayout>
 
