@@ -18,6 +18,9 @@ namespace App3.Views
 
         RestService restService;
         Root biblia;
+        int livroch;
+        string livronome;
+        string livroid;
         public BibliaCapituloPage()
         {
 
@@ -25,7 +28,7 @@ namespace App3.Views
             var chList = new List<Int32>();
 
             restService = new RestService();
-           
+
 
 
             var selectedIndex = listaC.SelectedItem as Biblia;
@@ -33,15 +36,38 @@ namespace App3.Views
                 chList.Add(i);
             listaC.ItemsSource = chList;
 
-        }
 
-        public BibliaCapituloPage(string nomebook, string book, string chapter)
+        }
+        public BibliaCapituloPage(string id, string nome, int ch)
         {
+            InitializeComponent();
+            var chList = new List<Item>();
+            livroch = ch;
+            livronome = nome;
+            livroid = id;
+            restService = new RestService();
+
+            for (int i = 1; i <= ch; i++)
+            {
+                chList.Add(new Item { Id = i.ToString() });
+
+            }
+
+            listaC.ItemsSource = chList;
+
 
         }
 
+        private async void listaC_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+        {
+            var item = (Item)listaC.SelectedItem;
+            await Navigation.PushModalAsync(new BibliaPage(livronome, livroid, item.Id));
 
+        }
+        private async void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new BibliaLivroPage());
 
-
+        }
     }
 }

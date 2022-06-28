@@ -93,10 +93,13 @@ namespace App3.Views
         
         private async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            //await Navigation.PushAsync(new BibliaCapituloPage());
-           // capitulo.FontFamily = "RedHat-Bold";
-            //livro.FontFamily = "RedHat-SemiBold";
-            //lista.IsVisible = false;
+            var item = (Biblia)lista.SelectedItem;
+            var itemnome = item.Nome;
+            var itemch = item.Ch;
+            var itemid = item.Id;
+
+            // assuiming Club has an Id property
+            await Navigation.PushModalAsync(new BibliaCapituloPage(itemid, itemnome, itemch));
         }
 
         private void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
