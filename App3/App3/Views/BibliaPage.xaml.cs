@@ -12,6 +12,7 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
+    
     public partial class BibliaPage : ContentPage
     {
         RestService restService;
@@ -128,8 +129,17 @@ namespace App3.Views
 
         async void Button_Clicked_Capitulo(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new BibliaLivroPage());
+            await Navigation.PushModalAsync(new BibliaCapituloPage());
         }
 
+       
+        private void ImageButton_Clicked_ZoomMais(object sender, EventArgs e)
+        {
+
+            
+
+
+
+        }
     }
 }

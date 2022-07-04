@@ -31,14 +31,20 @@
         </StackLayout>
     </Shell.TitleView>
     <ContentPage.Content>
+        
         <StackLayout>
+            <StackLayout>
+                <Frame HeightRequest="25">
+                    <SearchBar Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="OpenSans-SemiBold"></SearchBar>
+                </Frame>
+            </StackLayout>
             <ListView x:Name="lista" ItemSelected="OnItemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <ViewCell>
                             <StackLayout
                         Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                <Label FontSize="23" Text="{Binding NomeHinario}" FontFamily="RedHat-Bold" />
+                                <Label FontSize="20" Text="{Binding NomeHinario}" FontFamily="OpenSans-SemiBold" TextColor="#4568C7" />
                             </StackLayout>
                         </ViewCell>
 

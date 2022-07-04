@@ -33,27 +33,32 @@
 
                 </Frame>
             </StackLayout>
-            <ListView x:Name="listaC" ItemSelected="listaC_ItemSelected" >
-                <ListView.ItemTemplate>
-                    <DataTemplate>
-                        <ViewCell >
-                            <StackLayout Orientation="Vertical"  VerticalOptions="Center" Margin="10,5,0,0">
-                                <Grid>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="60"></ColumnDefinition>
-                                    </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" FontSize="20" Text="{Binding Id}" FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center" BackgroundColor="#527beb" TextColor="White"  ></Label>
-                                </Grid>
-                            </StackLayout>
 
-                        </ViewCell>
-
-                    </DataTemplate>
-
-
-                </ListView.ItemTemplate>
-
-            </ListView>
+            <StackLayout Margin="20,5,0,0">
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                        <ColumnDefinition Width="80"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    
+                    <Frame Grid.Column="0"  BackgroundColor="#527beb" >
+                        <Label Text="1" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                    </Frame>
+                    <Frame Grid.Column="1"  BackgroundColor="#527beb" >
+                        <Label Text="2" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                    </Frame>
+                    <Frame Grid.Column="2"  BackgroundColor="#527beb" >
+                        <Label Text="3" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                    </Frame>
+                    <Frame Grid.Column="3"  BackgroundColor="#527beb" >
+                        <Label Text="4" HorizontalTextAlignment="Center" TextColor="White"></Label>
+                    </Frame>
+                </Grid>
+                
+            </StackLayout>
+            
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

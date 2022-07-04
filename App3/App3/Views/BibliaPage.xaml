@@ -77,14 +77,14 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <ImageButton Source="zoomMais.png" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMais.png" Clicked="ImageButton_Clicked_ZoomMais" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
 
                             <ImageButton Source="zoomMenos.png" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent"></ImageButton>
 
                             <ImageButton Source="icon_sol.png" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
 
-                            <Image Grid.Column="0"  Source="icon_setaesquerda" TranslationY="-250" TranslationX="-30" HeightRequest="10"></Image>
-                            <Image Grid.Column="2" Source="icon_setadireita" TranslationY="-250" TranslationX="30" HeightRequest="10"></Image>
+                            <Image Grid.Column="0"  Source="icon_setaesquerda" TranslationY="-250" TranslationX="-30" HeightRequest="10" Opacity="0.35"></Image>
+                            <Image Grid.Column="2" Source="icon_setadireita" TranslationY="-250" TranslationX="30" HeightRequest="10" Opacity="0.35"></Image>
 
                         </Grid>
                     </StackLayout>

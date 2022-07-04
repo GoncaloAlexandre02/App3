@@ -40,11 +40,12 @@
             <ListView x:Name="lista" ItemsSource="{Binding Biblia}" ItemSelected="lista_ItemSelected" SeparatorColor="Transparent" >
                 <ListView.ItemTemplate>
                     <DataTemplate>                        
-                        <ViewCell >
+                        <ViewCell>
                             <StackLayout Orientation="Vertical" VerticalOptions="Center" Margin="10,5,0,0">
                                 <Grid>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="60"></ColumnDefinition>
+                                        
                                     </Grid.ColumnDefinitions>
                                     <Label Grid.Column="0" FontSize="20" Text="{Binding Sigla}" FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center" BackgroundColor="#527beb" TextColor="White"  ></Label>
                                     <Label Grid.Column="1" FontSize="20" Text="{Binding Nome}" FontFamily="OpenSans-SemiBold" TextColor="#4568C7"  />

@@ -34,13 +34,13 @@
     <ContentPage.Content>
         
         <StackLayout>
-            <ListView x:Name="lista" ItemSelected="OnItemSelected">
+            <ListView x:Name="lista" ItemSelected="OnItemSelected" SeparatorColor="Transparent">
                 <ListView.ItemTemplate>
                     <DataTemplate >
                         <ViewCell>
                             <StackLayout
-                        Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                <Label FontSize="23" Text="{Binding NomeHinario}" FontFamily="RedHat-Bold" />
+                        Orientation="Vertical" VerticalOptions="Center" Margin="5" >
+                                <Label FontSize="20" Text="{Binding NomeHinario}" FontFamily="OpenSans-SemiBold" TextColor="#4568C7" />
                             </StackLayout>
                         </ViewCell>
                         

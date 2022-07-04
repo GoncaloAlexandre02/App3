@@ -31,10 +31,10 @@ namespace App3.Views
 
 
 
-            var selectedIndex = listaC.SelectedItem as Biblia;
-            for (int i = 1; i <= selectedIndex.Ch; i++)
-                chList.Add(i);
-            listaC.ItemsSource = chList;
+            //var selectedIndex = listaC.SelectedItem as Biblia;
+           // for (int i = 1; i <= selectedIndex.Ch; i++)
+            //    chList.Add(i);
+           // listaC.ItemsSource = chList;
 
 
         }
@@ -53,15 +53,15 @@ namespace App3.Views
 
             }
 
-            listaC.ItemsSource = chList;
+           // listaC.ItemsSource = chList;
 
 
         }
 
         private async void listaC_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
-            var item = (Item)listaC.SelectedItem;
-            await Navigation.PushModalAsync(new BibliaPage(livronome, livroid, item.Id));
+           // var item = (Item)listaC.SelectedItem;
+            //await Navigation.PushModalAsync(new BibliaPage(livronome, livroid, item.Id));
 
         }
         private async void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
