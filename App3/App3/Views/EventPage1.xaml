@@ -1,0 +1,91 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.EventPage1">
+    
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                              Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                              Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Oração da adoração"></Label>
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <StackLayout>
+
+            <ScrollView >
+                <StackLayout>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="600"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+
+                        <Frame Grid.Row="0" >
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="500"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <StackLayout>
+                                        <StackLayout >
+                                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </Grid>
+                            </StackLayout>
+
+
+                        </Frame>
+                    </Grid>
+
+                    
+
+
+                </StackLayout>
+
+            </ScrollView>
+            <StackLayout>
+                <Grid>
+                    <Image Source="icon_mensager" HorizontalOptions="End" Margin="10,-20,10,0"></Image>
+                </Grid>
+            </StackLayout>
+            <StackLayout>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout Grid.Column="0" Margin="10,15,0,0">
+                        <Button Text="Vou" BackgroundColor="#527beb" FontSize="16" HorizontalOptions="Start" HeightRequest="50" WidthRequest="100"  TextColor="White" CornerRadius="5"  FontFamily="OpenSans-Regular" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                    </StackLayout>
+                    <StackLayout Grid.Column="1"  Margin="10,15,0,0">
+                        <Button Text="Talvez" BackgroundColor="#527beb" FontSize="15" HorizontalOptions="Center" HeightRequest="50" WidthRequest="100"  TextColor="White" CornerRadius="5"  FontFamily="OpenSans-Regular" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                    </StackLayout>
+                    <StackLayout Grid.Column="2" Margin="10,15,0,0">
+                        <Button Text="Não Vou" BackgroundColor="#527beb" FontSize="15" HorizontalOptions="End" HeightRequest="50" WidthRequest="100"   TextColor="White" CornerRadius="5"  FontFamily="OpenSans-Regular" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+
+        </StackLayout>  
+
+    </ContentPage.Content>
+</ContentPage>

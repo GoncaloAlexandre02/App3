@@ -53,6 +53,9 @@
     <EmbeddedResource Update="Views\EventPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Update="Views\EventPage1.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
     <EmbeddedResource Update="Views\HinarioPage1.xaml">
       <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>

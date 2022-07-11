@@ -24,15 +24,48 @@
 
             <ScrollView>
                 <StackLayout>
+
+                    <Frame BorderColor="#cf991d"  Margin="5,0,5,0">
+                        <Frame.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                        </Frame.GestureRecognizers>
+                        <StackLayout >
+                            <StackLayout.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                            </StackLayout.GestureRecognizers>
+                            <Grid>
+                                <StackLayout Grid.Column="0" Grid.Row="0">
+                                    <Label Text="13 de Maio" FontSize="19" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" TextTransform="Uppercase"></Label>
+
+                                </StackLayout>
+                                <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,30,0,0">
+                                    <Label Text="Ás 18:00" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" TextTransform="Uppercase"></Label>
+
+                                </StackLayout>
+
+                                <StackLayout Grid.ColumnSpan="1" Grid.Row="0" Margin="0,60,0,0">
+                                    <Label Text="Oração da adoração" TextColor="#4568C7" FontSize="15" TextTransform="Uppercase"></Label>
+                                </StackLayout>
+                                <StackLayout Grid.Column="1">
+                                    <Image Source="rezar" HorizontalOptions="End" HeightRequest="100" Margin="-15,0,0,0"></Image>
+
+                                </StackLayout>
+                            </Grid>
+
+
+                        </StackLayout>
+                    </Frame>
+
+
                     <Frame BorderColor="#cf991d"  Margin="5,0,5,0">
                         <StackLayout >
                             <Grid>
                                 <StackLayout Grid.ColumnSpan="2" Grid.Row="0">
-                                    <Label Text="13 de Maio de 2020" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                    <Label Text="13 de Maio de 2020" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                                     
                                 </StackLayout>
                                 <StackLayout Grid.Column="2" Grid.Row="0">
-                                    <Label Text="Ás 18:00" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                    <Label Text="Ás 18:00" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
 
                                 </StackLayout>
 
@@ -59,11 +92,11 @@
                         <StackLayout >
                             <Grid>
                                 <StackLayout Grid.ColumnSpan="2" Grid.Row="0">
-                                    <Label Text="13 de Maio de 2020" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                    <Label Text="13 de Maio de 2020" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
 
                                 </StackLayout>
                                 <StackLayout Grid.Column="2" Grid.Row="0">
-                                    <Label Text="Ás 18:00" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                                    <Label Text="Ás 18:00" TextColor="#4568C7" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
 
                                 </StackLayout>
 
