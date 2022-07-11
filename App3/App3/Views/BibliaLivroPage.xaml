@@ -14,9 +14,9 @@
                     <Frame.Background>
                         <LinearGradientBrush StartPoint="0,0"
                              EndPoint="1,0">
-                            <GradientStop Color="#527beb"
+                            <GradientStop Color="White"
                           Offset="0.1"/>
-                            <GradientStop Color="#cf991d"
+                            <GradientStop Color="White"
                           Offset="2.0"/>
                         </LinearGradientBrush>
                     </Frame.Background>
