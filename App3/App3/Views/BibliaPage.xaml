@@ -47,7 +47,7 @@
 
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="[Gn] Gênesis"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="Gênesis"></Label>
                         <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
                     </StackLayout>
                     <StackLayout x:Name="corpoB" Padding="20">
@@ -83,8 +83,8 @@
 
                             <ImageButton Source="icon_sol.png" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
 
-                            <Image Grid.Column="0"  Source="icon_setaE" TranslationY="-250" TranslationX="-30" HeightRequest="10" Opacity="0.65"></Image>
-                            <Image Grid.Column="2" Source="icon_setaD" TranslationY="-250" TranslationX="30" HeightRequest="10" Opacity="0.65"></Image>
+                            <Image Grid.Column="0"  Source="icon_setaE" TranslationY="-265" TranslationX="-30" HeightRequest="10" Opacity="0.70"></Image>
+                            <Image Grid.Column="2" Source="icon_setaD" TranslationY="-265" TranslationX="30" HeightRequest="10" Opacity="0.70"></Image>
 
                         </Grid>
                     </StackLayout>

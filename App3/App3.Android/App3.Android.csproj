@@ -328,12 +328,6 @@
     <AndroidResource Include="Resources\drawable\icon_moveis.png" />
   </ItemGroup>
   <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_setaesquerda.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AndroidResource Include="Resources\drawable\icon_setadireita.png" />
-  </ItemGroup>
-  <ItemGroup>
     <AndroidResource Include="Resources\drawable\icon_cartaodecredito.png" />
   </ItemGroup>
   <ItemGroup>
