@@ -33,40 +33,12 @@
 
                 </Frame>
             </StackLayout>
+            <ScrollView>
+                <FlexLayout x:Name="Ecraflex"  Direction="Row" Wrap="Wrap"  HorizontalOptions="Center" Margin="30" >
 
-            <StackLayout Margin="33,5,0,0">
-                <Grid>
-                    <Grid.ColumnDefinitions>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                        <ColumnDefinition Width="60"></ColumnDefinition>
-                    </Grid.ColumnDefinitions>
-                    
-                    <Frame Grid.Column="0"  BackgroundColor="#527beb" >
-                        <Label Text="1" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                    <Frame Grid.Column="1"  BackgroundColor="#527beb" >
-                        <Label Text="2" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                    <Frame Grid.Column="2"  BackgroundColor="#527beb" >
-                        <Label Text="3" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                    <Frame Grid.Column="3"  BackgroundColor="#527beb" >
-                        <Label Text="4" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                    <Frame Grid.Column="3"  BackgroundColor="#527beb" >
-                        <Label Text="5" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                    <Frame Grid.Column="4"  BackgroundColor="#527beb" >
-                        <Label Text="6" HorizontalTextAlignment="Center" TextColor="White"></Label>
-                    </Frame>
-                </Grid>
-                
-            </StackLayout>
-            
+
+                </FlexLayout>
+            </ScrollView>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

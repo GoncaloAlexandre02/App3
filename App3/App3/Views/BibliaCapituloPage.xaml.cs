@@ -1,5 +1,6 @@
 ﻿using App3.Models;
 using App3.Services;
+using App3.Views.Partials;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,6 +12,7 @@ using Xamarin.Forms.Xaml;
 
 namespace App3.Views
 {
+   
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class BibliaCapituloPage : ContentPage
 
@@ -21,6 +23,7 @@ namespace App3.Views
         int livroch;
         string livronome;
         string livroid;
+        Biblia selectedIndex;
         public BibliaCapituloPage()
         {
 
@@ -31,14 +34,14 @@ namespace App3.Views
 
 
 
-            //var selectedIndex = listaC.SelectedItem as Biblia;
-           // for (int i = 1; i <= selectedIndex.Ch; i++)
-            //    chList.Add(i);
-           // listaC.ItemsSource = chList;
+            // selectedIndex = listaC.SelectedItem as Biblia;
+            // for (int i = 1; i <= selectedIndex.Ch; i++)
+            //  chList.Add(i);
+            // listaC.ItemsSource = chList;
 
 
         }
-        public BibliaCapituloPage(string id, string nome, int ch)
+        public BibliaCapituloPage(string id, string nome, int ch, Biblia bibliaIndex)
         {
             InitializeComponent();
             var chList = new List<Item>();
@@ -46,28 +49,38 @@ namespace App3.Views
             livronome = nome;
             livroid = id;
             restService = new RestService();
-
-            for (int i = 1; i <= ch; i++)
+            selectedIndex = bibliaIndex;
+            Ecraflex.Children.Clear();
+            try
             {
-                chList.Add(new Item { Id = i.ToString() });
 
+                for (int i = 1; i <= ch; i++)
+                {
+                    Ecraflex.Children.Add(new CapituloSingleView(i, selectedIndex));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
             }
 
-           // listaC.ItemsSource = chList;
+            // listaC.ItemsSource = chList;
 
 
         }
 
-        private async void listaC_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-           // var item = (Item)listaC.SelectedItem;
-            //await Navigation.PushModalAsync(new BibliaPage(livronome, livroid, item.Id));
+        /* private async void listaC_ItemSelected(object sender, SelectedItemChangedEventArgs e)
+         {
+             var item = (Item)listaC.SelectedItem;
+             await Navigation.PushModalAsync(new BibliaPage(livronome, livroid,item.Id,selectedIndex));
 
-        }
+         } */
         private async void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
         {
             await Navigation.PushModalAsync(new BibliaLivroPage());
 
         }
+
+
     }
 }

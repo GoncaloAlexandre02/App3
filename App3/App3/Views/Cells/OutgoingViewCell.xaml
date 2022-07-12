@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="App3.Views.Cells.OutgoingViewCell">
+    <Frame CornerRadius="20" IsClippedToBounds="True" Padding="10"
+              Margin="80,10,10,10" BackgroundColor="#A2BDFF">
+    <StackLayout 
+               IsVisible="True"   >
+            <Label FontFamily="RedHat-SemiBold"  HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="Black" Text="{Binding Descmsg}"/>
+
+
+
+            <Label Margin="0,-10,0,0" FontFamily="RedHat-SemiBold" HorizontalOptions="EndAndExpand" VerticalOptions="End" TextColor="#656565" Text="{Binding Dtmsg, StringFormat='{}{0: dd/MM/yyyy à\\s HH:mm   }'}" FontSize="12"/>
+       
+           
+    </StackLayout>
+    </Frame>
+</ViewCell>

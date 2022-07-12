@@ -90,7 +90,7 @@ namespace App3.Views
             book.Add(new Biblia { Id = "rev", Nome = "Apocalipse", Ch = 22, Sigla = "Ap" });
         }
 
-        
+
         private async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         {
             var item = (Biblia)lista.SelectedItem;
@@ -99,7 +99,7 @@ namespace App3.Views
             var itemid = item.Id;
 
             // assuiming Club has an Id property
-            await Navigation.PushModalAsync(new BibliaCapituloPage(itemid, itemnome, itemch));
+            await Navigation.PushModalAsync(new BibliaCapituloPage(itemid, itemnome, itemch, item));
         }
 
         private void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
@@ -109,11 +109,5 @@ namespace App3.Views
             //lista.IsVisible = true;
         }
 
-        private void TapGestureRecognizer_Tapped_capitulo(object sender, EventArgs e)
-        {
-            //capitulo.FontFamily = "RedHat-Bold";
-            //livro.FontFamily = "RedHat-SemiBold";
-            //lista.IsVisible=false;
-        }
     }
 }

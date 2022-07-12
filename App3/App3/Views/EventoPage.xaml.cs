@@ -13,30 +13,30 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class DepartamentoPage : ContentPage
+    public partial class EventoPage : ContentPage
     {
-        List<Responsavel> bbb;
-        RootDepartamento aaa;
+
+        RootEvento aaa;
         RestService restService;
-        public DepartamentoPage()
+        public EventoPage()
         {
             InitializeComponent();
             restService = new RestService();
-            AtualizarDepartamentos();
+            AtualizarEventos();
         }
 
-        private async void AtualizarDepartamentos()
+        private async void AtualizarEventos()
         {
-            EcraDepart.Children.Clear();
-           // aaa = await restService.GetDepartamentosAsync();
-            
+            EcraEvento.Children.Clear();
+            //aaa = await restService.GetEventosAsync();
+
             try
             {
 
-                foreach (Departamento depart in aaa.data)
+                foreach (Evento evento in aaa.data)
                 {
-                                       
-                    EcraDepart.Children.Add(new DepartamentoSingleView(depart));
+
+                    EcraEvento.Children.Add(new EventoSingleView(evento));
                 }
             }
             catch (Exception ex)
@@ -44,7 +44,5 @@ namespace App3.Views
                 Console.WriteLine(ex.Message);
             }
         }
-
-
     }
 }

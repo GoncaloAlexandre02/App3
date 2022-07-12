@@ -38,9 +38,9 @@
         </StackLayout>
 
 
-        <StackLayout Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" BackgroundColor="White">
+        <StackLayout x:Name="stackTodo" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" BackgroundColor="White">
 
-            <ScrollView x:Name="scrollP" BackgroundColor="White">
+            <ScrollView  x:Name="scrollP" BackgroundColor="White">
                 <StackLayout >
 
 
@@ -59,13 +59,13 @@
                 </StackLayout>
 
             </ScrollView>
-
             <StackLayout>
 
                 <Frame>
                     <StackLayout>
                         <Grid>
                             <Grid.RowDefinitions>
+                                <RowDefinition Height="30"></RowDefinition>
                                 <RowDefinition Height="35"></RowDefinition>
 
                             </Grid.RowDefinitions>
@@ -77,20 +77,30 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <ImageButton Source="zoomMais.png" Clicked="ImageButton_Clicked_ZoomMais" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMais.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="1" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="zoomMenos.png" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMenos.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="1"  Grid.Column="1" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="icon_sol.png" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="icon_sol.png" Clicked="Leitura" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
 
-                            <Image Grid.Column="0"  Source="icon_setaE" TranslationY="-265" TranslationX="-30" HeightRequest="10" Opacity="0.70"></Image>
-                            <Image Grid.Column="2" Source="icon_setaD" TranslationY="-265" TranslationX="30" HeightRequest="10" Opacity="0.70"></Image>
+                            <Image Grid.Column="0" Grid.Row="0"  Source="icon_setaE"  x:Name="setaAnt"  HeightRequest="10">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAnterior"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="2" Source="icon_setaD"  x:Name="setaProx"  HeightRequest="10">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedProximo"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
 
                         </Grid>
                     </StackLayout>
                 </Frame>
 
             </StackLayout>
+
+
         </StackLayout>
     </Grid>
 

@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.Partials.CapituloSingleView">
+  <ContentView.Content>
+        <Frame  FlexLayout.Basis="20%" BackgroundColor="#527beb" WidthRequest="22" Margin="0,0,3,3" >
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <Label x:Name="labelNum" Text=""  HorizontalTextAlignment="Center" Margin="-3" TextColor="White" ></Label>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

@@ -1,0 +1,142 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.DepartamentoPage1">
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                              Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                              Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Departamentos"></Label>
+
+
+        </StackLayout>
+    </Shell.TitleView>
+
+    <ContentPage.Content>
+        <StackLayout>
+
+
+            <ScrollView x:Name="scrollP" >
+                <StackLayout>
+
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="auto"></RowDefinition>
+                            <RowDefinition Height="240"></RowDefinition>
+                        </Grid.RowDefinitions>
+
+
+                        <StackLayout Grid.Row="0" >
+                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="10">
+                                <Label x:Name="titulolabel"  FontSize="20" Margin="10,5,0,0" Text="A carregar.." FontFamily="OpenSans-SemiBold"  TextColor="#4568C7"/>
+                            </StackLayout>
+                        </StackLayout>
+
+
+
+                        <Frame Grid.Row="1" BackgroundColor="Transparent">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="240"></RowDefinition>
+                                    </Grid.RowDefinitions>
+
+                                    <StackLayout>
+                                        <StackLayout x:Name="stack3" >
+                                            <Label x:Name="desclabel" Text="A carregar.."  FontSize="14"  TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
+
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </Grid>
+                            </StackLayout>
+
+
+                        </Frame>
+                        <Frame Grid.Row="2" BackgroundColor="Transparent">
+                            <StackLayout>
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="auto"></RowDefinition>
+                                        <RowDefinition Height="240"></RowDefinition>
+                                    </Grid.RowDefinitions>
+          
+                                    <StackLayout>
+                                    </StackLayout>
+                                    <StackLayout x:Name="EcraResp">
+
+                                        <StackLayout Orientation="Horizontal">
+                                            <Label x:Name="resplabel" Text="A carregar.."   FontSize="14"  TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
+                                            <Image Margin="40,0,0,0" VerticalOptions="StartAndExpand" Source="icon_mens"></Image>
+                                        </StackLayout>
+
+
+                                    </StackLayout>
+
+                                </Grid>
+                            </StackLayout>
+
+
+                        </Frame>
+                    </Grid>
+
+
+
+
+                </StackLayout>
+
+            </ScrollView>
+
+
+            <Frame>
+                <StackLayout>
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <ImageButton Source="zoomMais.png" Clicked="ImageButton_Clicked_1" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="zoomMenos.png" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"  Grid.Column="1" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="icon_sol.png" Clicked="ImageButton_Clicked_2" BackgroundColor="Transparent" Grid.Column="2"   BorderColor="Transparent"></ImageButton>
+
+
+
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
+
+
+
+
+
+
+        </StackLayout>
+
+
+    </ContentPage.Content>
+</ContentPage>

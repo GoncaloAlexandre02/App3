@@ -7,12 +7,12 @@ using System.Threading.Tasks;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
-namespace App3.Views
+namespace App3.Views.Cells
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EventPage1 : ContentPage
+    public partial class IncomingViewCell : ViewCell
     {
-        public EventPage1()
+        public IncomingViewCell()
         {
             InitializeComponent();
         }

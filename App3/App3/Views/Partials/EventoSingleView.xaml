@@ -1,0 +1,45 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.Partials.EventoSingleView">
+    <ContentView.Content>
+        <Frame Margin="0,1,0,0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+
+                </TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <StackLayout >
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="120"></ColumnDefinition>
+                        <ColumnDefinition Width="75"></ColumnDefinition>
+                        <ColumnDefinition Width="*"></ColumnDefinition>
+                    </Grid.ColumnDefinitions>
+                    <StackLayout  Grid.Column="1" Grid.Row="0">
+                        <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" Orientation="Horizontal">
+                            <Label Text="22" x:Name="dataDEvento" VerticalOptions="CenterAndExpand" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="24" FontFamily="RedHat-Bold" ></Label>
+                            <Label Text="jul" x:Name="dataMEvento" VerticalOptions="End" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="18" FontFamily="RedHat-Bold" ></Label>
+                        </StackLayout>
+                        <Label Text="17:30" x:Name="dataHEvento" VerticalOptions="CenterAndExpand" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="15" FontFamily="RedHat-Bold" ></Label>
+                    </StackLayout>
+                    <StackLayout  Grid.Column="0" Grid.Row="0">
+                        <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                    </StackLayout>
+
+
+                    <StackLayout  Grid.Column="2" Grid.Row="0">
+                        <Label Text="A carregar.." x:Name="nomeEvento"  VerticalOptions="CenterAndExpand" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+
+                    </StackLayout>
+
+
+
+                </Grid>
+
+
+
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

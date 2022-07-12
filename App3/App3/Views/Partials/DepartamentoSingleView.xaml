@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.Partials.DepartamentoSingleView">
+  <ContentView.Content>
+        <Frame Margin="0,1,0,0">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped">
+                    
+                </TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <StackLayout >
+                <Grid>
+                    <StackLayout  Grid.Column="0" Grid.Row="0">
+                        <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Column="1" Grid.Row="0">
+                        <Label Text="A carregar.." x:Name="nomeDepart" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                        <Label Text="Coordenador:"   TextColor="#4568C7" FontSize="14" FontFamily="RedHat-Semi"></Label>
+                        <Label Text="- - -" x:Name="nomeUser" FontSize="13"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+
+                    </StackLayout>
+
+
+
+                </Grid>
+
+
+
+            </StackLayout>
+        </Frame>
+    </ContentView.Content>
+</ContentView>

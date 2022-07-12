@@ -30,22 +30,22 @@
             </Grid>
         </StackLayout>
     </Shell.TitleView>
-    
+
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Label Margin="20,60,20,0" FontSize="18" TextColor="#4568C7"  HorizontalTextAlignment="Center" FontFamily="RedHat-SemiBold" HorizontalOptions="Center" Text="O Senhor é a minha força e o meu escudo nele o meu coração confia, e dele recebo ajuda. Meu coração exulta de alegria, e com o meu cântico lhe darei graças.">
+                <Label Margin="20,60,20,0" x:Name="textV" FontSize="22" TextColor="#4568C7"  HorizontalTextAlignment="Center" FontFamily="OpenSans-Regular" HorizontalOptions="Center" Text="A carregar . . .">
                 </Label>
             </StackLayout>
-      
+
             <StackLayout>
-                <Label Margin="0,30,0,0" Text="Salmos 28:7"  FontSize="16" HorizontalOptions="Center" FontFamily="RedHat-Bold" TextColor="#4568C7" ></Label>
+                <Label Margin="0,20,0,0" x:Name="bookV" Text="--- 0:0"  FontSize="16" HorizontalOptions="Center" TextColor="#4568C7" FontFamily="OpenSans-Regular" ></Label>
             </StackLayout>
             <StackLayout >
-                <Button  Margin="0,40,0,0" Text="Leia Mais" BackgroundColor="#4568C7"  FontSize="15" HorizontalOptions="Center"  FontFamily="RedHat-Bold" TextColor="White" ></Button>
+                <Button  Margin="0,40,0,0" Clicked="Button_Clicked" Text="Ler Mais" BackgroundColor="#4568C7"  FontSize="15" HorizontalOptions="Center"  FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
             </StackLayout>
-            
+
         </StackLayout>
-       
+
     </ContentPage.Content>
 </ContentPage>
