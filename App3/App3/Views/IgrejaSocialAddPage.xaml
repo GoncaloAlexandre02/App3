@@ -1,0 +1,49 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.IgrejaSocialAddPage">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                             EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                          Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                          Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Criar Doação"></Label>
+
+          
+
+        </StackLayout>
+    </Shell.TitleView>
+    <ContentPage.Content>
+        <ScrollView>
+            
+            <StackLayout>
+                <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="#cf9946">
+                    <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Categoria" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
+                        <Picker.Items>
+                            <x:String>Roupa</x:String>
+                            <x:String>Emprego</x:String>
+                            <x:String>Móveis</x:String>
+                        </Picker.Items>
+                    </Picker>
+                </Frame>
+                <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="#cf9946">
+                    <Editor x:Name="txtMensagem" HeightRequest="100" Placeholder="Descição" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#4568C7" />
+                </Frame>
+                <StackLayout >
+                    <ImageButton Source="inserir_imagem.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                </StackLayout>
+                <StackLayout Margin="0,240,0,0">
+                    
+                    <Button Text="Publicar Doação" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

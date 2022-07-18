@@ -32,7 +32,7 @@ namespace App3.Views
 
         async void AtualizaDepartamento(string id)
         {
-            //depart = await restService.GetDepartamentoAsync(id);
+            depart = await restService.GetDepartamentoAsync(id);
 
             titulolabel.Text = depart.Nomedepart;
             desclabel.Text = depart.Descdepart;
@@ -41,16 +41,34 @@ namespace App3.Views
             EcraResp.Children.Add(new Label { Text = "Coordenadores", Padding = new Thickness(0, 0, 0, 20), FontSize=16,FontFamily="OpenSans-SemiBold",TextColor=Color.FromHex("#4568C7") });
             try
             {
-                //resp = await restService.GetResponsaveisAsync(depart.Iddepart);
-                //foreach(Responsavel respon in resp)
-               // EcraResp.Children.Add(new ResponsavelSingleView(respon));
+                resp = await restService.GetResponsaveisAsync(depart.Iddepart);
+                foreach (Responsavel respon in resp) ;
+                //EcraResp.Children.Add(new ResponsavelSingleView(respon));
                 
 
             }catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-            
+
+            try
+            {
+                if (depart.Imgdepart == null)
+                {
+                    //imgD.Source = "rezar";
+                }
+                else
+                {
+                    //imgD.Source = await restService.GetImagemServer(depart.Imgdepart);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                //imgD.Source = "rezar";
+            }
+
         }
         private void ImageButton_Clicked(object sender, EventArgs e)
         {

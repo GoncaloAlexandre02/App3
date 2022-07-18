@@ -26,7 +26,9 @@
 
             <ScrollView x:Name="scrollP" >
                 <StackLayout>
-
+                    <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="StartAndExpand">
+                        <Image Margin="4" Source="rezar" x:Name="imgD"  HeightRequest="250" ></Image>
+                    </StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="auto"></RowDefinition>

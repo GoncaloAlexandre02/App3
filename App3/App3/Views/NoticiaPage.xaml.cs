@@ -21,7 +21,7 @@ namespace App3.Views
         {
             InitializeComponent();
             
-            noticiaList.Add(new Noticia() {tituloNoticia= "Projeto Social Cuidando de Vidas", dataNoticia = "06 de jun de 2022"});
+            noticiaList.Add(new Noticia() {tituloNoticia= "Papa volta a falar do aborto", dataNoticia = "06 de jun de 2022"});
             lista.ItemsSource = noticiaList;
            
         }

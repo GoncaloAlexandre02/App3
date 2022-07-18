@@ -35,7 +35,7 @@
                         
                             <StackLayout HeightRequest="0">
                                 <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                    <Label  FontSize="18" Margin="10,5,0,0" Text="Projeto Social Cuidando de Vidas" FontFamily="OpenSans-SemiBold"  TextColor="#4568C7"/>
+                                <Label  FontSize="18" Margin="10,5,0,0" Text="Papa volta a falar do aborto" FontFamily="OpenSans-SemiBold"  TextColor="#4568C7"/>
                                 </StackLayout>
                                 <StackLayout Grid.Column="1">
                                 <Label FontSize="16" Text="06 de jun de 2022"  FontFamily="OpenSans-SemiBold" Margin="10,0,0,0" HorizontalOptions="Start" TextColor="#4568C7"/>
@@ -53,7 +53,9 @@
 
                                     <StackLayout>
                                         <StackLayout >
-                                            <Label Text="Missões urbanas no concelho de Santa Maria da Feira efebfbefbebwdedhbvhvbibvifbvjnfkvbjfuvbfbvnjnvljdsnvlnsdjvndnvnsjvnfkjnvkfjnvkjsfnvknsçfvnkfjvnçkjsfnvkjsfnvknjsfvknsjvnsjnvjfnvjsnvnvdvfvfvsfnvsnvsnvjnsvnskvnjvnfskvnskfvnkfsjnvsnvsjfvndnvsjdsnvsjvndjkvkjvnjnvurbvsjkdvurbvjsbrvuivjskfujvbks,djvbrskjvjsbbv"   TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
+                                            <Label Text="Não deixemos que a família seja envenenada pelas toxinas do egoísmo, do individualismo, da cultura atual da indiferença e do desperdício, e com isso perca seu próprio ADN, que é o espírito de acolhimento e serviço, afirmou o líder da igreja católica. 
+                                                         O Papa Francisco celebrou este sábado as famílias e exortou-as a evitar decisões egoístas que são indiferentes à vida, na sequência da decisão, sexta-feira, do Supremo Tribunal dos Estados Unidos de eliminar a proteção federal do direito ao aborto."  
+                                                   TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
 
                                         </StackLayout>
 

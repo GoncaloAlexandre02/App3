@@ -37,5 +37,15 @@ namespace App3.Views
             buttonEmprego.BorderColor = Color.Transparent;
             buttonMoveis.BorderColor = Color.Blue;
         }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new IgrejaSocialPage1());
+        }
+
+        private async void TapGestureRecognizer_Tapped_Add(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IgrejaSocialAddPage());
+        }
     }
 }

@@ -66,33 +66,39 @@
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="30"></RowDefinition>
-                                <RowDefinition Height="35"></RowDefinition>
-
+                                
                             </Grid.RowDefinitions>
                             <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="115"></ColumnDefinition>
-                                <ColumnDefinition Width="115"></ColumnDefinition>
-                                <ColumnDefinition Width="115"></ColumnDefinition>
+                                <ColumnDefinition Width="55"></ColumnDefinition>
+                                <ColumnDefinition Width="70"></ColumnDefinition>
+                                <ColumnDefinition Width="70"></ColumnDefinition>
+                                <ColumnDefinition Width="70"></ColumnDefinition>
+                                <ColumnDefinition Width="70"></ColumnDefinition>
 
                             </Grid.ColumnDefinitions>
 
 
-                            <ImageButton Source="zoomMais.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="0" Grid.Row="1" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMais.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="1" Grid.Row="0" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="zoomMenos.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="1"  Grid.Column="1" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMenos.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="0"  Grid.Column="2" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="icon_sol.png" Clicked="Leitura" BackgroundColor="Transparent" Grid.Row="1" Grid.Column="2"  BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="icon_sol.png" Clicked="Leitura" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="3"  BorderColor="Transparent"></ImageButton>
 
-                            <Image Grid.Column="0" Grid.Row="0"  Source="icon_setaE"  x:Name="setaAnt"  HeightRequest="10">
+                            <ImageButton Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Source="icon_setaE" x:Name="setaAnt" Clicked="TapGestureRecognizer_TappedAnterior"></ImageButton>
+
+                            <ImageButton Grid.Column="4" Grid.Row="0" BackgroundColor="Transparent"  Source="icon_setaD"  x:Name="setaProx"  Clicked="TapGestureRecognizer_TappedProximo"></ImageButton>
+
+                            <Image   Source="icon_setaE"  x:Name="setaAnte">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAnterior"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Grid.Column="2" Source="icon_setaD"  x:Name="setaProx"  HeightRequest="10">
+                            <Image Grid.Column="4" Grid.Row="0" Source="icon_setaD"  x:Name="setaProxi"  >
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedProximo"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
                             </Image>
+                            
 
                         </Grid>
                     </StackLayout>

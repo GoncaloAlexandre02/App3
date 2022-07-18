@@ -119,11 +119,11 @@ namespace App3.Views
             }
             if (chapter == "1")
             {
-                setaAnt.IsVisible = false;
+                setaAnte.IsVisible = false;
             }
             else
             {
-                setaAnt.IsVisible = true;
+                setaAnte.IsVisible = true;
             }
             try
             {
@@ -131,33 +131,33 @@ namespace App3.Views
                 {
                     if (chapter == biblia2.Ch.ToString())
                     {
-                        setaProx.IsVisible = false;
+                        setaProxi.IsVisible = false;
                     }
                     else
                     {
-                        setaProx.IsVisible = true;
+                        setaProxi.IsVisible = true;
                     }
                 }
                 else if (versi2 != null)
                 {
                     if (chapter == versi2.ChTotal.ToString())
                     {
-                        setaProx.IsVisible = false;
+                        setaProxi.IsVisible = false;
                     }
                     else
                     {
-                        setaProx.IsVisible = true;
+                        setaProxi.IsVisible = true;
                     }
                 }
                 else
                 {
                     if (chapter == "50")
                     {
-                        setaProx.IsVisible = false;
+                        setaProxi.IsVisible = false;
                     }
                     else
                     {
-                        setaProx.IsVisible = true;
+                        setaProxi.IsVisible = true;
                     }
                 }
             }
@@ -166,11 +166,11 @@ namespace App3.Views
 
                 if (chapter == "50")
                 {
-                    setaProx.IsVisible = false;
+                    setaProxi.IsVisible = false;
                 }
                 else
                 {
-                    setaProx.IsVisible = true;
+                    setaProxi.IsVisible = true;
                 }
             }
 

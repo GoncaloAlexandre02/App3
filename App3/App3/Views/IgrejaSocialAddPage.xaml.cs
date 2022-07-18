@@ -10,16 +10,11 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class EventPage : ContentPage
+    public partial class IgrejaSocialAddPage : ContentPage
     {
-        public EventPage()
+        public IgrejaSocialAddPage()
         {
             InitializeComponent();
-        }
-
-        async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new EventoPage1());
         }
     }
 }

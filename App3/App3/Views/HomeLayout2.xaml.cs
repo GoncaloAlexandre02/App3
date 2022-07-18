@@ -66,7 +66,7 @@ namespace App3.Views
 
         private async void TapGestureRecognizer_Tapped_Evento(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new EventPage());
+            await Navigation.PushAsync(new EventoPage());
         }
 
         private async void TapGestureRecognizer_Tapped_Departamento(object sender, EventArgs e)

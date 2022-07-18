@@ -47,7 +47,7 @@
                                             </Grid.ColumnDefinitions>
                                             
                                             
-                                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="10,-5,10,10">
+                                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="15,-5,10,10">
                                                 <Label  FontSize="16" Text="{Binding tituloNoticia}" FontFamily="RedHat-SemiBold"  TextColor="#4568C7"/>
                                             </StackLayout>
                                             <StackLayout Grid.Column="1" Margin="0,-7,0,0">

@@ -28,7 +28,7 @@ namespace App3.Views
         private async void AtualizarDepartamentos()
         {
             EcraDepart.Children.Clear();
-           // aaa = await restService.GetDepartamentosAsync();
+            aaa = await restService.GetDepartamentosAsync();
             
             try
             {
