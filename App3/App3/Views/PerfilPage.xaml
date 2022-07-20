@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="App3.Views.PerfilPage"
-             Title="Minha Conta">
+             Title="Minha Conta"
+             BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
@@ -52,7 +53,7 @@
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
-                <StackLayout Margin="5,5,5,0" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="1" xct:ShadowEffect.Radius="1" xct:ShadowEffect.Opacity="5">
+                <StackLayout Margin="5,5,5,0"  xct:ShadowEffect.OffsetY="1" xct:ShadowEffect.Radius="1" xct:ShadowEffect.Opacity="5">
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" >
                             <Image Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100"></Image>
@@ -69,27 +70,13 @@
                 <StackLayout>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Email" FontSize="18" Margin="10,10,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Email" FontSize="18" Margin="30,10,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
 
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="admin@admin.com" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
-                        </StackLayout>
-                    </Grid>
-                </StackLayout>
-
-                <StackLayout>
-                    <Grid >
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Telemovel" FontSize="18" Margin="10,20,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-
-                        </StackLayout>
-                    </Grid>
-                    <Grid >
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="912345678" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="admin@admin.com" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -97,13 +84,27 @@
                 <StackLayout>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Data Nascimento" FontSize="18" Margin="10,20,0,0" TextTransform="Uppercase" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Telemovel" FontSize="18" Margin="30,20,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
 
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="06/05/2022" FontSize="18" Margin="50,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="912345678" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Data Nascimento" FontSize="18" Margin="30,20,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="06/05/2022" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

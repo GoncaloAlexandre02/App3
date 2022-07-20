@@ -36,6 +36,15 @@ namespace App3.Views
             buttonCamisola.BorderColor = Color.Transparent;
             buttonEmprego.BorderColor = Color.Transparent;
             buttonMoveis.BorderColor = Color.Blue;
+            buttonOutro.BorderColor = Color.Transparent;
+        }
+
+        private void buttonOutro_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola.BorderColor = Color.Transparent;
+            buttonEmprego.BorderColor = Color.Transparent;
+            buttonMoveis.BorderColor = Color.Transparent;
+            buttonOutro.BorderColor = Color.Blue;
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
@@ -46,6 +55,11 @@ namespace App3.Views
         private async void TapGestureRecognizer_Tapped_Add(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new IgrejaSocialAddPage());
+        }
+
+        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IgrejaSocialPage2());
         }
     }
 }

@@ -34,6 +34,9 @@
                     </Picker>
                 </Frame>
                 <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="#cf9946">
+                    <Entry Placeholder="Nome" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#4568C7"></Entry>
+                </Frame>
+                <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="#cf9946">
                     <Editor x:Name="txtMensagem" HeightRequest="100" Placeholder="Descição" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#4568C7" />
                 </Frame>
                 <StackLayout >

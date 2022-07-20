@@ -1,0 +1,63 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.IgrejaSocialPage2">
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
+            <StackLayout.Background>
+                <LinearGradientBrush StartPoint="0,0"
+                                 EndPoint="1,0">
+                    <GradientStop Color="#527beb"
+                              Offset="0.1"/>
+                    <GradientStop Color="#cf991d"
+                              Offset="2.0"/>
+                </LinearGradientBrush>
+            </StackLayout.Background>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Igreja Social"></Label>
+
+            
+
+        </StackLayout>
+    </Shell.TitleView>
+    
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout>
+                <Grid>
+                    <StackLayout Grid.Row="0">
+                        
+                        <StackLayout>
+                            <Label Text="Comercial Telecomunicações (m/f)" FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="20" Margin="15,10,0,0"></Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="Requisitos" FontFamily="OpenSans-Bold" TextDecorations="Underline" TextColor="#4568C7" FontSize="17" Margin="10,10,0,0" ></Label>
+                        </StackLayout>
+                        <StackLayout>
+                            <Label Text="-Boa comunicação;
+
+                                                    -Boa apresentação;
+
+                                                                                        -Espírito de equipa;
+
+                                                                                            -Capacidade de liderança;
+
+                                                                -Dinâmico/a;
+
+                                                                    -Disponibilidade imediata;
+
+                                        -Gosto pela área comercial;"
+                                   TextColor="#4568C7" FontSize="18" Margin="10,10,0,0"></Label>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                    <StackLayout Grid.Row="1" Margin="0,220,0,0">
+                        <Image Source="icon_mensager" HorizontalOptions="End" Margin="10,-20,10,0"></Image>
+                        <Button Text="Candidatar-se" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                    </StackLayout>
+                </Grid>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>

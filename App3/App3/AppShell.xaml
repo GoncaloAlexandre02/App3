@@ -16,18 +16,18 @@
         <ResourceDictionary>
             
             <Style x:Key="BaseStyle" TargetType="Element">
-                <Setter Property="Shell.BackgroundColor" Value="#527beb" />
+                <Setter Property="Shell.BackgroundColor" Value="#0a2a3b" />
                 <Setter Property="Shell.ForegroundColor" Value="White" />
                 <Setter Property="Shell.TitleColor" Value="White" />
                 <Setter Property="Shell.DisabledColor" Value="#B4FFFFFF" />
                 <Setter Property="Shell.UnselectedColor" Value="#95FFFFFF" />
-                <Setter Property="Shell.TabBarBackgroundColor" Value="Pink" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#0a2a3b" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
             </Style>
             <Style x:Key="BaseStyle2" TargetType="Element">
-                <Setter Property="Shell.TabBarBackgroundColor" Value="Pink" />
+                <Setter Property="Shell.TabBarBackgroundColor" Value="#0a2a3b" />
                 <Setter Property="Shell.TabBarForegroundColor" Value="White"/>
                 <Setter Property="Shell.TabBarUnselectedColor" Value="#95FFFFFF"/>
                 <Setter Property="Shell.TabBarTitleColor" Value="White"/>
@@ -40,7 +40,7 @@
             https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/shell/flyout#flyoutitem-and-menuitem-style-classes
             -->
             <Style Class="FlyoutItemLabelStyle" TargetType="Label">
-                <Setter Property="TextColor" Value="White"></Setter>
+                <Setter Property="TextColor" Value="#0a2a3b"></Setter>
                 <Setter Property="FontFamily" Value="RedHat-Medium"/>
             </Style>
             <Style Class="FlyoutItemLayoutStyle" TargetType="Layout" ApplyToDerivedTypes="True">
@@ -55,7 +55,7 @@
                             </VisualState>
                             <VisualState x:Name="Selected">
                                 <VisualState.Setters>
-                                    <Setter Property="BackgroundColor" Value="#527beb" />
+                                    <Setter Property="BackgroundColor" Value="#ebebeb" />
                                 </VisualState.Setters>
                             </VisualState>
                         </VisualStateGroup>
@@ -96,14 +96,14 @@
     <FlyoutItem Title="Perfil" Icon="userB.png">
         <ShellContent Route="Perfil" ContentTemplate="{DataTemplate local:PerfilPage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Notificações" Icon="bellB.png">
-        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:AboutPage}" />
+    <FlyoutItem Title="Chat" Icon="chat.png">
+        <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:MessagePage}" />
+    </FlyoutItem>
+    <FlyoutItem Title="Idioma" Icon="idioma.png">
+        <ShellContent Route="Idioma" ContentTemplate="{DataTemplate local:IdiomaPage}" />
     </FlyoutItem>
     <FlyoutItem Title="Configurações" Icon="gearB.png">
         <ShellContent Route="Config" ContentTemplate="{DataTemplate local:ConfigPage}" />
-    </FlyoutItem>
-    <FlyoutItem Title="Idioma" Icon="gearB.png">
-        <ShellContent Route="Config" ContentTemplate="{DataTemplate local:IdiomaPage}" />
     </FlyoutItem>
     <MenuItem Text="Sair" Clicked="OnLogout" Icon="logoutB.png">
     </MenuItem>
@@ -130,10 +130,10 @@
         <DataTemplate>
             <extensions:Expander IsExpanded="True">
             <Grid HeightRequest="180" BackgroundColor="White">
-                <Image Source="logoIgreja.png" HeightRequest="150" Margin="0,10,0,0" HorizontalOptions="Center"></Image>
-                <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="30" HorizontalOptions="Start" Margin="10,0,0,0" Text=""></Label>
+                <Image Source="logo_6.png" HeightRequest="150" Margin="0,10,0,0" HorizontalOptions="Center"></Image>
+                <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="30" HorizontalOptions="Center" Margin="10,0,0,0" Text=""></Label>
 
-                <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="18" HorizontalOptions="End" Margin="0,0,30,0" Text="AD BETEL Portugal"></Label>
+                <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="18" HorizontalOptions="End" Margin="0,0,30,0" Text="NOSSA IGREJA"></Label>
             </Grid>
             </extensions:Expander>
         </DataTemplate>

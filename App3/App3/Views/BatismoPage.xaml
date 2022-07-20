@@ -76,21 +76,7 @@
 
                         </StackLayout>
 
-                        <StackLayout>
-                            <Grid>
-                                <StackLayout Grid.Column="0" Grid.Row="1">
-                                    <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                                </StackLayout>
-                            </Grid>
-                            <StackLayout Grid.Column="0" Grid.Row="1">
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <DatePicker x:Name="txtDtNas"  TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0"></DatePicker>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-
-                        </StackLayout>
+                        
 
 
 

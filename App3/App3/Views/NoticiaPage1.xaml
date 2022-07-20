@@ -54,7 +54,8 @@
                                     <StackLayout>
                                         <StackLayout >
                                             <Label Text="Não deixemos que a família seja envenenada pelas toxinas do egoísmo, do individualismo, da cultura atual da indiferença e do desperdício, e com isso perca seu próprio ADN, que é o espírito de acolhimento e serviço, afirmou o líder da igreja católica. 
-                                                         O Papa Francisco celebrou este sábado as famílias e exortou-as a evitar decisões egoístas que são indiferentes à vida, na sequência da decisão, sexta-feira, do Supremo Tribunal dos Estados Unidos de eliminar a proteção federal do direito ao aborto."  
+                                                                
+                                                   O Papa Francisco celebrou este sábado as famílias e exortou-as a evitar decisões egoístas que são indiferentes à vida, na sequência da decisão, sexta-feira, do Supremo Tribunal dos Estados Unidos de eliminar a proteção federal do direito ao aborto."  
                                                    TextColor="#4568C7" FontFamily="OpenSans-Regular"></Label>
 
                                         </StackLayout>

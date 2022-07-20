@@ -29,21 +29,27 @@
                     <Frame>
                         <Label TextColor="#7a7a7a" Text="Notificações de transmissões ao vivo" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
                 </StackLayout>
 
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
                         <Label TextColor="#7a7a7a" Text="Notificações de eventos" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
                 </StackLayout>
 
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
                         <Label TextColor="#7a7a7a" Text="Notificações de notícias" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
+                </StackLayout>
+                <StackLayout Margin="0,0,0,5">
+                    <Frame>
+                        <Label TextColor="#7a7a7a" Text="Notificações de mensagens" FontAttributes="Bold" FontSize="15"></Label>
+                    </Frame>
+                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
                 </StackLayout>
 
             </StackLayout>

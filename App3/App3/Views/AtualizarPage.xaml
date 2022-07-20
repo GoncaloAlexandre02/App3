@@ -37,7 +37,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Nome" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Nome" TextTransform="Uppercase" Margin="22,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
                             <Entry Text="Admin" Margin="20,25,60,0" TextColor="#4568C7" ></Entry>
