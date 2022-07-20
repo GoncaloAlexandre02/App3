@@ -17,7 +17,9 @@
                 </LinearGradientBrush>
             </StackLayout.Background>
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mural de Orações"></Label>
-           
+            <ImageButton Source="icon_add" Grid.Row="0" Grid.Column="0" Margin="0,0,0,10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="30" WidthRequest="30" BackgroundColor="Transparent"></ImageButton>
+
+
         </StackLayout>
 
     </Shell.TitleView>
@@ -30,107 +32,8 @@
         <Button Grid.Row="0" Text="Adicionar uma Oração" Clicked="AddMural_Clicked" Padding="0"  BackgroundColor="#527beb" TextColor="White" VerticalOptions="Center" HeightRequest="300" Margin="0,-3,0,0"/>
 
         <ScrollView Grid.Row="1" Margin="0,-10,0,0">
-            <StackLayout>
+            <StackLayout x:Name="EcraMural">
 
-
-                <StackLayout >
-                        <Frame Background="white" Margin="15,20,15,0" HeightRequest="200" CornerRadius="15" Padding="20,20,30,20"  >
-                            <StackLayout>
-                                <StackLayout >
-                                    <Label Text="Saúde" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#527beb" ></Label>
-                                </StackLayout>
-                               
-                                <StackLayout>
-                                    <Label Text="tiagodoadnilson@gmail.com" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="10" TextColor="#4568C7" ></Label>
-                                </StackLayout>
-                                <Label Text="Tiago Santos" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#4568C7" Grid.Column="3"></Label>
-                                <StackLayout HorizontalOptions="Start" Margin="0,0,160,0" >
-                                    
-                                    <ImageButton Source="icon_mens" HeightRequest="30" Clicked="TapGestureRecognizer_Tapped_MuralPopup" HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent"></ImageButton>
-                                    
-                                </StackLayout>
-                                
-                                <StackLayout HorizontalOptions="Start" Margin="40,-35,120,0">
-                                    <Label Text="Envie uma mensagem" TextColor="#4568C7" FontSize="12" TextTransform="Uppercase" >
-                                        <Label.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MuralPopup"></TapGestureRecognizer>
-                                        </Label.GestureRecognizers>
-                                    </Label>
-                                </StackLayout>
-                            </StackLayout>
-                        </Frame>
-                    </StackLayout>
-
-                
-                
-                <StackLayout>
-                    <Frame Background="white" Margin="15,20,15,0" HeightRequest="200" CornerRadius="15" Padding="20,20,30,20">
-                        <StackLayout>
-                            <Label Text="Família" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#527beb"></Label>
-                            <Label Text="Peço oração por salvação, cura, libertação amém" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="30,10,30,0" TextColor="#4568C7"></Label>
-                            <Label Text="Adriano Santos Tonon" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#4568C7"></Label>
-                            <StackLayout HorizontalOptions="Start" Margin="0,0,160,0" Grid.Column="4">
-
-                                <ImageButton Source="icon_mens" HeightRequest="30" Clicked="TapGestureRecognizer_Tapped_MuralPopup" HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent"></ImageButton>
-
-                            </StackLayout>
-
-                            <StackLayout HorizontalOptions="Start" Margin="40,-35,120,0" >
-                                <Label Text="Envie uma mensagem" TextColor="#4568C7" FontSize="12" TextTransform="Uppercase" >
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MuralPopup"></TapGestureRecognizer>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <StackLayout>
-                    <Frame Background="white" Margin="15,20,15,0" HeightRequest="200" CornerRadius="15" Padding="20,20,30,20">
-                        <StackLayout>
-                            <Label Text="Saúde" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#527beb"></Label>
-                            <Label Text="Peço oração por Andreia que sofre com síndrome de Pânico" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="30,10,30,0" TextColor="#4568C7"></Label>
-                            <Label Text="Andreia Souza" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#4568C7"></Label>
-                            <StackLayout HorizontalOptions="Start" Margin="0,0,160,0" >
-
-                                <ImageButton Source="icon_mens" HeightRequest="30" Clicked="TapGestureRecognizer_Tapped_MuralPopup" HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent"></ImageButton>
-
-                            </StackLayout>
-
-                            <StackLayout HorizontalOptions="Start" Margin="40,-35,120,0">
-                                <Label Text="Envie uma mensagem" TextColor="#4568C7" FontSize="12" TextTransform="Uppercase" >
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MuralPopup"></TapGestureRecognizer>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
-
-                <StackLayout>
-                    <Frame Background="white" Margin="15,20,15,0" HeightRequest="200" CornerRadius="15" Padding="20,20,30,20">
-                        <StackLayout>
-                            <Label Text="Família" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#527beb"></Label>
-                            <Label Text="Por minha família" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="30,10,30,0" TextColor="#4568C7"></Label>
-                            <Label Text="Luis Rodrigues" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#4568C7"></Label>
-                            <StackLayout HorizontalOptions="Start" Margin="0,0,160,0" >
-
-                                <ImageButton Source="icon_mens" HeightRequest="30" Clicked="TapGestureRecognizer_Tapped_MuralPopup" HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent"></ImageButton>
-
-                            </StackLayout>
-
-                            <StackLayout HorizontalOptions="Start" Margin="40,-35,120,0">
-                                <Label Text="Envie uma mensagem" TextColor="#4568C7" FontSize="12" TextTransform="Uppercase" >
-                                    <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MuralPopup"></TapGestureRecognizer>
-                                    </Label.GestureRecognizers>
-                                </Label>
-                            </StackLayout>
-                        </StackLayout>
-                    </Frame>
-                </StackLayout>
             </StackLayout>
         </ScrollView>
     </Grid>

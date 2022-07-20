@@ -2,6 +2,7 @@
 using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Text;
@@ -424,14 +425,14 @@ namespace App3.Services
             }
         }
 
-        /*public async Task<ImageSource> GetImagemServer(string img)
+        public async Task<ImageSource> GetImagemServer(string img)
         {
             try
             {
                 var response = await client.GetAsync("https://10.0.2.2:7004/api/getImage?img=" + img);
                 byte[] image = await response.Content.ReadAsByteArrayAsync();
-                //var imageSource = ImageSource.FromStream(() => new MemoryStream(image));
-               // return imageSource;
+                var imageSource = ImageSource.FromStream(() => new MemoryStream(image));
+                return imageSource;
             }
             catch (Exception ex)
             {
@@ -439,7 +440,7 @@ namespace App3.Services
                 return null;
             }
 
-        }*/
+        }
         public async Task<RootNoticia> GetNoticiasAsync()
         {
             try

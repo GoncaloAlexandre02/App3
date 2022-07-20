@@ -15,7 +15,7 @@ namespace App3.Views.Partials
     public partial class DepartamentoSingleView : ContentView
     {
         Departamento depart2;
-        //List<Responsavel> bbb;
+        List<Responsavel> bbb;
         RestService restService;
         public DepartamentoSingleView()
         {
@@ -39,9 +39,9 @@ namespace App3.Views.Partials
             try
             {
   
-               // bbb = await restService.GetResponsaveisAsync(iddepart);
+                bbb = await restService.GetResponsaveisAsync(iddepart);
                 
-               // nomeUser.Text = bbb[0].NomeUser.ToString();
+                nomeUser.Text = bbb[0].NomeUser.ToString();
                 
             }
             catch (Exception ex)

@@ -24,7 +24,7 @@ namespace App3.Views.Partials
         }
         public void Handle_Completed(object sender, EventArgs e)
         {
-           // (this.Parent.Parent.BindingContext as ChatViewModel).OnSendCommand.Execute(null);
+            (this.Parent.Parent.BindingContext as ChatViewModel).OnSendCommand.Execute(null);
             chatTextInput.Focus();
         }
 

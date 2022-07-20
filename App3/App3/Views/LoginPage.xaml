@@ -36,7 +36,7 @@
                                     <StackLayout>
                                         <Frame BackgroundColor="Transparent" x:Name="fEmail" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-10,5,-5,0">
                                             <StackLayout Orientation="Horizontal">
-                                                <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                                <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
                                             </StackLayout>
                                         </Frame>
                                     </StackLayout>
@@ -44,7 +44,7 @@
                                     <StackLayout>
                                         <Frame BackgroundColor="Transparent" x:Name="fPass"  Margin="-10,15,-5,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
                                             <StackLayout Orientation="Horizontal">
-                                                <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
+                                                <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
                                             </StackLayout>
                                         </Frame>
                                     </StackLayout>
@@ -53,9 +53,9 @@
 
                                     <StackLayout  Orientation="Horizontal" Margin="9,5,0,0">
                                         <CheckBox IsChecked="False" Color="DarkGray" />
-                                        <Label Text="Remember me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
+                                        <Label Text="Lembre-me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 
-                                        <Label Text="Forgot Password" TextColor="DarkGray"  HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,22,0" />
+                                        <Label Text="Esqueceu Password" TextColor="DarkGray"  HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,22,0" />
 
 
                                     </StackLayout>
@@ -70,8 +70,8 @@
 
                                     <StackLayout Margin="0,33,0,0" Padding="0">
                                         <Grid>
-                                            <BoxView BackgroundColor="#cf9946" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
-                                            <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="#cf9946" Margin="0" HorizontalOptions="Center" Padding="0">
+                                            <BoxView BackgroundColor="#ebebeb" HeightRequest="1" WidthRequest="150"  HorizontalOptions="Center" VerticalOptions="Center"/>
+                                            <Frame BackgroundColor="White" HeightRequest="45" WidthRequest="45" CornerRadius="45" HasShadow="False" BorderColor="#ebebeb" Margin="0" HorizontalOptions="Center" Padding="0">
                                                 <Label Text="OU" TextColor="#0a2a3b" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center"/>
                                             </Frame>
                                         </Grid>

@@ -33,7 +33,7 @@ namespace App3.Views
         private async void AtualizaUser(string id)
         {
             userChat = await restService.GetUserChatAsync(id);
-            //imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
+            imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
             titulo.Text = userChat.Nome + " " + userChat.Apelido;
 
         }

@@ -1,21 +1,13 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             BackgroundColor="#ededed"
+             BackgroundColor="#ebebeb"
              Title="Configurações"
              x:Class="App3.Views.ConfigPage">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium"  VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Configurações"></Label>
 
         </StackLayout>
@@ -27,29 +19,29 @@
 
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
-                        <Label TextColor="#7a7a7a" Text="Notificações de transmissões ao vivo" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Notificações de transmissões ao vivo" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True" ThumbColor="#0a2a3b" OnColor="#18648C"></Switch>
                 </StackLayout>
 
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
-                        <Label TextColor="#7a7a7a" Text="Notificações de eventos" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Notificações de eventos" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True" ThumbColor="#0a2a3b" OnColor="#18648C"></Switch>
                 </StackLayout>
 
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
-                        <Label TextColor="#7a7a7a" Text="Notificações de notícias" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Notificações de notícias" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True" ThumbColor="#0a2a3b" OnColor="#18648C"></Switch>
                 </StackLayout>
                 <StackLayout Margin="0,0,0,5">
                     <Frame>
-                        <Label TextColor="#7a7a7a" Text="Notificações de mensagens" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Notificações de mensagens" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Switch Margin="0,-50,10,0" IsToggled="True"></Switch>
+                    <Switch Margin="0,-50,10,0" IsToggled="True" ThumbColor="#0a2a3b" OnColor="#18648C"></Switch>
                 </StackLayout>
 
             </StackLayout>
@@ -60,9 +52,9 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="desenvolver_event"></TapGestureRecognizer>
                         </Frame.GestureRecognizers>
-                        <Label TextColor="#7a7a7a" Text="Sobre o desenvolvedor" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Sobre o desenvolvedor" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                    <Label TextColor="#0a2a3b" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
                 </StackLayout>
 
                 <StackLayout>
@@ -70,9 +62,9 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="privacy_event"></TapGestureRecognizer>
                         </Frame.GestureRecognizers>
-                        <Label TextColor="#7a7a7a" Text="Política de privacidade" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Política de privacidade" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                    <Label TextColor="#0a2a3b" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
                 </StackLayout>
 
                 <StackLayout>
@@ -81,9 +73,9 @@
                         <Frame.GestureRecognizers>
                             <TapGestureRecognizer Tapped="term_event"></TapGestureRecognizer>
                         </Frame.GestureRecognizers>
-                        <Label TextColor="#7a7a7a" Text="Termos de serviços" FontAttributes="Bold" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Termos de serviços" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
-                    <Label TextColor="#7a7a7a" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
+                    <Label TextColor="#0a2a3b" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
                 </StackLayout>
 
             </StackLayout>

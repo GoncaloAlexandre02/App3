@@ -6,8 +6,11 @@ namespace App3.Models
 {
     public class Noticia
     {
-        public String dataNoticia { get; set; }
-        public String tituloNoticia { get; set; }
+        public int Idnoticia { get; set; }
+        public int? Idigreja { get; set; }
+        public string Nomenoticia { get; set; }
+        public string Descnoticia { get; set; }
+        public DateTime Dtnoticia { get; set; }
     }
 
     public class RootNoticia

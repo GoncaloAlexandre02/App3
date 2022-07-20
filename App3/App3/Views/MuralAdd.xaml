@@ -32,21 +32,17 @@
 
 
 
-                    <Frame  Margin="20,30,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
-                        <Entry Placeholder="MOTIVO DA ORAÇÃO" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0" ></Entry>
+                    <Frame  Margin="20,15,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
+                        <Entry Placeholder="MOTIVO DA ORAÇÃO" x:Name="Motivo"  TextColor="#4568C7" Margin="15,0,15,0" ></Entry>
                     </Frame>
 
 
                     <Frame  Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
-                        <Entry  Placeholder="ESCREVA AQUI" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0"></Entry>
-                    </Frame>
-
-                    <Frame  Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
-                        <Entry  Placeholder="NOME" PlaceholderColor="#7a7a7a" TextColor="#4568C7" Margin="15,0,15,0"></Entry>
+                        <Entry  Placeholder="ESCREVA AQUI" x:Name="DescM" TextColor="#4568C7" Margin="15,0,15,0"></Entry>
                     </Frame>
 
                     <StackLayout>
-                        <Label Text="Deseja receber uma visita ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="15" FontFamily="RedHat-Bold"></Label>
+                        <Label Text="Deseja receber uma visita de algum membro ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="15"></Label>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"></RowDefinition>
@@ -55,21 +51,19 @@
                                 <ColumnDefinition Width="40"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                           
-                            
-                            <Label Text="SIM" Grid.Row="0" Grid.ColumnSpan="2" TextColor="#4568C7" Margin="20,0,0,0" FontSize="15"></Label>
-                            <RadioButton x:Name="cbRecebSim"  xct:IconTintColorEffect.TintColor="#4568C7" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0"></RadioButton>
+                            <RadioButton x:Name="cVisitaSim"  Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></RadioButton>
+                            <Label Text="SIM" Grid.Row="0" Grid.Column="1" TextColor="#4568C7"></Label>
 
-                            <Label Text="NÃO" Grid.Row="0" Grid.ColumnSpan="4" Margin="110,0,0,0" TextColor="#4568C7" FontSize="15"></Label>
-                            <RadioButton x:Name="cbRecebNao"  Grid.Row="0" Grid.Column="2"  ></RadioButton>
-                            
+                            <RadioButton IsChecked="True" x:Name="cVisitaNao"   Grid.Row="0" Grid.Column="2"></RadioButton>
+                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-90,0,0,0" TextColor="#4568C7"></Label>
 
                         </Grid>
 
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Publicar no mural de oração ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="16" FontFamily="RedHat-Bold"></Label>
+                        <Label Text="Deseja receber uma ligação de 
+                                   algum membro ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="15"></Label>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"></RowDefinition>
@@ -78,20 +72,39 @@
                                 <ColumnDefinition Width="40"></ColumnDefinition>
                             </Grid.ColumnDefinitions>
 
-                            <Label Text="SIM" Grid.Row="0" Grid.ColumnSpan="2" FontFamily="Dosis-SemiBold" TextColor="#4568C7" Margin="20,0,0,0" FontSize="15"></Label>
-                            <RadioButton x:Name="cbRecebSim1"  xct:IconTintColorEffect.TintColor="#4568C7" Grid.Row="0" Grid.Column="1" Margin="10,0,0,0"></RadioButton>
+                            <RadioButton  x:Name="cLigacaoSim" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></RadioButton>
+                            <Label Text="SIM" Grid.Row="0" Grid.Column="1" TextColor="#4568C7"></Label>
 
-                            <Label Text="NÃO" Grid.Row="0" Grid.ColumnSpan="4" FontFamily="Dosis-SemiBold" Margin="110,0,0,0" TextColor="#4568C7" FontSize="15"></Label>
-                            <RadioButton x:Name="cbRecebNao1"  Grid.Row="0" Grid.Column="2" ></RadioButton>
+                            <RadioButton IsChecked="True"  x:Name="cLigacaoNao" Grid.Row="0" Grid.Column="2"></RadioButton>
+                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-90,0,0,0" TextColor="#4568C7"></Label>
 
+                        </Grid>
+
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <Label Text="Publicar no mural de oração ?" Margin="15,20,15,10" TextColor="#4568C7" FontSize="15"></Label>
+                        <Grid>
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="20"></RowDefinition>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="40"></ColumnDefinition>
+                            </Grid.ColumnDefinitions>
+
+                            <RadioButton  x:Name="cPublicarSim" Grid.Row="0" Grid.Column="0" Margin="10,0,0,0"></RadioButton>
+                            <Label Text="SIM" Grid.Row="0" Grid.Column="1" TextColor="#4568C7"></Label>
+
+                            <RadioButton IsChecked="True"  x:Name="cPublicarNao" Grid.Row="0" Grid.Column="2"></RadioButton>
+                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-90,0,0,0" TextColor="#4568C7"></Label>
 
                         </Grid>
 
                     </StackLayout>
 
                     <StackLayout>
-                        <Button Text="Enviar" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,45,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
-
+                        <Button Text="Enviar" BackgroundColor="#527beb" Clicked="Button_ClickedAsync"  Margin="10,30,10,0" TextColor="White" CornerRadius="15"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
                     </StackLayout>
 
 

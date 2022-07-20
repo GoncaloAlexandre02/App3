@@ -64,7 +64,7 @@ namespace App3.Views
                 fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
                 fTele.BorderColor = Color.FromRgb(207, 153, 70);
 
-                /*var pass2 = MD5Hash.Hash.Content(password);
+                var pass2 = MD5Hash.Hash.Content(password);
                 string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'dtnasc':'" + dtnasc + "', 'tipouser':2}";
                 var dataal = data.Replace('\'', '\"');
                 //await this.DisplayToastAsync(dataal, 3000);
@@ -84,7 +84,7 @@ namespace App3.Views
                     fEmail.BorderColor = Color.FromRgb(255, 0, 0);
                     await this.DisplayToastAsync("Email ja esta em uso!", 2000);
 
-                }*/
+                }
             }
         }
     }

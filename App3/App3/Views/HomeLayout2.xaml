@@ -4,7 +4,7 @@
              xmlns:sys="clr-namespace:System;assembly=netstandard"
              x:Class="App3.Views.HomeLayout2"
              BackgroundColor="#ededed"
-             Title="AD BETEL Portugal"
+             Title="Nossa Igreja"
              >
     <Shell.TitleView>
 
@@ -168,16 +168,16 @@
                     </StackLayout>
                     <StackLayout   Grid.Column="1" Grid.Row="3" Orientation="Vertical" Padding="10,10,10,10"  BackgroundColor="Transparent">
                             <StackLayout.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Video"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Mensagem"  Source="videoT.png" BackgroundColor="Transparent"></ImageButton>
+                            <ImageButton Style="{StaticResource image2}" Clicked="TapGestureRecognizer_Tapped_Video"  Source="videoT.png" BackgroundColor="Transparent"></ImageButton>
                             <Frame  TranslationY="-15"   Padding="-23,10,-23,0" BackgroundColor="Transparent" >
                                 <Frame.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Video"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
                             <Label HorizontalTextAlignment="Center" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="VÍDEOS">
                                     <Label.GestureRecognizers>
-                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mensagem"></TapGestureRecognizer>
+                                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Video"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
                             </Label>
                          </Frame>

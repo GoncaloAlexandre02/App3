@@ -4,16 +4,8 @@
              x:Class="App3.Views.IdiomaPage">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Idioma"></Label>
 
         </StackLayout>
@@ -25,18 +17,18 @@
         <StackLayout>
             <Grid>
                 <Frame Grid.Column="0" Grid.Row="0" Margin="0,5,0,0">
-                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Português"></Label>
+                    <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Português"></Label>
                 </Frame>
                 <Frame Grid.Column="0" Grid.Row="1" Margin="0,5,0,0">
 
-                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Inglês"></Label>
+                    <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Inglês"></Label>
 
                 </Frame>
 
                 <Frame Grid.Column="0" Grid.Row="2" Margin="0,5,0,0">
 
 
-                    <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Espanhol"></Label>
+                    <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="Start" Text="Espanhol"></Label>
 
                 </Frame>
             </Grid>

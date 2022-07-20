@@ -28,7 +28,7 @@ namespace App3.Views
         private async void AtualizarEventos()
         {
             EcraEvento.Children.Clear();
-            //aaa = await restService.GetEventosAsync();
+            aaa = await restService.GetEventosAsync();
 
             try
             {

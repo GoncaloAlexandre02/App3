@@ -19,18 +19,18 @@
 
         </StackLayout>
     </Shell.TitleView>
-    
+
     <ContentPage.Content>
         <StackLayout>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="80"  />
-                   
+
                 </Grid.RowDefinitions>
-                
+
                 <StackLayout Grid.Row="0">
                     <Frame HeightRequest="25">
-                        <SearchBar Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#4568C7"></SearchBar>
+                        <SearchBar x:Name="pesquisa" TextChanged="MySearchBarOnTextChanged"  Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#4568C7"></SearchBar>
                     </Frame>
                 </StackLayout>
 
@@ -43,18 +43,18 @@
                                         <Grid>
                                             <Grid.ColumnDefinitions>
                                                 <ColumnDefinition Width="1*"></ColumnDefinition>
-                                                
+
                                             </Grid.ColumnDefinitions>
-                                            
-                                            
-                                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="15,-5,10,10">
-                                                <Label  FontSize="16" Text="{Binding tituloNoticia}" FontFamily="RedHat-SemiBold"  TextColor="#4568C7"/>
+
+
+                                            <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="10,0,10,10">
+                                                <Label  FontSize="16" Text="{Binding Nomenoticia}" FontFamily="RedHat-SemiBold"  TextColor="#4568C7"/>
                                             </StackLayout>
-                                            <StackLayout Grid.Column="1" Margin="0,-7,0,0">
-                                                <Label FontSize="16" Text="{Binding dataNoticia}"  FontFamily="RedHat-SemiBold" Margin="45,5,0,0" TextColor="#4568C7"/>
+                                            <StackLayout Grid.Column="1" Orientation="Vertical" VerticalOptions="Center" Margin="0,-7,0,0">
+                                                <Label FontSize="14" Text="{Binding Dtnoticia,StringFormat='{}{0: dd/MM/yyyy à\\s HH:mm   }'}"  FontFamily="RedHat-SemiBold" Margin="45,5,0,0" TextColor="#4568C7"/>
                                             </StackLayout>
                                         </Grid>
-                                        
+
                                     </ViewCell>
 
                                 </DataTemplate>
@@ -63,12 +63,12 @@
                     </StackLayout>
                 </ScrollView>
             </Grid>
-            
-            
-            
+
+
+
 
         </StackLayout>
-        
-        
+
+
     </ContentPage.Content>
 </ContentPage>

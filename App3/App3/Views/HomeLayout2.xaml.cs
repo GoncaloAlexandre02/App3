@@ -59,9 +59,9 @@ namespace App3.Views
 
         }
 
-        private async void TapGestureRecognizer_Tapped_Mensagem(object sender, EventArgs e)
+        private async void TapGestureRecognizer_Tapped_Video(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new MensagensPage());
+            await Navigation.PushAsync(new VideoPage());
         }
 
         private async void TapGestureRecognizer_Tapped_Evento(object sender, EventArgs e)

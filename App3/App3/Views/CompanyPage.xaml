@@ -6,16 +6,8 @@
              Title="Sobre"
              >
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Sobre"></Label>
 
         </StackLayout>
@@ -24,22 +16,25 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-            <StackLayout>
+            <StackLayout >
 
                 <Image Source="q4logo.png" HorizontalOptions="Center" HeightRequest="120" Margin="0,40,0,0"></Image>
-                    <Label TextColor="#4568C7" Text="Tecnologia para conectar pessoas" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="20" FontAttributes="Bold"></Label>
-                    <Label TextColor="#4568C7" Text="Mais do que desenvolder aplicações proprocionamos funções que permitem acessibilidade para todos e crecimento para as instituições/empresas." HorizontalTextAlignment="Center"  Margin="5,5,5,0" FontSize="16" ></Label>
-                    <Label TextColor="#4568C7" Text="CONTATO" FontAttributes="Bold" FontSize="18" Margin="10,60,0,0"></Label>
-                    <Label TextColor="#4568C7" Text="Av. Sagrado Coração de Maria N1,1ºF 2900-031 Setubal" Margin="10,0,0,0"></Label>
-                    <Label TextColor="#4568C7" Text="+351 913 885 038" Margin="10,3,0,0"  FontSize="16"></Label>
-                    <Label TextColor="#4568C7" Text="SITE" FontAttributes="Bold" FontSize="18" Margin="10,25,0,0"></Label>
-                    <Label TextColor="#4568C7" Text="http://www.srwsoftware.pt" Margin="10,0,0,0" FontSize="15">
+                    <StackLayout Margin="5,0,5,0">
+                        <Label TextColor="#0a2a3b" Text="Tecnologia para conectar pessoas" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="20" FontFamily="OpenSans-SemiBold" FontAttributes="Bold"></Label>
+                        <Label TextColor="#0a2a3b" Text="Mais do que desenvolder aplicações proprocionamos funções que permitem acessibilidade para todos e crecimento para as instituições/empresas." FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center"  Margin="5,5,5,0" FontSize="16" ></Label>
+                        <Label TextColor="#0a2a3b" Text="CONTATO" FontAttributes="Bold" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,60,0,0"></Label>
+                        <Label TextColor="#0a2a3b" Text="Av. Sagrado Coração de Maria N1,1ºF 2900-031 Setubal" FontFamily="OpenSans-SemiBold" Margin="10,0,0,0"></Label>
+                        <Label TextColor="#0a2a3b" Text="+351 913 885 038" Margin="10,3,0,0" FontFamily="OpenSans-SemiBold" FontSize="16"></Label>
+                        <Label TextColor="#0a2a3b" Text="SITE" FontAttributes="Bold" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0"></Label>
+                        <Label TextColor="#0a2a3b" Text="http://www.srwsoftware.pt" Margin="10,0,0,0"  FontFamily="OpenSans-SemiBold" FontSize="15">
                     <Label.GestureRecognizers>
                         <TapGestureRecognizer Tapped="site_event"></TapGestureRecognizer>
                     </Label.GestureRecognizers>
                 </Label>
-                    <Label TextColor="#4568C7" Text="E-MAIL" FontAttributes="Bold" FontSize="18" Margin="10,25,0,10"></Label>
-                    <Label TextColor="#4568C7" Text="info@srwsoftware.pt" Margin="10,0,0,10" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="E-MAIL" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,25,0,10"></Label>
+                        <Label TextColor="#0a2a3b" Text="info@srwsoftware.pt" FontFamily="OpenSans-SemiBold" Margin="10,0,0,10" FontSize="15"></Label>
+                    </StackLayout>
+                    
             </StackLayout>
             </ScrollView>
         </StackLayout>

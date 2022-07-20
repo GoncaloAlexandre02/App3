@@ -7,16 +7,8 @@
              BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Minha Conta"></Label>
 
             <Grid >
@@ -56,14 +48,14 @@
                 <StackLayout Margin="5,5,5,0"  xct:ShadowEffect.OffsetY="1" xct:ShadowEffect.Radius="1" xct:ShadowEffect.Opacity="5">
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" >
-                            <Image Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100"></Image>
+                            <Image x:Name="Imagem" Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100"></Image>
                         </StackLayout>
                 
                     </Grid>
 
                     <Grid>
                             <StackLayout Grid.Column="0" Grid.Row="0">
-                                <Label Text="Admin" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,5,0,20" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold" ></Label>
+                            <Label Text="Admin" x:Name="tNome" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,5,0,20" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold" ></Label>
                             </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -76,7 +68,7 @@
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="admin@admin.com" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="admin@admin.com"  x:Name="tEmail" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -90,7 +82,7 @@
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="912345678" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="912345678" FontSize="18" x:Name="tTele"  Margin="30,0,0,0" TextColor="#4568C7" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -104,7 +96,7 @@
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="06/05/2022" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="06/05/2022" x:Name="tDt" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

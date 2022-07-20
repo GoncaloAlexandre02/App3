@@ -26,14 +26,14 @@ namespace App3.Views
 
         public async void AtualizaVersiculo()
         {
-            //versiculo = await restService.GetVersiculo();
+            versiculo = await restService.GetVersiculo();
             textV.Text = versiculo.Text;
             bookV.Text = versiculo.Book_name + " " + versiculo.Chapter + ":" + versiculo.Verse;
         }
 
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //versiculo = await restService.GetVersiculo();
+            versiculo = await restService.GetVersiculo();
             await Navigation.PushAsync(new BibliaPage(versiculo.Book_name.ToString(), versiculo.Book_id.ToString(), versiculo.Chapter.ToString(), versiculo.Verse.ToString(), versiculo));
         }
     }

@@ -17,7 +17,7 @@ namespace App3.Views.Partials
         {
             InitializeComponent();
         }
-       /* private Mural mural2;
+        private Mural mural2;
         public MuralSingleView(Mural mural1)
         {
             InitializeComponent();
@@ -25,11 +25,11 @@ namespace App3.Views.Partials
             Motivo.Text = mural1.Motivo.ToString();
             Descmural.Text = mural1.Descmural.ToString();
             Nomeuser.Text = mural1.Nomeuser.ToString();
-        }*/
+        }
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new ChatPage(mural2.Iduser.ToString()));
+            await Navigation.PushAsync(new ChatPage(mural2.Iduser.ToString()));
         }
     }
 }

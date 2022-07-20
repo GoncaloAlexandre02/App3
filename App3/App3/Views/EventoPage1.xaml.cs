@@ -16,7 +16,7 @@ namespace App3.Views
     {
         RestService restService;
         Evento evento2;
-        //Pessoaevento pessoaevento;
+        Pessoaevento pessoaevento;
         public EventoPage1()
         {
             InitializeComponent();
@@ -27,41 +27,43 @@ namespace App3.Views
             InitializeComponent();
             restService = new RestService();
             evento2 = evento;
-            //AtualizarPessoaevento();
+            AtualizarPessoaevento();
             titulolabel.Text = evento.Nome.ToString();
             dtlabel.Text = evento.Dtevento.ToString("dd MMM HH:mm (yyyy)");
             desclabel.Text = evento.Descevento.ToString();
         }
-        /*public async void AtualizarPessoaevento()
+        public async void AtualizarPessoaevento()
         {
             try
             {
 
-            
-            var resp = await restService.GetPessoaeventoAsync(evento2.Idevento.ToString(), await SecureStorage.GetAsync("iduser"));
 
-                //if (resp[0].estado == "vai")
-            {
-                bVou.BackgroundColor = Color.FromHex("#527beb");
-                bNao.BackgroundColor = Color.FromHex("#A9BCF2");
-                bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
-            }else if(resp[0].estado == "talvez")
-            {
-                bTalvez.BackgroundColor = Color.FromHex("#527beb");
-                bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                bNao.BackgroundColor = Color.FromHex("#A9BCF2");
+                var resp = await restService.GetPessoaeventoAsync(evento2.Idevento.ToString(), await SecureStorage.GetAsync("iduser"));
+
+                if (resp[0].estado == "vai")
+                {
+                    bVou.BackgroundColor = Color.FromHex("#527beb");
+                    bNao.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                }
+                else if (resp[0].estado == "talvez")
+                {
+                    bTalvez.BackgroundColor = Color.FromHex("#527beb");
+                    bVou.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bNao.BackgroundColor = Color.FromHex("#A9BCF2");
+                }
+                else
+                {
+                    bNao.BackgroundColor = Color.FromHex("#527beb");
+                    bVou.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                }
             }
-            else
-            {
-                bNao.BackgroundColor = Color.FromHex("#527beb");
-                bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
-            }
-            }catch (Exception ex)
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
-        }*/
+        }
 
         private async void bVou_Clicked(object sender, EventArgs e)
         {
@@ -70,8 +72,8 @@ namespace App3.Views
                 bVou.BackgroundColor = Color.FromHex("#527beb");
                 bNao.BackgroundColor = Color.FromHex("#A9BCF2");
                 bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
-                //pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "vai" };
-           // var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
+                pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "vai" };
+            var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
@@ -85,8 +87,8 @@ namespace App3.Views
                 bTalvez.BackgroundColor = Color.FromHex("#527beb");
                 bVou.BackgroundColor = Color.FromHex("#A9BCF2");
                 bNao.BackgroundColor = Color.FromHex("#A9BCF2");
-                //pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "talvez" };
-                //var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
+                pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "talvez" };
+                var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }
             catch (Exception ex)
             {
@@ -101,8 +103,8 @@ namespace App3.Views
                 bNao.BackgroundColor = Color.FromHex("#527beb");
                 bVou.BackgroundColor = Color.FromHex("#A9BCF2");
                 bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
-                //pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "nao" };
-                //var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
+                pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "nao" };
+                var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }
             catch (Exception ex)
             {
@@ -138,7 +140,7 @@ namespace App3.Views
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            //await Navigation.PushAsync(new ChatPage("1"));
+            await Navigation.PushAsync(new ChatPage("1"));
         }
     }
 }

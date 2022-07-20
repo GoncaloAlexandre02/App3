@@ -14,12 +14,12 @@ namespace App3.Views.Partials
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class ResponsavelSingleView : ContentView
     {
-        //Responsavel resp2;
+        Responsavel resp2;
         public ResponsavelSingleView()
         {
             InitializeComponent();
         }
-        /*
+        
         public ResponsavelSingleView(Responsavel resp)
         {
             InitializeComponent();
@@ -32,6 +32,6 @@ namespace App3.Views.Partials
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new ChatPage(resp2.Iduser.ToString()));
-        }*/
+        }
     }
 }

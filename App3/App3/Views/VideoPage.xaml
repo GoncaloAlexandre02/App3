@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-                 xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-                 x:Class="App3.Views.MensagensPage">
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Class="App3.Views.VideoPage">
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
             <StackLayout.Background>
@@ -14,7 +14,7 @@
                               Offset="2.0"/>
                 </LinearGradientBrush>
             </StackLayout.Background>
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mensagem"></Label>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Video"></Label>
 
             <Grid>
                 <StackLayout Grid.Column="2" HorizontalOptions="End" IsVisible="false" x:Name="AddVideo">
@@ -23,7 +23,7 @@
                     </StackLayout.GestureRecognizers>
                     <ImageButton Source="icon_add" Clicked="TapGestureRecognizer_Tapped_Add" BackgroundColor="Transparent" HeightRequest="30" Margin="10,10,0,0"></ImageButton>
                 </StackLayout>
-                
+
             </Grid>
         </StackLayout>
     </Shell.TitleView>
@@ -57,7 +57,7 @@
 
                 </StackLayout>
             </Frame>
-            
+
 
             <ScrollView IsVisible="false" x:Name="scrollVip">
 
