@@ -16,26 +16,37 @@
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
-            <StackLayout >
+                <StackLayout >
 
-                <Image Source="q4logo.png" HorizontalOptions="Center" HeightRequest="120" Margin="0,40,0,0"></Image>
+                    <Image Source="q4logo.png" HorizontalOptions="Center" HeightRequest="90" Margin="0,30,0,0"></Image>
+                    <Label TextColor="#0a2a3b" Text="Tecnologia para conectar pessoas" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
                     <StackLayout Margin="5,0,5,0">
-                        <Label TextColor="#0a2a3b" Text="Tecnologia para conectar pessoas" HorizontalOptions="Center" Margin="0,15,0,0" FontSize="20" FontFamily="OpenSans-SemiBold" FontAttributes="Bold"></Label>
-                        <Label TextColor="#0a2a3b" Text="Mais do que desenvolder aplicações proprocionamos funções que permitem acessibilidade para todos e crecimento para as instituições/empresas." FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center"  Margin="5,5,5,0" FontSize="16" ></Label>
-                        <Label TextColor="#0a2a3b" Text="CONTATO" FontAttributes="Bold" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,60,0,0"></Label>
-                        <Label TextColor="#0a2a3b" Text="Av. Sagrado Coração de Maria N1,1ºF 2900-031 Setubal" FontFamily="OpenSans-SemiBold" Margin="10,0,0,0"></Label>
-                        <Label TextColor="#0a2a3b" Text="+351 913 885 038" Margin="10,3,0,0" FontFamily="OpenSans-SemiBold" FontSize="16"></Label>
-                        <Label TextColor="#0a2a3b" Text="SITE" FontAttributes="Bold" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0"></Label>
-                        <Label TextColor="#0a2a3b" Text="http://www.srwsoftware.pt" Margin="10,0,0,0"  FontFamily="OpenSans-SemiBold" FontSize="15">
-                    <Label.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="site_event"></TapGestureRecognizer>
-                    </Label.GestureRecognizers>
-                </Label>
-                        <Label TextColor="#0a2a3b" Text="E-MAIL" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,25,0,10"></Label>
-                        <Label TextColor="#0a2a3b" Text="info@srwsoftware.pt" FontFamily="OpenSans-SemiBold" Margin="10,0,0,10" FontSize="15"></Label>
+                        <Label TextColor="#0a2a3b" Text="Contato: +351 913 885 038" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0" HorizontalOptions="Center"></Label>
+                        <Label TextColor="#0a2a3b" Text="Email: info@srwsoftware.pt" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                        <Label TextColor="#0a2a3b" Text="Rede Social: @srwsoftware" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                        <Label TextColor="#0a2a3b" Text="Site: http://www.srwsoftware.pt" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,5,0,0" HorizontalOptions="Center">
+                            <Label.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="site_event"></TapGestureRecognizer>
+                            </Label.GestureRecognizers>
+                        </Label>
+
                     </StackLayout>
-                    
-            </StackLayout>
+                    <Frame BackgroundColor="#ededed">
+                        
+                    </Frame>
+                    <Image Source="icon_inova" HorizontalOptions="Center" HeightRequest="50" Margin="0,40,0,0"></Image>
+                    <Label TextColor="#0a2a3b" Text="A solução de gestão 360º para o seu negócio!" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                    <StackLayout Margin="5,0,5,0">
+                        <Label TextColor="#0a2a3b" Text="Contato: +351 935 278 958" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0" HorizontalOptions="Center"></Label>
+                        
+                        <Label TextColor="#0a2a3b" Text="Email: info@inovarnegocios.pt" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                        <Label TextColor="#0a2a3b" Text="Rede Social: @inovarnegociosportugal" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                       
+
+                    </StackLayout>
+                </StackLayout>
+
+
             </ScrollView>
         </StackLayout>
     </ContentPage.Content>

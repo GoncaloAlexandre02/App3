@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             x:Class="App3.Views.IgrejaSocialPage1">
+             x:Class="App3.Views.IgrejaSocialPage1"
+             BackgroundColor="#ebebeb">
     <ContentPage.Content>
         <ScrollView>
             <StackLayout>
@@ -12,20 +13,20 @@
                             <Image Source="casaco_oferta" Margin="20" HeightRequest="250"></Image>
                         </StackLayout>
                         <StackLayout>
-                            <Label Text="Casaco Rosa, tamanho M para inverno" FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="18" Margin="15,0,0,0"></Label>
+                            <Label Text="Casaco Rosa, tamanho M para inverno"  TextColor="#0a2a3b" FontSize="18" Margin="15,0,0,0" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout>
-                            <Label Text="Descrição" FontFamily="OpenSans-Bold" TextDecorations="Underline" TextColor="#4568C7" FontSize="17" Margin="10,10,0,0" ></Label>
+                            <Label Text="Descrição"  TextDecorations="Underline" TextColor="#0a2a3b" FontSize="17" Margin="10,10,0,0" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout>
-                            <Label Text="Casaco Rosa, tamanho M , está novo nunca foi usado" TextColor="#4568C7" FontSize="18" Margin="10,10,0,0"></Label>
+                            <Label Text="Casaco Rosa, tamanho M , está novo nunca foi usado" TextColor="#0a2a3b" FontSize="18" Margin="10,10,0,0" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                     </StackLayout>
 
                     
                     <StackLayout Grid.Row="1" Margin="0,230,0,0">
-                        <Image Source="icon_mensager" HorizontalOptions="End" Margin="10,-20,10,0"></Image>
-                        <Button Text="Reservar" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                        <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,10,0"></Image>
+                        <Button Text="Reservar" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="OpenSans-SemiBold"/>
                     </StackLayout>
                 </Grid>
             </StackLayout>

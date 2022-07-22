@@ -1,17 +1,18 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.Partials.MuralSingleView">
+             x:Class="App3.Views.Partials.MuralSingleView"
+             BackgroundColor="#ebebeb">
   <ContentView.Content>
         <StackLayout>
             <Frame Background="white" Margin="15,20,15,0" HeightRequest="200" CornerRadius="15" Padding="20,20,30,20">
                 <StackLayout>
-                    <Label x:Name="Motivo" Text="Saúde" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#527beb"></Label>
-                    <Label x:Name="Descmural" Text="tiagodoadnilson@gmail.com" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="30,10,30,0" TextColor="#4568C7"></Label>
-                    <Label x:Name="Nomeuser" Text="Tiago Santos" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#4568C7"></Label>
+                    <Label x:Name="Motivo" Text="Saúde" FontFamily="OpenSans-SemiBold" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" FontSize="18" TextColor="#0a2a3b"></Label>
+                    <Label x:Name="Descmural" Text="tiagodoadnilson@gmail.com" HorizontalOptions="CenterAndExpand" FontSize="16" Margin="30,10,30,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Label>
+                    <Label x:Name="Nomeuser" Text="Tiago Santos" HorizontalOptions="CenterAndExpand" FontAttributes="Bold" Margin="0,10,0,0" FontSize="14" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Label>
                     <StackLayout HorizontalOptions="Start" Margin="0,0,160,0">
-                        <ImageButton Source="icon_mens" HeightRequest="30"  HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
-                        <Label Text="Envie uma mensagem" TextColor="#4568C7" HorizontalOptions="Start" Margin="50,-38,0,0" FontSize="12" TextTransform="Uppercase">
+                        <ImageButton Source="icon_mensB" HeightRequest="30"  HorizontalOptions="Start" Margin="0,35,0,0" BackgroundColor="Transparent" Clicked="ImageButton_Clicked"></ImageButton>
+                        <Label Text="Envie uma mensagem" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="Start" Margin="50,-38,0,0" FontSize="12" TextTransform="Uppercase">
                             <Label.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="ImageButton_Clicked"/>
                             </Label.GestureRecognizers>

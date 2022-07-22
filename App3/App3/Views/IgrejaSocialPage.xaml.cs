@@ -19,7 +19,7 @@ namespace App3.Views
 
         private void buttonCamisola_Clicked(object sender, EventArgs e)
         {
-            buttonCamisola.BorderColor = Color.Blue;
+            buttonCamisola.BorderColor = Color.FromHex("#0a2a3b");
             buttonEmprego.BorderColor = Color.Transparent;
             buttonMoveis.BorderColor = Color.Transparent;
         }
@@ -27,7 +27,7 @@ namespace App3.Views
         private void buttonEmprego_Clicked(object sender, EventArgs e)
         {
             buttonCamisola.BorderColor = Color.Transparent;
-            buttonEmprego.BorderColor = Color.Blue;
+            buttonEmprego.BorderColor = Color.FromHex("#0a2a3b");
             buttonMoveis.BorderColor = Color.Transparent;
         }
 
@@ -35,7 +35,7 @@ namespace App3.Views
         {
             buttonCamisola.BorderColor = Color.Transparent;
             buttonEmprego.BorderColor = Color.Transparent;
-            buttonMoveis.BorderColor = Color.Blue;
+            buttonMoveis.BorderColor = Color.FromHex("#0a2a3b");
             buttonOutro.BorderColor = Color.Transparent;
         }
 
@@ -44,7 +44,7 @@ namespace App3.Views
             buttonCamisola.BorderColor = Color.Transparent;
             buttonEmprego.BorderColor = Color.Transparent;
             buttonMoveis.BorderColor = Color.Transparent;
-            buttonOutro.BorderColor = Color.Blue;
+            buttonOutro.BorderColor = Color.FromHex("#0a2a3b");
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

@@ -1,19 +1,12 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.RedesSociaisPage">
+             x:Class="App3.Views.RedesSociaisPage"
+             BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Redes Sociais"></Label>
 
         </StackLayout>
@@ -21,27 +14,27 @@
     <ContentPage.Content>
         <StackLayout>
             <Grid>
-                <Frame Grid.Column="0" Grid.Row="0" Margin="0,5,0,0">
+                <Frame Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
                     <StackLayout>
 
-                        <Image Source="faceTC.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
+                        <Image Source="logo_Face.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
 
                         </Image>
-                        <Frame  TranslationY="-5"  Margin="10,0,0,-25" BackgroundColor="Transparent" >
+                        <Frame  Margin="10,0,0,-25" BackgroundColor="Transparent" >
 
-                            <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Facebook"></Label>
+                            <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Facebook"></Label>
                         </Frame>
                     </StackLayout>
                 </Frame>
-                <Frame Grid.Column="0" Grid.Row="1" Margin="0,5,0,0">
+                <Frame Grid.Column="0" Grid.Row="1" Margin="0,-5,0,0">
                     <StackLayout>
 
-                        <Image Source="instaTC.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
+                        <Image Source="instaTC1.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="45" Margin="10,0,0,-60">
 
                         </Image>
-                        <Frame  TranslationY="-5"  Margin="10,0,0,-25" BackgroundColor="Transparent" >
+                        <Frame  TranslationY="-5"  Margin="10,0,0,-15" BackgroundColor="Transparent" >
 
-                            <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="#4568C7" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Instagram"></Label>
+                            <Label HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Instagram"></Label>
                         </Frame>
                     </StackLayout>
                 </Frame>

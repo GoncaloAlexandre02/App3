@@ -3,21 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="App3.Views.DonatePage"
-              BackgroundColor="#ededed"
+           BackgroundColor="#ebebeb"
              Title="Doar"
              >
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Doar"></Label>
 
         </StackLayout>
@@ -29,7 +21,7 @@
             <StackLayout Orientation="Vertical">
                 <StackLayout>
                     <Frame Margin="10,20,10,0" CornerRadius="10">
-                        <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Tipos de Doação" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
+                        <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Tipos de Doação" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
                             <Picker.Items>
                                 <x:String>Ofertas</x:String>
                                 <x:String>Dizimos</x:String>
@@ -42,10 +34,10 @@
                 <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" >
                     <Frame BackgroundColor="#FFFF" HeightRequest="120" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
                         <StackLayout>
-                            <Label Text="Montante"  FontAttributes="Bold" FontSize="17"  HorizontalOptions="Center" Margin="10,15,0,0" TextColor="#4568C7" FontFamily="OpenSans-SemiBold" ></Label>
+                            <Label Text="Montante"  FontAttributes="Bold" FontSize="17"  HorizontalOptions="Center" Margin="10,15,0,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" ></Label>
 
-                            <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                <Entry Keyboard="Numeric" Placeholder="10€" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150" FontFamily="OpenSans-SemiBold" />
+                            <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
+                                <Entry Keyboard="Numeric" Placeholder="10€" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150" FontFamily="OpenSans-SemiBold" />
                             </Frame>
                         </StackLayout>
                     </Frame>
@@ -53,7 +45,7 @@
 
                 <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand"   >
                     <StackLayout>
-                        <Label Text="Forma de Pagamento" TextColor="#4568C7" FontFamily="OpenSans-SemiBold" FontSize="18"></Label>
+                        <Label Text="Forma de Pagamento" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" FontSize="18"></Label>
                     </StackLayout>
                     <Grid>
                         
@@ -61,7 +53,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MBW"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="logo_MBWay.png" HeightRequest="55" Margin="10,35,0,0">
+                            <Image Source="logo_MBWay.png" HeightRequest="55" Margin="10,25,0,0">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MBW"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
@@ -71,7 +63,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_CC"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="icon_cartaodecredito" HeightRequest="65" Margin="10,30,0,0">
+                            <Image Source="icon_cartaodecreditoB" HeightRequest="65" Margin="10,20,0,0">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_CC"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
@@ -81,7 +73,7 @@
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MB"></TapGestureRecognizer>
                             </StackLayout.GestureRecognizers>
-                            <Image Source="logo_Multibanco.png" HeightRequest="65" Margin="5,30,0,0">
+                            <Image Source="logo_Multibanco.png" HeightRequest="65" Margin="5,20,0,0">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MB"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
@@ -96,18 +88,18 @@
                     <Frame BackgroundColor="#FFFF" HeightRequest="280" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="10" >
                         <StackLayout>
                             <StackLayout>
-                                <Label TextColor="#4568C7"  Text="MBWAY" FontAttributes="Bold" FontSize="17" Margin="20,20,0,0" FontFamily="OpenSans-SemiBold" ></Label>
+                                <Label TextColor="#0a2a3b"  Text="MBWAY" FontAttributes="Bold" FontSize="17" Margin="20,20,0,0" FontFamily="OpenSans-SemiBold" ></Label>
                                 <Image Source="logo_MBWay.png" HorizontalOptions="End" WidthRequest="50" Margin="0,-25,30,0"  ></Image>
-                                <Label TextColor="#4568C7" Text="Inserir o número de telemóvel MBWAY" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="16" FontFamily="OpenSans-SemiBold" ></Label>
+                                <Label TextColor="#0a2a3b" Text="Inserir o número de telemóvel MBWAY" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="16" FontFamily="OpenSans-SemiBold" ></Label>
                             </StackLayout>
                             <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center"  CornerRadius="10" Margin="0,15,0,0">
-                                    <Entry x:Name="txtNumTelemovel" Placeholder="#########" Keyboard="Telephone" MaxLength="9" PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="OpenSans-SemiBold"  HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150"/>
+                                <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center"  CornerRadius="10" Margin="0,15,0,0">
+                                    <Entry x:Name="txtNumTelemovel" Placeholder="#########" Keyboard="Telephone" MaxLength="9" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150"/>
                                 </Frame>
                             </StackLayout>
 
                             <StackLayout>
-                                <Button Text="DOAR" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                                <Button Text="DOAR" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
 
                             </StackLayout>
 
@@ -118,41 +110,41 @@
 
                 <StackLayout x:Name="CC" Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" IsVisible="false">
 
-                    <Frame BackgroundColor="#FFFF" HeightRequest="480" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
+                    <Frame BackgroundColor="#FFFF" HeightRequest="325" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
                         <StackLayout >
                             <StackLayout>
 
-                                <Label Text="Nome"  HorizontalOptions="Center" Margin="10,15,0,0" FontSize="16" TextColor="#4568C7" FontFamily="OpenSans-SemiBold" ></Label>
+                              
 
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                    <Entry x:Name="txtNome" Placeholder="Nome do Titular" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250" FontFamily="OpenSans-SemiBold" />
+                                <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="10,15,0,0">
+                                    <Entry x:Name="txtNome" Placeholder="Nome do Titular" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250" FontFamily="OpenSans-SemiBold" />
                                 </Frame>
                             </StackLayout>
 
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="Nº de cartão de crédito" HorizontalOptions="Center" FontSize="16" Margin="0,10,0,0" FontFamily="OpenSans-SemiBold" ></Label>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                    <Entry x:Name="txtNcartao" Placeholder="#### #### #### ####" MaxLength="16" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold"  Margin="15,0,15,0"  WidthRequest="250" Keyboard="Numeric" />
+                               
+                                <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
+                                    <Entry x:Name="txtNcartao" Placeholder="Nº de cartão de crédito" MaxLength="16" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold"  Margin="15,0,15,0"  WidthRequest="250" Keyboard="Numeric" />
                                 </Frame>
                             </StackLayout>
 
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="Validade" HorizontalOptions="Center" FontSize="16" Margin="0,10,0,0" FontFamily="OpenSans-SemiBold" ></Label>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                    <Entry x:Name="txtDvalidade" Placeholder="MM/AA" MaxLength="5" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold"  Margin="15,0,15,0"  WidthRequest="250" Keyboard="Numeric" />
+                               
+                                <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
+                                    <Entry x:Name="txtDvalidade" Placeholder="Validade (MM/AA)" MaxLength="5" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold"  Margin="15,0,15,0"  WidthRequest="250" Keyboard="Numeric" />
                                 </Frame>
                             </StackLayout>
 
 
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="CVV" HorizontalOptions="Center" FontSize="16" Margin="0,10,0,0" FontFamily="OpenSans-SemiBold" ></Label>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                    <Entry x:Name="txtNcvv" Placeholder="###" MaxLength="3" PlaceholderColor="#7a7a7a" TextColor="#4568C7" HorizontalTextAlignment="Center" Margin="15,0,15,0" FontFamily="OpenSans-SemiBold"  WidthRequest="250" Keyboard="Numeric" />
+                              
+                                <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
+                                    <Entry x:Name="txtNcvv" Placeholder="CVV" MaxLength="3" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0" FontFamily="OpenSans-SemiBold"  WidthRequest="250" Keyboard="Numeric" />
                                 </Frame>
                             </StackLayout>
 
                             <StackLayout>
-                                <Button Text="DOAR" BackgroundColor="#527beb" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,20,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
+                                <Button Text="DOAR" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,20,30,50"  FontFamily="RedHat-SemiBold" xct:ShadowEffect.Color="Black" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"/>
 
                             </StackLayout>
                         </StackLayout>
@@ -164,18 +156,18 @@
                     <Frame BackgroundColor="#FFFF" HeightRequest="250" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
                         <StackLayout>
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="Entidade e Referência" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="19" FontFamily="OpenSans-SemiBold" ></Label>
+                                <Label TextColor="#0a2a3b" Text="Entidade e Referência" HorizontalOptions="Center" Margin="0,20,0,0" FontSize="19" FontFamily="OpenSans-SemiBold" ></Label>
                                 <Image Source="logo_Multibanco.png" HorizontalOptions="End" WidthRequest="30" Margin="0,-30,30,0" ></Image>
                             </StackLayout>
 
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="Entidade" Margin="30,30,0,0" FontSize="17" HorizontalOptions="Start" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
-                                <Label TextColor="#4568C7" Text="1234" Margin="0,-30,0,0" HorizontalOptions="Center" FontSize="17"></Label>
+                                <Label TextColor="#0a2a3b" Text="Entidade" Margin="30,30,0,0" FontSize="17" HorizontalOptions="Start" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
+                                <Label TextColor="#0a2a3b" Text="1234" Margin="0,-30,0,0" HorizontalOptions="Center" FontSize="17"></Label>
                             </StackLayout>
 
                             <StackLayout>
-                                <Label TextColor="#4568C7" Text="Referência" Margin="30,30,0,0" FontSize="17" HorizontalOptions="Start" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
-                                <Label TextColor="#4568C7" Text="12345" Margin="0,-30,0,0" HorizontalOptions="Center" FontSize="17"></Label>
+                                <Label TextColor="#0a2a3b" Text="Referência" Margin="30,30,0,0" FontSize="17" HorizontalOptions="Start" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
+                                <Label TextColor="#0a2a3b" Text="12345" Margin="0,-30,0,0" HorizontalOptions="Center" FontSize="17"></Label>
                             </StackLayout>
 
                         </StackLayout>

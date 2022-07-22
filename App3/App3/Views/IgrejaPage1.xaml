@@ -1,27 +1,20 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.IgrejaPage1">
+             x:Class="App3.Views.IgrejaPage1"
+            BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mais Perto de si"></Label>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+           
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mais Perto de Si"></Label>
 
         </StackLayout>
     </Shell.TitleView>
     
     <ContentPage.Content>
         <StackLayout>
-            <Frame Margin="0,10,0,0" HeightRequest="60">
+            <Frame Margin="0,0,0,0" HeightRequest="60">
                 <Frame.GestureRecognizers>
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                 </Frame.GestureRecognizers>
@@ -31,14 +24,14 @@
                     </StackLayout.GestureRecognizers>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="RedHat-Bold" TextColor="#4568C7"></Label>
+                            <Label Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
 
                         </StackLayout>
                         <StackLayout>
                             <Image Source="icon_BanPortugal.png" HorizontalOptions="End" HeightRequest="30" ></Image>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="1">
-                            <Label Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="RedHat" TextColor="#4568C7"></Label>
+                            <Label Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
                         </StackLayout>
                     </Grid>
                     

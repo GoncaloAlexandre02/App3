@@ -2,18 +2,11 @@
     <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
                  xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-                 x:Class="App3.Views.IgrejaSocialPage">
+                 x:Class="App3.Views.IgrejaSocialPage"
+                  BackgroundColor="#ebebeb">
         <Shell.TitleView>
-            <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-                <StackLayout.Background>
-                    <LinearGradientBrush StartPoint="0,0"
-                                 EndPoint="1,0">
-                        <GradientStop Color="#527beb"
-                              Offset="0.1"/>
-                        <GradientStop Color="#cf991d"
-                              Offset="2.0"/>
-                    </LinearGradientBrush>
-                </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+                
                 <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Igreja Social"></Label>
 
                 <Grid>
@@ -45,13 +38,13 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <ImageButton Source="icon_camisola.png" x:Name="buttonCamisola" Clicked="buttonCamisola_Clicked" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
+                            <ImageButton Source="icon_camisolaB.png" x:Name="buttonCamisola" Clicked="buttonCamisola_Clicked" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
 
-                            <ImageButton Source="icon_emprego.png" x:Name="buttonEmprego" Clicked="buttonEmprego_Clicked" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent" BorderWidth="3"></ImageButton>
+                            <ImageButton Source="icon_empregoB.png" x:Name="buttonEmprego" Clicked="buttonEmprego_Clicked" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent" BorderWidth="3"></ImageButton>
 
-                            <ImageButton Source="icon_moveis.png" x:Name="buttonMoveis" Clicked="buttonMoveis_Clicked" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
+                            <ImageButton Source="icon_moveisB.png" x:Name="buttonMoveis" Clicked="buttonMoveis_Clicked" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
                         
-                            <ImageButton Source="icon_outro.png" x:Name="buttonOutro" Clicked="buttonOutro_Clicked" BackgroundColor="Transparent" Grid.Column="3"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
+                            <ImageButton Source="icon_outroB.png" x:Name="buttonOutro" Clicked="buttonOutro_Clicked" BackgroundColor="Transparent" Grid.Column="3"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
 
 
 
@@ -59,7 +52,7 @@
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Ultimas Atulizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#4568C7" FontSize="16" Margin="10,0,0,0"></Label>
+                        <Label Text="Ultimas Atulizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#0a2a3b" FontSize="16" Margin="10,0,0,0"></Label>
 
                         <StackLayout>
                             <StackLayout.GestureRecognizers>
@@ -84,7 +77,7 @@
                                         <StackLayout.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                                         </StackLayout.GestureRecognizers>
-                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="18">
+                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18">
                                             <Label.GestureRecognizers>
                                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                                             </Label.GestureRecognizers>
@@ -103,7 +96,7 @@
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
                                     </StackLayout.GestureRecognizers>
-                                    <Label Text="Comercial Telecomunicações (m/f) " FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="18">
+                                    <Label Text="Comercial Telecomunicações (m/f) " FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_1"></TapGestureRecognizer>
                                         </Label.GestureRecognizers>
@@ -117,7 +110,7 @@
                                         <Image Source="casaco_oferta" HorizontalOptions="Start" HeightRequest="120" Margin="10,0,0,0"></Image>
                                     </StackLayout>
                                     <StackLayout Grid.Column="1" Grid.Row="0" Margin="-40,10,0,0">
-                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="18"></Label>
+                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18"></Label>
                                     </StackLayout>
                                 </Grid>
                             </Frame>
@@ -127,7 +120,7 @@
                                         <Image Source="casaco_oferta" HorizontalOptions="Start" HeightRequest="120" Margin="10,0,0,0"></Image>
                                     </StackLayout>
                                     <StackLayout Grid.Column="1" Grid.Row="0" Margin="-40,10,0,0">
-                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#4568C7" FontSize="18"></Label>
+                                        <Label Text="Casaco Rosa, tamanho M para inverno " FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18"></Label>
                                     </StackLayout>
                                 </Grid>
                             </Frame>

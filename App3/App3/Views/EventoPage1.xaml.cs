@@ -42,21 +42,21 @@ namespace App3.Views
 
                 if (resp[0].estado == "vai")
                 {
-                    bVou.BackgroundColor = Color.FromHex("#527beb");
-                    bNao.BackgroundColor = Color.FromHex("#A9BCF2");
-                    bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bVou.BackgroundColor = Color.FromHex("#0a2a3b");
+                    bNao.BackgroundColor = Color.FromHex("#035891");
+                    bTalvez.BackgroundColor = Color.FromHex("#035891");
                 }
                 else if (resp[0].estado == "talvez")
                 {
-                    bTalvez.BackgroundColor = Color.FromHex("#527beb");
-                    bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                    bNao.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bTalvez.BackgroundColor = Color.FromHex("#0a2a3b");
+                    bVou.BackgroundColor = Color.FromHex("#035891");
+                    bNao.BackgroundColor = Color.FromHex("#035891");
                 }
                 else
                 {
-                    bNao.BackgroundColor = Color.FromHex("#527beb");
-                    bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                    bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                    bNao.BackgroundColor = Color.FromHex("#0a2a3b");
+                    bVou.BackgroundColor = Color.FromHex("#035891");
+                    bTalvez.BackgroundColor = Color.FromHex("#035891");
                 }
             }
             catch (Exception ex)
@@ -69,9 +69,9 @@ namespace App3.Views
         {
             try
             {
-                bVou.BackgroundColor = Color.FromHex("#527beb");
-                bNao.BackgroundColor = Color.FromHex("#A9BCF2");
-                bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                bVou.BackgroundColor = Color.FromHex("#0a2a3b");
+                bNao.BackgroundColor = Color.FromHex("#035891");
+                bTalvez.BackgroundColor = Color.FromHex("#035891");
                 pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "vai" };
             var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }catch (Exception ex)
@@ -84,9 +84,9 @@ namespace App3.Views
         {
             try
             {
-                bTalvez.BackgroundColor = Color.FromHex("#527beb");
-                bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                bNao.BackgroundColor = Color.FromHex("#A9BCF2");
+                bTalvez.BackgroundColor = Color.FromHex("#0a2a3b");
+                bVou.BackgroundColor = Color.FromHex("#035891");
+                bNao.BackgroundColor = Color.FromHex("#035891");
                 pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "talvez" };
                 var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }
@@ -100,9 +100,9 @@ namespace App3.Views
         {
             try
             {
-                bNao.BackgroundColor = Color.FromHex("#527beb");
-                bVou.BackgroundColor = Color.FromHex("#A9BCF2");
-                bTalvez.BackgroundColor = Color.FromHex("#A9BCF2");
+                bNao.BackgroundColor = Color.FromHex("#0a2a3b");
+                bVou.BackgroundColor = Color.FromHex("#035891");
+                bTalvez.BackgroundColor = Color.FromHex("#035891");
                 pessoaevento = new Pessoaevento { Idevento = evento2.Idevento, Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "nao" };
                 var res = await restService.UpdatePessoaevento(pessoaevento, evento2.Idevento.ToString());
             }

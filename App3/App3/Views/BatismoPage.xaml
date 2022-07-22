@@ -8,19 +8,11 @@
              x:Class="App3.Views.BatismoPage"
              xmlns:local="clr-namespace:App3.Renderer"
              Title="Batismo"
-             BackgroundColor="#ededed">
+             BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Batismo"></Label>
         </StackLayout>
     </Shell.TitleView>
@@ -30,29 +22,24 @@
         <ScrollView>
 
             <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" >
-                <StackLayout>
+                <StackLayout IsVisible="false">
                     <Image Source="batismo.png" HeightRequest="140" Margin="0,0,0,0"></Image>
                 </StackLayout>
                 
 
-                <Frame BackgroundColor="#FFFF" HeightRequest="550" HasShadow="True" Padding="0" Margin="0,5" CornerRadius="15">
+               
                     <StackLayout>
                         <StackLayout>
-                            <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#527beb" FontSize="18" FontAttributes="Bold" FontFamily="RedHat-Bold" Margin="0,20,0,0"></Label>
+                        <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#0a2a3b" FontSize="21"  FontFamily="OpenSans-SemiBold" Margin="0,20,0,0"></Label>
                         </StackLayout>
 
                         <StackLayout>
-                            <Grid>
-                                <StackLayout Grid.Column="0" Grid.Row="0">
-                                    <Label Text="Nome Completo" TextTransform="Uppercase" Margin="10,15,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                                </StackLayout>
-
-                            </Grid>
+                            
 
                             <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
+                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
                                     <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#4568C7"  HorizontalOptions="FillAndExpand" FontFamily="Dosis-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
+                                        <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold"  Keyboard="Text"/>
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
@@ -61,15 +48,11 @@
                         </StackLayout>
 
                         <StackLayout>
-                            <Grid>
-                                <StackLayout Grid.Column="0" Grid.Row="1">
-                                    <Label Text="Email" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                                </StackLayout>
-                            </Grid>
+                            
                             <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                     <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtEmail" Placeholder="exemplo@abc.com"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                        <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Email"/>
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
@@ -82,26 +65,24 @@
 
 
                         <StackLayout>
-                            <Grid>
-                                <StackLayout Grid.Column="0" Grid.Row="1">
-                                    <Label Text="Telemovel" TextTransform="Uppercase" Margin="10,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                                </StackLayout>
-                            </Grid>
+                            
                             <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="#cf9946" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                     <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtTelemovel" Placeholder="9########"  PlaceholderColor="#7a7a7a" TextColor="#4568C7" FontFamily="Dosis-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
+                                        <Entry x:Name="txtTelemovel" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
                                     </StackLayout>
                                 </Frame>
                             </StackLayout>
 
                         </StackLayout>
 
-                        <StackLayout Margin="20,30,20,10">
-                            <Button Text="Enviar" BackgroundColor="#527beb" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100" />
+                        <StackLayout Margin="30,40,30,10">
+                            <Button Text="Enviar" BackgroundColor="#0a2a3b" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"  />
                         </StackLayout>
-                    </StackLayout>
-                </Frame>
+
+                    
+                </StackLayout>
+                
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

@@ -30,7 +30,7 @@
                     <Label  FontSize="10" HeightRequest="22" WidthRequest="23" Margin="1,1,1,1"    HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  BackgroundColor="Transparent" 
                          TextColor="White"  x:Name="labelText"/>
                 </Frame>
-                <Image Source="icon_atualizar.png" Grid.Row="0" Grid.Column="2" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
+                <Image Source="gearW.png" Grid.Row="0" Grid.Column="2" Margin="0,0,-10,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
                     <Image.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Atualizar"></TapGestureRecognizer>
                     </Image.GestureRecognizers>
@@ -55,34 +55,20 @@
 
                     <Grid>
                             <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Admin" x:Name="tNome" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,5,0,20" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold" ></Label>
+                            <Label Text="Admin" x:Name="tNome" FontSize="22" HorizontalOptions="CenterAndExpand" Margin="0,5,0,20" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="RedHat-Bold" ></Label>
                             </StackLayout>
                     </Grid>
                 </StackLayout>
                 <StackLayout>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Email" FontSize="18" Margin="30,10,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Email" FontSize="18" Margin="30,10,0,0"  TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
 
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="admin@admin.com"  x:Name="tEmail" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
-                        </StackLayout>
-                    </Grid>
-                </StackLayout>
-
-                <StackLayout>
-                    <Grid >
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Telemovel" FontSize="18" Margin="30,20,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-
-                        </StackLayout>
-                    </Grid>
-                    <Grid >
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="912345678" FontSize="18" x:Name="tTele"  Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="admin@admin.com"  x:Name="tEmail" FontSize="18" Margin="30,0,0,0" TextColor="#0a2a3b" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -90,13 +76,27 @@
                 <StackLayout>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Data Nascimento" FontSize="18" Margin="30,20,0,0"  TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Telemovel" FontSize="18" Margin="30,20,0,0"  TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
 
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="06/05/2022" x:Name="tDt" FontSize="18" Margin="30,0,0,0" TextColor="#4568C7" ></Label>
+                            <Label Text="912345678" FontSize="18" x:Name="tTele"  Margin="30,0,0,0" TextColor="#0a2a3b" ></Label>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Data Nascimento" FontSize="18" Margin="30,20,0,0"  TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+
+                        </StackLayout>
+                    </Grid>
+                    <Grid >
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="06/05/2022" x:Name="tDt" FontSize="18" Margin="30,0,0,0" TextColor="#0a2a3b" ></Label>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

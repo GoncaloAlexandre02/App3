@@ -1,0 +1,124 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Pages:PopupPage  xmlns:Pages="http://rotorgames.com" 
+                  xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.IgrejaHorarioPopup"
+                  Padding="20, 10, 20, 20" 
+                  Opacity="0.9">
+  
+        <ScrollView >
+            <StackLayout Margin="0,50,0,0">
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Domingo"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="07:30 - 9:30 - 15:00 - 18:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Segunda-feira"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="10:00 - 15:00 - 20:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Terça-feira"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="10:00 - 15:00 - 20:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Quarta-feira"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="10:00 - 15:00 - 20:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Quinta-feira"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="10:00 - 15:00 - 20:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+                <Frame>
+                    <StackLayout>
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Sexta-feira"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" ></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Image Source="icon_clock.png" HorizontalOptions="Start" HeightRequest="25" Margin="-5,0,0,0"></Image>
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="1">
+                                <Label Text="10:00 - 15:00 - 20:00"  TextColor="#0a2a3b" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="30,0,0,0"></Label>
+                            </StackLayout>
+                        </Grid>
+
+
+                    </StackLayout>
+
+                </Frame>
+               
+            </StackLayout>
+        </ScrollView>
+    
+</Pages:PopupPage>

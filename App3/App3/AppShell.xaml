@@ -99,9 +99,6 @@
     <FlyoutItem Title="Chat" Icon="chat.png">
         <ShellContent Route="AboutPage" ContentTemplate="{DataTemplate local:MessagePage}" />
     </FlyoutItem>
-    <FlyoutItem Title="Idioma" Icon="idioma.png">
-        <ShellContent Route="Idioma" ContentTemplate="{DataTemplate local:IdiomaPage}" />
-    </FlyoutItem>
     <FlyoutItem Title="Configurações" Icon="gearB.png">
         <ShellContent Route="Config" ContentTemplate="{DataTemplate local:ConfigPage}" />
     </FlyoutItem>

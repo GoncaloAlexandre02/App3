@@ -34,16 +34,16 @@
 
 
                                     <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fEmail" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-10,5,-5,0">
-                                            <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="Transparent" x:Name="fEmail" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                            <StackLayout Orientation="Horizontal"  Margin="-15,0,-10,0">
                                                 <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
                                             </StackLayout>
                                         </Frame>
                                     </StackLayout>
 
                                     <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fPass"  Margin="-10,15,-5,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
-                                            <StackLayout Orientation="Horizontal">
+                                        <Frame BackgroundColor="Transparent" x:Name="fPass" BorderColor="Transparent"  Margin="0,5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                                            <StackLayout Orientation="Horizontal"  Margin="-15,0,-10,0">
                                                 <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
                                             </StackLayout>
                                         </Frame>

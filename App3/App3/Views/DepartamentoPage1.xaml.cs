@@ -38,15 +38,16 @@ namespace App3.Views
             desclabel.Text = depart.Descdepart;
 
             EcraResp.Children.Clear();
-            EcraResp.Children.Add(new Label { Text = "Coordenadores", Padding = new Thickness(0, 0, 0, 20), FontSize=16,FontFamily="OpenSans-SemiBold",TextColor=Color.FromHex("#4568C7") });
+            EcraResp.Children.Add(new Label { Text = "Coordenadores", Padding = new Thickness(0, 0, 0, 20), FontSize = 16, FontFamily = "OpenSans-SemiBold", TextColor = Color.FromHex("#4568C7") });
             try
             {
                 resp = await restService.GetResponsaveisAsync(depart.Iddepart);
-                foreach (Responsavel respon in resp) ;
-                //EcraResp.Children.Add(new ResponsavelSingleView(respon));
-                
+                foreach (Responsavel respon in resp)
+                    EcraResp.Children.Add(new ResponsavelSingleView(respon));
 
-            }catch (Exception ex)
+
+            }
+            catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
             }
@@ -55,7 +56,7 @@ namespace App3.Views
             {
                 if (depart.Imgdepart == null)
                 {
-                    //imgD.Source = "rezar";
+                    imgD.Source = "rezar";
                 }
                 else
                 {
@@ -66,7 +67,7 @@ namespace App3.Views
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
-                //imgD.Source = "rezar";
+                imgD.Source = "rezar";
             }
 
         }

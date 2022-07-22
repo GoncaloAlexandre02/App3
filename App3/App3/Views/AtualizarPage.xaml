@@ -2,22 +2,13 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             x:Class="App3.Views.AtualizarPage">
+             x:Class="App3.Views.AtualizarPage"
+             BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Atualizar Conta"></Label>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
 
-           
+            <Label FontFamily="OpenSans-SemiBold" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Atualizar Conta"></Label>
 
         </StackLayout>
     </Shell.TitleView>
@@ -31,7 +22,7 @@
                         <StackLayout HorizontalOptions="Center">
 
                             <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-                                <ImageButton Clicked="UploadFile_Clicked" Source="inserir_imagem.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                                <ImageButton Clicked="UploadFile_Clicked" Source="perfilB_icon.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
                                 <ImageButton Clicked="UploadFile_Clicked" Source="camera.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" BackgroundColor="Transparent" ></ImageButton>
                             </StackLayout>
 
@@ -42,21 +33,10 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Nome" TextTransform="Uppercase" Margin="22,0,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Nome" TextTransform="Uppercase" Margin="22,0,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry x:Name="tNome" Text="Admin" Margin="20,25,60,0" TextColor="#4568C7" ></Entry>
-                        </StackLayout>
-                    </Grid>
-                </StackLayout>
-
-                <StackLayout>
-                    <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Sobrenome" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                        </StackLayout>
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry  x:Name="tApelido" Text="Admin" Margin="20,30,60,0" TextColor="#4568C7" ></Entry>
+                            <Entry x:Name="tNome" Text="Admin" Margin="20,25,60,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" ></Entry>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -64,10 +44,21 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Email" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Sobrenome" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry Text="admin@admin.com" x:Name="tEmail" Margin="20,30,60,0" TextColor="#4568C7" ></Entry>
+                            <Entry  x:Name="tApelido" Text="Admin" Margin="20,30,60,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Entry>
+                        </StackLayout>
+                    </Grid>
+                </StackLayout>
+
+                <StackLayout>
+                    <Grid>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Label Text="Email" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
+                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="0">
+                            <Entry Text="admin@admin.com" x:Name="tEmail" Margin="20,30,60,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Entry>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -76,10 +67,10 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Telemovel" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Telemovel" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry x:Name="tTele" Text="912345678" Margin="20,30,60,0" TextColor="#4568C7" Keyboard="Telephone" MaxLength="9" ></Entry>
+                            <Entry x:Name="tTele" Text="912345678" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Telephone" MaxLength="9" FontFamily="OpenSans-SemiBold"></Entry>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -87,31 +78,33 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry  x:Name="tDt"  Text="06/05/2022" Margin="20,30,60,0" TextColor="#4568C7" Keyboard="Numeric" MaxLength="10" ></Entry>
+                            <Entry  x:Name="tDt"  Text="06/05/2022" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Numeric" MaxLength="10" FontFamily="OpenSans-SemiBold"></Entry>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
 
                 <StackLayout>
-                    <Label Text="Gênero" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
-                    <RadioButton x:Name="rFe"  Value="feminino" Content="Feminino" FontSize="16" TextColor="#4568C7" Margin="10,5,0,0" TextTransform="Uppercase" IsChecked="True"></RadioButton>
-                    <RadioButton x:Name="rMa" Value="masculino" Content="Masculino" FontSize="16" TextColor="#4568C7" Margin="10,0,0,0" TextTransform="Uppercase"></RadioButton>
-                    <RadioButton x:Name="rGn" Value="nao" Content="Não Responder" FontSize="16" TextColor="#4568C7" Margin="10,0,0,0" TextTransform="Uppercase"></RadioButton>
+                    <Label Text="Gênero" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
+                    <RadioButton x:Name="rFe"  Value="feminino" Content="Feminino" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold" >
+                        
+                    </RadioButton>
+                    <RadioButton x:Name="rMa" Value="masculino" Content="Masculino" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
+                    <RadioButton x:Name="rGn" Value="nao" Content="Não Responder" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
 
                 </StackLayout>
 
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Localidade"  TextTransform="Uppercase" Margin="10,10,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Localidade"  TextTransform="Uppercase" Margin="22,10,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Picker TitleColor="#7a7a7a" x:Name="tLoca" TextColor="#4568C7" Title=""   Margin="20,0,60,0">
+                            <Picker TitleColor="#7a7a7a" x:Name="tLoca" TextColor="#0a2a3b" Title="" FontFamily="OpenSans-SemiBold"  Margin="20,0,60,0">
                                 <Picker.Items>
                                     <x:String>Aveiro</x:String>
                                     <x:String>Beja</x:String>
@@ -143,10 +136,10 @@
 
 
                 <StackLayout>
-                    <Label Text="Batismado" TextTransform="Uppercase" Margin="10,5,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                    <Label Text="Batismado" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
 
-                    <RadioButton x:Name="rBatSim" Value="sim" Content="Sim" FontSize="16" TextColor="#4568C7" Margin="10,5,0,0" TextTransform="Uppercase" IsChecked="True"></RadioButton>
-                    <RadioButton x:Name="rBatNao" Value="nao" Content="Não" FontSize="16" TextColor="#4568C7" Margin="10,0,0,0" TextTransform="Uppercase" ></RadioButton>
+                    <RadioButton x:Name="rBatSim" Value="sim" Content="Sim" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold"></RadioButton>
+                    <RadioButton x:Name="rBatNao" Value="nao" Content="Não" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold" ></RadioButton>
 
                 </StackLayout>
 
@@ -154,12 +147,12 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Estado Civil"  TextTransform="Uppercase" Margin="10,10,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Estado Civil"  TextTransform="Uppercase" Margin="22,10,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                     </Grid>
                     <Grid >
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Picker TitleColor="#7a7a7a" x:Name="tEst" TextColor="#4568C7" Title=""   Margin="20,0,60,0">
+                            <Picker TitleColor="#7a7a7a" x:Name="tEst" TextColor="#0a2a3b" Title=""   Margin="20,0,60,0" FontFamily="OpenSans-SemiBold">
                                 <Picker.Items>
                                     <x:String>Casado civil</x:String>
                                     <x:String>Casado civil e religioso</x:String>
@@ -180,10 +173,10 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Profisão" TextTransform="Uppercase" Margin="10,10,0,0" FontSize="16" TextColor="#4568C7" FontAttributes="Bold" FontFamily="RedHat-Bold"></Label>
+                            <Label Text="Profisão" TextTransform="Uppercase" Margin="22,10,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry Text="" x:Name="tProf" Margin="20,30,60,0" TextColor="#4568C7" Keyboard="Text" ></Entry>
+                            <Entry Text="" x:Name="tProf" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Text" FontFamily="OpenSans-SemiBold"></Entry>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -192,7 +185,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout>
-                            <Button Text="Atualizar" Clicked="Button_Clicked" BackgroundColor="#527beb"  Margin="20,30,20,30" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                            <Button Text="Atualizar" Clicked="Button_Clicked" BackgroundColor="#0a2a3b"  Margin="20,30,20,30" TextColor="White" CornerRadius="10" FontFamily="OpenSans-SemiBold" FontSize="20"></Button>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

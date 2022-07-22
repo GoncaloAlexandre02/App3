@@ -1,21 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.BibliaCapituloPage">
+             x:Class="App3.Views.BibliaCapituloPage"
+             BackgroundColor="#ededed">
 
     <ContentPage.Content>
         <StackLayout>
             <StackLayout>
-                <Frame>
-                    <Frame.Background>
-                        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                            <GradientStop Color="White"
-                          Offset="0.1"/>
-                            <GradientStop Color="White"
-                          Offset="2.0"/>
-                        </LinearGradientBrush>
-                    </Frame.Background>
+                <Frame BackgroundColor="#ededed">
+                    
                     <Grid>
 
                         <Grid.RowDefinitions>
@@ -24,10 +17,10 @@
 
 
                         <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent">
-                            <Button  Margin="10,-7,0,0" Text="Livro" BackgroundColor="#527beb"  FontSize="15" Clicked="TapGestureRecognizer_Tapped_livro"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+                            <Button  Margin="10,-7,0,0" Text="Livro" BackgroundColor="#0a2a3b"  FontSize="15" Clicked="TapGestureRecognizer_Tapped_livro"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
                         </StackLayout>
                         <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent">
-                            <Button  Margin="0,-7,10,0" Text="Capítulo" BackgroundColor="#527beb"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+                            <Button  Margin="0,-7,10,0" Text="Capítulo" BackgroundColor="#0a2a3b"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
                         </StackLayout>
                     </Grid>
 

@@ -30,7 +30,7 @@ namespace App3.Views
             var nome = txtNome.Text;
             var apelido = txtApelido.Text;
             var tele = txtTelefone.Text;
-            var dtnasc = txtDtNas.Date.ToString("yyyy-MM-dd");
+            //var dtnasc = txtDtNas.Date.ToString("yyyy-MM-dd");
             var email = txtEmail.Text;
             var password = txtPassword.Text;
             if (nome == null || email == null || password == null || tele == null || apelido == null || nome == "" || email == "" || password == "" || tele == "" || apelido == "")
@@ -39,7 +39,7 @@ namespace App3.Views
                 fNome.BorderColor = Color.FromRgb(255, 0, 0);
                 fApelido.BorderColor = Color.FromRgb(255, 0, 0);
                 fTele.BorderColor = Color.FromRgb(255, 0, 0);
-                fDtNas.BorderColor = Color.FromRgb(255, 0, 0);
+                //fDtNas.BorderColor = Color.FromRgb(255, 0, 0);
                 fPass.BorderColor = Color.FromRgb(255, 0, 0);
                 await this.DisplayToastAsync("Preencha Todos os Campos", 2000);
 
@@ -49,7 +49,7 @@ namespace App3.Views
                 fPass.BorderColor = Color.FromRgb(207, 153, 70);
                 fNome.BorderColor = Color.FromRgb(207, 153, 70);
                 fApelido.BorderColor = Color.FromRgb(207, 153, 70);
-                fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
+                //fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
                 fTele.BorderColor = Color.FromRgb(207, 153, 70);
                 fEmail.BorderColor = Color.FromRgb(255, 0, 0);
                 await this.DisplayToastAsync("Email Invalido", 2000);
@@ -61,11 +61,11 @@ namespace App3.Views
                 fPass.BorderColor = Color.FromRgb(207, 153, 70);
                 fNome.BorderColor = Color.FromRgb(207, 153, 70);
                 fApelido.BorderColor = Color.FromRgb(207, 153, 70);
-                fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
+                //fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
                 fTele.BorderColor = Color.FromRgb(207, 153, 70);
 
                 var pass2 = MD5Hash.Hash.Content(password);
-                string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'dtnasc':'" + dtnasc + "', 'tipouser':2}";
+                string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'tipouser':2}";
                 var dataal = data.Replace('\'', '\"');
                 //await this.DisplayToastAsync(dataal, 3000);
 

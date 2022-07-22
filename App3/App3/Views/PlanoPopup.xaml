@@ -7,16 +7,16 @@
                  Padding="20,10,20,10"
                  Opacity="0.9">
 
-    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" WidthRequest="360" HeightRequest="510" xct:CornerRadiusEffect.CornerRadius="15" >
+    <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" WidthRequest="360" HeightRequest="510" xct:CornerRadiusEffect.CornerRadius="10" >
         <ScrollView>
             <StackLayout>
                 <StackLayout>
-                    <Label Text="Criar novo plano de oração"  TextColor="#4568C7" HorizontalOptions="Center" FontSize="20" FontFamily="RedHat-Bold" Margin="20, 35, 20, 0"></Label>
-                    <Label Text="Selecione os dias e os horários que deseja ser lembrado para orar" HorizontalOptions="Center"  FontFamily="RedHat-SemiBold" HorizontalTextAlignment="Center" TextColor="Gray" FontSize="18" Margin="20, 5, 20, 0"></Label>
+                    <Label Text="Criar novo plano de oração"  TextColor="#0a2a3b" HorizontalOptions="Center" FontSize="20" FontFamily="OpenSans-SemiBold" Margin="20, 35, 20, 0"></Label>
+                    <Label Text="Selecione os dias e os horários que deseja ser lembrado para orar" HorizontalOptions="Center"  FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center" TextColor="#0a2a3b" FontSize="18" Margin="20, 5, 20, 0"></Label>
                 </StackLayout>
                 <StackLayout>
-                    <Frame Margin="20,40,20,0" CornerRadius="15" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100">
-                        <Picker TitleColor="#7a7a7a" TextColor="#4568C7" Title="Selecione o dia da semana" HorizontalTextAlignment="Center" FontFamily="RedHat-SemiBold" >
+                    <Frame Margin="20,40,20,0" CornerRadius="10" >
+                        <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecione o dia da semana" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
                             <Picker.Items>
                                 <x:String>Domingo</x:String>
                                 <x:String>Segunda-feira</x:String>
@@ -30,12 +30,12 @@
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Frame Margin="20,20,20,0" CornerRadius="15" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100">
-                        <TimePicker HorizontalOptions="Center" TextColor="#4568C7" ></TimePicker>
+                    <Frame Margin="20,20,20,0" CornerRadius="10">
+                        <TimePicker HorizontalOptions="Center" TextColor="#0a2a3b" ></TimePicker>
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="Selecionar" BackgroundColor="#527beb"  Margin="20,30,20,10" TextColor="White" CornerRadius="10"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+                    <Button Text="Selecionar" BackgroundColor="#0a2a3b"  Margin="20,30,20,10" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20" ></Button>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

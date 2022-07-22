@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.Partials.DepartamentoSingleView">
+             x:Class="App3.Views.Partials.DepartamentoSingleView"
+             BackgroundColor="#ebebeb">
   <ContentView.Content>
         <Frame Margin="0,1,0,0">
             <Frame.GestureRecognizers>
@@ -17,9 +18,9 @@
 
 
                     <StackLayout Grid.Column="1" Grid.Row="0">
-                        <Label Text="A carregar.." x:Name="nomeDepart" TextColor="#4568C7" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
-                        <Label Text="Coordenador:"   TextColor="#4568C7" FontSize="14" FontFamily="RedHat-Semi"></Label>
-                        <Label Text="- - -" x:Name="nomeUser" FontSize="13"   TextColor="#4568C7" FontFamily="RedHat-Semi"></Label>
+                        <Label Text="A carregar.." x:Name="nomeDepart" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="OpenSans-SemiBold" ></Label>
+                        <Label Text="Coordenador:"   TextColor="#0a2a3b" FontSize="14" FontFamily="OpenSans-SemiBold"></Label>
+                        <Label Text="- - -" x:Name="nomeUser" FontSize="13"   TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Label>
 
                     </StackLayout>
 

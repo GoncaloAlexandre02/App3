@@ -25,7 +25,7 @@
                     <ScrollView>
                         
                     <StackLayout Padding="0" Margin="10,110,10,0" HorizontalOptions="FillAndExpand" >
-                        <Frame  BackgroundColor="White" HeightRequest="650"  HasShadow="True" Padding="0" Margin="0,-5,0,20" CornerRadius="15" >
+                        <Frame  BackgroundColor="White" HeightRequest="560"  HasShadow="True" Padding="0" Margin="0,-5,0,20" CornerRadius="15" >
 
                                 
 
@@ -33,60 +33,47 @@
                                     
 
                                 <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fNome"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-15,10,-10,0">
-                                            <StackLayout Orientation="Horizontal">
-                                                <Entry x:Name="txtNome" Placeholder="NOME"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
+                                        <Frame BackgroundColor="Transparent" x:Name="fNome" BorderColor="Transparent"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                            <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
+                                                <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
                                             </StackLayout>
                                         </Frame>
                                 </StackLayout>
                                        
                                 <StackLayout >
-                                    <Frame BackgroundColor="Transparent" x:Name="fApelido" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-15,10,-10,0">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Entry x:Name="txtApelido" Placeholder="APELIDO"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Text"/>
+                                    <Frame BackgroundColor="Transparent" x:Name="fApelido" Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
+                                            <Entry x:Name="txtApelido" Placeholder="Apelido"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Text"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
 
-                                    
-
-                                    
                                         
                                 <StackLayout>
-                                    <Frame BackgroundColor="Transparent"  x:Name="fEmail"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-15,10,-10,0">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                    <Frame BackgroundColor="Transparent"  x:Name="fEmail"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
+                                            <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
 
                                     
-
-
                                    
                                 <StackLayout>
-                                    <Frame BackgroundColor="Transparent" x:Name="fTele"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-15,10,-10,0">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Entry x:Name="txtTelefone" Placeholder="TELEMOVEL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
+                                    <Frame BackgroundColor="Transparent" x:Name="fTele"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
+                                            <Entry x:Name="txtTelefone" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>
 
 
-                                    
-                                <StackLayout >
-                                    <Frame BackgroundColor="Transparent" x:Name="fDtNas"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="-15,10,-10,0">
-                                        <StackLayout Orientation="Horizontal">
-                                            <DatePicker x:Name="txtDtNas"  TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold" Margin="20,0,25,0"></DatePicker>
-                                        </StackLayout>
-                                    </Frame>
-                                </StackLayout>
-                                        
+                                                                   
                                    
                                 <StackLayout >
-                                    <Frame BackgroundColor="Transparent" x:Name="fPass"  Margin="-15,10,-10,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
-                                        <StackLayout Orientation="Horizontal">
-                                            <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
+                                    <Frame BackgroundColor="Transparent" x:Name="fPass"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
+                                            <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
                                         </StackLayout>
                                     </Frame>
                                 </StackLayout>

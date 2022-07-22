@@ -1,33 +1,14 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.HinarioPage1">
+             x:Class="App3.Views.HinarioPage1"
+             BackgroundColor="#ebebeb">
     <Shell.TitleView>
 
-        <StackLayout Orientation="Horizontal"   BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"   BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Hinário"></Label>
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"  />
-                    <RowDefinition Height="50"  />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="0.1*"/>
-                </Grid.ColumnDefinitions>
-                
-            </Grid>
+            
         </StackLayout>
     </Shell.TitleView>
     
@@ -40,7 +21,7 @@
                         <ViewCell>
                             <StackLayout
                         Orientation="Vertical" VerticalOptions="Center" Margin="5" >
-                                <Label FontSize="20" Text="{Binding NomeHinario}" FontFamily="OpenSans-SemiBold" TextColor="#4568C7" />
+                                <Label FontSize="20" Text="{Binding NomeHinario}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
                             </StackLayout>
                         </ViewCell>
                         

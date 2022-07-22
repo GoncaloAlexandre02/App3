@@ -68,7 +68,7 @@ namespace App3.Views
 
         }
 
-        /*  void OnPickerSelectedIndexChanged(object sender, EventArgs e)
+        /* void OnPickerSelectedIndexChanged(object sender, EventArgs e)
           {
               var chList = new List<Int32>();
               var selectedIndex = pickerB.SelectedItem as Biblia;
@@ -207,7 +207,7 @@ namespace App3.Views
 
         async void Button_Clicked_Capitulo(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new BibliaLivroPage());
+            await Navigation.PushModalAsync(new BibliaCapituloPage());
         }
 
         private void TapGestureRecognizer_TappedAnterior(object sender, EventArgs e)
@@ -262,7 +262,7 @@ namespace App3.Views
             }
             else if (modo == 2)
             {
-                stackLayout.BackgroundColor = Color.White;
+                stackLayout.BackgroundColor = Color.FromHex("#ededed");
                 modo = 1;
             }
 
@@ -279,7 +279,7 @@ namespace App3.Views
             }
             else if (modo == 2)
             {
-                stackLayout.BackgroundColor = Color.White;
+                stackLayout.BackgroundColor = Color.FromHex("#ededed");
 
             }
 

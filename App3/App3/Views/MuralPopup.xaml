@@ -5,19 +5,20 @@
                   xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
                   x:Class="App3.Views.MuralPopup"
                   Padding="20, 10, 20, 20" 
-                  Opacity="0.9">
+                  Opacity="0.9"
+                  BackgroundColor="#ebebeb">
 
     <StackLayout HorizontalOptions="Center" VerticalOptions="Center" BackgroundColor="White" WidthRequest="370" HeightRequest="550" xct:CornerRadiusEffect.CornerRadius="15">
-        <Label Text="Deixe uma mensagem de apoio" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="15" TextColor="#4568C7"></Label>
-        <Frame Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946"  HeightRequest="43">
-            <Entry  x:Name="txtNome" Placeholder="Nome (opcional)" TextColor="#040033" Margin="15,0,15,0" />
+        <Label Text="Deixe uma mensagem de apoio" FontSize="20" FontAttributes="Bold" HorizontalTextAlignment="Center" Margin="15" TextColor="#0a2a3b"></Label>
+        <Frame Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="Transparent"  HeightRequest="43">
+            <Entry  x:Name="txtNome" Placeholder="Nome (opcional)" TextColor="#0a2a3b" Margin="15,0,15,0" />
         </Frame>
 
-        <Frame Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="#cf9946">
-            <Editor x:Name="txtMensagem" HeightRequest="190" Placeholder="Mensagem" TextColor="#040033" Margin="15,0,15,0" />
+        <Frame Margin="20,10,20,10" WidthRequest="20" CornerRadius="10" BorderColor="Transparent">
+            <Editor x:Name="txtMensagem" HeightRequest="190" Placeholder="Mensagem" TextColor="#0a2a3b" Margin="15,0,15,0" />
         </Frame>
 
-        <Button Text="Enviar" BackgroundColor="#527beb"  Margin="30,30,30,0" TextColor="White" CornerRadius="15"  FontFamily="Dosis-SemiBold" FontSize="20" xct:ShadowEffect.Color="#9a4a01" xct:ShadowEffect.OffsetY="5" xct:ShadowEffect.Radius="5" xct:ShadowEffect.Opacity="100"></Button>
+        <Button Text="Enviar" BackgroundColor="#0a2a3b"  Margin="30,30,30,0" TextColor="White" CornerRadius="15"  FontFamily="Dosis-SemiBold" FontSize="20" ></Button>
 
     </StackLayout>
 </Pages:PopupPage>

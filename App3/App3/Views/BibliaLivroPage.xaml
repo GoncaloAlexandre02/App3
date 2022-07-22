@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:vm="clr-namespace:App3.Models;assembly=App3"
-             x:Class="App3.Views.BibliaLivroPage">
+             x:Class="App3.Views.BibliaLivroPage"
+             BackgroundColor="#ededed">
 
     
     
@@ -10,16 +11,8 @@
         
         <StackLayout>
             <StackLayout>
-                <Frame >
-                    <Frame.Background>
-                        <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                            <GradientStop Color="White"
-                          Offset="0.1"/>
-                            <GradientStop Color="White"
-                          Offset="2.0"/>
-                        </LinearGradientBrush>
-                    </Frame.Background>
+                <Frame BackgroundColor="#ededed">
+                   
                     <Grid>
 
                         <Grid.RowDefinitions>
@@ -28,10 +21,10 @@
 
 
                         <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent">
-                            <Button  Margin="10,-7,0,0" Text="Livro" BackgroundColor="#527beb"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+                            <Button  Margin="10,-7,0,0" Text="Livro" BackgroundColor="#0a2a3b"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
                         </StackLayout>
                         <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="Transparent">
-                            <Button  Margin="0,-7,10,0" Text="Capítulo" BackgroundColor="#527beb"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+                            <Button  Margin="0,-7,10,0" Text="Capítulo" BackgroundColor="#0a2a3b"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
                         </StackLayout>
                     </Grid>
                     
@@ -47,8 +40,8 @@
                                         <ColumnDefinition Width="60"></ColumnDefinition>
                                         
                                     </Grid.ColumnDefinitions>
-                                    <Label Grid.Column="0" FontSize="20" Text="{Binding Sigla}" FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center" BackgroundColor="#527beb" TextColor="White"  ></Label>
-                                    <Label Grid.Column="1" FontSize="20" Text="{Binding Nome}" FontFamily="OpenSans-SemiBold" TextColor="#4568C7"  />
+                                    <Label Grid.Column="0" FontSize="20" Text="{Binding Sigla}" FontFamily="OpenSans-SemiBold" HorizontalTextAlignment="Center" BackgroundColor="#0a2a3b" TextColor="White"  ></Label>
+                                    <Label Grid.Column="1" FontSize="20" Text="{Binding Nome}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  />
                                 </Grid>
                             </StackLayout>
                             

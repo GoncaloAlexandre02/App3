@@ -8,16 +8,8 @@
                  Title="Bíblia">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="White">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                                 EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                              Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                              Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Bíblia"></Label>
 
         </StackLayout>
@@ -30,28 +22,28 @@
         </Grid.RowDefinitions>
 
 
-        <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="White">
-            <Button  Margin="10,5,0,0" Text="Livro" BackgroundColor="#527beb" Clicked="Button_Clicked_Livro" FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+        <StackLayout Grid.Column="0" Grid.Row="0" BackgroundColor="#ededed" >
+            <Button  Margin="10,5,0,0" Text="Livro" BackgroundColor="#0a2a3b" Clicked="Button_Clicked_Livro" FontSize="16"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
         </StackLayout>
-        <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="White">
-            <Button  Margin="0,5,10,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#527beb"  FontSize="15"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
+        <StackLayout Grid.Column="1" Grid.Row="0" BackgroundColor="#ededed">
+            <Button  Margin="0,5,10,0" Text="Capítulo" Clicked="Button_Clicked_Capitulo" BackgroundColor="#0a2a3b"  FontSize="16"   FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>
         </StackLayout>
 
 
-        <StackLayout x:Name="stackTodo" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" BackgroundColor="White">
+        <StackLayout x:Name="stackTodo" Grid.Row="1" Grid.ColumnSpan="2" Margin="0,0,0,0" BackgroundColor="#ededed">
 
-            <ScrollView  x:Name="scrollP" BackgroundColor="White">
+            <ScrollView  x:Name="scrollP" BackgroundColor="#ededed">
                 <StackLayout >
 
 
 
 
                     <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
-                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="Gênesis"></Label>
-                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="OpenSans-SemiBold" TextColor="#4d4d4d" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="22" Margin="0,5,0,0" Text="Gênesis"></Label>
+                        <Label HorizontalOptions="Center" x:Name="titleLN" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="22" Margin="0,5,0,0" Text="1"></Label>
                     </StackLayout>
                     <StackLayout x:Name="corpoB" Padding="20">
-                        <Label Padding="20" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="16" TextColor="#4d4d4d" x:Name="aa"></Label>
+                        <Label Padding="20" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="16" TextColor="#0a2a3b" x:Name="aa"></Label>
                     </StackLayout>
 
 
@@ -78,22 +70,20 @@
                             </Grid.ColumnDefinitions>
 
 
-                            <ImageButton Source="zoomMais.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="1" Grid.Row="0" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMaisB.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="1" Grid.Row="0" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="zoomMenos.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="0"  Grid.Column="2" BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="zoomMenosB.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="0"  Grid.Column="2" BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Source="icon_sol.png" Clicked="Leitura" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="3"  BorderColor="Transparent"></ImageButton>
+                            <ImageButton Source="icon_solB.png" Clicked="Leitura" BackgroundColor="Transparent" Grid.Row="0" Grid.Column="3"  BorderColor="Transparent"></ImageButton>
 
-                            <ImageButton Grid.Column="0" Grid.Row="0" BackgroundColor="Transparent" Source="icon_setaE" x:Name="setaAnt" Clicked="TapGestureRecognizer_TappedAnterior"></ImageButton>
+                            
 
-                            <ImageButton Grid.Column="4" Grid.Row="0" BackgroundColor="Transparent"  Source="icon_setaD"  x:Name="setaProx"  Clicked="TapGestureRecognizer_TappedProximo"></ImageButton>
-
-                            <Image   Source="icon_setaE"  x:Name="setaAnte">
+                            <Image Grid.Column="0" Grid.Row="0"  Source="icon_setaEB"  x:Name="setaAnte">
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAnterior"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
                             </Image>
-                            <Image Grid.Column="4" Grid.Row="0" Source="icon_setaD"  x:Name="setaProxi"  >
+                            <Image Grid.Column="4" Grid.Row="0" Source="icon_setaDB"  x:Name="setaProxi"  >
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedProximo"></TapGestureRecognizer>
                                 </Image.GestureRecognizers>
