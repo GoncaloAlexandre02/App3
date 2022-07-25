@@ -112,9 +112,10 @@
 
                     <Frame BackgroundColor="#FFFF" HeightRequest="325" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
                         <StackLayout >
+                          
                             <StackLayout>
 
-                              
+                                <Image Source="icon_cartaodecreditoB" HorizontalOptions="End" WidthRequest="45" Margin="0,5,15,-35"  ></Image>
 
                                 <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="10,15,0,0">
                                     <Entry x:Name="txtNome" Placeholder="Nome do Titular" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="250" FontFamily="OpenSans-SemiBold" />

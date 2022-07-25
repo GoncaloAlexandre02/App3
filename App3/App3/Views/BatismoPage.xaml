@@ -76,7 +76,20 @@
 
                         </StackLayout>
 
-                        <StackLayout Margin="30,40,30,10">
+
+                    <StackLayout>
+
+                        <StackLayout>
+                            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="txtData" Placeholder="Data Preferência  "  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout Margin="30,40,30,10">
                             <Button Text="Enviar" BackgroundColor="#0a2a3b" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"  />
                         </StackLayout>
 

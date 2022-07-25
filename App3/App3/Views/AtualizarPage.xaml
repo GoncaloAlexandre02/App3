@@ -88,13 +88,19 @@
 
                 <StackLayout>
                     <Label Text="Gênero" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
-                    <RadioButton x:Name="rFe"  Value="feminino" Content="Feminino" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold" >
-                        
-                    </RadioButton>
-                    <RadioButton x:Name="rMa" Value="masculino" Content="Masculino" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
-                    <RadioButton x:Name="rGn" Value="nao" Content="Não Responder" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
+                    <RadioButton x:Name="rFe"  Value="feminino" Content="Feminino" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase"  FontFamily="OpenSans-SemiBold" ></RadioButton>
+                    <RadioButton x:Name="rMa" Value="masculino" Content="Masculino" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase"  FontFamily="OpenSans-SemiBold"></RadioButton>
+                    <RadioButton x:Name="rGn" Value="nao" Content="Não Responder" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold"></RadioButton>
 
                 </StackLayout>
+                <StackLayout>
+                    <Label Text="Batismado" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
+
+                    <RadioButton x:Name="rBatSim" IsChecked="True" Value="sim" Content="Sim" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
+                    <RadioButton x:Name="rBatNao"  Value="nao" Content="Não" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold" ></RadioButton>
+
+                </StackLayout>
+
 
                 <StackLayout>
                     <Grid>
@@ -135,14 +141,7 @@
                 </StackLayout>
 
 
-                <StackLayout>
-                    <Label Text="Batismado" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
-
-                    <RadioButton x:Name="rBatSim" Value="sim" Content="Sim" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold"></RadioButton>
-                    <RadioButton x:Name="rBatNao" Value="nao" Content="Não" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold" ></RadioButton>
-
-                </StackLayout>
-
+                
 
                 <StackLayout>
                     <Grid>

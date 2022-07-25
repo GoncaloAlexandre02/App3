@@ -34,7 +34,7 @@
 
 
                                     <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fEmail" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <Frame BackgroundColor="Transparent" x:Name="fEmail" BorderColor="Transparent" HasShadow="False" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                             <StackLayout Orientation="Horizontal"  Margin="-15,0,-10,0">
                                                 <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
                                             </StackLayout>
@@ -42,7 +42,7 @@
                                     </StackLayout>
 
                                     <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fPass" BorderColor="Transparent"  Margin="0,5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
+                                        <Frame BackgroundColor="Transparent" x:Name="fPass" BorderColor="Transparent" HasShadow="false" Margin="0,5,0,0" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10">
                                             <StackLayout Orientation="Horizontal"  Margin="-15,0,-10,0">
                                                 <Entry x:Name="txtPassword" Placeholder="PASSWORD" IsPassword="True" PlaceholderColor="#7a7a7a" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
                                             </StackLayout>
@@ -78,11 +78,11 @@
                                     </StackLayout>
 
                                     <StackLayout Margin="0,30" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                        <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
-                                            <Image Source="logo_G" Aspect="AspectFill" Margin="0"/>
+                                        <Frame BackgroundColor="White" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="Google_Logo" Aspect="AspectFill" Margin="0"/>
                                         </Frame>
-                                        <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
-                                            <Image Source="logo_Face" Aspect="AspectFill" Margin="0"/>
+                                        <Frame BackgroundColor="White" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                            <Image Source="facebook_logo" Aspect="AspectFill" Margin="0"/>
                                         </Frame>
                                     </StackLayout>
 

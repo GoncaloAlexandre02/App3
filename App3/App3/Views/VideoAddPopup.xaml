@@ -38,7 +38,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout  Grid.Column="0" Grid.Row="0" Margin="0,35,0,0">
-                            <Button Text="Enviar" BackgroundColor="#0a2a3b"  Margin="30,20,35,10" HeightRequest="60"  TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"></Button>
+                            <Button Text="Publicar" BackgroundColor="#0a2a3b"  Margin="30,20,35,10" HeightRequest="60"  TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"></Button>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

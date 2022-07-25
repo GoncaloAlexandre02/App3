@@ -17,7 +17,7 @@
                 <Frame Grid.Column="0" Grid.Row="0" Margin="0,0,0,0">
                     <StackLayout>
 
-                        <Image Source="logo_Face.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
+                        <Image Source="facebook_logo.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
 
                         </Image>
                         <Frame  Margin="10,0,0,-25" BackgroundColor="Transparent" >
@@ -29,10 +29,10 @@
                 <Frame Grid.Column="0" Grid.Row="1" Margin="0,-5,0,0">
                     <StackLayout>
 
-                        <Image Source="instaTC1.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="45" Margin="10,0,0,-60">
+                        <Image Source="Instagram_Icon.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
 
                         </Image>
-                        <Frame  TranslationY="-5"  Margin="10,0,0,-15" BackgroundColor="Transparent" >
+                        <Frame  TranslationY="-2"  Margin="10,0,0,-15" BackgroundColor="Transparent" >
 
                             <Label HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="20" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Instagram"></Label>
                         </Frame>

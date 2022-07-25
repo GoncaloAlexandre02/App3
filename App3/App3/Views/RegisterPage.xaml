@@ -33,7 +33,7 @@
                                     
 
                                 <StackLayout>
-                                        <Frame BackgroundColor="Transparent" x:Name="fNome" BorderColor="Transparent"  Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                        <Frame BackgroundColor="Transparent" x:Name="fNome" BorderColor="Transparent" HasShadow="False" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                             <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
                                                 <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold" Margin="20,0,25,0" Keyboard="Text"/>
                                             </StackLayout>
@@ -41,7 +41,7 @@
                                 </StackLayout>
                                        
                                 <StackLayout >
-                                    <Frame BackgroundColor="Transparent" x:Name="fApelido" Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                    <Frame BackgroundColor="Transparent" x:Name="fApelido" Padding="0" HasShadow="False" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                         <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
                                             <Entry x:Name="txtApelido" Placeholder="Apelido"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Text"/>
                                         </StackLayout>
@@ -50,7 +50,7 @@
 
                                         
                                 <StackLayout>
-                                    <Frame BackgroundColor="Transparent"  x:Name="fEmail"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                    <Frame BackgroundColor="Transparent"  x:Name="fEmail"  Padding="0" HasShadow="False" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                         <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
                                             <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
                                         </StackLayout>
@@ -60,7 +60,7 @@
                                     
                                    
                                 <StackLayout>
-                                    <Frame BackgroundColor="Transparent" x:Name="fTele"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                    <Frame BackgroundColor="Transparent" x:Name="fTele"  Padding="0" HasShadow="False" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                         <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
                                             <Entry x:Name="txtTelefone" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Telephone"/>
                                         </StackLayout>
@@ -71,7 +71,7 @@
                                                                    
                                    
                                 <StackLayout >
-                                    <Frame BackgroundColor="Transparent" x:Name="fPass"  Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
+                                    <Frame BackgroundColor="Transparent" x:Name="fPass"  HasShadow="False" Padding="0" BorderColor="Transparent" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
                                         <StackLayout Orientation="Horizontal" Margin="-15,0,-10,0">
                                             <Entry x:Name="txtPassword" Placeholder="Password" IsPassword="True" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand" Margin="20,0,25,0"/>
                                         </StackLayout>
@@ -95,12 +95,13 @@
                                     </Grid>
                                 </StackLayout>
 
-                                <StackLayout Margin="0,25" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
-                                    <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
-                                        <Image Source="logo_G" Aspect="AspectFill" Margin="0"/>
+                               
+                                <StackLayout Margin="0,25" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" IsVisible="true">
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="2">
+                                        <Image Source="Google_Logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
-                                    <Frame BackgroundColor="White" HeightRequest="55" WidthRequest="45"  HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
-                                        <Image Source="logo_Face" Aspect="AspectFill" Margin="0"/>
+                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="5,0,0,0" HorizontalOptions="Center" Padding="1" >
+                                        <Image Source="facebook_logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
                                 </StackLayout>
 

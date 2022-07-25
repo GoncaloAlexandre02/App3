@@ -70,6 +70,11 @@
                             </Grid.ColumnDefinitions>
 
 
+                            <Image Grid.Column="0" Source="icon_setaEB" x:Name="setaAnte">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAnterior"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image> 
                             <ImageButton Source="zoomMaisB.png" Clicked="AumentarLetra" BackgroundColor="Transparent" Grid.Column="1" Grid.Row="0" BorderColor="Transparent"></ImageButton>
 
                             <ImageButton Source="zoomMenosB.png" Clicked="DiminuirLetra" BackgroundColor="Transparent" Grid.Row="0"  Grid.Column="2" BorderColor="Transparent"></ImageButton>
@@ -78,11 +83,7 @@
 
                             
 
-                            <Image Grid.Column="0" Grid.Row="0"  Source="icon_setaEB"  x:Name="setaAnte">
-                                <Image.GestureRecognizers>
-                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedAnterior"></TapGestureRecognizer>
-                                </Image.GestureRecognizers>
-                            </Image>
+                            
                             <Image Grid.Column="4" Grid.Row="0" Source="icon_setaDB"  x:Name="setaProxi"  >
                                 <Image.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_TappedProximo"></TapGestureRecognizer>
