@@ -160,7 +160,149 @@ namespace App3.Services
             }
 
         }
+        public async Task<SocialRoot> GetSocialItemsAsync(string tipo)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "https://10.0.2.2:7004/api/Social?tipo=" + tipo;
+                Console.WriteLine(url);
+                var response = await client.GetStringAsync(url);
+                Console.WriteLine(response);
+                var produtos = JsonConvert.DeserializeObject<SocialRoot>(response);
 
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        public async Task<HttpResponseMessage> UpdateSocial(Social2 social, string id)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/Social/" + id;
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = JsonConvert.SerializeObject(social);
+                var buffer = System.Text.Encoding.UTF8.GetBytes(content);
+                var byteContent = new ByteArrayContent(buffer);
+                byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
+                var response = await client.PutAsync(url, byteContent);
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+
+        public async Task<SocialimgRoot> GetSocialImgAsync(string id)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "https://10.0.2.2:7004/api/Social/" + id;
+                Console.WriteLine(url);
+                var response = await client.GetStringAsync(url);
+                Console.WriteLine(response);
+                var produtos = JsonConvert.DeserializeObject<SocialimgRoot>(response);
+
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+        public async Task<Social> PostSocial(string social)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/AddSocial/";
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(social, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(url, content);
+                var social2 = JsonConvert.DeserializeObject<Social>(await response.Content.ReadAsStringAsync());
+
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return social2;
+                }
+                else
+                {
+                    return social2;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<HttpResponseMessage> PostSocialReserva(string social)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/AddSocialReserva/";
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(social, Encoding.UTF8, "application/json");
+
+                var response = await client.PostAsync(url, content);
+
+                Console.WriteLine(response);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<List<Igreja>> GetIgrejasAsync()
         {
             try

@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="App3.Views.ChatPage" 
              xmlns:local="clr-namespace:App3.Helpers" 
-             xmlns:partials="clr-namespace:App3.Views.Partials" xmlns:viewmodels="clr-namespace:App3.ViewModels" x:DataType="viewmodels:ChatViewModel">
+             xmlns:partials="clr-namespace:App3.Views.Partials" xmlns:viewmodels="clr-namespace:App3.ViewModels" x:DataType="viewmodels:ChatViewModel"
+             BackgroundColor="#ebebeb">
     <ContentPage.Resources>
         <ResourceDictionary>
             <local:ChatTemplateSelector x:Key="MessageTemplateSelector"/>
@@ -11,16 +12,7 @@
     </ContentPage.Resources>
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="Transparent">
-            <StackLayout.Background>
-                <LinearGradientBrush StartPoint="0,0"
-                             EndPoint="1,0">
-                    <GradientStop Color="#527beb"
-                          Offset="0.1"/>
-                    <GradientStop Color="#cf991d"
-                          Offset="2.0"/>
-                </LinearGradientBrush>
-            </StackLayout.Background>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
             <Frame Padding="0" CornerRadius="30" HeightRequest="60" WidthRequest="60" IsClippedToBounds="True" HorizontalOptions="Center">
                 <Image x:Name="imagemT" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
             </Frame>

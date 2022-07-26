@@ -11,7 +11,7 @@
         
         <ResourceDictionary>
 
-            <Color x:Key="Primary">#1e48bd</Color>
+            <Color x:Key="Primary">#0a2a3b</Color>
             <Style x:Key="image2" TargetType="ImageButton">
                 <Setter Property="HeightRequest" Value="85"></Setter>
                 

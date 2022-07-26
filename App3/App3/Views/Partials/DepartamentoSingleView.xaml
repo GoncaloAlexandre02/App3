@@ -13,7 +13,7 @@
             <StackLayout >
                 <Grid>
                     <StackLayout  Grid.Column="0" Grid.Row="0">
-                        <Image Source="rezar" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                        <Image Source="rezar"  x:Name="imgD" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
                     </StackLayout>
 
 

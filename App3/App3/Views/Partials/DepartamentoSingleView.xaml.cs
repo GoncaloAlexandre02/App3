@@ -35,21 +35,38 @@ namespace App3.Views.Partials
         }
         public async void AtualizaResp(int iddepart)
         {
-            
+
             try
             {
-  
+
                 bbb = await restService.GetResponsaveisAsync(iddepart);
-                
+
                 nomeUser.Text = bbb[0].NomeUser.ToString();
-                
+
             }
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
                 nomeUser.Text = "";
             }
-            
+            try
+            {
+                if (depart2.Imgdepart == null)
+                {
+                    imgD.Source = "rezar";
+                }
+                else
+                {
+                    imgD.Source = await restService.GetImagemServer(depart2.Imgdepart);
+                }
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                imgD.Source = "rezar";
+            }
+
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

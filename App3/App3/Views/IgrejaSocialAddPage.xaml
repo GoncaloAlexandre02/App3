@@ -18,7 +18,7 @@
             
             <StackLayout>
                 <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent">
-                    <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Categoria" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
+                    <Picker TitleColor="#7a7a7a" x:Name="picker" TextColor="#0a2a3b" Title="Categoria" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
                         <Picker.Items>
                             <x:String>Roupa</x:String>
                             <x:String>Emprego</x:String>
@@ -27,17 +27,18 @@
                     </Picker>
                 </Frame>
                 <Frame Margin="10,0,10,0" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent">
-                    <Entry Placeholder="Nome" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"></Entry>
+                    <Entry x:Name="txtTitulo" Placeholder="Nome" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"></Entry>
                 </Frame>
                 <Frame Margin="10,0,10,0" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent">
-                    <Editor x:Name="txtMensagem" HeightRequest="100" Placeholder="Descição" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" />
+                    <Editor x:Name="txtDesc" HeightRequest="100" Placeholder="Descição" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" />
                 </Frame>
                 <StackLayout >
                     <ImageButton Source="inserirB_imagem.png" Margin="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                    <Label x:Name="lImg" HorizontalOptions="Center" TextColor="#0a2a3b" Text="0 de 3 Imagens" FontFamily="OpenSans-Regular" ></Label>
                 </StackLayout>
                 <StackLayout Margin="0,30,0,0">
 
-                    <Button Text="Publicar Doação" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="OpenSans-SemiBold" />
+                    <Button Text="Publicar Doação" Clicked="Button_Clicked" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="OpenSans-SemiBold" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

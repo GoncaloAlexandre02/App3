@@ -4,7 +4,7 @@
                  x:Class="App3.Views.BibliaPage"
                  xmlns:vm="clr-namespace:App3.Models;assembly=App3"
                  xmlns:xct="http://xamarin.com/schemas/2020/toolkit"     
-                 BackgroundColor="#ededed"
+                 BackgroundColor="#ebebeb"
                  Title="Bíblia">
 
     <Shell.TitleView>

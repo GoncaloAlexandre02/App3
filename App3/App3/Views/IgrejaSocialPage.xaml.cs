@@ -1,4 +1,7 @@
-﻿using System;
+﻿using App3.Models;
+using App3.Services;
+using App3.Views.Partials;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -12,9 +15,33 @@ namespace App3.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class IgrejaSocialPage : ContentPage
     {
+        SocialRoot aaa;
+        RestService restService;
         public IgrejaSocialPage()
         {
             InitializeComponent();
+            restService = new RestService();
+            AtualizarSocial("tudo");
+        }
+
+        private async void AtualizarSocial(string tipo)
+        {
+            EcraSocial.Children.Clear();
+            aaa = await restService.GetSocialItemsAsync(tipo);
+
+            try
+            {
+
+                foreach (Social social in aaa.data)
+                {
+
+                    EcraSocial.Children.Add(new SocialSingleView(social));
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
         }
 
         private void buttonCamisola_Clicked(object sender, EventArgs e)
