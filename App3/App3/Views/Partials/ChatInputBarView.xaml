@@ -2,7 +2,9 @@
 <ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="App3.Views.Partials.ChatInputBarView" >
-    <Grid RowSpacing="0" 
+    <ScrollView>
+        <StackLayout>
+            <Grid RowSpacing="0" 
            ColumnSpacing="0">
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
@@ -11,28 +13,34 @@
             <ColumnDefinition Width="*" />
             <ColumnDefinition Width="Auto" />
         </Grid.ColumnDefinitions>
-        <Entry x:Name="chatTextInput" 
-                 Text="{Binding TextToSend}" 
-                 Margin="1"  
-                 TextColor="#0a2a3b" 
-                 Keyboard="Chat"  
-                 HorizontalOptions="FillAndExpand" 
-                 PlaceholderColor="#ebebeb"
-                 Placeholder="Escreva uma Mensagem..."
-                 Grid.Row="0" 
-                 Grid.Column="0"
-                 Completed="Handle_Completed"/>
-        <StackLayout Grid.Row="0"
-               Grid.Column="1" Margin="5">
-        <Button Text="Enviar"
-               BackgroundColor="#18648C"
-               CornerRadius="50" Command="{Binding OnSendCommand}" >
-            <Button.GestureRecognizers>
-                <TapGestureRecognizer
-                      Command="{Binding OnSendCommand}"
-                      Tapped="Handle_Completed"/>
-            </Button.GestureRecognizers>
-        </Button>
+        
+                <Entry x:Name="chatTextInput" 
+                     Text="{Binding TextToSend}" 
+                     Margin="1"  
+                     TextColor="#0a2a3b" 
+                     Keyboard="Chat"  
+                     HorizontalOptions="FillAndExpand" 
+                     PlaceholderColor="#ebebeb"
+                     Placeholder="Escreva uma Mensagem..."
+                     Grid.Row="0" 
+                     Grid.Column="0"
+                     Completed="Handle_Completed"/>
+            <StackLayout Grid.Row="0"
+                   Grid.Column="1" Margin="5">
+            <Button Text="Enviar" 
+                   BackgroundColor="#0a2a3b"
+                   CornerRadius="10" Command="{Binding OnSendCommand}" >
+                <Button.GestureRecognizers>
+                    <TapGestureRecognizer
+                          Command="{Binding OnSendCommand}"
+                          Tapped="Handle_Completed"/>
+                </Button.GestureRecognizers>
+            </Button>
+            </StackLayout>
+            </Grid>
         </StackLayout>
-    </Grid>
+                
+        </ScrollView>
+        
+    
 </ContentView>

@@ -8,14 +8,14 @@
 
     <!-- Set theme colors from https://aka.ms/material-colors -->
     <!-- colorPrimary is used for the default action bar background -->
-    <!--<item name="colorPrimary">#2196F3</item>-->
+    <!--<item name="colorPrimary">#1976D2r</item> -->
     <!-- colorPrimaryDark is used for the status bar -->
     <!--<item name="colorPrimaryDark">#1976D2</item>-->
     <!-- colorAccent is used as the default value for colorControlActivated
          which is used to tint widgets -->
-    <!--<item name="colorAccent">#FF4081</item>-->
+        <item name="colorAccent">#0a2a3b</item>
 
-	  <!--<item name="colorAccent">#FF4081</item>-->
+	    <item name="colorAccent">#0a2a3b</item>
 
 	  <item name="android:colorPressedHighlight">@color/ListViewSelected</item>
 	  <item name="android:colorLongPressedHighlight">@color/ListViewHighlighted</item>

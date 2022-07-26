@@ -16,29 +16,45 @@
     </Shell.TitleView>
 
     <ContentPage.Content>
-        <ScrollView>
-            <StackLayout>
-                <Frame Margin="10,40,10,0" CornerRadius="10" BackgroundColor="#0a2a3b">
-                    <StackLayout Margin="10,10,0,0">
+        <StackLayout>
+            <Button Text="Definir Plano" Clicked="Plano_Clicked"  Padding="0"  BackgroundColor="#18648C" TextColor="White" VerticalOptions="Center" HeightRequest="50" Margin="0,-3,0,0"/>
 
-                        <Label Text="Quanto tempo você quer orar por dia?" TextColor="White"  HorizontalOptions="Center"  FontSize="17" FontFamily="OpenSans-SemiBold"></Label>
+            <ScrollView >
+                <StackLayout>
+                   
 
-                        <Label Text="Defina um plano de oração para ser sempre lembrado de realizar as suas orações" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,10,0,10" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                    <Frame Margin="10,20,10,0" CornerRadius="10" BackgroundColor="#0a2a3b">
+                        <StackLayout Margin="10,10,0,0">
 
-                    </StackLayout>
-                </Frame>
+                            <Label Text="Quanto tempo você quer orar por dia?" TextColor="White"  HorizontalOptions="Center"  FontSize="17" FontFamily="OpenSans-SemiBold"></Label>
 
-                <StackLayout Margin="0,50,0,0">
+                            <Label Text="Defina um plano de oração para ser sempre lembrado de realizar as suas orações" TextColor="White" HorizontalOptions="Center" HorizontalTextAlignment="Center" Margin="0,10,0,10" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
 
-                    <Image Source="prayB.png" WidthRequest="300"></Image>
+                        </StackLayout>
+                    </Frame>
+
+                    <Frame Margin="0,40,0,0">
+                        <Grid>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="12:00" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="22" FontFamily="OpenSans-SemiBold" Margin="0,0,10,0"></Label>
+                               
+                            </StackLayout>
+                            <StackLayout Grid.Column="0" Grid.Row="0">
+                                <Label Text="Domingo" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="18" FontFamily="OpenSans-SemiBold" Margin="5,30,10,0"></Label>
+                            </StackLayout>
+                            <StackLayout Grid.Column="1" Grid.Row="0">
+                                <Switch Margin="0,10,10,0" IsToggled="True" HorizontalOptions="End" ThumbColor="#0a2a3b" OnColor="#18648C" HeightRequest="30"></Switch>
+                            </StackLayout>
+                        </Grid>
+                        
+                    </Frame>
+
+                    
 
                 </StackLayout>
+            </ScrollView>
+        </StackLayout>
 
-                <StackLayout HorizontalOptions="Center" VerticalOptions="Center" WidthRequest="300" Margin="0,40,0,20">
-                    <Button Text="Definir Plano" Clicked="Plano_Clicked" TextColor="White" BackgroundColor="#0a2a3b" CornerRadius="10"   FontFamily="OpenSans-SemiBold" FontSize="20"></Button>
-                </StackLayout>
 
-            </StackLayout>
-        </ScrollView>
     </ContentPage.Content>
 </ContentPage>

@@ -32,13 +32,13 @@
                             <StackLayout Orientation="Horizontal">
                             <StackLayout
                                 Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                    <Label FontSize="23" Text="{Binding Emissor}" FontFamily="OpenSans-SemiBold" />
+                                    <Label FontSize="23" Text="{Binding Emissor}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
                 
 
                             </StackLayout>
                                 <StackLayout
                                  VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="5">
-                                    <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" />
+                                    <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
 
                                 </StackLayout>
                             </StackLayout>
