@@ -31,13 +31,7 @@ namespace App3.Views
 
         }
 
-        async void lista_ItemSelected(object sender, SelectedItemChangedEventArgs e)
-        {
-            var item = (Noticia)lista.SelectedItem;
-            var itemstrig = item.Idnoticia;
-            await Navigation.PushAsync(new NoticiaPage1(itemstrig.ToString()));
-
-        }
+       
 
         async void AtualizaNoticias()
         {
@@ -51,7 +45,7 @@ namespace App3.Views
                     item.Nomenoticia = item.Nomenoticia.Substring(0, 20) + "...";
                 Noticias.Add(item);
             }
-            lista.ItemsSource = Noticias;
+            
 
         }
 

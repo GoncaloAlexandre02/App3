@@ -19,32 +19,103 @@ namespace App3.Views
 
         private void buttonCamisola_Clicked(object sender, EventArgs e)
         {
-            buttonCamisola.BorderColor = Color.FromHex("#0a2a3b");
-            buttonEmprego.BorderColor = Color.Transparent;
-            buttonMoveis.BorderColor = Color.Transparent;
+            buttonCamisola1.IsVisible = true;
+            buttonCamisola.IsVisible = false;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonOutro.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+        }
+
+        private void buttonCamisola1_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola1.IsVisible = false;
+            buttonCamisola.IsVisible = true;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+            buttonOutro.IsVisible = true;
         }
 
         private void buttonEmprego_Clicked(object sender, EventArgs e)
         {
-            buttonCamisola.BorderColor = Color.Transparent;
-            buttonEmprego.BorderColor = Color.FromHex("#0a2a3b");
-            buttonMoveis.BorderColor = Color.Transparent;
+            buttonCamisola1.IsVisible = false;
+            buttonEmprego.IsVisible = false;
+            buttonEmpregos1.IsVisible = true;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonOutro.IsVisible = true;
+
+        }
+        private void buttonEmprego1_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola1.IsVisible = false;
+            buttonEmprego.IsVisible = true;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+            buttonOutro.IsVisible = true;
         }
 
         private void buttonMoveis_Clicked(object sender, EventArgs e)
         {
-            buttonCamisola.BorderColor = Color.Transparent;
-            buttonEmprego.BorderColor = Color.Transparent;
-            buttonMoveis.BorderColor = Color.FromHex("#0a2a3b");
-            buttonOutro.BorderColor = Color.Transparent;
+            buttonCamisola1.IsVisible = false;
+            buttonMoveis.IsVisible = false;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = true;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+            buttonOutro.IsVisible = true;
+        }
+
+        private void buttonMoveis1_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+            buttonOutro.IsVisible = true;
         }
 
         private void buttonOutro_Clicked(object sender, EventArgs e)
         {
-            buttonCamisola.BorderColor = Color.Transparent;
-            buttonEmprego.BorderColor = Color.Transparent;
-            buttonMoveis.BorderColor = Color.Transparent;
-            buttonOutro.BorderColor = Color.FromHex("#0a2a3b");
+            buttonCamisola1.IsVisible = false;
+            buttonOutro.IsVisible = false;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = true;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+        }
+
+        private void buttonOutro1_Clicked(object sender, EventArgs e)
+        {
+            buttonCamisola1.IsVisible = false;
+            buttonOutro.IsVisible = true;
+            buttonEmpregos1.IsVisible = false;
+            buttonMoveil1.IsVisible = false;
+            buttonOutro1.IsVisible = false;
+            buttonMoveis.IsVisible = true;
+            buttonCamisola.IsVisible = true;
+            buttonEmprego.IsVisible = true;
+
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)

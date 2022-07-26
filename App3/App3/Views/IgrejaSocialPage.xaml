@@ -39,21 +39,26 @@
 
 
                             <ImageButton Source="icon_camisolaB.png" x:Name="buttonCamisola" Clicked="buttonCamisola_Clicked" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
+                            <ImageButton Source="icon_camisolaB1.png" x:Name="buttonCamisola1" Clicked="buttonCamisola1_Clicked" IsVisible="false" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
 
                             <ImageButton Source="icon_empregoB.png" x:Name="buttonEmprego" Clicked="buttonEmprego_Clicked" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent" BorderWidth="3"></ImageButton>
+                            <ImageButton Source="icon_empregoB1.png" x:Name="buttonEmpregos1" Clicked="buttonEmprego1_Clicked" IsVisible="false" BackgroundColor="Transparent" Grid.Column="1" BorderColor="Transparent" BorderWidth="3"></ImageButton>
 
                             <ImageButton Source="icon_moveisB.png" x:Name="buttonMoveis" Clicked="buttonMoveis_Clicked" BackgroundColor="Transparent" Grid.Column="2"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
-                        
+                            <ImageButton Source="icon_moveisB1.png" x:Name="buttonMoveil1" Clicked="buttonMoveis1_Clicked" BackgroundColor="Transparent" IsVisible="false" Grid.Column="2" BorderColor="Transparent" BorderWidth="3"></ImageButton>
+
                             <ImageButton Source="icon_outroB.png" x:Name="buttonOutro" Clicked="buttonOutro_Clicked" BackgroundColor="Transparent" Grid.Column="3"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
+                            <ImageButton Source="icon_outroB1.png" x:Name="buttonOutro1" Clicked="buttonOutro1_Clicked" BackgroundColor="Transparent" IsVisible="false" Grid.Column="3"  BorderColor="Transparent" BorderWidth="3"></ImageButton>
 
 
 
-                        </Grid>
+                    </Grid>
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Ultimas Atulizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#0a2a3b" FontSize="16" Margin="10,0,0,0"></Label>
-
+                        
+                        <Label Text="Ultimas Atulizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#0a2a3b" FontSize="17" Margin="10,-5,0,5"></Label>
+                       
                         <StackLayout>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
