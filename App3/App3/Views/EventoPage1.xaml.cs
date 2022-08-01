@@ -29,7 +29,7 @@ namespace App3.Views
             evento2 = evento;
             AtualizarPessoaevento();
             titulolabel.Text = evento.Nome.ToString();
-            dtlabel.Text = evento.Dtevento.ToString("dd MMM HH:mm (yyyy)");
+            dtlabel.Text = evento.Dtevento.ToString("HH:mm dd MMM");
             desclabel.Text = evento.Descevento.ToString();
         }
         public async void AtualizarPessoaevento()

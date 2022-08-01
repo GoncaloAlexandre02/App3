@@ -15,8 +15,8 @@
         
         <StackLayout>
             <StackLayout>
-                <Frame HeightRequest="25">
-                    <SearchBar Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></SearchBar>
+                <Frame HeightRequest="25" BackgroundColor="#ebebeb">
+                    <SearchBar x:Name="pesquisaH" TextChanged="MySearchBarOnTextChangedHin" Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></SearchBar>
                 </Frame>
             </StackLayout>
             <ListView x:Name="lista" ItemSelected="OnItemSelected">

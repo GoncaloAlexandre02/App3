@@ -38,5 +38,32 @@ namespace App3.Views
             hinarioList.RemoveAt(0);
             aa.Text = hinarioList[0].DescHinario;
         }
+
+        private void ImageButton_Clicked(object sender, EventArgs e)
+        {
+            var change = stack3.Children.OfType<Label>().ToArray();
+
+            foreach (var item in change)
+            {
+                item.FontSize -= 2;
+            }
+        }
+
+        private void ImageButton_Clicked_1(object sender, EventArgs e)
+        {
+            var change = stack3.Children.OfType<Label>().ToArray();
+
+            foreach (var item in change)
+            {
+                item.FontSize += 2;
+            }
+        }
+
+        private void ImageButton_Clicked_2(object sender, EventArgs e)
+        {
+            BibliaPage.ModoLeitura(scrollP);
+
+        }
+
     }
 }

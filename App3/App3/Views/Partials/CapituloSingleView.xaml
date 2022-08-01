@@ -4,11 +4,14 @@
              x:Class="App3.Views.Partials.CapituloSingleView"
              BackgroundColor="#ededed">
   <ContentView.Content>
-        <Frame  FlexLayout.Basis="20%" BackgroundColor="#0a2a3b" WidthRequest="22" Margin="0,0,3,3" >
+       
+            <Frame  FlexLayout.Basis="20%" BackgroundColor="#0a2a3b" WidthRequest="22" Margin="0,0,5,3" >
             <Frame.GestureRecognizers>
                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
             </Frame.GestureRecognizers>
             <Label x:Name="labelNum" Text=""  HorizontalTextAlignment="Center" Margin="-3" TextColor="White" ></Label>
         </Frame>
+        
+        
     </ContentView.Content>
 </ContentView>

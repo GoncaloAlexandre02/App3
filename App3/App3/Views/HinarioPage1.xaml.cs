@@ -17,7 +17,7 @@ namespace App3.Views
         public HinarioPage1()
         {
             InitializeComponent();
-            hinarioList.Add(new Hinario() { NomeHinario="1 - Harpa Cristã"});
+            hinarioList.Add(new Hinario() { NomeHinario = "1 - Harpa Cristã" });
             lista.ItemsSource = hinarioList;
 
 

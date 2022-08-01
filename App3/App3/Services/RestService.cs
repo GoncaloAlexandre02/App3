@@ -78,6 +78,33 @@ namespace App3.Services
                 throw ex;
             }
         }
+        public async Task<HttpResponseMessage> UpdatePlano(string data, string id)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/Plano/" + id;
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                var response = await client.PutAsync(url, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<HttpResponseMessage> UpdateUser(string data, string id, DateTime data1)
         {
             try
@@ -119,6 +146,34 @@ namespace App3.Services
                 var byteContent = new ByteArrayContent(buffer);
                 byteContent.Headers.ContentType = new MediaTypeHeaderValue("application/json");
                 var response = await client.PutAsync(url, byteContent);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<HttpResponseMessage> UpdateFavIgreja(string data, string id)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/Favigrejas/" + id;
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+
+                var response = await client.PutAsync(url, content);
                 if (response.IsSuccessStatusCode)
                 {
                     //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
@@ -303,14 +358,36 @@ namespace App3.Services
                 throw ex;
             }
         }
-        public async Task<List<Igreja>> GetIgrejasAsync()
+        public async Task<RootIgreja> GetIgrejasAsync()
         {
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
                 string url = "https://10.0.2.2:7004/api/Igrejas";
                 var response = await client.GetStringAsync(url);
-                var produtos = JsonConvert.DeserializeObject<List<Igreja>>(response);
+                var produtos = JsonConvert.DeserializeObject<RootIgreja>(response);
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+        public async Task<RootFavigreja> GetIgrejasFavAsync(string id)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "https://10.0.2.2:7004/api/Favigrejas/" + id;
+                var response = await client.GetStringAsync(url);
+                var produtos = JsonConvert.DeserializeObject<RootFavigreja>(response);
                 return produtos;
             }
             catch (HttpRequestException ex)
@@ -347,6 +424,30 @@ namespace App3.Services
             }
 
         }
+        public async Task<RootPlano> GetPlanosAsync(string id)
+        {
+            try
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "https://10.0.2.2:7004/api/Plano/" + id;
+                var response = await client.GetStringAsync(url);
+                var produtos = JsonConvert.DeserializeObject<RootPlano>(response);
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                return null;
+            }
+
+        }
+
+
 
         public async Task<RootHinario> GetDescHinarioAsync(string nome)
         {
@@ -392,11 +493,66 @@ namespace App3.Services
             }
 
         }
+        public async Task<HttpResponseMessage> AddBatismo(string data)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/AddBatismo/";
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                Console.WriteLine(response);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
         public async Task<HttpResponseMessage> AddMurais(string data)
         {
             try
             {
                 string url = "https://10.0.2.2:7004/api/AddMural/";
+                //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
+                //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var content = new StringContent(data, Encoding.UTF8, "application/json");
+                var response = await client.PostAsync(url, content);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return response;
+                }
+                else
+                {
+                    return response;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public async Task<HttpResponseMessage> AddPlano(string data)
+        {
+            try
+            {
+                string url = "https://10.0.2.2:7004/api/AddPlano/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));

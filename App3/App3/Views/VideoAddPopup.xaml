@@ -17,7 +17,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,45,0,0">
-                            <ImageButton Source="icon_addvideoB.png"  HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="60" BackgroundColor="Transparent" ></ImageButton>
+                            <ImageButton Source="icon_videocamera.png"  HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

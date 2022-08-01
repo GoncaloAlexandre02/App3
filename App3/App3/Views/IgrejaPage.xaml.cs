@@ -21,5 +21,9 @@ namespace App3.Views
         {
             await Navigation.PushAsync(new IgrejaPage1());
         }
+        private async void TapGestureRecognizer_Tapped_Fav(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new IgrejaPage1("sim"));
+        }
     }
 }

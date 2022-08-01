@@ -39,16 +39,16 @@
 
                         <StackLayout Grid.Row="0" >
                             <StackLayout Grid.Column="0"  Orientation="Vertical" VerticalOptions="Center" Margin="10">
-                                <Label x:Name="titulolabel"  FontSize="24" Margin="10,5,0,0" Text="" FontFamily="OpenSans-SemiBold"  TextColor="#0a2a3b"/>
+                                <Label x:Name="titulolabel"  FontSize="24" Margin="24,5,0,0" Text="" FontFamily="OpenSans-SemiBold"  TextColor="#0a2a3b"/>
                             </StackLayout>
                             <StackLayout  Margin="10">
-                                <Label x:Name="dtlabel" FontSize="17" Text=""  FontFamily="OpenSans-Regular" Margin="10,-15,0,0" HorizontalOptions="Start" TextColor="#0a2a3b"/>
+                                <Label x:Name="dtlabel" FontSize="17" Text=""  FontFamily="OpenSans-Regular" Margin="24,-15,0,0" HorizontalOptions="Start" TextColor="#0a2a3b"/>
                             </StackLayout>
                         </StackLayout>
 
 
 
-                        <Frame Grid.Row="1" BackgroundColor="Transparent" >
+                        <Frame Grid.Row="1" BackgroundColor="Transparent" Margin="17,0,0,0">
                             <StackLayout>
                                 <Grid>
                                     <Grid.RowDefinitions>
@@ -80,16 +80,16 @@
 
             <StackLayout>
                 <Grid>
-                    <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,10,0">
+                    <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,55,0">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
                 </Grid>
             </StackLayout>
-            <Frame>
-                
-                <StackLayout>
+            <Frame BackgroundColor="#0a2a3b">
+
+                <StackLayout >
                     <Grid>
                         <Grid.RowDefinitions>
                             <RowDefinition Height="35"></RowDefinition>

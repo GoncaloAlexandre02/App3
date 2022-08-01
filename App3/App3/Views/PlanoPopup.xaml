@@ -16,7 +16,7 @@
                 </StackLayout>
                 <StackLayout>
                     <Frame Margin="20,40,20,0" CornerRadius="10" >
-                        <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecione o dia da semana" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
+                        <Picker x:Name="pickerP" TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecione o dia da semana" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
                             <Picker.Items>
                                 <x:String>Domingo</x:String>
                                 <x:String>Segunda-feira</x:String>
@@ -31,13 +31,13 @@
                 </StackLayout>
                 <StackLayout>
                     <Frame Margin="20,20,20,0" CornerRadius="10">
-                        <TimePicker HorizontalOptions="Center" TextColor="#0a2a3b" ></TimePicker>
+                        <TimePicker x:Name="horaP" Format="HH:mm" HorizontalOptions="Center" TextColor="#0a2a3b" ></TimePicker>
                     </Frame>
                 </StackLayout>
                 <StackLayout>
-                    <Button Text="Selecionar" BackgroundColor="#0a2a3b"  Margin="20,30,20,10" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20" ></Button>
+                    <Button x:Name="btnP" Clicked="btnP_Clicked" Text="Selecionar" BackgroundColor="#0a2a3b"  Margin="20,30,20,10" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20" ></Button>
                 </StackLayout>
-            </StackLayout>
+            </StackLayout>  
         </ScrollView>
         
     </StackLayout>

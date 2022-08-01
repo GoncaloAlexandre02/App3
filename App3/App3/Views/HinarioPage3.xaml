@@ -6,23 +6,52 @@
     <Shell.TitleView>
 
         <StackLayout Orientation="Horizontal"   BackgroundColor="#0a2a3b">
-            
+
             <Label x:Name="titulo" FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Hinário"></Label>
-            
+
         </StackLayout>
     </Shell.TitleView>
     <ContentPage.Content>
         <StackLayout>
-            <ScrollView>
-                <StackLayout>
-            <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+            <ScrollView x:Name="scrollP">
+                <StackLayout Margin="0,-25,0,0">
+                    <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
                         <Label HorizontalOptions="Center" x:Name="titleL" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="22" Margin="0,0,0,0" Text=""></Label>
-            </StackLayout>
-            <StackLayout>
-                        <Label Padding="20" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  FontSize="16" x:Name="aa"></Label>
-            </StackLayout>
+                    </StackLayout>
+                    <StackLayout x:Name="stack3">
+                        <Label Padding="20" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"  FontSize="17" x:Name="aa"></Label>
+                    </StackLayout>
                 </StackLayout>
             </ScrollView>
+
+            <Frame BackgroundColor="#0a2a3b">
+
+                <StackLayout >
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="35"></RowDefinition>
+
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="110"></ColumnDefinition>
+                            <ColumnDefinition Width="100"></ColumnDefinition>
+                        </Grid.ColumnDefinitions>
+
+
+                        <ImageButton Source="zoomMaisB.png" Clicked="ImageButton_Clicked_1" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="zoomMenosB.png" Clicked="ImageButton_Clicked" BackgroundColor="Transparent"  Grid.Column="1" BorderColor="Transparent"></ImageButton>
+
+                        <ImageButton Source="icon_solB.png" Clicked="ImageButton_Clicked_2" BackgroundColor="Transparent" Grid.Column="2"   BorderColor="Transparent"></ImageButton>
+
+
+
+                    </Grid>
+                </StackLayout>
+            </Frame>
+
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

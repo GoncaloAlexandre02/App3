@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.Partials.IgrejaSingleView">
+  <ContentView.Content>
+        <Frame Margin="0,0,0,0" HeightRequest="60">
+            <Frame.GestureRecognizers>
+                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+            </Frame.GestureRecognizers>
+            <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
+                <Grid>
+                    <StackLayout Grid.Column="0" Grid.Row="0">
+                        <Label x:Name="nome" Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
+
+                    </StackLayout>
+                    <StackLayout>
+                        <Image Source="icon_BanPortugal.png" HorizontalOptions="End" HeightRequest="30" ></Image>
+                    </StackLayout>
+                    <StackLayout Grid.Column="0" Grid.Row="1">
+                        <Label x:Name="morada" Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
+                    </StackLayout>
+                </Grid>
+
+            </StackLayout>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

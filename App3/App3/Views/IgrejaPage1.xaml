@@ -6,38 +6,15 @@
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
-           
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mais Perto de Si"></Label>
+
+            <Label x:Name="tit" FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Mais Perto de Si"></Label>
 
         </StackLayout>
     </Shell.TitleView>
-    
-    <ContentPage.Content>
-        <StackLayout>
-            <Frame Margin="0,0,0,0" HeightRequest="60">
-                <Frame.GestureRecognizers>
-                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                </Frame.GestureRecognizers>
-                <StackLayout>
-                    <StackLayout.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
-                    </StackLayout.GestureRecognizers>
-                    <Grid>
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
 
-                        </StackLayout>
-                        <StackLayout>
-                            <Image Source="icon_BanPortugal.png" HorizontalOptions="End" HeightRequest="30" ></Image>
-                        </StackLayout>
-                        <StackLayout Grid.Column="0" Grid.Row="1">
-                            <Label Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
-                        </StackLayout>
-                    </Grid>
-                    
-                </StackLayout>
-                
-            </Frame>
+    <ContentPage.Content>
+        <StackLayout x:Name="EcraIgrejas">
+
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

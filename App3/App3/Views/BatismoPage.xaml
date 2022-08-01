@@ -1,18 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             mc:Ignorable="d"
-             x:Class="App3.Views.BatismoPage"
-             xmlns:local="clr-namespace:App3.Renderer"
-             Title="Batismo"
-             BackgroundColor="#ebebeb">
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+                 xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+                 xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+                 mc:Ignorable="d"
+                 x:Class="App3.Views.BatismoPage"
+                 xmlns:local="clr-namespace:App3.Renderer"
+                 Title="Batismo"
+                 BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
-            
+
             <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Batismo"></Label>
         </StackLayout>
     </Shell.TitleView>
@@ -25,88 +25,84 @@
                 <StackLayout IsVisible="false">
                     <Image Source="batismo.png" HeightRequest="140" Margin="0,0,0,0"></Image>
                 </StackLayout>
-                
 
-               
+
+
+                <StackLayout>
                     <StackLayout>
-                        <StackLayout>
                         <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#0a2a3b" FontSize="21"  FontFamily="OpenSans-SemiBold" Margin="0,20,0,0"></Label>
-                        </StackLayout>
+                    </StackLayout>
 
-                        <StackLayout>
-                            
-
-                            <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold"  Keyboard="Text"/>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-
-
-                        </StackLayout>
-
-                        <StackLayout>
-                            
-                            <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Email"/>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-
-                        </StackLayout>
-
-                        
-
-
+                    <StackLayout>
 
 
                         <StackLayout>
-                            
-                            <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtTelemovel" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-
-                        </StackLayout>
-
-
-                        <StackLayout>
-
-                            <StackLayout>
-                                <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                                    <StackLayout Orientation="Horizontal">
-                                        <Entry x:Name="txtData" Placeholder="Data Preferência  "  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
-                                    </StackLayout>
-                                </Frame>
-                            </StackLayout>
-
-                        </StackLayout>
-
-                        <StackLayout>
-                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                            <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecionar Igreja" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="19">
-                                    <Picker.Items>
-                                        <x:String>Quinta do Conde</x:String>
-                                        
-                                    </Picker.Items>
-                                </Picker>
+                            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold"  Keyboard="Text"/>
+                                </StackLayout>
                             </Frame>
                         </StackLayout>
 
+
+                    </StackLayout>
+
+                    <StackLayout>
+
+                        <StackLayout>
+                            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Email"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+
+
+
+
+                    <StackLayout>
+
+                        <StackLayout>
+                            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <Entry x:Name="txtTelemovel" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+
+                    <StackLayout>
+                        <StackLayout>
+                            <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                                <StackLayout Orientation="Horizontal">
+                                    <local:ExtendedDatePicker x:Name="txtData" HorizontalOptions="Center"></local:ExtendedDatePicker>
+                                </StackLayout>
+                            </Frame>
+                        </StackLayout>
+
+                    </StackLayout>
+
+                    <StackLayout>
+                        <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
+                            <Picker x:Name="picker" TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecionar Igreja" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="19">
+
+                            </Picker>
+                        </Frame>
+                    </StackLayout>
+
                     <StackLayout Margin="30,40,30,10">
-                        <Button Text="Enviar" BackgroundColor="#0a2a3b" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"  />
+                        <Button Text="Enviar" Clicked="ButtonEnviar_Clicked" BackgroundColor="#0a2a3b" TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"  />
                     </StackLayout>
 
 
                 </StackLayout>
-                
+
             </StackLayout>
         </ScrollView>
     </ContentPage.Content>

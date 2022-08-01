@@ -9,21 +9,21 @@
             </Frame.GestureRecognizers>
             <Grid>
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="150"></ColumnDefinition>
-                    <ColumnDefinition Width="250"></ColumnDefinition>
+                    <ColumnDefinition Width="120"></ColumnDefinition>
+                    <ColumnDefinition Width="300"></ColumnDefinition>
                     <ColumnDefinition Width="100"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <StackLayout  Grid.Column="0" Grid.Row="0">
+                <StackLayout  Grid.Column="1" Grid.Row="0">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                     </StackLayout.GestureRecognizers>
-                    <Image x:Name="ImgSoc" Source="noimage" HorizontalOptions="Start" HeightRequest="120" Margin="10,0,0,0">
+                    <Image x:Name="ImgSoc" Source="noimage" HorizontalOptions="Start" HeightRequest="120" Margin="10,0,0,0" >
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>
                     </Image>
                 </StackLayout>
-                <StackLayout Grid.Column="1" Grid.Row="0" Margin="10" VerticalOptions="Center">
+                <StackLayout Grid.Column="0" Grid.Row="0" Margin="10" VerticalOptions="Center">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                     </StackLayout.GestureRecognizers>
@@ -33,7 +33,7 @@
                         </Label.GestureRecognizers>
                     </Label>
                 </StackLayout>
-                <StackLayout Grid.Column="1" Grid.Row="0" Margin="5" VerticalOptions="EndAndExpand">
+                <StackLayout Grid.Column="0" Grid.Row="0" Margin="5" VerticalOptions="EndAndExpand">
                     <StackLayout.GestureRecognizers>
                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                     </StackLayout.GestureRecognizers>

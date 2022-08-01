@@ -22,11 +22,11 @@
                             <Label Text="" x:Name="dataDEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="24" FontFamily="RedHat-Bold" ></Label>
                             <Label Text="" x:Name="dataMEvento" VerticalOptions="End" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="18" FontFamily="RedHat-Bold" ></Label>
                         </StackLayout>
-                        <Label Text="" x:Name="dataHEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="Center"  FontSize="15" FontFamily="RedHat-Bold" ></Label>
+                        <Label Text="" x:Name="dataHEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b"  HorizontalOptions="Center"  FontSize="15" FontFamily="RedHat-Bold" ></Label>
                     </StackLayout>
 
                     <StackLayout  Grid.Column="2" Grid.Row="0">
-                        <Label Text="" x:Name="nomeEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="CenterAndExpand"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                        <Label Text="" x:Name="nomeEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b"  HorizontalOptions="CenterAndExpand"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
 
                     </StackLayout>
 

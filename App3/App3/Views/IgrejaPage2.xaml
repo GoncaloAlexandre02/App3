@@ -1,18 +1,19 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
-             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="App3.Views.IgrejaPage2"
-             BackgroundColor="#ebebeb">
+                 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+                 x:Class="App3.Views.IgrejaPage2"
+                 BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"   BackgroundColor="#0a2a3b">
-            
+
             <Label FontFamily="OpenSans-SemiBold-Medium" VerticalOptions="Center" HorizontalOptions="Center" Margin="0,0,30,0" TextColor="White" FontSize="20" ></Label>
 
         </StackLayout>
     </Shell.TitleView>
-    
-    
+
+
+
     <ContentPage.Content>
         <StackLayout>
             <ScrollView>
@@ -22,7 +23,7 @@
                         <StackLayout>
                             <Grid>
                                 <StackLayout Grid.Column="0" Grid.Row="0">
-                                    <Label Text="Quinta do Conde" FontSize="20" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold-Bold" TextColor="#0a2a3b"></Label>
+                                    <Label x:Name="nome" Text="" FontSize="20" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold-Bold" TextColor="#0a2a3b"></Label>
 
                                 </StackLayout>
                                 <StackLayout Grid.Column="1" Grid.Row="0" x:Name="fav" IsVisible="true">
@@ -34,7 +35,7 @@
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                                         </Image.GestureRecognizers>
                                     </Image>
-                                    
+
                                 </StackLayout>
                                 <StackLayout Grid.Column="1" Grid.Row="0" x:Name="favp" IsVisible="false">
                                     <StackLayout.GestureRecognizers>
@@ -47,7 +48,7 @@
                                     </Image>
                                 </StackLayout>
                                 <StackLayout Grid.Column="0" Grid.Row="1">
-                                    <Label Text="Sesimbra,Lisboa" FontSize="16" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
+                                    <Label x:Name="morada2" Text="" FontSize="16" HorizontalOptions="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b"></Label>
                                 </StackLayout>
                             </Grid>
                         </StackLayout>
@@ -59,7 +60,7 @@
                                     <Image Source="icon_maisperto.png" HorizontalOptions="Start" HeightRequest="35" Margin="-5,0,0,0"></Image>
                                 </StackLayout>
                                 <StackLayout Grid.Column="0" Grid.Row="0" Padding="25,0,0,5">
-                                    <Label Text="Av.Cova dos Vidros,49,Quinta do Conde, Sesimbra" HorizontalOptions="Center" Margin="15,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                                    <Label x:Name="morada" Text="" HorizontalOptions="StartAndExpand" Margin="15,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
                                 </StackLayout>
                             </Grid>
                         </StackLayout>
@@ -101,23 +102,18 @@
                                     <Image Source="icon_tele.png" HorizontalOptions="Start" HeightRequest="35" Margin="-5,0,0,0" ></Image>
                                 </StackLayout>
                                 <StackLayout Grid.Column="0" Grid.Row="0" Padding="0,0,0,5">
-                                    <Label Text="(21) 4069021" HorizontalOptions="Start" Margin="40,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                                    <Label x:Name="tele" Text="" HorizontalOptions="Start" Margin="40,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
                                 </StackLayout>
                             </Grid>
                         </StackLayout>
                     </Frame>
                 </StackLayout>
-                   
-                
+
+
             </ScrollView>
 
 
-            
-
-
-
-
         </StackLayout>
-        
+
     </ContentPage.Content>
 </ContentPage>

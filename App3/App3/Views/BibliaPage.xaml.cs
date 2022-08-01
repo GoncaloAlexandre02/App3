@@ -114,7 +114,7 @@ namespace App3.Views
             foreach (var item in biblia.verses)
             {
 
-                corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#4d4d4d"), Padding = 0 });
+                corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#0a2a3b"), Padding = 0 });
 
             }
             if (chapter == "1")
@@ -187,11 +187,11 @@ namespace App3.Views
             {
                 if (item.verse.ToString() == verse)
                 {
-                    corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#4d4d4d"), Padding = 0, BackgroundColor = Color.FromHex("#a6e6ff"), ClassId = "ola" });
+                    corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#0a2a3b"), Padding = 0, BackgroundColor = Color.FromHex("#ffffff"), ClassId = "ola" });
                     await scrollP.ScrollToAsync(corpoB.Children.LastOrDefault(), ScrollToPosition.MakeVisible, true);
                 }
                 else
-                    corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#4d4d4d"), Padding = 0 });
+                    corpoB.Children.Add(new Label { Text = item.verse + ". " + item.text + '\n', HorizontalTextAlignment = TextAlignment.Start, FontFamily = "OpenSans-SemiBold", FontSize = 16, TextColor = Color.FromHex("#0a2a3b"), Padding = 0 });
             }
 
 

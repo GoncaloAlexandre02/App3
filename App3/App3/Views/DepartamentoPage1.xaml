@@ -97,7 +97,7 @@
             </ScrollView>
 
 
-            <Frame>
+            <Frame BackgroundColor="#0a2a3b">
                 <StackLayout>
                     <Grid>
                         <Grid.RowDefinitions>

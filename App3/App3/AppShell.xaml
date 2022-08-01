@@ -127,7 +127,7 @@
         <DataTemplate>
             <extensions:Expander IsExpanded="True">
             <Grid HeightRequest="180" BackgroundColor="White">
-                <Image Source="logo_6.png" HeightRequest="150" Margin="0,10,0,0" HorizontalOptions="Center"></Image>
+                <Image Source="Logo_F.png" HeightRequest="150" Margin="0,10,0,0" HorizontalOptions="Center"></Image>
                 <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="30" HorizontalOptions="Center" Margin="10,0,0,0" Text=""></Label>
 
                 <Label IsVisible="false" HeightRequest="55" VerticalTextAlignment="Center" TextColor="White" FontSize="18" HorizontalOptions="End" Margin="0,0,30,0" Text="NOSSA IGREJA"></Label>

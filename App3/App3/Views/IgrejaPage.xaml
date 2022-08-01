@@ -10,15 +10,15 @@
 
         </StackLayout>
     </Shell.TitleView>
-    
+
     <ContentPage.Content>
         <StackLayout >
-            
+
             <StackLayout>
                 <Frame Margin="10,20,10,0" BorderColor="Transparent" CornerRadius="0" HeightRequest="50" BackgroundColor="Transparent">
                     <SearchBar Placeholder="Buscar por localidade, cidade" PlaceholderColor="#7a7a7a" FontSize="18" TextColor="#0a2a3b" Margin="-20,0,0,0" FontFamily="OpenSans-SemiBold" CancelButtonColor="#0a2a3b"></SearchBar>
                 </Frame>
-                
+
                 <Grid>
                     <StackLayout >
                         <Frame HeightRequest="40" >
@@ -46,9 +46,11 @@
 
                         <Frame HeightRequest="40">
                             <StackLayout>
-
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Fav"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
                                 <Image Source="icon_fav.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="55" Margin="0,-5,0,-60">
-                                    
+
                                 </Image>
                                 <Frame  TranslationY="-8"  Margin="0,0,0,-15" BackgroundColor="Transparent" >
 
@@ -57,19 +59,12 @@
                             </StackLayout>
                         </Frame>
                     </StackLayout>
-                    
 
-                 </Grid>
-                                
 
+                </Grid>
 
             </StackLayout>
 
-                
-
-          
-
-           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="App3.Views.Partials.PlanoSingleView">
+  <ContentView.Content>
+        <Frame Margin="0,0,0,0">
+            <Grid>
+                <StackLayout Grid.Column="0" Grid.Row="0">
+                    <Label x:Name="hora" Text="" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="22" FontFamily="OpenSans-SemiBold" Margin="0,0,10,0"></Label>
+
+                </StackLayout>
+                <StackLayout Grid.Column="0" Grid.Row="0">
+                    <Label x:Name="dia" Text="" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="18" FontFamily="OpenSans-SemiBold" Margin="5,30,10,0"></Label>
+                </StackLayout>
+                <StackLayout Grid.Column="1" Grid.Row="0">
+                    <Switch Toggled="ativar_Toggled"  x:Name="ativar" Margin="0,10,10,0" IsToggled="True" HorizontalOptions="End" ThumbColor="#0a2a3b" OnColor="#18648C" HeightRequest="30"></Switch>
+                </StackLayout>
+            </Grid>
+
+        </Frame>
+    </ContentView.Content>
+</ContentView>

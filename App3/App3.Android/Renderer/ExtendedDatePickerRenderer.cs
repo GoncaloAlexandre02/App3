@@ -28,8 +28,7 @@ namespace App3.Droid.Renderer
             base.OnElementChanged(e);
             if (Control != null)
             {
-                Control.Text = "Data de Nascimento";
-              
+                Control.Text = "Data de Preferência";
                 
 
             }
