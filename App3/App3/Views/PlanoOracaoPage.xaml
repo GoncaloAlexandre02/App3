@@ -33,22 +33,7 @@
                         </StackLayout>
                     </Frame>
 
-                    <Frame Margin="0,0,0,0">
-                        <Grid>
-                            <StackLayout Grid.Column="0" Grid.Row="0">
-                                <Label Text="12:30" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="22" FontFamily="OpenSans-SemiBold" Margin="0,0,10,0"></Label>
-
-                            </StackLayout>
-                            <StackLayout Grid.Column="0" Grid.Row="0">
-                                <Label  Text="Domingo" TextColor="#0a2a3b"  HorizontalOptions="Start"  FontSize="18" FontFamily="OpenSans-SemiBold" Margin="5,30,10,0"></Label>
-                            </StackLayout>
-                            <StackLayout Grid.Column="1" Grid.Row="0">
-                                <Switch  Margin="0,10,10,0" IsToggled="True" HorizontalOptions="End" ThumbColor="#0a2a3b" OnColor="#18648C" HeightRequest="30"></Switch>
-                            </StackLayout>
-                        </Grid>
-
-                    </Frame>
-                    
+                                      
                     <StackLayout x:Name="EcraPlano">
 
                     </StackLayout>

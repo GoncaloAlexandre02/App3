@@ -18,19 +18,19 @@ namespace App3.Views
     public partial class LoginPage : ContentPage
     {
 
-        RestService restService;
-        User user;
+        //RestService restService;
+        //User user;
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
-            restService = new RestService();
+            //this.BindingContext = new LoginViewModel();
+            //restService = new RestService();
         }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
             
-            var regmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+           /* var regmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             var email = txtEmail.Text;
             var password = txtPassword.Text;
             if (email == null || password == null || email == "" || password == "")
@@ -38,19 +38,16 @@ namespace App3.Views
                 fEmail.BorderColor = Color.FromRgb(255, 0, 0);
                 fPass.BorderColor = Color.FromRgb(255, 0, 0);
                 await this.DisplayToastAsync("Preencha todos os campos!", 2000);
-
             }
             else if (!Regex.IsMatch(email, regmail))
             {
                 fEmail.BorderColor = Color.FromRgb(255, 0, 0);
-                fPass.BorderColor = Color.FromRgb(207, 153, 70);
+               
                 await this.DisplayToastAsync("Email Invalido", 2000);
-
             }
             else
             {
-                fPass.BorderColor = Color.FromRgb(207, 153, 70);
-                fEmail.BorderColor = Color.FromRgb(207, 153, 70);
+                
                 var pass2 = MD5Hash.Hash.Content(password);
                 var data = "{email :" + email + " , password : " + password + "}";
                 user = await restService.PostLogin(data, email, pass2);
@@ -62,17 +59,16 @@ namespace App3.Views
                 }
                 else
                 {
-                    fPass.BorderColor = Color.FromRgb(207, 153, 70);
-                    fEmail.BorderColor = Color.FromRgb(207, 153, 70);
+                    
                     SecureStorage.RemoveAll();
                    
                     await SecureStorage.SetAsync("iduser", user.Iduser.ToString());
                     await this.DisplayToastAsync(user.Tokenuser, 500);
                     await Shell.Current.GoToAsync("//Home");
                 }
-            }
+            }*/
 
-             //await Shell.Current.GoToAsync("//Home");
+             await Shell.Current.GoToAsync("//Home");
         }
     }
 }
