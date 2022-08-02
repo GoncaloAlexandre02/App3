@@ -54,20 +54,10 @@ namespace App3.Views
             buttonMoveis.IsVisible = true;
             buttonOutro.IsVisible = true;
             buttonEmprego.IsVisible = true;
+            AtualizarSocial("roupa");
         }
 
-        private void buttonCamisola1_Clicked(object sender, EventArgs e)
-        {
-            buttonCamisola1.IsVisible = false;
-            buttonCamisola.IsVisible = true;
-            buttonEmpregos1.IsVisible = false;
-            buttonMoveil1.IsVisible = false;
-            buttonOutro1.IsVisible = false;
-            buttonMoveis.IsVisible = true;
-            buttonCamisola.IsVisible = true;
-            buttonEmprego.IsVisible = true;
-            buttonOutro.IsVisible = true;
-        }
+
 
         private void buttonEmprego_Clicked(object sender, EventArgs e)
         {
@@ -79,20 +69,10 @@ namespace App3.Views
             buttonMoveis.IsVisible = true;
             buttonCamisola.IsVisible = true;
             buttonOutro.IsVisible = true;
+            AtualizarSocial("emprego");
 
         }
-        private void buttonEmprego1_Clicked(object sender, EventArgs e)
-        {
-            buttonCamisola1.IsVisible = false;
-            buttonEmprego.IsVisible = true;
-            buttonEmpregos1.IsVisible = false;
-            buttonMoveil1.IsVisible = false;
-            buttonOutro1.IsVisible = false;
-            buttonMoveis.IsVisible = true;
-            buttonCamisola.IsVisible = true;
-            buttonEmprego.IsVisible = true;
-            buttonOutro.IsVisible = true;
-        }
+
 
         private void buttonMoveis_Clicked(object sender, EventArgs e)
         {
@@ -105,20 +85,10 @@ namespace App3.Views
             buttonCamisola.IsVisible = true;
             buttonEmprego.IsVisible = true;
             buttonOutro.IsVisible = true;
+            AtualizarSocial("mobilia");
         }
 
-        private void buttonMoveis1_Clicked(object sender, EventArgs e)
-        {
-            buttonCamisola1.IsVisible = false;
-            buttonMoveis.IsVisible = true;
-            buttonEmpregos1.IsVisible = false;
-            buttonMoveil1.IsVisible = false;
-            buttonOutro1.IsVisible = false;
-            buttonMoveis.IsVisible = true;
-            buttonCamisola.IsVisible = true;
-            buttonEmprego.IsVisible = true;
-            buttonOutro.IsVisible = true;
-        }
+
 
         private void buttonOutro_Clicked(object sender, EventArgs e)
         {
@@ -130,20 +100,10 @@ namespace App3.Views
             buttonMoveis.IsVisible = true;
             buttonCamisola.IsVisible = true;
             buttonEmprego.IsVisible = true;
+            AtualizarSocial("outros");
         }
 
-        private void buttonOutro1_Clicked(object sender, EventArgs e)
-        {
-            buttonCamisola1.IsVisible = false;
-            buttonOutro.IsVisible = true;
-            buttonEmpregos1.IsVisible = false;
-            buttonMoveil1.IsVisible = false;
-            buttonOutro1.IsVisible = false;
-            buttonMoveis.IsVisible = true;
-            buttonCamisola.IsVisible = true;
-            buttonEmprego.IsVisible = true;
 
-        }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
@@ -155,9 +115,5 @@ namespace App3.Views
             await Navigation.PushAsync(new IgrejaSocialAddPage());
         }
 
-        private async void TapGestureRecognizer_Tapped_1(object sender, EventArgs e)
-        {
-            await Navigation.PushAsync(new IgrejaSocialPage2());
-        }
     }
 }

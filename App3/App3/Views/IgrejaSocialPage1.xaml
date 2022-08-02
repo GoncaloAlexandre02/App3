@@ -25,7 +25,12 @@
 
                     
                     <StackLayout Grid.Row="1" Margin="0,230,0,0">
-                        <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,10,0"></Image>
+                        
+                        <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,10,0">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                            </Image.GestureRecognizers>
+                        </Image>
                         <Button x:Name="btnR" Text="Reservar"  Clicked="btnR_Clicked" BackgroundColor="#0a2a3b" FontSize="20" TextColor="White" CornerRadius="10" Margin="30,25,30,50"  FontFamily="OpenSans-SemiBold"/>
                     </StackLayout>
                 </Grid>
