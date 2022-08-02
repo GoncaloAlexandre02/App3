@@ -81,7 +81,7 @@
                         <StackLayout>
                             <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:ExtendedDatePicker x:Name="txtData" HorizontalOptions="Center"></local:ExtendedDatePicker>
+                                    <local:ExtendedDatePicker x:Name="txtData" HorizontalOptions="Center" TextColor="#0a2a3b"></local:ExtendedDatePicker>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
