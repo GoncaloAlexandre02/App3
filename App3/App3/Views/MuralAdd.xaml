@@ -67,7 +67,7 @@
                             <Label Text="SIM" Grid.Row="0" Grid.Column="1" TextColor="#0a2a3b" Margin="10,0,0,0" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
 
                             <RadioButton IsChecked="True"  x:Name="cLigacaoNao" Grid.Row="0" Grid.Column="2" Margin="-10,0,0,0"></RadioButton>
-                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-95,0,0,0" TextColor="#0a2a3b" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
+                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-90,0,0,0" TextColor="#0a2a3b" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
 
                         </Grid>
 
@@ -88,7 +88,7 @@
                             <Label Text="SIM" Grid.Row="0" Grid.Column="1" TextColor="#0a2a3b" Margin="10,0,0,0" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
 
                             <RadioButton IsChecked="True"  x:Name="cPublicarNao" Grid.Row="0" Grid.Column="2" Margin="-10,0,0,0"></RadioButton>
-                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-95,0,0,0" TextColor="#0a2a3b" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
+                            <Label Text="NÃO" Grid.Row="0" Grid.Column="3" Margin="-90,0,0,0" TextColor="#0a2a3b" FontSize="15" FontFamily="OpenSans-SemiBold"></Label>
 
                         </Grid>
 

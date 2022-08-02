@@ -173,5 +173,9 @@ namespace App3.Views
 
             return null;
         }
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Navigation.PushModalAsync(new ChatPage("1"));
+        }
     }
 }

@@ -79,6 +79,9 @@
             </ScrollView>
 
             <StackLayout>
+                <StackLayout.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                </StackLayout.GestureRecognizers>
                 <Grid>
                     <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,55,0">
                         <Image.GestureRecognizers>

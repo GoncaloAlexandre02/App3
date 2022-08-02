@@ -65,7 +65,7 @@ namespace App3.Views
                     fPass.BorderColor = Color.FromRgb(207, 153, 70);
                     fEmail.BorderColor = Color.FromRgb(207, 153, 70);
                     SecureStorage.RemoveAll();
-                    await SecureStorage.SetAsync("tokenuser", user.Tokenuser);
+                   
                     await SecureStorage.SetAsync("iduser", user.Iduser.ToString());
                     await this.DisplayToastAsync(user.Tokenuser, 500);
                     await Shell.Current.GoToAsync("//Home");
