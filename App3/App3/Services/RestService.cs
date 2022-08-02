@@ -31,7 +31,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Users/Login?email=" + email + "&password=" + pass;
+                string url = "http://tze.ddns.net:8070/api/Users/Login?email=" + email + "&password=" + pass;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
 
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
@@ -56,7 +56,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddUser/";
+                string url = "http://tze.ddns.net:8070/api/AddUser/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
 
@@ -82,7 +82,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Plano/" + id;
+                string url = "http://tze.ddns.net:8070/api/Plano/" + id;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -109,7 +109,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Users/" + id + "?data1=" + data1;
+                string url = "http://tze.ddns.net:8070/api/Users/" + id + "?data1=" + data1;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -136,7 +136,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Pessoasevento/" + id;
+                string url = "http://tze.ddns.net:8070/api/Pessoasevento/" + id;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -166,7 +166,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Favigrejas/" + id;
+                string url = "http://tze.ddns.net:8070/api/Favigrejas/" + id;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -195,7 +195,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Pessoasevento/" + id + "?iduser=" + iduser;
+                string url = "http://tze.ddns.net:8070/api/Pessoasevento/" + id + "?iduser=" + iduser;
                 Console.WriteLine(url);
                 var response = await client.GetStringAsync(url);
                 Console.WriteLine(response);
@@ -220,7 +220,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Social?tipo=" + tipo;
+                string url = "http://tze.ddns.net:8070/api/Social?tipo=" + tipo;
                 Console.WriteLine(url);
                 var response = await client.GetStringAsync(url);
                 Console.WriteLine(response);
@@ -244,7 +244,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Social/" + id;
+                string url = "http://tze.ddns.net:8070/api/Social/" + id;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -277,7 +277,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Social/" + id;
+                string url = "http://tze.ddns.net:8070/api/Social/" + id;
                 Console.WriteLine(url);
                 var response = await client.GetStringAsync(url);
                 Console.WriteLine(response);
@@ -302,7 +302,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddSocial/";
+                string url = "http://tze.ddns.net:8070/api/AddSocial/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -332,7 +332,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddSocialReserva/";
+                string url = "http://tze.ddns.net:8070/api/AddSocialReserva/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -363,7 +363,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Igrejas";
+                string url = "http://tze.ddns.net:8070/api/Igrejas";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootIgreja>(response);
                 return produtos;
@@ -385,7 +385,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Favigrejas/" + id;
+                string url = "http://tze.ddns.net:8070/api/Favigrejas/" + id;
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootFavigreja>(response);
                 return produtos;
@@ -407,7 +407,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Hinario";
+                string url = "http://tze.ddns.net:8070/api/Hinario";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootHinario>(response);
                 return produtos;
@@ -429,7 +429,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Plano/" + id;
+                string url = "http://tze.ddns.net:8070/api/Plano/" + id;
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootPlano>(response);
                 return produtos;
@@ -454,7 +454,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/DescHinario/" + nome;
+                string url = "http://tze.ddns.net:8070/api/DescHinario/" + nome;
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootHinario>(response);
                 return produtos;
@@ -476,7 +476,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Mural";
+                string url = "http://tze.ddns.net:8070/api/Mural";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMural>(response);
                 return produtos;
@@ -497,7 +497,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddBatismo/";
+                string url = "http://tze.ddns.net:8070/api/AddBatismo/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -525,7 +525,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddMural/";
+                string url = "http://tze.ddns.net:8070/api/AddMural/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -552,7 +552,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/AddPlano/";
+                string url = "http://tze.ddns.net:8070/api/AddPlano/";
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -580,7 +580,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Mensagens/" + idemissor + "?idrecetor=" + idrecetor;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/" + idemissor + "?idrecetor=" + idrecetor;
                 Console.WriteLine(url);
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -605,7 +605,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Mensagens/StatsUser/" + idrecetor;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/StatsUser/" + idrecetor;
                 Console.WriteLine(url);
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -630,7 +630,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/EnviarMensagem/";
+                string url = "http://tze.ddns.net:8070/api/EnviarMensagem/";
                 var content = new StringContent(data, Encoding.UTF8, "application/json");
                 var response = await client.PostAsync(url, content);
                 return response;
@@ -653,7 +653,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Users/" + await SecureStorage.GetAsync("iduser");
+                string url = "http://tze.ddns.net:8070/api/Users/" + await SecureStorage.GetAsync("iduser");
                 var response = await client.GetStringAsync(url);
                 var user = JsonConvert.DeserializeObject<User>(response);
                 return user;
@@ -675,7 +675,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Users/" + id;
+                string url = "http://tze.ddns.net:8070/api/Users/" + id;
                 var response = await client.GetStringAsync(url);
                 var user = JsonConvert.DeserializeObject<User>(response);
                 return user;
@@ -712,7 +712,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "https://10.0.2.2:7004/api/Vesiculo/";
+                string url = "http://tze.ddns.net:8070/api/Vesiculo/";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<Versiculo>(response);
                 return produtos;
@@ -727,7 +727,7 @@ namespace App3.Services
         {
             try
             {
-                var response = await client.GetAsync("https://10.0.2.2:7004/api/getImage?img=" + img);
+                var response = await client.GetAsync("http://tze.ddns.net:8070/api/getImage?img=" + img);
                 byte[] image = await response.Content.ReadAsByteArrayAsync();
                 var imageSource = ImageSource.FromStream(() => new MemoryStream(image));
                 return imageSource;
@@ -744,7 +744,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Noticias";
+                string url = "http://tze.ddns.net:8070/api/Noticias";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootNoticia>(response);
                 return produtos;
@@ -766,7 +766,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Noticias/" + id;
+                string url = "http://tze.ddns.net:8070/api/Noticias/" + id;
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<Noticia>(response);
                 return produtos;
@@ -788,7 +788,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Eventos";
+                string url = "http://tze.ddns.net:8070/api/Eventos";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootEvento>(response);
                 return produtos;
@@ -810,7 +810,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Departamentos";
+                string url = "http://tze.ddns.net:8070/api/Departamentos";
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootDepartamento>(response);
                 return produtos;
@@ -832,7 +832,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Departamentos/" + id;
+                string url = "http://tze.ddns.net:8070/api/Departamentos/" + id;
                 var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<Departamento>(response);
                 return produtos;
@@ -854,7 +854,7 @@ namespace App3.Services
             try
             {
                 client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "https://10.0.2.2:7004/api/Responsaveis/" + iddepart.ToString();
+                string url = "http://tze.ddns.net:8070/api/Responsaveis/" + iddepart.ToString();
                 var response = await client.GetStringAsync(url);
 
                 var produtos = JsonConvert.DeserializeObject<List<Responsavel>>(response);

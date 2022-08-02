@@ -15,7 +15,7 @@ namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    
+
     public partial class NoticiaPage : ContentPage
     {
 
@@ -49,43 +49,57 @@ namespace App3.Views
 
 
         }
+        private async void AtualizarNoticias2(string pesquisa)
+        {
+
+            aaa = await restService.GetNoticiasAsync();
+            EcraEvento.Children.Clear();
+            try
+            {
+
+                foreach (var evento in aaa.data)
+                {
+                    if (evento.Nomenoticia.IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0 || evento.Dtnoticia.ToString("dd/MM/yyyy HH:mm").IndexOf(pesquisa, StringComparison.OrdinalIgnoreCase) >= 0)
+                    {
+                        EcraEvento.Children.Add(new NoticiaSingleView(evento));
+                    }
+
+                }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
 
 
-        /* private void MySearchBarOnTextChanged(object sender, TextChangedEventArgs textChangedEventArgs)
-         {
-             // Has Cancel has been pressed?
-             if (textChangedEventArgs.NewTextValue == null)
-             {
-                 Noticias.Clear();
-                 foreach (var item in noticiaList)
-                 {
-                     Noticias.Add(item);
-
-                 }
-             }
-
-             var txtsearch = pesquisa.Text;
-             Noticias.Clear();
-             if (txtsearch == null || txtsearch.Length == 0 || txtsearch == "")
-             {
-                 foreach (var item in noticiaList)
-                 {
-                     Noticias.Add(item);
-
-                 }
-             }
-             else
-             {
+        }
 
 
-                 foreach (var item in noticiaList)
-                 {
-                     if (item.Nomenoticia.IndexOf(txtsearch, StringComparison.OrdinalIgnoreCase) >= 0 || item.Dtnoticia.ToString("dd/MM/yyyy HH:mm").IndexOf(txtsearch, StringComparison.OrdinalIgnoreCase) >= 0)
-                         Noticias.Add(item);
+        private void MySearchBarOnTextChanged(object sender, TextChangedEventArgs textChangedEventArgs)
+        {
 
-                 }
-             }
+            // Has Cancel has been pressed?
+            if (textChangedEventArgs.NewTextValue == null)
+            {
+                EcraEvento.Children.Clear();
+                AtualizarNoticias();
+            }
 
-         }*/
+            var txtsearch = pesquisa.Text;
+            if (txtsearch == null || txtsearch.Length == 0 || txtsearch == "")
+            {
+                EcraEvento.Children.Clear();
+                AtualizarNoticias();
+            }
+            else
+            {
+                EcraEvento.Children.Clear();
+                AtualizarNoticias2(txtsearch);
+            }
+
+
+
+
+        }
     }
 }
