@@ -18,19 +18,19 @@ namespace App3.Views
     public partial class LoginPage : ContentPage
     {
 
-        //RestService restService;
-        //User user;
+        RestService restService;
+        User user;
         public LoginPage()
         {
             InitializeComponent();
-            //this.BindingContext = new LoginViewModel();
-            //restService = new RestService();
+            this.BindingContext = new LoginViewModel();
+            restService = new RestService();
         }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
             
-           /* var regmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
+            var regmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             var email = txtEmail.Text;
             var password = txtPassword.Text;
             if (email == null || password == null || email == "" || password == "")
@@ -66,9 +66,9 @@ namespace App3.Views
                     await this.DisplayToastAsync(user.Tokenuser, 500);
                     await Shell.Current.GoToAsync("//Home");
                 }
-            }*/
+            }
 
-             await Shell.Current.GoToAsync("//Home");
+            // await Shell.Current.GoToAsync("//Home");
         }
     }
 }
