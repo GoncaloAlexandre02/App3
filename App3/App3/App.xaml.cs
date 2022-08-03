@@ -16,7 +16,7 @@ namespace App3
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
-            MainPage = new AppShell();
+            MainPage = new CompanyPage();
         }
        
         protected override void OnStart()

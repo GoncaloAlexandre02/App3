@@ -59,9 +59,7 @@
 
                 <StackLayout>
                     <Frame>
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="privacy_event"></TapGestureRecognizer>
-                        </Frame.GestureRecognizers>
+                        
                         <Label TextColor="#0a2a3b" Text="Política de privacidade" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
                     <Label TextColor="#0a2a3b" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>
@@ -70,9 +68,7 @@
                 <StackLayout>
 
                     <Frame>
-                        <Frame.GestureRecognizers>
-                            <TapGestureRecognizer Tapped="term_event"></TapGestureRecognizer>
-                        </Frame.GestureRecognizers>
+                        
                         <Label TextColor="#0a2a3b" Text="Termos de serviços" FontFamily="OpenSans-SemiBold" FontAttributes="Bold" FontSize="15"></Label>
                     </Frame>
                     <Label TextColor="#0a2a3b" Text=">" Margin="0,-50,35,0" HorizontalOptions="End" FontAttributes="Bold" FontSize="20"></Label>

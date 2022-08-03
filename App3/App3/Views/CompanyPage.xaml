@@ -35,7 +35,8 @@
                         
                     </Frame>
                     <Image Source="icon_inova" HorizontalOptions="Center" HeightRequest="50" Margin="0,40,0,0"></Image>
-                    <Label TextColor="#0a2a3b" Text="A solução de gestão 360º para o seu negócio!" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
+                    <Label TextColor="#0a2a3b" Text="A solução de gestão 360º" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
+                    <Label TextColor="#0a2a3b" Text="para o seu negócio!" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,0,0,0" HorizontalOptions="Center" HorizontalTextAlignment="Center"></Label>
                     <StackLayout Margin="5,0,5,0">
                         <Label TextColor="#0a2a3b" Text="Contato: +351 935 278 958" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0" HorizontalOptions="Center"></Label>
                         

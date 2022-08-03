@@ -18,7 +18,7 @@ namespace App3.Views
     public partial class LoginPage : ContentPage
     {
 
-        RestService restService;
+       RestService restService;
         User user;
         public LoginPage()
         {
@@ -29,7 +29,7 @@ namespace App3.Views
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
         {
-            
+           
             var regmail = @"^([\w\.\-]+)@([\w\-]+)((\.(\w){2,3})+)$";
             var email = txtEmail.Text;
             var password = txtPassword.Text;
@@ -68,7 +68,7 @@ namespace App3.Views
                 }
             }
 
-            // await Shell.Current.GoToAsync("//Home");
+             //await Shell.Current.GoToAsync("//Home");
         }
     }
 }
