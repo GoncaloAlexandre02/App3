@@ -27,7 +27,7 @@
                 </Frame>
             </StackLayout>
             <ScrollView>
-                <FlexLayout x:Name="Ecraflex"  Direction="Row" Wrap="Wrap"  HorizontalOptions="Center" Margin="20,0,10,0" >
+                <FlexLayout x:Name="Ecraflex"  Direction="Row" Wrap="Wrap"  HorizontalOptions="Center" Margin="30,0,10,0" >
 
 
                 </FlexLayout>

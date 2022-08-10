@@ -95,13 +95,13 @@
                                     </Grid>
                                 </StackLayout>
 
-                               
-                                <StackLayout Margin="0,25" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" IsVisible="true">
-                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="2">
-                                        <Image Source="Google_Logo" Aspect="AspectFill" Margin="0"/>
+
+                                <StackLayout Margin="0,25,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                                    <Frame BackgroundColor="White"   HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                        <Image Source="goog_Logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
-                                    <Frame BackgroundColor="Transparent" HeightRequest="40" WidthRequest="35"  HasShadow="False"  Margin="5,0,0,0" HorizontalOptions="Center" Padding="1" >
-                                        <Image Source="facebook_logo" Aspect="AspectFill" Margin="0"/>
+                                    <Frame BackgroundColor="White"   HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                        <Image Source="faceb_logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
                                 </StackLayout>
 

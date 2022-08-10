@@ -13,6 +13,7 @@ using System.Threading.Tasks;
 using System.IO;
 using Android.Content;
 using FFImageLoading.Forms.Platform;
+using System.Diagnostics;
 
 namespace App3.Droid
 {

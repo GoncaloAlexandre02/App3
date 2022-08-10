@@ -46,23 +46,14 @@ namespace App3.Views
             }
             else if (!Regex.IsMatch(email, regmail))
             {
-                fPass.BorderColor = Color.FromRgb(207, 153, 70);
-                fNome.BorderColor = Color.FromRgb(207, 153, 70);
-                fApelido.BorderColor = Color.FromRgb(207, 153, 70);
-                //fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
-                fTele.BorderColor = Color.FromRgb(207, 153, 70);
+               
                 fEmail.BorderColor = Color.FromRgb(255, 0, 0);
                 await this.DisplayToastAsync("Email Invalido", 2000);
 
             }
             else
             {
-                fEmail.BorderColor = Color.FromRgb(207, 153, 70);
-                fPass.BorderColor = Color.FromRgb(207, 153, 70);
-                fNome.BorderColor = Color.FromRgb(207, 153, 70);
-                fApelido.BorderColor = Color.FromRgb(207, 153, 70);
-                //fDtNas.BorderColor = Color.FromRgb(207, 153, 70);
-                fTele.BorderColor = Color.FromRgb(207, 153, 70);
+               
 
                 var pass2 = MD5Hash.Hash.Content(password);
                 string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'tipouser':2}";

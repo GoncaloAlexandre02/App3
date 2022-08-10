@@ -60,7 +60,7 @@ namespace App3.Views
                 }
                 else
                 {
-                    //imgD.Source = await restService.GetImagemServer(depart.Imgdepart);
+                    imgD.Source = await restService.GetImagemServer(depart.Imgdepart);
                 }
 
             }

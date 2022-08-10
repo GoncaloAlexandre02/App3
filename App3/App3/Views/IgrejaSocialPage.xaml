@@ -37,7 +37,6 @@
                             <ColumnDefinition Width="90"></ColumnDefinition>
                         </Grid.ColumnDefinitions>
 
-
                         <ImageButton Source="icon_camisolaB.png" x:Name="buttonCamisola" Clicked="buttonCamisola_Clicked" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
                         <ImageButton Source="icon_camisolaB1.png" x:Name="buttonCamisola1" Clicked="buttonCamisola_Clicked" IsVisible="false" BackgroundColor="Transparent" Grid.Column="0" BorderColor="Transparent" BorderWidth="3" ></ImageButton>
 

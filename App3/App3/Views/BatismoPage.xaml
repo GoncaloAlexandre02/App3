@@ -39,7 +39,7 @@
                         <StackLayout>
                             <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,20,30,0">
                                 <StackLayout Orientation="Horizontal">
-                                    <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold"  Keyboard="Text"/>
+                                    <Entry x:Name="txtNome" Placeholder="Nome"  PlaceholderColor="#0a2a3b" TextColor="#0a2a3b"  HorizontalOptions="FillAndExpand" FontFamily="OpenSans-SemiBold"  Keyboard="Text"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -52,7 +52,7 @@
                         <StackLayout>
                             <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                 <StackLayout Orientation="Horizontal">
-                                    <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Email"/>
+                                    <Entry x:Name="txtEmail" Placeholder="Email"  PlaceholderColor="#0a2a3b" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Email"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -69,7 +69,7 @@
                         <StackLayout>
                             <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                 <StackLayout Orientation="Horizontal">
-                                    <Entry x:Name="txtTelemovel" Placeholder="Telemóvel"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
+                                    <Entry x:Name="txtTelemovel" Placeholder="Telemóvel"  PlaceholderColor="#0a2a3b" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" HorizontalOptions="FillAndExpand"  Keyboard="Telephone"/>
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -81,7 +81,11 @@
                         <StackLayout>
                             <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
                                 <StackLayout Orientation="Horizontal">
-                                    <local:ExtendedDatePicker x:Name="txtData" Format="dd-MM-yyyy" HorizontalOptions="Center"></local:ExtendedDatePicker>
+
+                                
+
+                                    <local:ExtendedDatePicker x:Name="txtData" Format="dd-MM-yyyy" HorizontalOptions="Center" TextColor="#0a2a3b"></local:ExtendedDatePicker>
+
                                 </StackLayout>
                             </Frame>
                         </StackLayout>
@@ -90,7 +94,7 @@
 
                     <StackLayout>
                         <Frame BackgroundColor="Transparent" BorderColor="Transparent" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="30,15,30,0">
-                            <Picker x:Name="picker" TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Selecionar Igreja" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="19">
+                            <Picker x:Name="picker" TitleColor="#0a2a3b" TextColor="#0a2a3b" Title="Selecionar Igreja" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" FontSize="19">
 
                             </Picker>
                         </Frame>

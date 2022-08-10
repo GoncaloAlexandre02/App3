@@ -18,7 +18,7 @@
         <StackLayout>
             <StackLayout >
                 <Frame HeightRequest="25">
-                    <SearchBar x:Name="pesquisa"  Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" Margin="-15,0,0,0"></SearchBar>
+                    <SearchBar x:Name="pesquisa" TextChanged="MySearchBarOnTextChanged"  Placeholder="Digite a sua busca aqui" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" Margin="-15,0,0,0"></SearchBar>
                 </Frame>
             </StackLayout>
 
