@@ -32,7 +32,7 @@ namespace App3.Views.Partials
             dataMEvento.Text = evento.Dtnoticia.ToString("MMM");
             dataHEvento.Text = evento.Dtnoticia.ToString("HH : mm");
             restService = new RestService();
-            
+
 
 
         }

@@ -15,7 +15,7 @@ namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
 
-    
+
     public partial class NoticiaPage : ContentPage
     {
 
