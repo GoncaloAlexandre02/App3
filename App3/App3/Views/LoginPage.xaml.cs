@@ -63,7 +63,8 @@ namespace App3.Views
                     SecureStorage.RemoveAll();
                    
                     await SecureStorage.SetAsync("iduser", user.Iduser.ToString());
-                    await this.DisplayToastAsync(user.Tokenuser, 500);
+                    await SecureStorage.SetAsync("tokenuser", user.Tokenuser.ToString());
+                    // await this.DisplayToastAsync(user.Tokenuser, 500);
                     await Shell.Current.GoToAsync("//Home");
                 }
             }
