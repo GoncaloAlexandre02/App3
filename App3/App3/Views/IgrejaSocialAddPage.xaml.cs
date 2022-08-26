@@ -47,14 +47,15 @@ namespace App3.Views
                         Random rdm = new Random();
 
                         var content = new MultipartFormDataContent();
-                        content.Add(new StreamContent(await file[i].OpenReadAsync()), "file", rdm.Next(10000).ToString() + file[i].FileName);
+                        content.Add(new StreamContent(await file[i].OpenReadAsync()), "file", aaa.Idsocial + file[i].FileName);
 
                         var httpClient = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
                         httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
 
-                        var response = await httpClient.PostAsync("https://10.0.2.2:7004/api/Files/UploadSocial/" + aaa.Idsocial, content);
+                        var response = await httpClient.PostAsync("http://tze.ddns.net:8070/api/Files/UploadSocial/" + aaa.Idsocial, content);
 
                         Console.WriteLine(response.ToString());
+                        Console.WriteLine(await response.Content.ReadAsStringAsync());
                     }
                 }
                 await Navigation.PushAsync(new IgrejaSocialPage());

@@ -12,11 +12,11 @@ namespace App3.Models
         public string Emissor { get; set; }
         public string Receptor { get; set; }
         public int Idemissor { get; set; }
-        public int Idreceptor { get; set; }
+        public int? Idreceptor { get; set; }
         public string ImgEmissor { get; set; }
         public string ImgReceptor { get; set; }
         public DateTime Dtmsg { get; set; }
-
+        public int? Evento { get; set; }
     }
 
     public class RootMsg

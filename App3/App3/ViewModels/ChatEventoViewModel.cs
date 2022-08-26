@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace App3.ViewModels
 {
-    public class ChatViewModel : INotifyPropertyChanged
+    public class ChatEventoViewModel : INotifyPropertyChanged
     {
         RestService restService;
         RootMsg msg;
@@ -24,10 +24,10 @@ namespace App3.ViewModels
         public string TextToSend { get; set; }
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
-        private string idRecetor;
-        public ChatViewModel(string idrecetor)
+        private string idEvento;
+        public ChatEventoViewModel(string idevento)
         {
-            idRecetor = idrecetor;
+            idEvento = idevento;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
@@ -47,7 +47,7 @@ namespace App3.ViewModels
         }
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','receptor':'"+idRecetor+"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','evento':'"+idEvento+"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -67,13 +67,18 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensUserAsync(await SecureStorage.GetAsync("iduser"), idRecetor);
+                msg = await restService.GetMensagensEventoAsync(idEvento);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
                 
                 foreach (Mensagem m in listmsg)
                 {
+                    if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
+                    {
+                        Messages.Add(m);
+                    }
+                    /*
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
                         if (m.Idemissor == Int32.Parse(await SecureStorage.GetAsync("iduser")))
@@ -86,11 +91,10 @@ namespace App3.ViewModels
                             Messages.Add(new Mensagem() { Descmsg = m.Descmsg, Idemissor = m.Idemissor, Idmensagem = m.Idmensagem, Idreceptor = m.Idreceptor, Emissor = m.Emissor, Receptor = m.Receptor, ImgEmissor = m.ImgEmissor, ImgReceptor = m.ImgReceptor, Dtmsg = m.Dtmsg });
 
                         }
-                    }
+                    }*/
                    
                 }        
-                
-                
+
             }catch (Exception ex)
             {
                 Messages.Add(new Mensagem() { Descmsg = ex.ToString() });
@@ -105,14 +109,18 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensUserAsync(await SecureStorage.GetAsync("iduser"), idRecetor);
+                msg = await restService.GetMensagensEventoAsync(idEvento);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);
 
                 foreach (Mensagem m in listmsg)
                 {
-
+                    if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
+                    {
+                        Messages.Add(m);
+                    }
+                    /*
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
                         if (m.Idemissor == Int32.Parse(await SecureStorage.GetAsync("iduser")))
@@ -126,7 +134,7 @@ namespace App3.ViewModels
 
                         }
                     }
-
+                    */
                 }
 
 

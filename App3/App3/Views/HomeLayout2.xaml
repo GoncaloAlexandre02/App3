@@ -23,7 +23,7 @@
             
             
             
-            <StackLayout  Orientation="Vertical" >
+            <StackLayout  Orientation="Vertical">
                 
                 
 
@@ -226,7 +226,8 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Redes"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
-                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat"  Margin="0,5,0,0" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Redes Sociais">
+                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat"  Margin="0,5,0,0" 
+                                       TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Redes Sociais" LineBreakMode="WordWrap">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Redes"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
@@ -244,7 +245,8 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Socia"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
-                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" Margin="0,5,0,0" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Igreja Social">
+                                <Label HorizontalTextAlignment="Center" TextTransform="Uppercase" FontFamily="RedHat" Margin="0,5,0,0" 
+                                       TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="Igreja Social" LineBreakMode="WordWrap" >
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Socia"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>

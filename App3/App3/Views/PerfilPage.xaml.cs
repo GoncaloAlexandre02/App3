@@ -27,9 +27,9 @@ namespace App3.Views
         public PerfilPage()
         {
             InitializeComponent();
-            Navigation.ShowPopup(new PopUpLoading());
+            /*Navigation.ShowPopup(new PopUpLoading());
             restService = new RestService();
-            AtualizaDados();
+            AtualizaDados();*/
         }
         protected override void OnAppearing()
         {
@@ -46,19 +46,21 @@ namespace App3.Views
                 tNome.Text = user.Nome.ToString() + " " + user.Apelido.ToString();
                 tEmail.Text = user.Email.ToString();
                 tTele.Text = user.Telefone.ToString();
-                tDt.Text = user.Dtnasc.ToString();
+                tDt.Text = user.Dtnasc?.ToString();
 
+                var imageSource = ImageSource.FromStream(() => new MemoryStream(user.ImageSource));
+                Imagem.Source = imageSource;
             }
             catch (NullReferenceException ex)
             {
                 await Navigation.PushAsync(new HomeLayout2());
                 Console.WriteLine(ex.Message);
             }
-            try
+            /*try
             {
                 var client = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
 
-                var response = await client.GetAsync("https://10.0.2.2:7004/api/getImage?img=" + user.Imagem.ToString());
+                var response = await client.GetAsync("http://tze.ddns.net:8070/api/getImage?img=" + user.Imagem.ToString());
                 byte[] image = await response.Content.ReadAsByteArrayAsync();
                 var imageSource = ImageSource.FromStream(() => new MemoryStream(image));
                 Imagem.Source = imageSource;
@@ -67,7 +69,7 @@ namespace App3.Views
             {
 
                 Console.WriteLine(ex.Message);
-            }
+            }*/
 
         }
         async void UploadFile_Clicked(System.Object sender, System.EventArgs e)

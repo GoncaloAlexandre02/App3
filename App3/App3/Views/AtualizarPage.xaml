@@ -77,12 +77,17 @@
 
                 <StackLayout>
                     <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                            <RowDefinition Height="Auto"></RowDefinition>
+                        </Grid.RowDefinitions>
                         <StackLayout Grid.Column="0" Grid.Row="0">
                             <Label Text="Data de Nascimento" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
-                        <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Entry  x:Name="tDt"  Text="06/05/2022" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Numeric" MaxLength="10" FontFamily="OpenSans-SemiBold"></Entry>
-                        </StackLayout>
+                        <StackLayout Grid.Column="0" Grid.Row="1" Margin="20, 0, 0, 0">
+                            <DatePicker x:Name="tDt"></DatePicker>
+                            <!--<Entry  x:Name="tDt"  Text="06/05/2022" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Text" MaxLength="10" FontFamily="OpenSans-SemiBold"></Entry>
+                        --></StackLayout>
                     </Grid>
                 </StackLayout>
 

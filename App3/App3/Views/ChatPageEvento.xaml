@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+             x:Class="App3.Views.ChatPageEvento" 
+             xmlns:local="clr-namespace:App3.Helpers" 
+             xmlns:partials="clr-namespace:App3.Views.Partials" xmlns:viewmodels="clr-namespace:App3.ViewModels" x:DataType="viewmodels:ChatEventoViewModel"
+             BackgroundColor="#ebebeb">
+    <ContentPage.Resources>
+        <ResourceDictionary>
+            <local:ChatTemplateSelector x:Key="MessageTemplateSelector"/>
+        </ResourceDictionary>
+    </ContentPage.Resources>
+
+    <Shell.TitleView>
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+            <Frame Padding="0" CornerRadius="30" HeightRequest="60" WidthRequest="60" IsClippedToBounds="True" HorizontalOptions="Center">
+                <Image x:Name="imagemT" HorizontalOptions="Center" VerticalOptions="Center" ></Image>
+            </Frame>
+            
+            <Label FontFamily="RedHat-Medium" x:Name="titulo" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Configurações"></Label>
+
+        </StackLayout>
+    </Shell.TitleView>
+    <Grid RowSpacing="0" 
+           ColumnSpacing="0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="1" />
+            <RowDefinition Height="Auto" />
+        </Grid.RowDefinitions>
+        <ListView x:Name="ListaMensagens" Grid.Row="0" 
+                 ItemTemplate="{StaticResource MessageTemplateSelector}" 
+                 ItemsSource="{Binding Messages}" 
+                 Margin="0" 
+                 HasUnevenRows="True" 
+                 VerticalOptions="FillAndExpand" 
+                 SeparatorColor="Transparent" >
+        </ListView>
+        <BoxView HorizontalOptions="FillAndExpand"
+                 HeightRequest="1"
+                 BackgroundColor="LightGray"
+                 Grid.Row="1"/>
+        <partials:ChatInputBarView Grid.Row="2"
+                                   Margin="0,0,10,0"/>
+    </Grid>
+</ContentPage>

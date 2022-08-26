@@ -29,7 +29,7 @@
                     </StackLayout>
 
                     <StackLayout  Grid.Column="2" Grid.Row="0">
-                        <Label Text="" x:Name="nomeEvento" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b"  HorizontalOptions="CenterAndExpand"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
+                        <Label Text="" x:Name="nomeEvento" LineBreakMode="TailTruncation" VerticalOptions="CenterAndExpand" TextColor="#0a2a3b"  HorizontalOptions="CenterAndExpand"  FontSize="17" FontFamily="RedHat-Bold" ></Label>
 
                     </StackLayout>
 

@@ -26,5 +26,7 @@ namespace App3.Models
         public string Emailativo { get; set; }
         public DateTime Dtregisto { get; set; }
         public int? Tipouser { get; set; }
+
+        public byte[] ImageSource { get; set; }
     }
 }

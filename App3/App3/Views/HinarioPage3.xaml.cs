@@ -35,7 +35,7 @@ namespace App3.Views
         {
             hin = await restService.GetDescHinarioAsync(nome);
             hinarioList = hin.data;
-            hinarioList.RemoveAt(0);
+            //hinarioList.RemoveAt(0);
             aa.Text = hinarioList[0].DescHinario;
         }
 

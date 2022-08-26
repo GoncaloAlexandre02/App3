@@ -72,7 +72,7 @@ namespace App3.Views
             }
             try
             {
-                if (socialimg == null)
+                if (socialimg == null || socialimg.data.Count == 0)
                 {
                     ImgSoc.Source = "noimage";
                 }

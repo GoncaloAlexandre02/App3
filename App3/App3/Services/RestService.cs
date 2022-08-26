@@ -26,6 +26,7 @@ namespace App3.Services
 #else
             client = new HttpClient();
 #endif
+            client = new HttpClient();
         }
 
         public async Task<User> PostLogin(string data, string email, string pass)
@@ -110,7 +111,7 @@ namespace App3.Services
         {
             try
             {
-                string url = "http://tze.ddns.net:8070/api/Users/" + id + "?data1=" + data1;
+                string url = "http://tze.ddns.net:8070/api/Users/" + id + "?data1=" + data1.ToString("yyyy/MM/dd HH:mm:ss");
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
                 //string data2 = @"{""nome"":""nome"", ""apelido"":""apelido"", ""email"":""email"", ""password"":"" password"",""morada"":"" "", ""telefone"":""tele"", ""emailativo"":""nao"", ""dtnasc"":""dtnasc"", ""tipouser"":2}";
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
@@ -576,12 +577,13 @@ namespace App3.Services
                 throw ex;
             }
         }
-        public async Task<RootMsg> GetMensagensAsync(string idemissor, string idrecetor)
+
+        public async Task<RootMsg> GetMensagensUserAsync(string idemissor, string idrecetor)
         {
             try
             {
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "http://tze.ddns.net:8070/api/Mensagens/" + idemissor + "?idrecetor=" + idrecetor;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/User/" + idemissor + "?idrecetor=" + idrecetor;
                 Console.WriteLine(url);
                 var response = await clientFora.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -601,6 +603,33 @@ namespace App3.Services
             }
 
         }
+
+        public async Task<RootMsg> GetMensagensEventoAsync(string idevento)
+        {
+            try
+            {
+                clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Evento/" + idevento;
+                Console.WriteLine(url);
+                var response = await clientFora.GetStringAsync(url);
+                var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
+
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
         public async Task<RootMsg> GetMensagensListAsync(string idrecetor)
         {
             try
@@ -699,13 +728,20 @@ namespace App3.Services
             try
             {
                 string url = "https://bible-api.com/" + book + "%20" + chapter + "?verse_numbers=true&translation=almeida";
-                var response = await clientFora.GetStringAsync(url);
+                var response = await client.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<Root>(response);
                 return produtos;
             }
             catch (Exception ex)
             {
-                throw ex;
+                //throw ex;
+                Verses newVer = new Verses();
+                newVer.text = ex.InnerException.ToString();
+                newVer.book_id = "gen";
+                newVer.verse = 1;
+                newVer.chapter = 1;
+
+                return new Root() { verses = new List<Verses>() { newVer }, text = ex.Message };
             }
         }
 

@@ -1,10 +1,7 @@
-﻿using App3.Models;
-using App3.Services;
-using System;
-using System.Collections.Generic;
+﻿using System;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using App3.Models;
+using App3.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -39,8 +36,14 @@ namespace App3.Views
 
 
                 var resp = await restService.GetPessoaeventoAsync(evento2.Idevento.ToString(), await SecureStorage.GetAsync("iduser"));
-
-                if (resp[0].estado == "vai")
+                
+                if (resp.Count == 0)
+                {
+                    bNao.BackgroundColor = Color.FromHex("#035891");
+                    bVou.BackgroundColor = Color.FromHex("#035891");
+                    bTalvez.BackgroundColor = Color.FromHex("#035891");
+                }
+                else if (resp[0].estado == "vai")
                 {
                     bVou.BackgroundColor = Color.FromHex("#0a2a3b");
                     bNao.BackgroundColor = Color.FromHex("#035891");
@@ -140,7 +143,7 @@ namespace App3.Views
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ChatPage("1"));
+            await Navigation.PushAsync(new ChatPageEvento(evento2.Idevento.ToString()));
         }
     }
 }

@@ -33,7 +33,7 @@
                     <Editor x:Name="txtDesc" HeightRequest="100" Placeholder="Descrição" FontFamily="OpenSans-SemiBold" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" />
                 </Frame>
                 <StackLayout >
-                    <ImageButton Source="inserirB_imagem.png" Margin="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                    <ImageButton Source="inserirB_imagem.png" Clicked="ImageButton_Clicked" Margin="0,20,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
                     <Label x:Name="lImg" HorizontalOptions="Center" TextColor="#0a2a3b" Text="0 de 3 Imagens" FontFamily="OpenSans-Regular" ></Label>
                 </StackLayout>
                 <StackLayout Margin="0,30,0,0">

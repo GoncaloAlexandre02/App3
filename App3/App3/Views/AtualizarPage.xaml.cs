@@ -32,9 +32,9 @@ namespace App3.Views
                 var nome = tNome.Text;
                 var apelido = tApelido.Text;
                 var tele = tTele.Text;
-                var dtnasc = tDt.Text;
+                var dtnasc = tDt.Date.ToString("dd/MM/yyyy");
                 var email = tEmail.Text;
-                var est = tEst.SelectedItem.ToString();
+                var est = tEst.SelectedItem?.ToString();
                 var password = user.Password;
                 var tipouser = user.Tipouser;
                 DateTime dtregisto = user.Dtregisto;
@@ -42,7 +42,7 @@ namespace App3.Views
                 var ocup = tProf.Text;
                 var gen = "nao";
                 var bat = "nao";
-                var loca = tLoca.SelectedItem.ToString();
+                var loca = tLoca.SelectedItem?.ToString();
                 var cpostal = user.Cpostal;
                 var morada = user.Morada;
                 if (rFe.IsChecked)
@@ -83,7 +83,8 @@ namespace App3.Views
                     else if (res.IsSuccessStatusCode)
                     {
 
-                        await Navigation.PushAsync(new PerfilPage());
+                        //await Navigation.PushAsync(new PerfilPage());
+                        await Navigation.PopAsync();
                     }
                     Console.WriteLine(res.ToString());
 
@@ -108,8 +109,20 @@ namespace App3.Views
                 tApelido.Text = user.Apelido.ToString();
                 tEmail.Text = user.Email.ToString();
                 tTele.Text = user.Telefone.ToString();
-                tDt.Text = user.Dtnasc.ToString();
-                if (user.Estadocivil.ToString() != null)
+                if (user.Dtnasc != null)
+                {
+                    DateTime date = DateTime.Now;
+                    var res = DateTime.TryParse(user.Dtnasc, out date);
+                    if (res)
+                        tDt.Date = date;
+                    else
+                        tDt.Date = DateTime.Now;
+                }
+                    
+                //tDt.Date = DateTime.ty user.Dtnasc?.ToString();
+                else
+                    tDt.Date = DateTime.Now;
+                if (user.Estadocivil != null)
                 {
                     tEst.Items.Add(user.Estadocivil.ToString());
                     tEst.SelectedItem = user.Estadocivil.ToString();
@@ -118,8 +131,8 @@ namespace App3.Views
                     tProf.Text = " ";
                 else
                     tProf.Text = user.Ocupacao.ToString();
-                var bat = user.Batismo.ToString();
-                var loca = user.Localidade.ToString();
+                var bat = user.Batismo?.ToString();
+                var loca = user.Localidade?.ToString();
                 tLoca.SelectedItem = loca;
                 var gen = "";
                 if (user.Genero == null)

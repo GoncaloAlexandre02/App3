@@ -16,8 +16,7 @@
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
-    <AndroidUseLatestPlatformSdk>false</AndroidUseLatestPlatformSdk>
-    <TargetFrameworkVersion>v13.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v12.1</TargetFrameworkVersion>
     <AndroidEnableSGenConcurrent>true</AndroidEnableSGenConcurrent>
     <AndroidUseAapt2>true</AndroidUseAapt2>
     <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
@@ -63,7 +62,7 @@
     <AndroidDexTool>d8</AndroidDexTool>
     <AndroidCreatePackagePerAbi>true</AndroidCreatePackagePerAbi>
     <AndroidLinkMode>None</AndroidLinkMode>
-    <AndroidHttpClientHandlerType />
+    <AndroidHttpClientHandlerType>Xamarin.Android.Net.AndroidClientHandler</AndroidHttpClientHandlerType>
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Mono.Android" />
@@ -117,6 +116,21 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
+    <AndroidAsset Include="Assets\OpenSans-Light.ttf" />
+    <AndroidAsset Include="Assets\OpenSans-Regular.ttf" />
+    <AndroidAsset Include="Assets\OpenSans-SemiBold.ttf" />
+    <AndroidAsset Include="Assets\RedHat.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\RedHat-Bold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\RedHat-Medium.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
+    <AndroidAsset Include="Assets\RedHat-SemiBold.ttf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </AndroidAsset>
     <None Include="Resources\AboutResources.txt" />
     <None Include="Assets\AboutAssets.txt" />
     <None Include="Properties\AndroidManifest.xml" />

@@ -52,7 +52,7 @@ namespace App3.Views.Partials
                 ImgSoc.Source = "noimage";
             }
             try { 
-            if (socialimg == null)
+            if (socialimg == null || socialimg.data.Count == 0)
             {
                 ImgSoc.Source = "noimage";
             }

@@ -77,8 +77,8 @@ namespace App3.Views
          } */
         private async void TapGestureRecognizer_Tapped_livro(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new BibliaLivroPage());
-
+            await Navigation.PushModalAsync(new BibliaLivroPage());
+            //Application.Current.MainPage = new NavigationPage(new BibliaLivroPage());
         }
 
 

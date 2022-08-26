@@ -1,6 +1,7 @@
 ﻿using App3.Models;
 using App3.Services;
 using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -127,7 +128,7 @@ namespace App3.Views
             }
             try
             {
-                if (biblia != null)
+                if (biblia2 != null)
                 {
                     if (chapter == biblia2.Ch.ToString())
                     {
@@ -207,7 +208,22 @@ namespace App3.Views
 
         async void Button_Clicked_Capitulo(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new BibliaCapituloPage());
+            if (biblia2 != null)
+            {
+                var itemnome = biblia2.Nome;
+                var itemch = biblia2.Ch;
+                var itemid = biblia2.Id;
+                await Navigation.PushModalAsync(new BibliaCapituloPage(itemid, itemnome, itemch, biblia2));
+            }
+            else
+            {
+                var item = new Biblia { Id = "gen", Nome = "Gênesis", Ch = 50, Sigla = "Gn" };
+                var itemnome = item.Nome;
+                var itemch = item.Ch;
+                var itemid = item.Id;
+                await Navigation.PushModalAsync(new BibliaCapituloPage(itemid, itemnome, itemch, item));
+            }
+            
         }
 
         private void TapGestureRecognizer_TappedAnterior(object sender, EventArgs e)
