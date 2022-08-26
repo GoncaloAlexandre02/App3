@@ -175,7 +175,7 @@ namespace App3.Views
         }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ChatPage("1"));
+            await Navigation.PushModalAsync(new ChatPageSocial(social1.Idsocial.ToString()));
         }
     }
 }

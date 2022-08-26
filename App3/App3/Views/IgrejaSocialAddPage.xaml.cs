@@ -68,11 +68,28 @@ namespace App3.Views
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
+            var choices = new[] { "Abrir câmera", "Escolher imagem"};
+
+            var choice =  await Acr.UserDialogs.UserDialogs.Instance.ActionSheetAsync("Escolher", "Cancelar", null, null, choices);
+            
+            
             if (file[2] == null)
             {
-                fileTest = await MediaPicker.PickPhotoAsync();
+                
+                if (choice == "Abrir câmera")
+                {
+                    fileTest = await MediaPicker.CapturePhotoAsync();
+                }
+                else
+                {
+                    fileTest = await MediaPicker.PickPhotoAsync();
+                }
+                
+                
+
                 file[count] = fileTest;
                 count++;
+
                 lImg.Text = count + " de 3 Imagens";
             }
             else

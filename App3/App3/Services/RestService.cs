@@ -630,6 +630,32 @@ namespace App3.Services
 
         }
 
+        public async Task<RootMsg> GetMensagensSocialAsync(string idsocial)
+        {
+            try
+            {
+                clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Social/" + idsocial;
+                Console.WriteLine(url);
+                var response = await clientFora.GetStringAsync(url);
+                var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
+
+                return produtos;
+            }
+            catch (HttpRequestException ex)
+            {
+                await Shell.Current.GoToAsync("//MainPage");
+                return null;
+
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                return null;
+            }
+
+        }
+
         public async Task<RootMsg> GetMensagensListAsync(string idrecetor)
         {
             try

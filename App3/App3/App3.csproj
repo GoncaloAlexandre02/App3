@@ -34,6 +34,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
     <PackageReference Include="MD5" Version="2.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.1" />
@@ -50,6 +51,9 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\ChatPageSocial.xaml.cs">
+      <DependentUpon>ChatPageSocial.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ChatPageEvento.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>ChatPageEvento.xaml</DependentUpon>
@@ -71,6 +75,9 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\BibliaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChatPageSocial.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ChatPageEvento.xaml">
       <SubType>Designer</SubType>

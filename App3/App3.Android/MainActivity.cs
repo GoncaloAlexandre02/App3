@@ -14,6 +14,7 @@ using System.IO;
 using Android.Content;
 using FFImageLoading.Forms.Platform;
 using System.Diagnostics;
+using Acr.UserDialogs;
 
 namespace App3.Droid
 {
@@ -32,6 +33,7 @@ namespace App3.Droid
             global::Xamarin.Forms.Forms.Init(this, savedInstanceState);
             Rg.Plugins.Popup.Popup.Init(this);
             CachedImageRenderer.Init(true);
+            UserDialogs.Init(this);
 
             LoadApplication(new App());
 
