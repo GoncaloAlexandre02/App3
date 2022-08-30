@@ -29,7 +29,7 @@ namespace App3.Views.Partials
 
         private async void ImageButton_Clicked(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ChatPage(mural2.Iduser.ToString()));
+            await Navigation.PushAsync(new ChatPageMural(mural2));
         }
     }
 }

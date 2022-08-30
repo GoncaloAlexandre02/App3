@@ -12,12 +12,14 @@ namespace App3.Helpers
     class ChatTemplateSelector : DataTemplateSelector
     {
         DataTemplate incomingDataTemplate;
+        DataTemplate incomingGroupDataTemplate;
         DataTemplate outgoingDataTemplate;
         private string iduser;
 
         public ChatTemplateSelector()
         {
             this.incomingDataTemplate = new DataTemplate(typeof(IncomingViewCell));
+            this.incomingGroupDataTemplate = new DataTemplate(typeof(IncomingGroupViewCell));
             this.outgoingDataTemplate = new DataTemplate(typeof(OutgoingViewCell));
             testar();
         }
@@ -28,7 +30,8 @@ namespace App3.Helpers
             var messageVm = item as Mensagem;
             if (messageVm == null)
                 return null;
-            return (messageVm.Idemissor == Int32.Parse(iduser)) ? outgoingDataTemplate : incomingDataTemplate;
+            return (messageVm.Idemissor == Int32.Parse(iduser)) ? outgoingDataTemplate : 
+                (messageVm.isGrupo() ? incomingGroupDataTemplate : incomingDataTemplate);
 
         }
 

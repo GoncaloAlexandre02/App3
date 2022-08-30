@@ -1,0 +1,13 @@
+﻿<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           x:Class="App3.Views.PopUpImg"
+           Color="Transparent"
+           >
+
+    <Frame Padding="0" BackgroundColor="Transparent">
+        <Image x:Name="ImagePop" VerticalOptions="Center" HorizontalOptions="Center" Aspect="AspectFit" 
+               HeightRequest="600" WidthRequest="600"></Image>
+    </Frame>
+
+</xct:Popup>

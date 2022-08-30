@@ -13,30 +13,29 @@ using Xamarin.Forms.Xaml;
 namespace App3.Views
 {
     [XamlCompilation(XamlCompilationOptions.Compile)]
-    public partial class ChatPageSocial : ContentPage
+    public partial class ChatPageDepartamento : ContentPage
     {
         RestService restService;
         User userChat;
-        Social Social;
-        private ChatSocialViewModel aaa;
-        public ChatPageSocial(Social social)
+        Responsavel Responsavel;
+        private ChatDepartamentoViewModel aaa;
+        public ChatPageDepartamento(Responsavel responsavel)
         {
+            Responsavel = responsavel;
             InitializeComponent();
-            Social = social;
-
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
-            aaa = new ChatSocialViewModel(Social.Idsocial.ToString());
+            aaa = new ChatDepartamentoViewModel(Responsavel.Iddepart.ToString()); ;
             this.BindingContext = aaa;
 
 
         }
         private async void AtualizaUser()
         {
-            userChat = await restService.GetUserChatAsync(Social.Iduser.ToString());
+            userChat = await restService.GetUserChatAsync(Responsavel.Iduser.ToString());
             imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
-            titulo.Text = Social.Nomesocial;// userChat.Nome + " " + userChat.Apelido;
+            titulo.Text = Responsavel.NomeDepart;// userChat.Nome + " " + userChat.Apelido;
 
         }
         protected override void OnDisappearing()

@@ -1,7 +1,9 @@
 ﻿using App3.Models;
 using App3.Services;
+using Rg.Plugins.Popup.Services;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Net.Http.Headers;
@@ -20,6 +22,9 @@ namespace App3.Views
         Social social1;
         SocialimgRoot socialimg;
         RestService restService;
+
+        ObservableCollection<Image> Images { get; set; } = new ObservableCollection<Image>();
+
         public IgrejaSocialPage1()
         {
             InitializeComponent();
@@ -31,6 +36,7 @@ namespace App3.Views
             desc.Text = social.Descsocial.ToString();
             social1 = social;
             restService = new RestService();
+            CarouselImg.ItemsSource = Images;
 
             if (social1.Tipo == "emprego")
             {
@@ -68,22 +74,34 @@ namespace App3.Views
             }
             catch (Exception ex)
             {
-                ImgSoc.Source = "noimage";
+                //ImgSoc.Source = "noimage";
             }
+
             try
             {
                 if (socialimg == null || socialimg.data.Count == 0)
                 {
-                    ImgSoc.Source = "noimage";
+                    //ImgSoc.Source = "noimage";
+                    Image newImg = new Image();
+                    newImg.Source = "noimg";
+                    Images.Add(newImg);
+                    
                 }
                 else
                 {
-                    ImgSoc.Source = await restService.GetImagemServer(socialimg.data[0].Img);
+                    //ImgSoc.Source = await restService.GetImagemServer(socialimg.data[0].Img);
+                    foreach (var d in socialimg.data)
+                    {
+                        Image newImg = new Image(); 
+                        newImg.Source = await restService.GetImagemServer(d.Img);
+                        Images.Add(newImg);
+                    }
+
                 }
             }
             catch (Exception ex)
             {
-                ImgSoc.Source = "noimage";
+                //ImgSoc.Source = "noimage";
             }
         }
 
@@ -175,7 +193,23 @@ namespace App3.Views
         }
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new ChatPageSocial(social1.Idsocial.ToString()));
+            await Navigation.PushAsync(new ChatPageSocial(social1));
+        }
+
+        private async void ImageTapped(object sender, EventArgs e)
+        {
+            var image = (Image)sender;
+            await Navigation.ShowPopupAsync(new PopUpImg(image));
+            //await PopupNavigation.Instance.PushAsync(new PopUpImg(image));
+        }
+
+        protected override bool OnBackButtonPressed()
+        {
+            //Rg.Plugins.Popup.pop
+            // Do something if there are some pages in the `PopupStack`
+            //Task.Run(() => PopupNavigation.Instance.PopAllAsync());
+            return false;
+            //return base.OnBackButtonPressed();
         }
     }
 }

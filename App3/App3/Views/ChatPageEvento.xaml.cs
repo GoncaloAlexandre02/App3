@@ -17,24 +17,25 @@ namespace App3.Views
     {
         RestService restService;
         User userChat;
+        Evento Evento;
         private ChatEventoViewModel aaa;
-        public ChatPageEvento(string idEvento)
+        public ChatPageEvento(Evento evento)
         {
-            
+            Evento = evento;
             InitializeComponent();
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser("1");
-            aaa = new ChatEventoViewModel(idEvento);
+            aaa = new ChatEventoViewModel(evento.Idevento.ToString());
             this.BindingContext = aaa;
 
 
         }
         private async void AtualizaUser(string id)
         {
-            userChat = await restService.GetUserChatAsync(id);
-            imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
-            titulo.Text = "Evento";// userChat.Nome + " " + userChat.Apelido;
+            //userChat = await restService.GetUserChatAsync(id);
+            imagemT.Source = await restService.GetImagemServer(Evento.Imgevento);
+            titulo.Text = Evento.Nome;// userChat.Nome + " " + userChat.Apelido;
 
         }
         protected override void OnDisappearing()

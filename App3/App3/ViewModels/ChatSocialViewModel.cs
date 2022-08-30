@@ -21,6 +21,8 @@ namespace App3.ViewModels
 
         public ObservableCollection<Mensagem> Messages { get; set; } = new ObservableCollection<Mensagem>();
 
+        private Dictionary<int, ImageSource> userImages { get; set; } = new Dictionary<int, ImageSource>();
+
         public string TextToSend { get; set; }
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
@@ -76,6 +78,18 @@ namespace App3.ViewModels
                 {
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
+                        var iduser = m.Idemissor;
+
+                        if (userImages.ContainsKey(iduser))
+                        {
+                            m.ImgEmissorSource = userImages[iduser];
+                        }
+                        else
+                        {
+                            var img = await restService.GetImagemServer(m.ImgEmissor);
+                            m.ImgEmissorSource = img;
+                            userImages.Add(iduser, img);
+                        }
                         Messages.Add(m);
                     }
                     /*
@@ -118,6 +132,18 @@ namespace App3.ViewModels
                 {
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
+                        var iduser = m.Idemissor;
+
+                        if (userImages.ContainsKey(iduser))
+                        {
+                            m.ImgEmissorSource = userImages[iduser];
+                        }
+                        else
+                        {
+                            var img = await restService.GetImagemServer(m.ImgEmissor);
+                            m.ImgEmissorSource = img;
+                            userImages.Add(iduser, img);
+                        }
                         Messages.Add(m);
                     }
                     /*

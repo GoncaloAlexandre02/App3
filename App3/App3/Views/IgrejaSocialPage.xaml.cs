@@ -107,7 +107,7 @@ namespace App3.Views
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushModalAsync(new IgrejaSocialPage1());
+            await Navigation.PushAsync(new IgrejaSocialPage1());
         }
 
         private async void TapGestureRecognizer_Tapped_Add(object sender, EventArgs e)

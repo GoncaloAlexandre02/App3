@@ -26,12 +26,11 @@ namespace App3.Views.Partials
             resp2 = resp;
             resplabel.Text = resp.NomeUser;
             
-            
         }
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ChatPage(resp2.Iduser.ToString()));
+            await Navigation.PushAsync(new ChatPageDepartamento(resp2));
         }
     }
 }

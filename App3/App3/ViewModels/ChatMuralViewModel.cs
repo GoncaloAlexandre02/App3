@@ -13,7 +13,7 @@ using Xamarin.Forms;
 
 namespace App3.ViewModels
 {
-    public class ChatEventoViewModel : INotifyPropertyChanged
+    public class ChatMuralViewModel : INotifyPropertyChanged
     {
         RestService restService;
         RootMsg msg;
@@ -23,14 +23,13 @@ namespace App3.ViewModels
 
         private Dictionary<int, ImageSource> userImages { get; set; } = new Dictionary<int, ImageSource>();
 
-
         public string TextToSend { get; set; }
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
-        private string idEvento;
-        public ChatEventoViewModel(string idevento)
+        private string idMural;
+        public ChatMuralViewModel(string idmural)
         {
-            idEvento = idevento;
+            idMural = idmural;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
@@ -50,7 +49,7 @@ namespace App3.ViewModels
         }
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','evento':'"+idEvento+"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','mural':'"+idMural+"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -70,7 +69,7 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensEventoAsync(idEvento);
+                msg = await restService.GetMensagensMuralAsync(idMural);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
@@ -84,8 +83,7 @@ namespace App3.ViewModels
                         if (userImages.ContainsKey(iduser))
                         {
                             m.ImgEmissorSource = userImages[iduser];
-                        }
-                        else
+                        } else
                         {
                             var img = await restService.GetImagemServer(m.ImgEmissor);
                             m.ImgEmissorSource = img;
@@ -124,7 +122,7 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensEventoAsync(idEvento);
+                msg = await restService.GetMensagensSocialAsync(idMural);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);
@@ -145,6 +143,7 @@ namespace App3.ViewModels
                             m.ImgEmissorSource = img;
                             userImages.Add(iduser, img);
                         }
+
                         Messages.Add(m);
                     }
                     /*

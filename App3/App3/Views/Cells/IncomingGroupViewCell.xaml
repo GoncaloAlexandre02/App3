@@ -1,0 +1,34 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ViewCell xmlns="http://xamarin.com/schemas/2014/forms" 
+          xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+          x:Class="App3.Views.Cells.IncomingGroupViewCell">
+    
+
+        <Grid Margin="0" Padding="0">
+        <Grid.ColumnDefinitions >
+            <ColumnDefinition Width="60"/>
+        </Grid.ColumnDefinitions>
+
+        <Frame Grid.Column="0" BackgroundColor="Transparent" Padding="0" Margin="0, 20, 0, 20" 
+               CornerRadius="50" WidthRequest="60" HeightRequest="20" IsClippedToBounds="True">
+            <Image x:Name="imagemT"  HorizontalOptions="Start" Aspect="AspectFill"  Source="{Binding ImgEmissorSource}"/>
+        </Frame>
+
+        <Frame Grid.Column="1" CornerRadius="20" IsClippedToBounds="True" Padding="10" VerticalOptions="StartAndExpand"
+              Margin="0,10,80,10" BackgroundColor="White">
+            <StackLayout>
+
+                <Label IsVisible="True"  Text="{Binding Emissor}" FontSize="12" />
+
+                <Label FontFamily="OpenSans-SemiBold" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand" TextColor="#0a2a3b"  Text="{Binding Descmsg}" FontSize="17"/>
+
+                <Label Margin="0,-10,0,0" FontFamily="OpenSans-SemiBold" HorizontalOptions="EndAndExpand" VerticalOptions="End" TextColor="#0a2a3b" Text="{Binding Dtmsg, StringFormat='{}{0: dd/MM/yyyy à\\s HH:mm   }'}" FontSize="10"/>
+
+            </StackLayout>
+        </Frame>
+
+    </Grid>
+
+        
+        
+</ViewCell>

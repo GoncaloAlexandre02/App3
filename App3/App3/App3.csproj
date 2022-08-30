@@ -3,6 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+    <OutputType>Library</OutputType>
   </PropertyGroup>
 
   <ItemGroup>
@@ -51,12 +52,24 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Views\Cells\IncomingGroupViewCell.xaml.cs">
+      <DependentUpon>IncomingGroupViewCell.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChatPageDepartamento.xaml.cs">
+      <DependentUpon>ChatPageDepartamento.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\ChatPageMural.xaml.cs">
+      <DependentUpon>ChatPageMural.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\ChatPageSocial.xaml.cs">
       <DependentUpon>ChatPageSocial.xaml</DependentUpon>
     </Compile>
     <Compile Update="Views\ChatPageEvento.xaml.cs">
       <SubType>Code</SubType>
       <DependentUpon>ChatPageEvento.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\PopUpImg.xaml.cs">
+      <DependentUpon>PopUpImg.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 
@@ -75,6 +88,12 @@
     </EmbeddedResource>
     <EmbeddedResource Update="Views\BibliaPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChatPageDepartamento.xaml">
+      <Generator>MSBuild:Compile</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\ChatPageMural.xaml">
+      <Generator>MSBuild:Compile</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\ChatPageSocial.xaml">
       <Generator>MSBuild:Compile</Generator>

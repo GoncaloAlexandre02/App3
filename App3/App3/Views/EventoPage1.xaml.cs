@@ -143,7 +143,7 @@ namespace App3.Views
 
         private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new ChatPageEvento(evento2.Idevento.ToString()));
+            await Navigation.PushAsync(new ChatPageEvento(evento2));
         }
     }
 }
