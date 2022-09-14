@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -25,17 +26,27 @@ namespace App3.Views
             InitializeComponent();
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
-            AtualizaUser("1");
-            aaa = new ChatEventoViewModel(evento.Idevento.ToString());
+            AtualizaUser();
+            aaa = new ChatEventoViewModel(evento.Idevento.ToString(), SecureStorage.GetAsync("iduser").Result, evento.Iduser.ToString());
             this.BindingContext = aaa;
-
-
         }
-        private async void AtualizaUser(string id)
+
+        public ChatPageEvento(string idemissor, string idrecetor, string idevento)
         {
-            //userChat = await restService.GetUserChatAsync(id);
-            imagemT.Source = await restService.GetImagemServer(Evento.Imgevento);
-            titulo.Text = Evento.Nome;// userChat.Nome + " " + userChat.Apelido;
+            InitializeComponent();
+            restService = new RestService();
+            Evento = Task.Run(() => restService.GetEventosAsync()).Result.data.Find(e => e.Idevento.ToString() == idevento);
+            Shell.Current.FlyoutIsPresented = false;
+            AtualizaUser();
+            aaa = new ChatEventoViewModel(Evento.Idevento.ToString(), idemissor, idrecetor);
+            this.BindingContext = aaa;
+        }
+
+        private async void AtualizaUser()
+        {
+            userChat = await restService.GetUserChatAsync(Evento.Iduser.ToString());
+            imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
+            titulo.Text = userChat.Nome + " " + userChat.Apelido;
 
         }
         protected override void OnDisappearing()

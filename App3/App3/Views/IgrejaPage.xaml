@@ -16,7 +16,8 @@
 
             <StackLayout>
                 <Frame Margin="10,20,10,0" BorderColor="Transparent" CornerRadius="0" HeightRequest="50" BackgroundColor="Transparent">
-                    <SearchBar Placeholder="Buscar por localidade, cidade" PlaceholderColor="#7a7a7a" FontSize="18" TextColor="#0a2a3b" Margin="-20,0,0,0" FontFamily="OpenSans-SemiBold" CancelButtonColor="#0a2a3b"></SearchBar>
+                    <SearchBar Placeholder="Buscar por localidade, cidade" PlaceholderColor="#7a7a7a" FontSize="18"
+                               TextColor="#0a2a3b" Margin="-20,0,0,0" FontFamily="OpenSans-SemiBold" CancelButtonColor="#0a2a3b"></SearchBar>
                 </Frame>
 
                 <Grid>
@@ -35,7 +36,7 @@
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                                     </Frame.GestureRecognizers>
 
-                                    <Label HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase" HorizontalOptions="Center" Text="Mais Perto de si">
+                                    <Label Margin="50,0,0,0" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase"  Text="Mais Perto de si">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_MaisPerto"></TapGestureRecognizer>
                                         </Label.GestureRecognizers>
@@ -54,7 +55,7 @@
                                 </Image>
                                 <Frame  TranslationY="-8"  Margin="0,0,0,-15" BackgroundColor="Transparent" >
 
-                                    <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Favoritos"></Label>
+                                    <Label Margin="50,0,0,0" HorizontalTextAlignment="Start"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase" Text="Favoritos"></Label>
                                 </Frame>
                             </StackLayout>
                         </Frame>

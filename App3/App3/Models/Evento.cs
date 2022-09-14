@@ -8,6 +8,7 @@ namespace App3.Models
     {
         public int Idevento { get; set; }
         public int? Idigreja { get; set; }
+        public int Iduser { get; set; }
         public string Nome { get; set; }
         public string Descevento { get; set; }
         public string Imgevento { get; set; }

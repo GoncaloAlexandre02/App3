@@ -192,8 +192,17 @@ namespace App3.Views
             var httpClient = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
             httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
 
-            var response = await httpClient.PostAsync("https://10.0.2.2:7004/api/Files/Upload?id=" + await SecureStorage.GetAsync("iduser"), content);
+            var response = await httpClient.PostAsync("http://tze.ddns.net:8070/api/Files/Upload?id=" + await SecureStorage.GetAsync("iduser"), content);
 
+            try
+            {
+                if (response.StatusCode.ToString() == "OK")
+                    imgButton.Source = ImageSource.FromStream(() => file.OpenReadAsync().Result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
 
             await Navigation.PushAsync(new PerfilPage());
         }

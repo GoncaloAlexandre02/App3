@@ -30,8 +30,8 @@ namespace App3.Helpers
             var messageVm = item as Mensagem;
             if (messageVm == null)
                 return null;
-            return (messageVm.Idemissor == Int32.Parse(iduser)) ? outgoingDataTemplate : 
-                (messageVm.isGrupo() ? incomingGroupDataTemplate : incomingDataTemplate);
+            return (messageVm.Idemissor == Int32.Parse(iduser)) ? outgoingDataTemplate : incomingDataTemplate;
+                //(messageVm.isGrupo() ? incomingGroupDataTemplate : incomingDataTemplate);
 
         }
 

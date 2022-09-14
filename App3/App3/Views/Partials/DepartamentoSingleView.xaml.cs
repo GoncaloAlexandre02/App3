@@ -40,9 +40,10 @@ namespace App3.Views.Partials
             {
 
                 bbb = await restService.GetResponsaveisAsync(iddepart);
-
-                nomeUser.Text = bbb[0].NomeUser.ToString();
-
+                if (bbb.Count > 0)
+                    nomeUser.Text = bbb[0].NomeUser.ToString();
+                else
+                    nomeUser.Text = "";
             }
             catch (Exception ex)
             {

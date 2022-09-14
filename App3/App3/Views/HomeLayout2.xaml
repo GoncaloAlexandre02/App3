@@ -67,7 +67,7 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Noticia"></TapGestureRecognizer>
                                 </Frame.GestureRecognizers>
-                                <Label HorizontalTextAlignment="Center"  Padding="-30,0,-30,0" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="NOTICIAS">
+                                <Label HorizontalTextAlignment="Center"  Padding="-30,0,-30,0" FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="NOTÍCIAS">
                                     <Label.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Noticia"></TapGestureRecognizer>
                                     </Label.GestureRecognizers>
@@ -123,7 +123,7 @@
                                 <Frame.GestureRecognizers>
                                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Mural"/>
                                 </Frame.GestureRecognizers>
-                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="MURAL DE ORAÇÔES"></Label>
+                                <Label HorizontalTextAlignment="Center"  FontFamily="RedHat" TextColor="Black" FontSize="14" HorizontalOptions="Center" Text="MURAL DE ORAÇÕES"></Label>
                         </Frame>
                     </StackLayout>
                     <StackLayout   Grid.Column="1" Grid.Row="2" Orientation="Vertical" Padding="10,5,10,5"  BackgroundColor="Transparent">

@@ -18,11 +18,10 @@
                     <StackLayout>
 
                         <Image Source="facebook_logo.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
-
                         </Image>
-                        <Frame  Margin="10,0,0,-25" BackgroundColor="Transparent" >
-
-                            <Label HorizontalTextAlignment="Center"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Facebook"></Label>
+                        
+                        <Frame  Margin="50,0,0,-25" BackgroundColor="Transparent" >
+                            <Label HorizontalTextAlignment="Start"  FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase"  Text="Facebook"></Label>
                         </Frame>
                     </StackLayout>
                 </Frame>
@@ -30,11 +29,10 @@
                     <StackLayout>
 
                         <Image Source="Instagram_Icon.png" BackgroundColor="Transparent" HorizontalOptions="Start" HeightRequest="40" Margin="10,0,0,-60">
-
                         </Image>
-                        <Frame  TranslationY="-2"  Margin="10,0,0,-15" BackgroundColor="Transparent" >
-
-                            <Label HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase" HorizontalOptions="CenterAndExpand" Text="Instagram"></Label>
+                        
+                        <Frame  TranslationY="-2"  Margin="50,0,0,-15" BackgroundColor="Transparent" >
+                            <Label FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" FontSize="18" TextTransform="Uppercase"  Text="Instagram"></Label>
                         </Frame>
                     </StackLayout>
                 </Frame>

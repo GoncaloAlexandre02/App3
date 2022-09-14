@@ -27,15 +27,17 @@ namespace App3.ViewModels
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
         private string idDepart;
-        public ChatDepartamentoViewModel(string iddepart)
+        private string idRecetor;
+        private string idEmissor;
+        public ChatDepartamentoViewModel(string iddepart, string idemissor, string idrecetor)
         {
             idDepart = iddepart;
+            idRecetor = idrecetor;
+            idEmissor = idemissor;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
             myTimer.Start();
-            
-
 
             OnSendCommand = new Command(async () =>
             {
@@ -45,11 +47,12 @@ namespace App3.ViewModels
                     TextToSend = string.Empty;
                 }
 
-            });
+            }); 
         }
+
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','departamento':'"+idDepart +"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + idEmissor + "','receptor':'"+ idRecetor +"','departamento':'"+idDepart +"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -69,7 +72,7 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensDepartamentoAsync(idDepart);
+                msg = await restService.GetMensagensDepartamentoAsync(idEmissor, idRecetor, idDepart);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
@@ -78,18 +81,18 @@ namespace App3.ViewModels
                 {
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
-                        var iduser = m.Idemissor;
+                        //var iduser = m.Idemissor;
 
-                        if (userImages.ContainsKey(iduser))
-                        {
-                            m.ImgEmissorSource = userImages[iduser];
-                        }
-                        else
-                        {
-                            var img = await restService.GetImagemServer(m.ImgEmissor);
-                            m.ImgEmissorSource = img;
-                            userImages.Add(iduser, img);
-                        }
+                        //if (userImages.ContainsKey(iduser))
+                        //{
+                        //    m.ImgEmissorSource = userImages[iduser];
+                        //}
+                        //else
+                        //{
+                        //    var img = await restService.GetImagemServer(m.ImgEmissor);
+                        //    m.ImgEmissorSource = img;
+                        //    userImages.Add(iduser, img);
+                        //}
                         Messages.Add(m);
                     }
                     /*
@@ -123,7 +126,7 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensSocialAsync(idDepart);
+                msg = await restService.GetMensagensDepartamentoAsync(idEmissor, idRecetor, idDepart);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);
@@ -132,18 +135,6 @@ namespace App3.ViewModels
                 {
                     if (!Messages.Any(u => u.Idmensagem == m.Idmensagem))
                     {
-                        var iduser = m.Idemissor;
-
-                        if (userImages.ContainsKey(iduser))
-                        {
-                            m.ImgEmissorSource = userImages[iduser];
-                        }
-                        else
-                        {
-                            var img = await restService.GetImagemServer(m.ImgEmissor);
-                            m.ImgEmissorSource = img;
-                            userImages.Add(iduser, img);
-                        }
                         Messages.Add(m);
                     }
                     /*

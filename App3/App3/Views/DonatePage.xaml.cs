@@ -14,6 +14,8 @@ namespace App3.Views
     {
         public DonatePage()
         {
+            System.Threading.Thread.CurrentThread.CurrentUICulture = System.Globalization.CultureInfo.GetCultureInfo("pt-PT");
+            System.Threading.Thread.CurrentThread.CurrentCulture = System.Globalization.CultureInfo.GetCultureInfo("pt-PT");
             InitializeComponent();
         }
 
@@ -37,6 +39,19 @@ namespace App3.Views
             MBWAY.IsVisible = false;
             MB.IsVisible = true;
             CC.IsVisible = false;
+        }
+
+        private void Entry_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (e.NewTextValue.Contains("."))
+            {
+                if (e.NewTextValue.Length - 1 - e.NewTextValue.IndexOf(".") > 2)
+                {
+                    var s = e.NewTextValue.Substring(0, e.NewTextValue.IndexOf(".") + 2 + 1);
+                    InputDoar.Text = s;
+                    InputDoar.SelectionLength = s.Length;
+                }
+            }
         }
     }
 }

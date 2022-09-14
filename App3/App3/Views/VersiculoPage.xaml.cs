@@ -5,9 +5,10 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace App3.Views
 {
@@ -35,6 +36,15 @@ namespace App3.Views
         {
             versiculo = await restService.GetVersiculo();
             await Navigation.PushAsync(new BibliaPage(versiculo.Book_name.ToString(), versiculo.Book_id.ToString(), versiculo.Chapter.ToString(), versiculo.Verse.ToString(), versiculo));
+        }
+
+        private async void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        {
+            await Share.RequestAsync(new ShareTextRequest
+            {
+                Text = textV.Text,
+                Title = "Partilhar versículo"
+            });
         }
     }
 }

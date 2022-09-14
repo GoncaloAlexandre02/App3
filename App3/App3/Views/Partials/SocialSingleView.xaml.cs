@@ -27,7 +27,7 @@ namespace App3.Views.Partials
         {
             InitializeComponent();
             titulo.Text = social.Nomesocial.ToString();
-            if(social.Estado == "indisponivel")
+            if(social.Estado == "Indisponível")
             {
                 titulo2.TextColor= Color.Red;
             }

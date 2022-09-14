@@ -56,7 +56,7 @@ namespace App3.Views
                
 
                 var pass2 = MD5Hash.Hash.Content(password);
-                string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'tipouser':2}";
+                string data = @"{'nome':'" + nome + "', 'apelido':'" + apelido + "', 'email':'" + email + "', 'password':'" + pass2 + "', 'morada':' ', 'telefone':'" + tele + "', 'emailativo':'nao', 'tipouser':[2]}";
                 var dataal = data.Replace('\'', '\"');
                 //await this.DisplayToastAsync(dataal, 3000);
 

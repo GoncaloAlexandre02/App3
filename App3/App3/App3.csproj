@@ -68,6 +68,9 @@
       <SubType>Code</SubType>
       <DependentUpon>ChatPageEvento.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\PopUpMultiImg.xaml.cs">
+      <DependentUpon>PopUpMultiImg.xaml</DependentUpon>
+    </Compile>
     <Compile Update="Views\PopUpImg.xaml.cs">
       <DependentUpon>PopUpImg.xaml</DependentUpon>
     </Compile>

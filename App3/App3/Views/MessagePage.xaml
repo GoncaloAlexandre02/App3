@@ -1,8 +1,10 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              x:Class="App3.Views.MessagePage"
              BackgroundColor="#ebebeb">
+    
     <Shell.TitleView>
 
         <StackLayout Orientation="Horizontal"   BackgroundColor="#0a2a3b">
@@ -23,30 +25,129 @@
             </Grid>
         </StackLayout>
     </Shell.TitleView>
+    
     <ContentPage.Content>
-        <StackLayout>
-            <ListView x:Name="lista" ItemSelected="OnItemSelected">
-                <ListView.ItemTemplate>
-                    <DataTemplate >
-                        <ViewCell>
-                            <StackLayout Orientation="Horizontal">
-                            <StackLayout
-                                Orientation="Vertical" VerticalOptions="Center" Margin="5">
-                                    <Label FontSize="23" Text="{Binding Emissor}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+        <xct:TabView
+            TabIndicatorColor="Red"
+            BackgroundColor="LightGray"
+            TabContentBackgroundColor="#ebebeb">
+
+            <xct:TabViewItem
+                Text="Departamentos"
+                IsSelected="True">
                 
+                <StackLayout>
+                    <ListView x:Name="depList" ItemSelected="OnItemSelectedDep">
+                        <ListView.ItemTemplate>
+                            <DataTemplate >
+                                <ViewCell>
+                                    <StackLayout Orientation="Horizontal">
+                                        <StackLayout
+                                Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                            <Label FontSize="23" Text="{Binding Titulo}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
 
-                            </StackLayout>
-                                <StackLayout
+
+                                        </StackLayout>
+                                        <StackLayout
                                  VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="5">
-                                    <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+                                            <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
 
+                                        </StackLayout>
+                                    </StackLayout>
+                                </ViewCell>
+
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </StackLayout>
+                
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                Text="Eventos">
+
+                <ListView x:Name="eventoList" ItemSelected="OnItemSelectedEvento">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout
+                                Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                        <Label FontSize="23" Text="{Binding Titulo}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+
+                                    </StackLayout>
+                                    <StackLayout
+                                 VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="5">
+                                        <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+                                    </StackLayout>
                                 </StackLayout>
-                            </StackLayout>
-                        </ViewCell>
+                            </ViewCell>
 
-                    </DataTemplate>
-                </ListView.ItemTemplate>
-            </ListView>
-        </StackLayout>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                Text="Social">
+
+                <ListView x:Name="socList" ItemSelected="OnItemSelectedSoc">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout
+                                Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                        <Label FontSize="23" Text="{Binding Titulo}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+
+                                    </StackLayout>
+                                    <StackLayout
+                                 VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="5">
+                                        <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </xct:TabViewItem>
+
+            <xct:TabViewItem
+                Text="Mural">
+
+                <ListView x:Name="muralList" ItemSelected="OnItemSelectedMural">
+                    <ListView.ItemTemplate>
+                        <DataTemplate >
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal">
+                                    <StackLayout
+                                Orientation="Vertical" VerticalOptions="Center" Margin="5">
+                                        <Label FontSize="23" Text="{Binding Titulo}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+
+                                    </StackLayout>
+                                    <StackLayout
+                                 VerticalOptions="Center" HorizontalOptions="EndAndExpand" Margin="5">
+                                        <Label FontSize="15" Text="{Binding Dtmsg, StringFormat='{}{0: à\\s HH:mm \\d\\e dd/MM/yyyy  }'}" FontFamily="OpenSans-SemiBold" TextColor="#0a2a3b" />
+
+                                    </StackLayout>
+                                </StackLayout>
+                            </ViewCell>
+
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+
+            </xct:TabViewItem>
+            
+        </xct:TabView>
+        
     </ContentPage.Content>
 </ContentPage>

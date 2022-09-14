@@ -19,7 +19,7 @@
             <ScrollView>
 
                 <StackLayout>
-                    <Frame >
+                    <Frame HeightRequest="50">
                         <StackLayout>
                             <Grid>
                                 <StackLayout Grid.Column="0" Grid.Row="0">
@@ -53,7 +53,7 @@
                             </Grid>
                         </StackLayout>
                     </Frame>
-                    <Frame >
+                    <Frame HeightRequest="35">
                         <StackLayout>
                             <Grid>
                                 <StackLayout Grid.Column="0" Grid.Row="0">
@@ -66,7 +66,7 @@
                         </StackLayout>
 
                     </Frame>
-                    <Frame >
+                    <Frame HeightRequest="35">
                         <StackLayout>
                             <StackLayout.GestureRecognizers>
                                 <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Horario"></TapGestureRecognizer>
@@ -86,7 +86,7 @@
                                     <StackLayout.GestureRecognizers>
                                         <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Horario"></TapGestureRecognizer>
                                     </StackLayout.GestureRecognizers>
-                                    <Label Text="Horario" HorizontalOptions="Start" Margin="40,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold">
+                                    <Label Text="Horário" HorizontalOptions="Start" Margin="40,5,0,0" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold">
                                         <Label.GestureRecognizers>
                                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Horario"></TapGestureRecognizer>
                                         </Label.GestureRecognizers>
@@ -95,7 +95,7 @@
                             </Grid>
                         </StackLayout>
                     </Frame>
-                    <Frame >
+                    <Frame HeightRequest="35">
                         <StackLayout>
                             <Grid>
                                 <StackLayout Grid.Column="0" Grid.Row="0" >

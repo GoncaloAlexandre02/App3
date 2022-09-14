@@ -22,7 +22,7 @@
                         <StackLayout HorizontalOptions="Center">
 
                             <StackLayout Grid.Column="0" Grid.Row="0" Orientation="Horizontal">
-                                <ImageButton Clicked="UploadFile_Clicked" Source="perfilB_icon.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                                <ImageButton x:Name="imgButton" Clicked="UploadFile_Clicked" Source="perfilB_icon.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
                                 <ImageButton Clicked="UploadFile_Clicked" Source="camera.png" Margin="0,15,0,0" HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="50" BackgroundColor="Transparent" ></ImageButton>
                             </StackLayout>
 
@@ -44,7 +44,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Sobrenome" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
+                            <Label Text="Apelido" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
                             <Entry  x:Name="tApelido" Text="Admin" Margin="20,30,60,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Entry>
@@ -67,7 +67,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0">
-                            <Label Text="Telemovel" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
+                            <Label Text="Telemóvel" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
                         </StackLayout>
                         <StackLayout Grid.Column="0" Grid.Row="0">
                             <Entry x:Name="tTele" Text="912345678" Margin="20,30,60,0" TextColor="#0a2a3b" Keyboard="Telephone" MaxLength="9" FontFamily="OpenSans-SemiBold"></Entry>
@@ -92,14 +92,14 @@
                 </StackLayout>
 
                 <StackLayout>
-                    <Label Text="Gênero" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
+                    <Label Text="Género" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold" ></Label>
                     <RadioButton x:Name="rFe"  Value="feminino" Content="Feminino" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase"  FontFamily="OpenSans-SemiBold" ></RadioButton>
                     <RadioButton x:Name="rMa" Value="masculino" Content="Masculino" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase"  FontFamily="OpenSans-SemiBold"></RadioButton>
                     <RadioButton x:Name="rGn" Value="nao" Content="Não Responder" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" IsChecked="True" FontFamily="OpenSans-SemiBold"></RadioButton>
 
                 </StackLayout>
                 <StackLayout>
-                    <Label Text="Batismado" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
+                    <Label Text="Batizado" TextTransform="Uppercase" Margin="22,5,0,0" FontSize="16" TextColor="#0a2a3b" FontAttributes="Bold" FontFamily="OpenSans-SemiBold"></Label>
 
                     <RadioButton x:Name="rBatSim" IsChecked="True" Value="sim" Content="Sim" FontSize="16" TextColor="#0a2a3b" Margin="12,5,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold"></RadioButton>
                     <RadioButton x:Name="rBatNao"  Value="nao" Content="Não" FontSize="16" TextColor="#0a2a3b" Margin="12,0,0,0" TextTransform="Uppercase" FontFamily="OpenSans-SemiBold" ></RadioButton>
@@ -158,14 +158,11 @@
                         <StackLayout Grid.Column="0" Grid.Row="0">
                             <Picker TitleColor="#7a7a7a" x:Name="tEst" TextColor="#0a2a3b" Title=""   Margin="20,0,60,0" FontFamily="OpenSans-SemiBold">
                                 <Picker.Items>
-                                    <x:String>Casado civil</x:String>
-                                    <x:String>Casado civil e religioso</x:String>
+                                    <x:String>Solteiro(a)</x:String>
                                     <x:String>Casado(a)</x:String>
                                     <x:String>Divorciado(a)</x:String>
-                                    <x:String>Mora junto</x:String>
-                                    <x:String>Solteiro(a)</x:String>
-                                    <x:String>União estável</x:String>
                                     <x:String>Viúvo(a)</x:String>
+                                    <x:String>União de facto</x:String>
                                 </Picker.Items>
                             </Picker>
                         </StackLayout>

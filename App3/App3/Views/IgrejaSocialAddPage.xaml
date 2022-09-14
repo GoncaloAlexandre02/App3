@@ -20,9 +20,12 @@
                 <Frame Margin="10,20,10,0" CornerRadius="10" BorderColor="Transparent" BackgroundColor="Transparent">
                     <Picker TitleColor="#7a7a7a" x:Name="picker" TextColor="#0a2a3b" Title="Categoria" HorizontalTextAlignment="Start" FontFamily="OpenSans-SemiBold" >
                         <Picker.Items>
-                            <x:String>Roupa</x:String>
-                            <x:String>Emprego</x:String>
+                            <x:String>Vestuario</x:String>
+                            <x:String>Alimentos</x:String>
+                            <x:String>Brinquedos</x:String>
                             <x:String>Móveis</x:String>
+                            <x:String>Eletrodomésticos</x:String>
+                            <x:String>Vaga de emprego</x:String>
                         </Picker.Items>
                     </Picker>
                 </Frame>

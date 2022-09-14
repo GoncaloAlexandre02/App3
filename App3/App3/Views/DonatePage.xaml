@@ -20,24 +20,24 @@
         <ScrollView>
             <StackLayout Orientation="Vertical">
                 <StackLayout>
-                    <Frame Margin="10,20,10,0" CornerRadius="10">
-                        <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Tipos de Doação" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
+                    <Frame Margin="10,20,10,0" CornerRadius="10" HeightRequest="70">
+                        <Picker TitleColor="#7a7a7a" TextColor="#0a2a3b" Title="Tipo de Doação" HorizontalTextAlignment="Center" FontFamily="OpenSans-SemiBold" >
                             <Picker.Items>
                                 <x:String>Ofertas</x:String>
-                                <x:String>Dizimos</x:String>
+                                <x:String>Dízimos</x:String>
                                 
                             </Picker.Items>
                         </Picker>
                     </Frame>
                 </StackLayout>
 
-                <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" >
+                <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand" HeightRequest="100">
                     <Frame BackgroundColor="#FFFF" HeightRequest="120" HasShadow="false" Padding="0" Margin="0,-5" CornerRadius="15">
                         <StackLayout>
                             <Label Text="Montante"  FontAttributes="Bold" FontSize="17"  HorizontalOptions="Center" Margin="10,15,0,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" ></Label>
 
                             <Frame BackgroundColor="Transparent" BorderColor="transparent" Padding="0" HorizontalOptions="Center" CornerRadius="10" Margin="0,5,0,0">
-                                <Entry Keyboard="Numeric" Placeholder="10€" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150" FontFamily="OpenSans-SemiBold" />
+                                <Entry Keyboard="Numeric" x:Name="InputDoar" TextChanged="Entry_TextChanged" Placeholder="10€" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" HorizontalTextAlignment="Center" Margin="15,0,15,0"  WidthRequest="150" FontFamily="OpenSans-SemiBold" />
                             </Frame>
                         </StackLayout>
                     </Frame>
@@ -45,7 +45,7 @@
 
                 <StackLayout Padding="0" Margin="10,10,10,0" HorizontalOptions="FillAndExpand"   >
                     <StackLayout>
-                        <Label Text="Forma de Pagamento" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" FontSize="18"></Label>
+                        <Label Text="Método de Pagamento:" Margin="10,0,0,0" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" FontSize="18"></Label>
                     </StackLayout>
                     <Grid>
                         

@@ -12,13 +12,14 @@
             </Frame.GestureRecognizers>
             <StackLayout >
                 <Grid>
-                    <StackLayout  Grid.Column="0" Grid.Row="0">
-                        <Image Source="rezar"  x:Name="imgD" HorizontalOptions="Start" HeightRequest="100" Margin="10,0,5,0"></Image>
+                    <StackLayout  Grid.Column="0" Grid.Row="0" HeightRequest="100" >
+                        <Image Source="rezar" Aspect="AspectFill"  x:Name="imgD" HorizontalOptions="Start" HeightRequest="100" WidthRequest="150" Margin="10,0,5,0"></Image>
                     </StackLayout>
 
 
                     <StackLayout Grid.Column="1" Grid.Row="0">
-                        <Label Text="A carregar.." x:Name="nomeDepart" TextColor="#0a2a3b" FontAttributes="Bold" HorizontalOptions="Start"  FontSize="17" FontFamily="OpenSans-SemiBold" ></Label>
+                        <Label Text="A carregar.." x:Name="nomeDepart" TextColor="#0a2a3b" FontAttributes="Bold" 
+                               Margin="0,0,0,10" HorizontalOptions="Start"  FontSize="17" FontFamily="OpenSans-SemiBold"></Label>
                         <Label Text="Coordenador:"   TextColor="#0a2a3b" FontSize="14" FontFamily="OpenSans-SemiBold"></Label>
                         <Label Text="- - -" x:Name="nomeUser" FontSize="13"   TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"></Label>
 

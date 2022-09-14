@@ -27,9 +27,13 @@ namespace App3.ViewModels
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
         private string idMural;
-        public ChatMuralViewModel(string idmural)
+        private string idEmissor;
+        private string idRecetor;
+        public ChatMuralViewModel(string idmural, string idemissor, string idrecetor)
         {
             idMural = idmural;
+            idEmissor = idemissor;
+            idRecetor = idrecetor;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
@@ -49,7 +53,7 @@ namespace App3.ViewModels
         }
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','mural':'"+idMural+"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + idEmissor + "', 'recetor':'"+idRecetor+"','mural':'"+idMural+"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -69,7 +73,7 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensMuralAsync(idMural);
+                msg = await restService.GetMensagensMuralAsync(idEmissor, idRecetor, idMural);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
@@ -122,7 +126,7 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensSocialAsync(idMural);
+                msg = await restService.GetMensagensMuralAsync(idEmissor, idRecetor, idMural);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);

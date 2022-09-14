@@ -1,0 +1,21 @@
+﻿<xct:Popup xmlns="http://xamarin.com/schemas/2014/forms"
+           xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+           xmlns:xct="clr-namespace:Xamarin.CommunityToolkit.UI.Views;assembly=Xamarin.CommunityToolkit"
+           x:Class="App3.Views.PopUpMultiImg"
+           Color="Transparent"
+           >
+
+    <CarouselView x:Name="CarouselImg" Loop="False" WidthRequest="800" PeekAreaInsets="15">
+        <CarouselView.ItemTemplate>
+            <DataTemplate>
+                <Frame BackgroundColor="Transparent"  Padding="0">
+
+                    <Image Source="{Binding Source}" Aspect="AspectFit"  HeightRequest="600" WidthRequest="600" Margin="10">
+                    </Image>
+
+                </Frame>
+            </DataTemplate>
+        </CarouselView.ItemTemplate>
+    </CarouselView>
+
+</xct:Popup>

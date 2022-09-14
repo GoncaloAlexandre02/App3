@@ -30,7 +30,7 @@
 
                 <StackLayout>
                     <StackLayout>
-                        <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center"  TextColor="#0a2a3b" FontSize="21"  FontFamily="OpenSans-SemiBold" Margin="0,20,0,0"></Label>
+                        <Label Text="PREENCHA O FORMULÁRIO ABAIXO" HorizontalTextAlignment="Center" TextColor="#0a2a3b" FontSize="17"  FontFamily="OpenSans-SemiBold" Margin="0,20,0,0"></Label>
                     </StackLayout>
 
                     <StackLayout>

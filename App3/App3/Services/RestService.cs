@@ -40,6 +40,7 @@ namespace App3.Services
                 var response = await clientFora.PostAsync(url, content);
                 if (response.IsSuccessStatusCode)
                 {
+                    var x = await response.Content.ReadAsStringAsync();
                     var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
                     return user;
                 }
@@ -604,12 +605,12 @@ namespace App3.Services
 
         }
 
-        public async Task<RootMsg> GetMensagensEventoAsync(string idevento)
+        public async Task<RootMsg> GetMensagensEventoAsync(string id, string idrecetor, string idevento)
         {
             try
             {
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "http://tze.ddns.net:8070/api/Mensagens/Evento/" + idevento;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Evento/" + id + "/" + idrecetor + "/" + idevento;
                 Console.WriteLine(url);
                 var response = await clientFora.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -630,12 +631,12 @@ namespace App3.Services
 
         }
 
-        public async Task<RootMsg> GetMensagensSocialAsync(string idsocial)
+        public async Task<RootMsg> GetMensagensSocialAsync(string id, string idrecetor, string idsocial)
         {
             try
             {
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "http://tze.ddns.net:8070/api/Mensagens/Social/" + idsocial;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Social/" + id + "/" + idrecetor + "/" + idsocial;
                 Console.WriteLine(url);
                 var response = await clientFora.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -656,12 +657,12 @@ namespace App3.Services
 
         }
 
-        public async Task<RootMsg> GetMensagensDepartamentoAsync(string iddepart)
+        public async Task<RootMsg> GetMensagensDepartamentoAsync(string id, string idrecetor, string iddepart)
         {
             try
             {
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "http://tze.ddns.net:8070/api/Mensagens/Departamento/" + iddepart;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Departamento/" + id + "/" + idrecetor + "/" + iddepart;
                 Console.WriteLine(url);
                 var response = await clientFora.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);
@@ -682,12 +683,12 @@ namespace App3.Services
 
         }
 
-        public async Task<RootMsg> GetMensagensMuralAsync(string idmural)
+        public async Task<RootMsg> GetMensagensMuralAsync(string id, string idrecetor, string idmural)
         {
             try
             {
                 clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
-                string url = "http://tze.ddns.net:8070/api/Mensagens/Mural/" + idmural;
+                string url = "http://tze.ddns.net:8070/api/Mensagens/Mural/" + id + "/" + idrecetor + "/" + idmural;
                 Console.WriteLine(url);
                 var response = await clientFora.GetStringAsync(url);
                 var produtos = JsonConvert.DeserializeObject<RootMsg>(response);

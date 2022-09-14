@@ -27,9 +27,13 @@ namespace App3.ViewModels
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
         private string idSocial;
-        public ChatSocialViewModel(string idsocial)
+        private string idEmissor;
+        private string idRecetor;
+        public ChatSocialViewModel(string idsocial, string idemissor, string idrecetor)
         {
             idSocial = idsocial;
+            idEmissor = idemissor;
+            idRecetor = idrecetor;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
@@ -49,7 +53,7 @@ namespace App3.ViewModels
         }
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','social':'"+idSocial+"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "', 'receptor':'" + idRecetor +"','social':'"+idSocial+"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -69,7 +73,7 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensSocialAsync(idSocial);
+                msg = await restService.GetMensagensSocialAsync(idEmissor, idRecetor, idSocial);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
@@ -123,7 +127,7 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensSocialAsync(idSocial);
+                msg = await restService.GetMensagensSocialAsync(idEmissor, idRecetor, idSocial);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);

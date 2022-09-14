@@ -7,7 +7,7 @@
         <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
                 
-                <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Igreja Social"></Label>
+                <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,0,0" TextColor="White" FontSize="20" Text="Igreja Social"></Label>
 
                 <Grid>
                     <StackLayout Grid.Column="2" HorizontalOptions="End" x:Name="AddVideo">
@@ -55,7 +55,7 @@
                 </StackLayout>
 
                 <StackLayout>
-                    <Label Text="Ultimas Atualizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#0a2a3b" FontSize="16" Margin="10,0,0,0"></Label>
+                    <Label Text="Últimas Atualizações" FontFamily="OpenSans-SemiBold.ttf" TextColor="#0a2a3b" FontSize="16" Margin="10,0,0,0"></Label>
 
                     <StackLayout x:Name="EcraSocial">
 

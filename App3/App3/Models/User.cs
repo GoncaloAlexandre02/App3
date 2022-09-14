@@ -25,8 +25,10 @@ namespace App3.Models
         public string Tokenuser { get; set; }
         public string Emailativo { get; set; }
         public DateTime Dtregisto { get; set; }
-        public int? Tipouser { get; set; }
+        public List<int> Tipouser { get; set; }
 
         public byte[] ImageSource { get; set; }
+
+        public ICollection<UsersTipos> UsersTipos { get; set; }
     }
 }

@@ -101,25 +101,46 @@ namespace App3.Views
             content.Add(new StreamContent(await file.OpenReadAsync()), "file", file.FileName);
 
             var httpClient = new HttpClient(DependencyService.Get<IHttpClientHandlerService>().GetInsecureHandler());
+            httpClient.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+            var id = await SecureStorage.GetAsync("iduser");
+            var response = await httpClient.PostAsync("http://tze.ddns.net:8070/api/Files/Upload?id=" + id, content);
 
-            var response = await httpClient.PostAsync("https://10.0.2.2:7004/api/Files/Upload", content);
+            try
+            {
+                if (response.StatusCode.ToString() == "OK")
+                    Imagem.Source = ImageSource.FromStream(() => file.OpenReadAsync().Result);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+            }
+            
 
             return response.StatusCode.ToString();
         }
 
         async void OnPickPhotoButtonClicked(object sender, EventArgs e)
         {
-            (sender as Button).IsEnabled = false;
+            //(sender as Button).IsEnabled = false;
             try
             {
-                Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
-                if (stream != null)
+                //Stream stream = await DependencyService.Get<IPhotoPickerService>().GetImageStreamAsync();
+                //if (stream != null)
+                //{
+
+                //    image.Source = ImageSource.FromStream(() => stream);
+
+                //}
+                var res = await UploadFile();
+                if (res == "OK")
                 {
-
-                    image.Source = ImageSource.FromStream(() => stream);
-                    await this.DisplayToastAsync(await UploadFile(), 3000);
-
+                    await this.DisplayToastAsync("Foto alterada");
+                } else if (res != null)
+                {
+                    await this.DisplayToastAsync("Erro ao alterar foto");
                 }
+               // await this.DisplayToastAsync(await UploadFile(), 3000);
+
 
             }
             catch (NullReferenceException ex)
@@ -127,7 +148,7 @@ namespace App3.Views
                 Console.WriteLine(ex.Message);
             }
 
-    (sender as Button).IsEnabled = true;
+            //(sender as Button).IsEnabled = true;
         }
 
         private async void TapGestureRecognizer_Tapped_Atualizar(object sender, EventArgs e)

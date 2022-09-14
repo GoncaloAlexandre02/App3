@@ -36,7 +36,7 @@ namespace App3.Views
             desc.Text = social.Descsocial.ToString();
             social1 = social;
             restService = new RestService();
-            CarouselImg.ItemsSource = Images;
+            //CarouselImg.ItemsSource = Images;
 
             if (social1.Tipo == "emprego")
             {
@@ -46,11 +46,11 @@ namespace App3.Views
             else
             {
 
-                if (social1.Estado == "indisponivel")
+                if (social1.Estado == "Indisponível")
                 {
                     btnR.BackgroundColor = Color.Red;
                     btnR.Effects.Clear();
-                    btnR.Text = "Indisponivel";
+                    btnR.Text = "Indisponível";
                 }
                 else
                 {
@@ -89,7 +89,9 @@ namespace App3.Views
                 }
                 else
                 {
-                    //ImgSoc.Source = await restService.GetImagemServer(socialimg.data[0].Img);
+                    ImgSoc.Source = await restService.GetImagemServer(socialimg.data[0].Img);
+                    ImgSoc.IsVisible = true;
+
                     foreach (var d in socialimg.data)
                     {
                         Image newImg = new Image(); 
@@ -150,7 +152,7 @@ namespace App3.Views
 
                 if (aab.IsSuccessStatusCode)
                 {
-                    social1.Estado = "indisponivel";
+                    social1.Estado = "Indisponível";
 
                     Social2 social2A = new Social2 { Idsocial = social1.Idsocial, Iduser = social1.Iduser, Tiposocial = social1.Tipo, Estadosocial = social1.Estado, Nomesocial = social1.Nomesocial, Descsocial = social1.Descsocial, Idigreja = null };
 
@@ -199,7 +201,9 @@ namespace App3.Views
         private async void ImageTapped(object sender, EventArgs e)
         {
             var image = (Image)sender;
-            await Navigation.ShowPopupAsync(new PopUpImg(image));
+            
+            //await Navigation.ShowPopupAsync(new PopUpImg(image));
+            await Navigation.ShowPopupAsync(new PopUpMultiImg(Images));
             //await PopupNavigation.Instance.PushAsync(new PopUpImg(image));
         }
 

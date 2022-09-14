@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,6 +20,7 @@ namespace App3.Views
         User userChat;
         Mural Mural;
         private ChatMuralViewModel aaa;
+
         public ChatPageMural(Mural mural)
         {
             Mural = mural;
@@ -26,16 +28,26 @@ namespace App3.Views
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
-            aaa = new ChatMuralViewModel(mural.Idmural.ToString());
+            aaa = new ChatMuralViewModel(mural.Idmural.ToString(), SecureStorage.GetAsync("iduser").Result, Mural.Iduser.ToString());
             this.BindingContext = aaa;
-
-
         }
+
+        public ChatPageMural(string idemissor, string idrecetor, string idmural)
+        {
+            InitializeComponent();
+            restService = new RestService();
+            Mural = Task.Run(() => restService.GetMuraisAsync()).Result.data.Find(m => m.Idmural.ToString() == idmural);
+            Shell.Current.FlyoutIsPresented = false;
+            AtualizaUser();
+            aaa = new ChatMuralViewModel(idmural, idemissor, idrecetor);
+            this.BindingContext = aaa;
+        }
+
         private async void AtualizaUser()
         {
             userChat = await restService.GetUserChatAsync(Mural.Iduser.ToString());
             imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
-            titulo.Text = Mural.Motivo;// userChat.Nome + " " + userChat.Apelido;
+            titulo.Text = userChat.Nome + " " + userChat.Apelido;
 
         }
         protected override void OnDisappearing()

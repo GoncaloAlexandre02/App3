@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Timers;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,24 +20,34 @@ namespace App3.Views
         User userChat;
         Social Social;
         private ChatSocialViewModel aaa;
+
         public ChatPageSocial(Social social)
         {
             InitializeComponent();
             Social = social;
-
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
-            aaa = new ChatSocialViewModel(Social.Idsocial.ToString());
+            aaa = new ChatSocialViewModel(Social.Idsocial.ToString(), SecureStorage.GetAsync("iduser").Result, social.Iduser.ToString());
             this.BindingContext = aaa;
-
-
         }
+
+        public ChatPageSocial(string idemissor, string idrecetor, string idsocial)
+        {
+            InitializeComponent();
+            restService = new RestService();
+            Social = Task.Run(() => restService.GetSocialItemsAsync("tudo")).Result.data.Find(s => s.Idsocial.ToString() == idsocial);
+            Shell.Current.FlyoutIsPresented = false;
+            AtualizaUser();
+            aaa = new ChatSocialViewModel(idsocial, idemissor, idrecetor);
+            this.BindingContext = aaa;
+        }
+
         private async void AtualizaUser()
         {
             userChat = await restService.GetUserChatAsync(Social.Iduser.ToString());
             imagemT.Source = await restService.GetImagemServer(userChat.Imagem);
-            titulo.Text = Social.Nomesocial;// userChat.Nome + " " + userChat.Apelido;
+            titulo.Text = userChat.Nome + " " + userChat.Apelido;
 
         }
         protected override void OnDisappearing()

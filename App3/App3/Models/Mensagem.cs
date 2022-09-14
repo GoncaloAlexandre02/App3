@@ -22,6 +22,7 @@ namespace App3.Models
         public int? Mural { get; set; }
         public int? Departamento { get; set; }
 
+        public string Titulo { get; set; }
         public ImageSource ImgEmissorSource { get; set; }
 
         public bool isGrupo()

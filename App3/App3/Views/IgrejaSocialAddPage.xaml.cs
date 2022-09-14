@@ -1,5 +1,6 @@
 ﻿using App3.Models;
 using App3.Services;
+using Plugin.Media.Abstractions;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -32,8 +33,8 @@ namespace App3.Views
         {
             if (txtDesc.Text != null && txtTitulo.Text != null && picker.SelectedItem != null)
             {
-                Social socialA = new Social { Nomesocial = txtTitulo.Text.ToString(), Descsocial = txtDesc.Text.ToString(), Tipo = picker.SelectedItem.ToString().ToLower(), Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "disponivel" };
-                string data = @"{'iduser':'" + await SecureStorage.GetAsync("iduser") + "', 'nomesocial':'" + txtTitulo.Text.ToString() + "', 'descsocial':'" + txtDesc.Text.ToString() + "', 'tiposocial':'" + picker.SelectedItem.ToString().ToLower() + "', 'estadosocial':'" + "disponivel" + "'}";
+                Social socialA = new Social { Nomesocial = txtTitulo.Text.ToString(), Descsocial = txtDesc.Text.ToString(), Tipo = picker.SelectedItem.ToString().ToLower(), Iduser = int.Parse(await SecureStorage.GetAsync("iduser")), Estado = "Disponível" };
+                string data = @"{'iduser':'" + await SecureStorage.GetAsync("iduser") + "', 'nomesocial':'" + txtTitulo.Text.ToString() + "', 'descsocial':'" + txtDesc.Text.ToString() + "', 'tiposocial':'" + picker.SelectedItem.ToString().ToLower() + "', 'estadosocial':'" + "Disponível" + "'}";
                 var dataal = data.Replace('\'', '\"');
                 var aaa = await restService.PostSocial(dataal);
 
@@ -79,16 +80,24 @@ namespace App3.Views
                 if (choice == "Abrir câmera")
                 {
                     fileTest = await MediaPicker.CapturePhotoAsync();
+                    file[count] = fileTest;
+                    count++;
                 }
                 else
                 {
-                    fileTest = await MediaPicker.PickPhotoAsync();
+                    for (int i=0; i<=count; i++)
+                    {
+                        file[i] = null;
+                    }
+                    MultiPickerOptions options = new MultiPickerOptions();
+                    options.MaximumImagesCount = 3;
+                    var images = await Plugin.Media.CrossMedia.Current.PickPhotosAsync(pickerOptions:options);
+                    foreach (var i in images)
+                    {
+                        FileResult fileResult = new FileResult(i.Path);
+                        file[count++] = fileResult;
+                    }
                 }
-                
-                
-
-                file[count] = fileTest;
-                count++;
 
                 lImg.Text = count + " de 3 Imagens";
             }

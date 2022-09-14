@@ -23,12 +23,37 @@
                     <StackLayout Margin="5,0,5,0">
                         <Label TextColor="#0a2a3b" Text="Contato: +351 913 885 038" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0" HorizontalOptions="Center"></Label>
                         <Label TextColor="#0a2a3b" Text="Email: info@srwsoftware.pt" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
-                        <Label TextColor="#0a2a3b" Text="Rede Social: @srwsoftware" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
-                        <Label TextColor="#0a2a3b" Text="Site: http://www.srwsoftware.pt" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,5,0,0" HorizontalOptions="Center">
-                            <Label.GestureRecognizers>
-                                <TapGestureRecognizer Tapped="site_event"></TapGestureRecognizer>
-                            </Label.GestureRecognizers>
-                        </Label>
+                        <Grid  Margin="80,0,0,0" VerticalOptions="Center">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="200" />
+                            </Grid.ColumnDefinitions>
+
+                            
+                            <Image Grid.Column="0" Source="web_logo.png" HeightRequest="2"  WidthRequest="2" BackgroundColor="Transparent" Margin="0,0,2,0">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                        CommandParameter="http://www.srwsoftware.pt/"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="1" Source="faceb_logo.png" HeightRequest="30"  WidthRequest="30" BackgroundColor="Transparent">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                        CommandParameter="https://www.facebook.com/SrwSoftware/"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="2" Source="instagram.png" HeightRequest="45"  WidthRequest="45" BackgroundColor="Transparent">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                        CommandParameter="https://www.instagram.com/srwsoftware/"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Grid.Column="3" TextColor="#0a2a3b" Text="srwsoftware" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="0,5,0,0" VerticalOptions="Center"/>
+
+                        </Grid>
 
                     </StackLayout>
                     <Frame BackgroundColor="#ededed">
@@ -41,8 +66,30 @@
                         <Label TextColor="#0a2a3b" Text="Contato: +351 935 278 958" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="10,25,0,0" HorizontalOptions="Center"></Label>
                         
                         <Label TextColor="#0a2a3b" Text="Email: info@inovarnegocios.pt" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
-                        <Label TextColor="#0a2a3b" Text="Rede Social: @inovarnegociosportugal" FontFamily="OpenSans-SemiBold" FontSize="18" Margin="10,5,0,0" HorizontalOptions="Center"></Label>
-                       
+
+                        <Grid  Margin="60,0,0,0" VerticalOptions="Center">
+
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="30" />
+                                <ColumnDefinition Width="40" />
+                                <ColumnDefinition Width="205" />
+                            </Grid.ColumnDefinitions>
+
+                            <Image Grid.Column="0" Source="faceb_logo.png" HeightRequest="30"  WidthRequest="30" BackgroundColor="Transparent">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                        CommandParameter="https://www.facebook.com/inovarnegociosportugal"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Image Grid.Column="1" Source="instagram.png" HeightRequest="45"  WidthRequest="45" BackgroundColor="Transparent">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Command="{Binding TapCommand}"
+                                                        CommandParameter="https://www.instagram.com/inovarnegociosportugal/"/>
+                                </Image.GestureRecognizers>
+                            </Image>
+                            <Label Grid.Column="2" TextColor="#0a2a3b" Text="inovarnegociosportugal" FontSize="18" FontFamily="OpenSans-SemiBold" Margin="0,5,0,0" VerticalOptions="Center"/>
+
+                        </Grid>
 
                     </StackLayout>
                 </StackLayout>

@@ -7,7 +7,7 @@
 
         <StackLayout Orientation="Horizontal"   BackgroundColor="#0a2a3b">
             
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Versiculo do dia"></Label>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Versículo do dia"></Label>
             
         </StackLayout>
     </Shell.TitleView>
@@ -20,7 +20,14 @@
             </StackLayout>
 
             <StackLayout>
-                <Label Margin="0,20,0,0" x:Name="bookV" Text="--- 0:0"  FontSize="18" HorizontalOptions="Center" TextColor="#0a2a3b" FontFamily="OpenSans-Regular" ></Label>
+                <Label Margin="0,20,0,0" x:Name="bookV" Text="--- 0:0"  FontSize="18" HorizontalOptions="Center" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold" ></Label>
+            </StackLayout>
+            <StackLayout>
+                <Image Source="redesSociais" Margin="0,40,0,0"  HorizontalOptions="Center" >
+                    <Image.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                    </Image.GestureRecognizers>
+                </Image>
             </StackLayout>
             <StackLayout >
                 <Button  Margin="0,40,0,0" Clicked="Button_Clicked" Text="Ler Mais" BackgroundColor="#0a2a3b"  FontSize="14" HorizontalOptions="Center"  FontFamily="OpenSans-SemiBold" TextColor="White" ></Button>

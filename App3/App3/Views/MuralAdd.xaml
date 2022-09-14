@@ -9,7 +9,7 @@
     <Shell.TitleView>
         <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
             
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Criar Oração"></Label>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Criar pedido de oração"></Label>
 
         </StackLayout>
 
@@ -25,16 +25,16 @@
 
 
                     <Frame  Margin="20,15,20,0" WidthRequest="20" CornerRadius="10" BackgroundColor="Transparent" BorderColor="Transparent" >
-                        <Entry Placeholder="MOTIVO DA ORAÇÃO" PlaceholderColor="#7a7a7a" x:Name="Motivo"  TextColor="#0a2a3b" Margin="0,0,10,0" ></Entry>
+                        <Entry Placeholder="Motivo da oração" PlaceholderColor="#7a7a7a" x:Name="Motivo"  TextColor="#0a2a3b" Margin="0,0,10,0" ></Entry>
                     </Frame>
 
 
                     <Frame  Margin="20,-15,20,10" WidthRequest="20" CornerRadius="10" BackgroundColor="Transparent" BorderColor="Transparent">
-                        <Entry  Placeholder="ESCREVA AQUI" PlaceholderColor="#7a7a7a" x:Name="DescM" TextColor="#0a2a3b" Margin="0,0,10,0"></Entry>
+                        <Entry  Placeholder="Escreva aqui o seu pedido de oração" PlaceholderColor="#7a7a7a" x:Name="DescM" TextColor="#0a2a3b" Margin="0,0,10,0"></Entry>
                     </Frame>
 
                     <StackLayout>
-                        <Label Text="Deseja receber uma visita de algum membro ?" Margin="25,10,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                        <Label Text="Deseja receber uma visita de um membro?" Margin="25,10,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"></RowDefinition>
@@ -54,7 +54,7 @@
                     </StackLayout>
 
                     <StackLayout>
-                        <Label Text="Deseja receber uma ligação de algum membro ?" Margin="25,20,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                        <Label Text="Deseja receber uma chamada de um membro?" Margin="25,20,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"></RowDefinition>
@@ -75,7 +75,7 @@
 
 
                     <StackLayout>
-                        <Label Text="Publicar no mural de oração ?" Margin="25,20,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
+                        <Label Text="Publicar no mural de oração?" Margin="25,20,15,10" TextColor="#0a2a3b" FontSize="16" FontFamily="OpenSans-SemiBold"></Label>
                         <Grid>
                             <Grid.RowDefinitions>
                                 <RowDefinition Height="20"></RowDefinition>

@@ -19,13 +19,13 @@
             <StackLayout BackgroundColor="Transparent" Margin="10" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                 
                 <StackLayout  HeightRequest="30" >
-                    <Button Text="Vou" x:Name="bVou" Clicked="bVou_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#0a2a3b" FontSize="16" HeightRequest="40"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold"  Margin="-15,0,0,0"></Button>
+                    <Button Text="Sim" x:Name="bVou" Clicked="bVou_Clicked" HorizontalOptions="FillAndExpand" BackgroundColor="#0a2a3b" FontSize="16" HeightRequest="40"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold"  Margin="-15,0,0,0"></Button>
+                </StackLayout>
+                <StackLayout   HeightRequest="30" >
+                    <Button Text="Não" x:Name="bNao" Clicked="bNao_Clicked" BackgroundColor="#0a2a3b" FontSize="16" HorizontalOptions="End" HeightRequest="40"   TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" Margin="15,0,0,0"></Button>
                 </StackLayout>
                 <StackLayout   HeightRequest="30" >
                     <Button Text="Talvez" x:Name="bTalvez" Clicked="bTalvez_Clicked" BackgroundColor="#0a2a3b" FontSize="16" HorizontalOptions="Center" HeightRequest="40"  TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" Margin="15,0,0,0"></Button>
-                </StackLayout>
-                <StackLayout   HeightRequest="30" >
-                    <Button Text="Não Vou" x:Name="bNao" Clicked="bNao_Clicked" BackgroundColor="#0a2a3b" FontSize="16" HorizontalOptions="End" HeightRequest="40"   TextColor="White" CornerRadius="5"  FontFamily="Dosis-SemiBold" Margin="15,0,0,0"></Button>
                 </StackLayout>
             </StackLayout>
             <ScrollView x:Name="scrollP">
@@ -83,7 +83,7 @@
                     <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                 </StackLayout.GestureRecognizers>
                 <Grid>
-                    <Image Source="chatB" HorizontalOptions="End" Margin="10,-20,55,0">
+                    <Image Source="icon_mens" HorizontalOptions="End" Margin="10,-20,55,0">
                         <Image.GestureRecognizers>
                             <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
                         </Image.GestureRecognizers>

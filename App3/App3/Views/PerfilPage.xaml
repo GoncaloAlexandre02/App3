@@ -22,7 +22,7 @@
                     <ColumnDefinition Width="1*"/>
                     <ColumnDefinition Width="0.1*"/>
                 </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22"/>
+                <Image Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22" />
                 <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" Margin="0,-22,10,-18"   CornerRadius="20"
                     Padding="-3"
                     BackgroundColor="Transparent"
@@ -48,7 +48,11 @@
                 <StackLayout Margin="5,5,5,0"  xct:ShadowEffect.OffsetY="1" xct:ShadowEffect.Radius="1" xct:ShadowEffect.Opacity="5">
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" >
-                            <Image x:Name="Imagem" Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100"></Image>
+                            <Image x:Name="Imagem" Source="perfil_icon.png" Margin="0,20,0,0" HeightRequest="100">
+                                <Image.GestureRecognizers>
+                                    <TapGestureRecognizer Tapped="OnPickPhotoButtonClicked"></TapGestureRecognizer>
+                                </Image.GestureRecognizers>
+                            </Image>
                         </StackLayout>
                 
                     </Grid>

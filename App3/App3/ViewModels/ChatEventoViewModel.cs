@@ -28,9 +28,11 @@ namespace App3.ViewModels
         public ICommand OnSendCommand { get; set; }
         public Timer myTimer = new Timer();
         private string idEvento;
-        public ChatEventoViewModel(string idevento)
+        private string idReceptor;
+        public ChatEventoViewModel(string idevento, string id, string idrecetor)
         {
             idEvento = idevento;
+            idReceptor = id;
             AtualizaMsgFirst();
             myTimer.Elapsed += new ElapsedEventHandler(AtualizaMsg);
             myTimer.Interval = 2000;
@@ -50,7 +52,7 @@ namespace App3.ViewModels
         }
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','evento':'"+idEvento+"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + await SecureStorage.GetAsync("iduser") + "','receptor':'"+ idReceptor + "','evento':'"+idEvento+"'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)
@@ -70,7 +72,7 @@ namespace App3.ViewModels
             {
                 
                 restService = new RestService();
-                msg = await restService.GetMensagensEventoAsync(idEvento);
+                msg = await restService.GetMensagensEventoAsync(await SecureStorage.GetAsync("iduser"), idReceptor, idEvento);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 //Console.WriteLine(listmsg[0].Dtmsg.ToString());
@@ -124,7 +126,7 @@ namespace App3.ViewModels
             {
 
                 restService = new RestService();
-                msg = await restService.GetMensagensEventoAsync(idEvento);
+                msg = await restService.GetMensagensEventoAsync(await SecureStorage.GetAsync("iduser"), idReceptor, idEvento);
                 List<Mensagem> listmsg = msg.data;
                 listmsg.Reverse();
                 Console.WriteLine(msg);
