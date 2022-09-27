@@ -28,6 +28,14 @@ namespace App3.Views
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = social.Iduser.ToString(),
+                Emissor = SecureStorage.GetAsync("iduser").Result,
+                Social = social.Idsocial,
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatSocialViewModel(Social.Idsocial.ToString(), SecureStorage.GetAsync("iduser").Result, social.Iduser.ToString());
             this.BindingContext = aaa;
         }
@@ -39,6 +47,14 @@ namespace App3.Views
             Social = Task.Run(() => restService.GetSocialItemsAsync("tudo")).Result.data.Find(s => s.Idsocial.ToString() == idsocial);
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = idrecetor,
+                Emissor = idemissor,
+                Social = int.Parse(idsocial),
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatSocialViewModel(idsocial, idemissor, idrecetor);
             this.BindingContext = aaa;
         }

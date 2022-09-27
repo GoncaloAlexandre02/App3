@@ -52,7 +52,7 @@ namespace App3.ViewModels
 
         public async void EnviarMensagem()
         {
-            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + idEmissor + "','receptor':'"+ idRecetor +"','departamento':'"+idDepart +"'}";
+            string data = @"{'descmsg':'" + TextToSend + "','emissor':'" + idEmissor + "','receptor':'"+ idRecetor +"','departamento':'"+idDepart +"','lido':'S'}";
             var dataal = data.Replace('\'', '\"');
             var res = await restService.SendMensagemAsync(dataal);
             if (res == null)

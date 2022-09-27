@@ -27,6 +27,14 @@ namespace App3.Views
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = evento.Iduser.ToString(),
+                Emissor = SecureStorage.GetAsync("iduser").Result,
+                Evento = evento.Idevento,
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatEventoViewModel(evento.Idevento.ToString(), SecureStorage.GetAsync("iduser").Result, evento.Iduser.ToString());
             this.BindingContext = aaa;
         }
@@ -38,6 +46,14 @@ namespace App3.Views
             Evento = Task.Run(() => restService.GetEventosAsync()).Result.data.Find(e => e.Idevento.ToString() == idevento);
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = idrecetor,
+                Emissor = idemissor,
+                Evento = int.Parse(idevento),
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatEventoViewModel(Evento.Idevento.ToString(), idemissor, idrecetor);
             this.BindingContext = aaa;
         }

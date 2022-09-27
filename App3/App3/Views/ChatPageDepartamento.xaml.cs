@@ -29,6 +29,14 @@ namespace App3.Views
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = Idrecetor,
+                Emissor = SecureStorage.GetAsync("iduser").Result,
+                Departamento = responsavel.Iddepart,
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatDepartamentoViewModel(Responsavel.Iddepart.ToString(), SecureStorage.GetAsync("iduser").Result, Idrecetor);
             this.BindingContext = aaa;
         }
@@ -41,6 +49,14 @@ namespace App3.Views
             Responsavel = Task.Run(() => restService.GetResponsaveisAsync(int.Parse(iddepart))).Result.FirstOrDefault();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = idrecetor,
+                Emissor = idemissor,
+                Departamento = int.Parse(iddepart),
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatDepartamentoViewModel(iddepart, idemissor, idrecetor);
             this.BindingContext = aaa;
         }

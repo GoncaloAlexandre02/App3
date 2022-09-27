@@ -55,7 +55,7 @@ namespace App3.Views
                 if (m.Idemissor.ToString() == await SecureStorage.GetAsync("iduser"))
                 {
                     msgList.Add(new Mensagem() { Descmsg = m.Descmsg, Idemissor = m.Idreceptor.Value, Idmensagem = m.Idmensagem, Idreceptor = m.Idemissor, Emissor = m.Receptor, Receptor = m.Emissor, ImgEmissor = m.ImgReceptor, ImgReceptor = m.ImgEmissor, Dtmsg = m.Dtmsg,
-                    Departamento = m.Departamento, Evento = m.Evento, Social = m.Social, Mural = m.Mural, Titulo = m.Titulo});
+                    Departamento = m.Departamento, Evento = m.Evento, Social = m.Social, Mural = m.Mural, Titulo = m.Titulo, Lido = m.Lido, NaoLidoCount = m.NaoLidoCount, Count = m.Count});
                 }
                 else
                 {
@@ -83,7 +83,10 @@ namespace App3.Views
 
             // assuiming Club has an Id property
             if (item.Departamento != null)
+            {
                 await Navigation.PushAsync(new ChatPageDepartamento(item.Idreceptor.ToString(), item.Idemissor.ToString(), item.Departamento.ToString()));
+
+            }
             else
                 await Navigation.PushAsync(new ChatPage(itemstrig.ToString()));
         }
@@ -98,7 +101,10 @@ namespace App3.Views
 
             // assuiming Club has an Id property
             if (item.Departamento != null)
+            {
                 await Navigation.PushAsync(new ChatPageEvento(item.Idemissor.ToString(), item.Idreceptor.ToString(), item.Evento.ToString()));
+
+            }
             else
                 await Navigation.PushAsync(new ChatPage(itemstrig.ToString()));
         }
@@ -113,7 +119,9 @@ namespace App3.Views
 
             // assuiming Club has an Id property
             if (item.Social != null)
+            {
                 await Navigation.PushAsync(new ChatPageSocial(item.Idreceptor.ToString(), item.Idemissor.ToString(), item.Social.ToString()));
+            }
             else
                 await Navigation.PushAsync(new ChatPage(itemstrig.ToString()));
         }
@@ -128,7 +136,10 @@ namespace App3.Views
 
             // assuiming Club has an Id property
             if (item.Mural != null)
+            {
                 await Navigation.PushAsync(new ChatPageMural(item.Idemissor.ToString(), item.Idreceptor.ToString(), item.Mural.ToString()));
+
+            }
             else
                 await Navigation.PushAsync(new ChatPage(itemstrig.ToString()));
         }

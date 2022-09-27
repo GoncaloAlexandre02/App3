@@ -35,10 +35,17 @@ namespace App3.Droid
             CachedImageRenderer.Init(true);
             UserDialogs.Init(this);
 
-            LoadApplication(new App());
+            string startPage = "";
 
+            //If there's a page intent send it to the main app as a parameter
+            if (Intent.HasExtra("page"))
+            {
+                startPage = Intent.Extras.Get("page").ToString();
+            }
 
+            LoadApplication(new App(startPage));
         }
+
         public override void OnRequestPermissionsResult(int requestCode, string[] permissions, [GeneratedEnum] Android.Content.PM.Permission[] grantResults)
         {
             Xamarin.Essentials.Platform.OnRequestPermissionsResult(requestCode, permissions, grantResults);

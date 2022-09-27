@@ -28,6 +28,14 @@ namespace App3.Views
             restService = new RestService();
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = mural.Iduser.ToString(),
+                Emissor = SecureStorage.GetAsync("iduser").Result,
+                Mural = mural.Idmural,
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatMuralViewModel(mural.Idmural.ToString(), SecureStorage.GetAsync("iduser").Result, Mural.Iduser.ToString());
             this.BindingContext = aaa;
         }
@@ -39,6 +47,14 @@ namespace App3.Views
             Mural = Task.Run(() => restService.GetMuraisAsync()).Result.data.Find(m => m.Idmural.ToString() == idmural);
             Shell.Current.FlyoutIsPresented = false;
             AtualizaUser();
+            Mensagem msg = new Mensagem()
+            {
+                Receptor = idrecetor,
+                Emissor = idemissor,
+                Mural = int.Parse(idmural),
+                Descmsg = ""
+            };
+            var res = Task.Run(() => restService.MarcarMensagemLidoAsync(msg)).Result;
             aaa = new ChatMuralViewModel(idmural, idemissor, idrecetor);
             this.BindingContext = aaa;
         }

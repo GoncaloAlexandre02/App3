@@ -10,13 +10,16 @@ namespace App3
     public partial class App : Application
     {
         
-        public App()
+        public App(string page="")
         {
             Device.SetFlags(new string[] { "Brush_Experimental" });
             InitializeComponent();
 
             DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
+
+            //Store page string from intent to be used later in the Home page
+            Application.Current.Properties["intentPage"] = page;
         }
        
         protected override void OnStart()

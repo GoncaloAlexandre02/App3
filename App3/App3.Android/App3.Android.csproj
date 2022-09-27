@@ -113,6 +113,7 @@
   <ItemGroup>
     <Compile Include="HttpClientHandlerService.cs" />
     <Compile Include="MainActivity.cs" />
+    <Compile Include="NotificationsService.cs" />
     <Compile Include="PhotoPickerService.cs" />
     <Compile Include="Renderer\ExtendedDatePickerRenderer.cs" />
     <Compile Include="Renderer\SearchBarRenderer.cs" />
@@ -672,6 +673,9 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\web_logo.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\drawable\ic_launcher.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

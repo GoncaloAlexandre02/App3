@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using App3.Services;
 using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
@@ -15,6 +16,31 @@ namespace App3.Views
         public HomeLayout2()
         {
             InitializeComponent();
+
+            //Read intent page string and redirect to respective page
+            if (Application.Current.Properties["intentPage"] != null && !string.IsNullOrEmpty(Application.Current.Properties["intentPage"].ToString()))
+            {
+                string page = Application.Current.Properties["intentPage"].ToString();
+                Application.Current.Properties["intentPage"] = null;
+
+                switch(page)
+                {
+                    case "Mensagens": 
+                        Navigation.PushAsync(new MessagePage());
+                        break;
+
+                    case "Social":
+                        Navigation.PushAsync(new IgrejaSocialPage());
+                        break;
+
+                    case "Eventos":
+                        Navigation.PushAsync(new EventoPage());
+                        break;
+
+                    default: 
+                        break;
+                }
+            }
         }
 
 

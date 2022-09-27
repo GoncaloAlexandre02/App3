@@ -22,6 +22,12 @@ namespace App3.Models
         public int? Mural { get; set; }
         public int? Departamento { get; set; }
 
+        public char? Lido { get; set; }
+        public int? Count { get; set; }
+
+        public int? NaoLidoCount { get; set; }
+
+
         public string Titulo { get; set; }
         public ImageSource ImgEmissorSource { get; set; }
 
@@ -29,10 +35,25 @@ namespace App3.Models
         {
             return Evento != null || Social != null || Mural != null || Departamento != null;
         }
+
+        public bool hasUnread 
+        {   get
+            {
+                if (NaoLidoCount == null)
+                    return false;
+                return NaoLidoCount.Value != 0;
+            } 
+        }
+
     }
 
     public class RootMsg
     {
         public List<Mensagem> data { get; set; }
+    }
+
+    public class RootMsgO
+    {
+        public List<Object> data { get; set; }
     }
 }
