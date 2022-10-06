@@ -17,7 +17,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,45,0,0">
-                            <ImageButton Source="icon_videocamera.png"  HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
+                            <ImageButton x:Name="aa" Source="icon_videocamera.png"  HorizontalOptions="Center" VerticalOptions="Center" HeightRequest="80" BackgroundColor="Transparent" ></ImageButton>
                         </StackLayout>
                     </Grid>
                 </StackLayout>
@@ -27,7 +27,7 @@
                     <Grid>
                         <StackLayout Grid.Column="0" Grid.Row="0" Margin="0,35,0,0">
                             <Frame   Margin="0,30,0,10" WidthRequest="20" CornerRadius="10" BorderColor="Transparent" BackgroundColor="#ebebeb"  HeightRequest="43">
-                                <Entry Placeholder="TEMA DO VÍDEO" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" Margin="15,0,15,0" ></Entry>
+                                <Entry x:Name="TitleEntry" Placeholder="TEMA DO VÍDEO" PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" Margin="15,0,15,0" ></Entry>
                             </Frame>
                         </StackLayout>
                     </Grid>
@@ -38,7 +38,7 @@
                 <StackLayout>
                     <Grid>
                         <StackLayout  Grid.Column="0" Grid.Row="0" Margin="0,35,0,0">
-                            <Button Text="Publicar" BackgroundColor="#0a2a3b"  Margin="30,20,35,10" HeightRequest="60"  TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20"></Button>
+                            <Button Text="Publicar" BackgroundColor="#0a2a3b"  Margin="30,20,35,10" HeightRequest="60"  TextColor="White" CornerRadius="10"  FontFamily="OpenSans-SemiBold" FontSize="20" Clicked="Button_Clicked"></Button>
                         </StackLayout>
                     </Grid>
                 </StackLayout>

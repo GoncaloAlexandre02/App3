@@ -36,8 +36,10 @@
 
   <ItemGroup>
     <PackageReference Include="Acr.UserDialogs" Version="7.2.0.564" />
+    <PackageReference Include="Google.Apis.YouTube.v3" Version="1.57.0.2756" />
     <PackageReference Include="MD5" Version="2.0.2" />
     <PackageReference Include="Newtonsoft.Json" Version="13.0.2-beta1" />
+    <PackageReference Include="Plugin.MediaManager" Version="1.1.1" />
     <PackageReference Include="PropertyChanged.Fody" Version="3.4.1" />
     <PackageReference Include="Rg.Plugins.Popup" Version="2.1.0" />
     <PackageReference Include="Syncfusion.Xamarin.Buttons" Version="20.2.0.40" />
@@ -73,6 +75,9 @@
     </Compile>
     <Compile Update="Views\PopUpImg.xaml.cs">
       <DependentUpon>PopUpImg.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\VideoViewPopup.xaml.cs">
+      <DependentUpon>VideoViewPopup.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
 

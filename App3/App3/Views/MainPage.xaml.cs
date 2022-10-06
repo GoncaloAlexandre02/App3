@@ -34,7 +34,9 @@ namespace App3.Views
         private async void Auth()
         {
             var token = await SecureStorage.GetAsync("tokenuser");
-            if (token == null)
+            var remembered = await SecureStorage.GetAsync("userRemember");
+
+            if (token == null || (remembered == null || remembered == "0"))
             {
                 return;
             }
@@ -61,26 +63,29 @@ namespace App3.Views
             Timer _dispatcherTimerServicos = new Timer(timerDelegateServicos, null, period / 10, period / 10);
         }
 
-        private void NotificationsTick(object sender)
+        private async void NotificationsTick(object sender)
         {
-            Console.WriteLine("NOTIFICATION");
-            MessageCountWatcher();
-            IgrejaSocialCountWatcher();
-            MuralWatcher();
-            EventoCountWatcher();
+            var token = await SecureStorage.GetAsync("tokenuser");
+            if (token != null)
+            {
+                MessageCountWatcher();
+                IgrejaSocialCountWatcher();
+                MuralWatcher();
+                EventoCountWatcher();
+            }
+            
         }
     
         private async void MessageCountWatcher()
         {
-            var token = await SecureStorage.GetAsync("tokenuser");
-            if (token != null)
+            try
             {
                 var notify = false;
                 var msg = await restService.GetMensagensListAsync(await SecureStorage.GetAsync("iduser"));
 
                 if (msgs != null)
                 {
-                    foreach(var m in msg.data)
+                    foreach (var m in msg.data)
                     {
                         var aa = msgs.Find(ms => ms.Idmensagem == m.Idmensagem);
                         if (aa == null)
@@ -102,14 +107,16 @@ namespace App3.Views
                 {
                     DependencyService.Get<INotificationsService>().PushMensagemNotif("Tem novas mensagems!");
                 }
+            } 
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
-            
         }
 
         private async void IgrejaSocialCountWatcher()
         {
-            var token = await SecureStorage.GetAsync("tokenuser");
-            if (token != null)
+            try
             {
                 var notify = false;
                 var soc = await restService.GetSocialItemsAsync("tudo");
@@ -134,6 +141,10 @@ namespace App3.Views
                     DependencyService.Get<INotificationsService>().PushSocialNotif("Foram adicionados novos itens à Igreja Social!");
                 }
             }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+            }
         }
 
         private async void MuralWatcher()
@@ -143,8 +154,7 @@ namespace App3.Views
 
         private async void EventoCountWatcher()
         {
-            var token = await SecureStorage.GetAsync("tokenuser");
-            if (token != null)
+            try
             {
                 var notify = false;
                 var ev = await restService.GetEventosAsync();
@@ -168,6 +178,10 @@ namespace App3.Views
                 {
                     DependencyService.Get<INotificationsService>().PushEventoNotif("Existem novos eventos!");
                 }
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
             }
         }
     }

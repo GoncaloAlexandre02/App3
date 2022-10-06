@@ -1046,6 +1046,44 @@ namespace App3.Services
         }
 
 
+        #region Videos
+
+        public async Task<bool> UploadVideo(MultipartFormDataContent video)
+        {
+            clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+            var response = await clientFora.PostAsync("http://tze.ddns.net:8070/api/Videos/Upload", video);
+
+            return response.IsSuccessStatusCode;
+        }
+
+        public async Task<List<VideoPreview>> GetVideos()
+        {
+            clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+            var response = await clientFora.GetStringAsync("http://tze.ddns.net:8070/api/Videos/GetAllNames");
+
+            var content = JsonConvert.DeserializeObject<List<VideoPreview>>(response);
+
+            return content;
+        }
+
+        public async Task<Byte[]> GetVideo(string filename)
+        {
+            clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+            var response = await clientFora.GetAsync("http://tze.ddns.net:8070/api/Videos/Get?filename=" + filename);
+
+            if (response.IsSuccessStatusCode)
+            {
+                var content = await response.Content.ReadAsByteArrayAsync();
+                return content;
+            }
+
+            return null;
+        }
+        #endregion
+
     }
 }
 
