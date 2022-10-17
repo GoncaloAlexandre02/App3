@@ -7,35 +7,15 @@
              BackgroundColor="#ebebeb">
 
     <Shell.TitleView>
-        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b">
+        <StackLayout Orientation="Horizontal"  BackgroundColor="#0a2a3b" >
             
-            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Minha Conta"></Label>
+            <Label FontFamily="RedHat-Medium" VerticalOptions="CenterAndExpand" HorizontalOptions="StartAndExpand" Margin="0,0,30,0" TextColor="White" FontSize="20" Text="Minha Conta"></Label>
+            <Image Source="gearW.png" Margin="0,0,20,0" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
+                <Image.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Atualizar"></TapGestureRecognizer>
+                </Image.GestureRecognizers>
+            </Image>
 
-            <Grid >
-                <Grid.RowDefinitions>
-                    <RowDefinition Height="50"  />
-                    <RowDefinition Height="50"  />
-                </Grid.RowDefinitions>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="0.2*"/>
-                    <ColumnDefinition Width="1*"/>
-                    <ColumnDefinition Width="0.1*"/>
-                </Grid.ColumnDefinitions>
-                <Image Grid.Row="0" Grid.Column="0" Margin="0,0,0,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22" />
-                <Frame Grid.Row="0" Grid.Column="0" HorizontalOptions="End"  VerticalOptions="Center" Margin="0,-22,10,-18"   CornerRadius="20"
-                    Padding="-3"
-                    BackgroundColor="Transparent"
-                    HasShadow="False">
-                    <Label  FontSize="10" HeightRequest="22" WidthRequest="23" Margin="1,1,1,1"    HorizontalTextAlignment="Center"  VerticalTextAlignment="Center"  BackgroundColor="Transparent" 
-                         TextColor="White"  x:Name="labelText"/>
-                </Frame>
-                <Image Source="gearW.png" Grid.Row="0" Grid.Column="2" Margin="0,0,-10,-10" HorizontalOptions="End" VerticalOptions="Center"   HeightRequest="22" WidthRequest="22">
-                    <Image.GestureRecognizers>
-                        <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped_Atualizar"></TapGestureRecognizer>
-                    </Image.GestureRecognizers>
-                </Image>
-            </Grid>
 
         </StackLayout>
     </Shell.TitleView>

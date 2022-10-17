@@ -108,7 +108,7 @@ namespace App3.Views
                 tNome.Text = user.Nome.ToString();
                 tApelido.Text = user.Apelido.ToString();
                 tEmail.Text = user.Email.ToString();
-                tTele.Text = user.Telefone.ToString();
+                tTele.Text = user.Telefone?.ToString();
                 if (user.Dtnasc != null)
                 {
                     DateTime date = DateTime.Now;

@@ -12,18 +12,12 @@
             <Grid>
                 <StackLayout Padding="0" Margin="0" HorizontalOptions="FillAndExpand" >
                     <Frame HeightRequest="150" Padding="0" BackgroundColor="#0a2a3b">
-
-                        
-
                         <Label x:Name="txtEntrar" Text="BEM VINDO" FontFamily="OpenSans-SemiBold" TextColor="White" HorizontalOptions="Center" FontSize="35" Margin="0,40,0,0"></Label>
                     </Frame>
-
-
-
                 </StackLayout>
 
                 <ScrollView>
-                    <StackLayout Padding="0" Margin="10,120,10,0" HorizontalOptions="FillAndExpand">
+                    <StackLayout Padding="0" Margin="10,120,10,0" HorizontalOptions="FillAndExpand" >
 
                         <Frame  BackgroundColor="White" HeightRequest="500" HasShadow="True" Padding="0" Margin="0,0,0,20" CornerRadius="15">
 
@@ -31,12 +25,34 @@
 
                                 <StackLayout Padding="0" Margin="15,35">
 
-
-
-                                    <StackLayout>
+                                    <StackLayout IsClippedToBounds="False">
                                         <Frame BackgroundColor="Transparent" x:Name="fEmail" BorderColor="Transparent" HasShadow="False" Padding="0" HorizontalOptions="FillAndExpand" CornerRadius="10" Margin="0,5,0,0">
-                                            <StackLayout Orientation="Horizontal"  Margin="-15,0,-10,0">
-                                                <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b" FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"/>
+                                            <StackLayout Margin="-15,0,-10,0" VerticalOptions="StartAndExpand" HorizontalOptions="FillAndExpand" BackgroundColor="White" IsClippedToBounds="False">
+                                                <Entry x:Name="txtEmail" Placeholder="EMAIL"  PlaceholderColor="#7a7a7a" TextColor="#0a2a3b"
+                                                       FontFamily="OpenSans-SemiBold"  HorizontalOptions="FillAndExpand" Margin="20,0,25,0" Keyboard="Email"
+                                                       TextChanged="txtEmail_TextChanged" VerticalOptions="StartAndExpand"
+                                                       />
+
+                                                <StackLayout x:Name="listLayout" IsVisible="False" BackgroundColor="Transparent" Padding="1" MinimumHeightRequest="100"
+                                                             VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand" Margin="20,0,20,0" IsClippedToBounds="False" >
+                                                    <ListView x:Name="countryListView" ItemTapped="countryListView_ItemTapped" 
+                                                           >
+                                                        <ListView.ItemTemplate>
+                                                            <DataTemplate>
+                                                                <ViewCell>
+                                                                    <Frame HeightRequest="0" BackgroundColor="Transparent" Padding="0" Margin="0">
+                                                                        <Label Text="{Binding .}" FontSize="16" TextColor="#FF464859" BackgroundColor="White" Margin="0" Padding="0" VerticalTextAlignment="Center"/>
+                                                                        <!--
+                                                                        <StackLayout IsVisible="False" BackgroundColor="Blue" Padding="0" Margin="0" VerticalOptions="FillAndExpand" HorizontalOptions="FillAndExpand">
+                                                                        </StackLayout>
+                                                                        -->
+                                                                    </Frame>
+                                                                </ViewCell>
+                                                            </DataTemplate>
+                                                        </ListView.ItemTemplate>
+                                                    </ListView>
+                                                </StackLayout>
+                                                
                                             </StackLayout>
                                         </Frame>
                                     </StackLayout>
@@ -52,11 +68,16 @@
 
 
                                     <StackLayout  Orientation="Horizontal" Margin="9,5,0,0">
-                                        <CheckBox IsChecked="False" Color="DarkGray" />
+                                        <CheckBox x:Name="remember" IsChecked="False" Color="DarkGray" />
                                         <Label Text="Lembre-me" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 
-                                        <Label Text="Esqueceu Password" TextColor="DarkGray"  HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,22,0" />
+                                        <Label Text="Esqueceu Password" TextColor="DarkGray"  HorizontalOptions="EndAndExpand" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" Margin="0,0,0,0" />
 
+                                    </StackLayout>
+
+                                    <StackLayout  Orientation="Horizontal" Margin="9,5,0,0">
+                                        <CheckBox x:Name="save" IsChecked="False" Color="DarkGray" />
+                                        <Label Text="Guardar dados de login" TextColor="DarkGray" FontSize="Small" VerticalTextAlignment="Center" HorizontalTextAlignment="Center" />
 
                                     </StackLayout>
 
@@ -79,6 +100,9 @@
 
                                     <StackLayout Margin="0,30,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                         <Frame BackgroundColor="White"   HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Google_Tapped" />
+                                            </Frame.GestureRecognizers>
                                             <Image Source="goog_Logo" Aspect="AspectFill" Margin="0"/>
                                         </Frame>
                                         <Frame BackgroundColor="White"   HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">

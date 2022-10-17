@@ -27,7 +27,10 @@ namespace App3
         }
         private async void OnLogout(object sender, EventArgs e)
         {
-            SecureStorage.RemoveAll();
+            //SecureStorage.RemoveAll();
+            SecureStorage.Remove("iduser");
+            SecureStorage.Remove("tokenuser");
+            SecureStorage.Remove("remember");
             await Shell.Current.GoToAsync("//MainPage");
         }
         private async void Irchat(object sender, EventArgs e)

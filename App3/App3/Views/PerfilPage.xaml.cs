@@ -45,7 +45,7 @@ namespace App3.Views
 
                 tNome.Text = user.Nome.ToString() + " " + user.Apelido.ToString();
                 tEmail.Text = user.Email.ToString();
-                tTele.Text = user.Telefone.ToString();
+                tTele.Text = user.Telefone?.ToString();
                 tDt.Text = user.Dtnasc?.ToString();
 
                 var imageSource = ImageSource.FromStream(() => new MemoryStream(user.ImageSource));

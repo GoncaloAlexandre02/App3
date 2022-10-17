@@ -9,6 +9,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Essentials;
 using Xamarin.Forms;
+using static Xamarin.Forms.Internals.Profile;
 
 namespace App3.Services
 {
@@ -29,15 +30,18 @@ namespace App3.Services
             client = new HttpClient();
         }
 
-        public async Task<User> PostLogin(string data, string email, string pass)
+        #region Users
+        public async Task<User> PostLogin(string email, string pass, string googleIdToken = null)
         {
             try
             {
                 string url = "http://tze.ddns.net:8070/api/Users/Login?email=" + email + "&password=" + pass;
+                if (googleIdToken != null)
+                    url += "&googleIdToken=" + googleIdToken;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
 
-                var content = new StringContent(data, Encoding.UTF8, "application/json");
-                var response = await clientFora.PostAsync(url, content);
+                //var content = new StringContent(data, Encoding.UTF8, "application/json");
+                var response = await clientFora.PostAsync(url, null);
                 if (response.IsSuccessStatusCode)
                 {
                     var x = await response.Content.ReadAsStringAsync();
@@ -135,6 +139,33 @@ namespace App3.Services
                 throw ex;
             }
         }
+
+        public async Task<bool> UserExists(string email)
+        {
+            try
+            {
+                string url = "http://tze.ddns.net:8070/api/Users/EmailExists/" + email;
+                clientFora.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", await SecureStorage.GetAsync("tokenuser"));
+
+                var response = await clientFora.GetAsync(url);
+                if (response.IsSuccessStatusCode)
+                {
+                    //var user = JsonConvert.DeserializeObject<User>(await response.Content.ReadAsStringAsync());
+                    return JsonConvert.DeserializeObject<bool>(await response.Content.ReadAsStringAsync()); 
+                }
+                else
+                {
+                    return false;
+                }
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        #endregion
+
         public async Task<HttpResponseMessage> UpdatePessoaevento(Pessoaevento pessoaevento, string id)
         {
             try

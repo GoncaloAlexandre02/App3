@@ -15,6 +15,8 @@ using Android.Content;
 using FFImageLoading.Forms.Platform;
 using System.Diagnostics;
 using Acr.UserDialogs;
+using Android.Gms.Auth.Api.SignIn;
+using Android.Gms.Auth.Api;
 
 namespace App3.Droid
 {
@@ -74,6 +76,11 @@ namespace App3.Droid
                 {
                     PickImageTaskCompletionSource.SetResult(null);
                 }
+            }
+            else if (requestCode == 1)
+            {
+                GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(intent);
+                GoogleAuthService.Instance.OnAuthCompleted(result);
             }
         }
 

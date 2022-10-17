@@ -98,6 +98,9 @@
 
                                 <StackLayout Margin="0,25,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                     <Frame BackgroundColor="White"   HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                        </Frame.GestureRecognizers>
                                         <Image Source="goog_Logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
                                     <Frame BackgroundColor="White"   HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">

@@ -25,9 +25,9 @@ namespace App3.Views
             
             InitializeComponent();
 
-            InitTimer();
-
             Auth();
+
+            InitTimer();
 
         }
 
@@ -38,6 +38,7 @@ namespace App3.Views
 
             if (token == null || (remembered == null || remembered == "0"))
             {
+                SecureStorage.Remove("tokenuser");
                 return;
             }
             else
