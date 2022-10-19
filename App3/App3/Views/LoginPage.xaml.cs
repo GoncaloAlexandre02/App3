@@ -18,6 +18,7 @@ namespace App3.Views
     public partial class LoginPage : ContentPage
     {
         private readonly IGoogleAuthService _googleService;
+        private readonly IFacebookAuthService _facebookService;
         GoogleUser GoogleUser = new GoogleUser();
         RestService restService;
         User user;
@@ -31,6 +32,7 @@ namespace App3.Views
             this.BindingContext = new LoginViewModel();
             restService = new RestService();
             _googleService = DependencyService.Get<IGoogleAuthService>();
+            _facebookService = DependencyService.Get<IFacebookAuthService>();
 
             savedUsers = Task.Run(() => SecureStorage.GetAsync("savedUsers")).Result;
             if (!string.IsNullOrEmpty(savedUsers))
@@ -191,9 +193,7 @@ namespace App3.Views
 
                 if (user == null)
                 {
-                    fEmail.BorderColor = Color.FromRgb(255, 0, 0);
-                    fPass.BorderColor = Color.FromRgb(255, 0, 0);
-                    await this.DisplayToastAsync("Utilizador ou Password, Incorretos", 5000);
+                    await this.DisplayToastAsync("Utilizador não encontrado.", 5000);
                 }
                 else
                 {
@@ -219,7 +219,46 @@ namespace App3.Views
             }
             else
             {
-                await DisplayAlert("Message", message, "Ok");
+                await DisplayAlert("Erro", "Occrreu um erro ao fazer a autenticação, tente novamente mais tarde", "Ok");
+            }
+        }
+
+        private async void Facebook_Tapped(object sender, EventArgs e)
+        {
+            var loginResult = await _facebookService.Login();
+
+            if (loginResult.LoginState == LoginState.Success)
+            {
+                user = await restService.PostLogin(loginResult.Email, null, null, loginResult.Token);
+
+                if (user == null)
+                {
+                    await this.DisplayToastAsync("Utilizador não encontrado.", 5000);
+                }
+                else
+                {
+
+                    //SecureStorage.RemoveAll();
+                    SecureStorage.Remove("iduser");
+                    SecureStorage.Remove("tokenuser");
+
+                    await SecureStorage.SetAsync("iduser", user.Iduser.ToString());
+                    await SecureStorage.SetAsync("tokenuser", user.Tokenuser.ToString());
+
+                    if (remember.IsChecked)
+                        await SecureStorage.SetAsync("userRemember", "1");
+                    else
+                        await SecureStorage.SetAsync("userRemember", "0");
+
+                    await SecureStorage.SetAsync("savedUsers", string.Join(";", savedUsersList));
+
+                    // await this.DisplayToastAsync(user.Tokenuser, 500);
+                    await Shell.Current.GoToAsync("//Home");
+                }
+            }
+            else
+            {
+                await DisplayAlert("Erro", "Occrreu um erro ao fazer a autenticação, tente novamente mais tarde", "Ok");
             }
         }
     }

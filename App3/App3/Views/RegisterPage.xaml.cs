@@ -11,9 +11,12 @@ using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 using Xamarin.Essentials;
 using Xamarin.Auth;
+using Xamarin.Auth.OAuth2;
+using Xamarin.Auth.Presenters;
 using Newtonsoft.Json;
 using System.Diagnostics;
 using System.Xml.Linq;
+
 
 namespace App3.Views
 {
@@ -21,6 +24,7 @@ namespace App3.Views
     public partial class RegisterPage : ContentPage
     {
         private readonly IGoogleAuthService _googleService;
+        private readonly IFacebookAuthService _facebookService;
         GoogleUser GoogleUser = new GoogleUser();
 
         RestService restService;
@@ -30,6 +34,9 @@ namespace App3.Views
             InitializeComponent();
             restService = new RestService();
             _googleService = DependencyService.Get<IGoogleAuthService>();
+            _facebookService = DependencyService.Get<IFacebookAuthService>();
+
+        
         }
 
         private async void Button_ClickedAsync(object sender, EventArgs e)
@@ -87,7 +94,7 @@ namespace App3.Views
             }
         }
 
-        private void TapGestureRecognizer_Tapped(object sender, EventArgs e)
+        private void Google_Tapped(object sender, EventArgs e)
         {
             try
             {
@@ -139,5 +146,37 @@ namespace App3.Views
             }
         }
 
+        private async void Facebook_Tapped(object sender, EventArgs e)
+        {
+            var loginResult = await _facebookService.Login();
+
+            if (loginResult.LoginState == LoginState.Success)
+            {
+                var exists = await restService.UserExists(loginResult.Email);
+                if (!exists)
+                {
+                    string data = @"{'nome':'" + loginResult.FirstName + "', 'apelido':'" + loginResult.LastName + "', 'email':'" + loginResult.Email + "', 'emailativo':'sim', 'tipouser':[2], 'facebookAccessToken':'" + loginResult.Token + "'}";
+                    data = data.Replace('\'', '\"');
+
+                    var res = await restService.PostRegister(data);
+
+                    if (res.IsSuccessStatusCode)
+                    {
+                        await this.DisplayToastAsync("Conta Criada", 2000);
+                        await Navigation.PushModalAsync(new Views.LoginPage());
+                    }
+                    else
+                    {
+                        await DisplayAlert("Message", "Não foi possível realizar o registo. Por favor tente novamente.", "Ok");
+                    }
+                }
+                else
+                {
+                    await this.DisplayToastAsync("Utilizador já registado", 2000);
+                    await Navigation.PushModalAsync(new Views.LoginPage());
+                }
+
+            }
+        }
     }
 }

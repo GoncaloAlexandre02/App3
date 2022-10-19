@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+    <!-- https://go.microsoft.com/fwlink/?linkid=2124038
+    <issue id="HardcodedText" severity="error">
+        <ignore path="Resources\layout\content_main.xml" />
+    </issue>
+    -->
+  <string name="facebook_app_id">694263015597896</string>
+  <string name="facebook_login_protocol_scheme">fb694263015597896</string>
+  <string name="facebook_client_token">34cd42749884fdd6a7d4d496056f87de</string>
+</resources>

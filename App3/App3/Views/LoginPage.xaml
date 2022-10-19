@@ -106,6 +106,9 @@
                                             <Image Source="goog_Logo" Aspect="AspectFill" Margin="0"/>
                                         </Frame>
                                         <Frame BackgroundColor="White"   HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                            <Frame.GestureRecognizers>
+                                                <TapGestureRecognizer Tapped="Facebook_Tapped" />
+                                            </Frame.GestureRecognizers>
                                             <Image Source="faceb_logo" Aspect="AspectFill" Margin="0"/>
                                         </Frame>
                                     </StackLayout>

@@ -5,6 +5,7 @@
              xmlns:d="http://xamarin.com/schemas/2014/forms/design"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d"
+             xmlns:custom="clr-namespace:App3.Renderer"
              x:Class="App3.Views.RegisterPage"
              Shell.NavBarIsVisible="False">
     <ContentPage.Content>
@@ -99,20 +100,22 @@
                                 <StackLayout Margin="0,25,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
                                     <Frame BackgroundColor="White"   HasShadow="False"  Margin="0" HorizontalOptions="Center" Padding="0">
                                         <Frame.GestureRecognizers>
-                                            <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                                            <TapGestureRecognizer Tapped="Google_Tapped"/>
                                         </Frame.GestureRecognizers>
                                         <Image Source="goog_Logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
                                     <Frame BackgroundColor="White"   HasShadow="False"  Margin="3,0,0,0" HorizontalOptions="Center" Padding="0">
+                                        <Frame.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="Facebook_Tapped"/>
+                                        </Frame.GestureRecognizers>
                                         <Image Source="faceb_logo" Aspect="AspectFill" Margin="0"/>
                                     </Frame>
+                                    
                                 </StackLayout>
 
 
                             </StackLayout>
 
-
-                                
 
                         </Frame>
                     </StackLayout>

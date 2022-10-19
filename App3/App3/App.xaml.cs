@@ -9,7 +9,8 @@ namespace App3
 {
     public partial class App : Application
     {
-        
+        public static Action<string> PostSuccessFacebookAction { get; set; }
+
         public App(string page="")
         {
             Device.SetFlags(new string[] { "Brush_Experimental" });

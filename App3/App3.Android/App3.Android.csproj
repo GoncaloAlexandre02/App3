@@ -86,6 +86,9 @@
     <PackageReference Include="Newtonsoft.Json">
       <Version>13.0.2-beta1</Version>
     </PackageReference>
+    <PackageReference Include="Plugin.CurrentActivity">
+      <Version>2.1.0.4</Version>
+    </PackageReference>
     <PackageReference Include="PropertyChanged.Fody">
       <Version>3.4.1</Version>
     </PackageReference>
@@ -100,6 +103,12 @@
     </PackageReference>
     <PackageReference Include="Xamarin.CommunityToolkit">
       <Version>2.0.4</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Facebook.Android">
+      <Version>11.2.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Facebook.Login.Android">
+      <Version>11.2.0.1</Version>
     </PackageReference>
     <PackageReference Include="Xamarin.FFImageLoading">
       <Version>2.4.11.982</Version>
@@ -117,12 +126,15 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Activity1.cs" />
+    <Compile Include="FacebookAuthService .cs" />
     <Compile Include="GoogleAuthService.cs" />
     <Compile Include="HttpClientHandlerService.cs" />
     <Compile Include="MainActivity.cs" />
     <Compile Include="NotificationsService.cs" />
     <Compile Include="PhotoPickerService.cs" />
     <Compile Include="Renderer\ExtendedDatePickerRenderer.cs" />
+    <Compile Include="Renderer\FbLoginImageRenderer.cs" />
     <Compile Include="Renderer\SearchBarRenderer.cs" />
     <Compile Include="Resources\Resource.designer.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -683,6 +695,12 @@
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\drawable\ic_launcher.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <AndroidResource Include="Resources\values\strings.xml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:UpdateGeneratedFiles</Generator>
+    </AndroidResource>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\Android\Xamarin.Android.CSharp.targets" />
 </Project>

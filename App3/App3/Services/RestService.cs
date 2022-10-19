@@ -31,13 +31,15 @@ namespace App3.Services
         }
 
         #region Users
-        public async Task<User> PostLogin(string email, string pass, string googleIdToken = null)
+        public async Task<User> PostLogin(string email, string pass, string googleIdToken = null, string facebookAccessToken = null)
         {
             try
             {
                 string url = "http://tze.ddns.net:8070/api/Users/Login?email=" + email + "&password=" + pass;
                 if (googleIdToken != null)
                     url += "&googleIdToken=" + googleIdToken;
+                if (facebookAccessToken != null)
+                    url += "&facebookAccessToken=" + facebookAccessToken;
                 //string jsonData = @"{""username"" : ""myusername"", ""password"" : ""mypassword""}";
 
                 //var content = new StringContent(data, Encoding.UTF8, "application/json");

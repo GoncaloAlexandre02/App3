@@ -17,6 +17,7 @@ using System.Diagnostics;
 using Acr.UserDialogs;
 using Android.Gms.Auth.Api.SignIn;
 using Android.Gms.Auth.Api;
+using Xamarin.Facebook;
 
 namespace App3.Droid
 {
@@ -36,6 +37,7 @@ namespace App3.Droid
             Rg.Plugins.Popup.Popup.Init(this);
             CachedImageRenderer.Init(true);
             UserDialogs.Init(this);
+            //FacebookSdk.SdkInitialize(ApplicationContext);
 
             string startPage = "";
 
@@ -81,6 +83,10 @@ namespace App3.Droid
             {
                 GoogleSignInResult result = Auth.GoogleSignInApi.GetSignInResultFromIntent(intent);
                 GoogleAuthService.Instance.OnAuthCompleted(result);
+            }
+            else if (requestCode == 64206)
+            {
+                FacebookAuthService.Instance.OnActivityResult(requestCode, (int)resultCode, intent);
             }
         }
 
